@@ -704,7 +704,7 @@ function removeChips(parent) {
     var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 1) {
     var newVal = parseInt(parent.children[0].innerHTML) - baseBet;
-      if (newval<1){
+      if (newVal<1){
        TWWagered -= (baseBet + newVal);
       } else if (newVal > 0){
       TWWagered -= (baseBet);
