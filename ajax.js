@@ -30,6 +30,7 @@ MoneyPot.placeCustomBet(bodyParams, {
             alert(xhr.responseJSON.error);
           } else {
             alert('Internal Error');
+                document.getElementById('bet-button').disabled = false;
           }
         },
         complete: function() {
