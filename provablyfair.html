@@ -1,0 +1,20 @@
+<html ><head>
+
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    
+    </head>
+    
+    
+    <body style="width:420px;height420px">
+        <div>
+            <div style = "padding:10px"><h2 style="color:#fff">What is Provably Fair?</h2>
+            <div style="color:#B2BCC5"><p >Provably Fair ensures that every bet you make is free from any external tampering. Modern cryptographic algorithm such as SHA256 is used to achieve that.</p><p>A server hash is provided by MoneyPot(computed with the formula SHA256(secret + "|" + salt) where secret is the server seed(a value between 0 and (2^32)-1) and salt is the value added to prevent bruteforce. The client then provides a client seed(between 0 and (2^32)-1 which can be changed manually by the users). </p><p>The final bet outcome is then calculated through the formula (ServerSeed + ClientSeed) % Math.pow(2,32). Although we automatically verify each bet made to MoneyPot, the user can also verify each bet manually with all the information provided to ensure that the outcome is fair</p></div></div>
+        </div>
+    
+    </body>
+
+
+
+
+</html>
