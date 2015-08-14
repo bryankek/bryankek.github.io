@@ -704,11 +704,15 @@ function removeChips(parent) {
     var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 1) {
     var newVal = parseInt(parent.children[0].innerHTML) - baseBet;
-       TWWagered -= baseBet;
+      if (newval<1){
+       TWWagered -= (baseBet + newVal);
+      } else if (newVal > 0){
+      TWWagered -= (baseBet);
+      }
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
     parent.children[0].innerHTML = newVal.toString();
 
-    if (newVal == 0) {
+    if (newVal < 1) {
 
       parent.removeChild(parent.children[0]);
     }
