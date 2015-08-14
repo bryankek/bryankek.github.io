@@ -825,7 +825,7 @@ var UserBox = React.createClass({
         'Loading...'
       );
     } else if (worldStore.state.user) {
-document.getElementById('bet-button').disabled = false;
+
       innerNode = 
         // Logged in as...
         el.div(
