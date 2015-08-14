@@ -819,7 +819,7 @@ var UserBox = React.createClass({
 
     var innerNode;
     if (worldStore.state.isLoading) {
-          document.getElementById('bet-button').disabled = true;
+
       innerNode = el.span(
           {className: ''},
         'Loading...'
