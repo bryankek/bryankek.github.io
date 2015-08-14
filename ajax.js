@@ -1,7 +1,8 @@
 
 function sendAllBets(button) {
     checkBet();
-    button.disabled = true;
+   document.getElementById('bet-button').disabled = true;
+
     var payouts = rangeParam;
     var wager = TWWagered *100;
     var hash = betStore.state.nextHash;
@@ -13,7 +14,6 @@ function sendAllBets(button) {
     wager: wager,
     max_subsidy:0
 }
-    console.log(bodyParams);
 
 MoneyPot.placeCustomBet(bodyParams, {
         success: function(bet) {
@@ -825,7 +825,7 @@ var UserBox = React.createClass({
         'Loading...'
       );
     } else if (worldStore.state.user) {
-          document.getElementById('bet-button').disabled = false;
+document.getElementById('bet-button').disabled = false;
       innerNode = 
         // Logged in as...
         el.div(
@@ -2903,6 +2903,7 @@ if(duration > 148 && parseInt(document.getElementById("outcome").innerHTML) == t
 clearInterval(countLoop);
 clearInterval(startCount);
     
+document.getElementById('bet-button').disabled = false;
             Dispatcher.sendAction('UPDATE_USER', {
             balance: worldStore.state.user.balance + profit
           }); 
@@ -2917,7 +2918,6 @@ clearInterval(startCount);
     
     
     
-     button.disabled = false;
 }
   
 }, 150);
