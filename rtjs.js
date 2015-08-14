@@ -715,6 +715,7 @@ function removeChips(parent) {
     if (newVal < 1) {
 
       parent.removeChild(parent.children[0]);
+        
     }
 
   }
