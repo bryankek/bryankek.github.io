@@ -34,53 +34,62 @@
    
         
 		<div class="container">
-			<ul id="gn-menu" class="gn-menu-main">
-				<li class="gn-trigger">
-					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
-					<nav class="gn-menu-wrapper">
-						<div class="gn-scroller">
-							<ul class="gn-menu">
-								
-							
-								<li><a class="gn-icon gn-icon-help" onClick="TINY.box.show({url:'provablyfair.html',width:600,height:400})">Provably Fair</a></li>
-							
-							</ul>
-						</div><!-- /gn-scroller -->
-					</nav>
-				</li>
-                <li style="width: 121px;"><a href="https://qdice.net"><span>Home</span></a></li>
-				
-               
-                <li class = "gn-menu-alt" id="userBox">
-               
-                    <a>
-                    <span>Logged in as</span>
-                    <span>foo</span>
-                    <span>Balance</span>
-                    <span>999 bits</span>
-                  
-                        <ul>
-                        <li><a>Deposit</a></li>
-                        <li><a>Withdraw</a></li>
-                        <li><a>Logout</a></li>
-                      
-                        
+			<ul id="gn-menu" class="gn-menu-main" style="border-bottom: 1px solid #c6d0da;">
+	
+                 
+                
+                <li class = "gn-menu-alt" id="provably-fair" >
+               <div>
+
+                   <span  onClick="TINY.box.show({url:'provablyfair.html',width:600,height:400})"><a style="border-left:none">Provably Fair ?</a> </span>
+                        <ul style="border: 1px solid #c6d0da;border-top:none;margin-right: -280px;width:520px;">
+                        <li style="border-bottom: 1px solid #c6d0da;text-align:left;border-top: 1px solid #c6d0da;" ><a style=" border-left: none;">Server Hash:</a>
+                        <input readonly style="width:200px;text-align:center;
+                 border: 1px solid black;           
+                   cursor:text        ;
+    background: #5E778F;
+    margin-left: 20px;
+    height: 30px;
+    outline:none;
+    border-radius:5px;
+    text-align: center;
+       color: white;
+      
+                            
+                            
+                            "   id="ServerHash"></li>
+                        <li style="text-align:left"><a style=" border-left: none;">Client Seed:</a></li>
+                        <li style="text-align:left"><input id="ClientSeed" style="width:200px;text-align:center;
+                            
+                             border: 1px solid black;            
+
+    background: #5E778F;
+    margin-left: 20px;
+height: 30px;
+    outline:none;
+    border-radius: 5px;
+    text-align: center;
+   color: white;
+                            
+                            
+                            "  type=number></li>
+                   
                         </ul>
-                 </a>
-                  
-                
-                
-                
-                
-                
+           
+                    </div>
+             </li>
+                      <li class = "gn-menu-alt" id="userBox" style=";width:279px;height:58px:border-right">
+         
                 
                 </li>
+				
+                <li style="width: 121px; "><a style="color:white"href="#"><span>Home</span></a></li>
 				
 			</ul>
                
 				<div id = "r-table" class="game-area"  oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
                      <div class="chip-size-input"><span>Chip Size :</span><input min="1" type="number" value ="1" id="cs-Input"></div>
-                    <div class="spinButton"><div class = "outcome" id = "outcome">36</div><br><button id = "bet-button" onClick="if(TWWagered == 0){alert('Place at least one bet first')}else{sendAllBets(this);}">Spin</button><div class= "outcome-profit" style="text-align:left">Profit : </div><br><br><div class= "outcome-profit" style="" id = "bet-profit">0 bits</div></div>
+                    <div class="spinButton" style="background: #34495e;"><div class = "outcome" id = "outcome">36</div><br><button id = "bet-button" onClick="if(TWWagered == 0){alert('Place at least one bet first')}else{sendAllBets(this);}">Spin</button><div class= "outcome-profit" style="text-align:left">Profit : </div><br><br><div class= "outcome-profit" style="" id = "bet-profit">0.00 bits</div></div>
   <div class = "rt"></div>
   <div class="rt-inner"></div>
   <div class="rt-inner-2"></div>
@@ -284,12 +293,14 @@
 </div>
 	
             
+            
+            
    
          <div class="tmask" id="bluemask" style="height: 1454px; width: 1349px; opacity: 0; display: none;"></div>
             <div class="tbox" style="position: absolute; top: 163.5px; left: 683px; opacity: 0; display: none;"><div class="tinner" id="frameless" style="width: 750px; height: 450px;"><div class="tcontent" style="display: block;"></div><div class="tclose"></div></div></div>
             
-            <div style="visibility:hidden" id="ServerHash"></div>
-            <div style="visibility:hidden" id="ClientSeed"></div>
+   
+           
 		<!-- /container -->
 		<script src="js/classie.js"></script>
 		<script src="js/gnmenu.js"></script>

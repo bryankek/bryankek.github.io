@@ -2,8 +2,11 @@
 function sendAllBets(button) {
 
    document.getElementById('bet-button').disabled = true;
+
+    var bonus = checkAverageBet();
+    payout[0] += TWWagered * bonus;
     setRangeParam();
-    
+
     var payouts = rangeParam;
 
     var wager = TWWagered *100;
@@ -19,16 +22,16 @@ function sendAllBets(button) {
 
 MoneyPot.placeCustomBet(bodyParams, {
         success: function(bet) {
-            Dispatcher.sendAction('NEW_BET', bet);
+            payout[0] -= TWWagered * bonus;
           // Update next bet hash
             Dispatcher.sendAction('SET_NEXT_HASH', bet.next_hash);
             var target = Math.floor((bet.outcome/Math.pow(2,32))*36);
-            animateRoll(target, bet.profit);
+            animateRoll(target, bet);
         
         },
         error: function(xhr) {
               document.getElementById('bet-button').disabled = false;    
-            
+            payout[0] -= TWWagered * bonus;
           console.log('Error');
           if (xhr.responseJSON && xhr.responseJSON) {
             alert(xhr.responseJSON.error);
@@ -408,6 +411,8 @@ var MoneyPot = (function() {
     var endpoint = '/bets/custom';
     makeMPRequest('POST', bodyParams, endpoint, callbacks);
   };
+    
+ 
 
   return o;
 })();
@@ -618,7 +623,7 @@ clientSeed: undefined,
   Dispatcher.registerCallback('SET_NEXT_HASH', function(hexString) {
     
     self.state.nextHash = hexString;
-    document.getElementById("ServerHash").innerHTML = hexString;
+    document.getElementById("ServerHash").value = hexString;
     document.getElementById("ClientSeed").value = (Math.floor(Math.random()*4294967296)).toString();
     self.emitter.emit('change', self.state);
    
@@ -835,19 +840,19 @@ var UserBox = React.createClass({
         // Logged in as...
         el.div(
           {onClick:this._onRefreshUser},
-          el.span(null,'Logged in as '),
+
           el.span(null, worldStore.state.user.uname),
      
         el.span(
             {style:{marginLeft:'15px'}},
-        ' Balance: ' + (worldStore.state.user.balance / 100).toFixed(2) + ' bits'
+        (worldStore.state.user.balance / 100).toFixed(2) + ' bits'
         ), 
           
           
           
           el.ul(
-         null,
-        el.li(null,el.a({onClick:this._openDepositPopup},'Deposit')),el.li(null,el.a({onClick:this._openWithdrawPopup},'Withdraw')),el.li(null,el.a({onClick:this._onLogout},'Logout'))
+              {style:{width:'280px',marginRight:'-1px'}},
+        el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openDepositPopup},'Deposit')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openWithdrawPopup},'Withdraw')),el.li(null,el.a({onClick:this._onLogout},'Logout'))
             
             
             
@@ -2893,31 +2898,32 @@ alert('profit = ' + (worldStore.state.user.balance - initialBal)/100 + ' bits');
 
 
 
-function animateRoll(target, profit){
+function animateRoll(target, bet){
 document.getElementById("outcome").innerHTML = parseInt(Math.random() * 36);
 var duration = 1;
 var countLoop;
 var startCount = setInterval(function(){ 
-duration = duration +5;
-if(duration > 149){
-  duration = 149;
+duration = duration +10;
+if(duration > 199){
+  duration = 199;
 }  
 clearInterval(countLoop);
 countLoop = setInterval(countup, duration);
-if(duration > 148 && parseInt(document.getElementById("outcome").innerHTML) == target){
+if(duration > 198 && parseInt(document.getElementById("outcome").innerHTML) == target){
 clearInterval(countLoop);
 clearInterval(startCount);
     
 document.getElementById('bet-button').disabled = false;
             Dispatcher.sendAction('UPDATE_USER', {
-            balance: worldStore.state.user.balance + profit
+            balance: worldStore.state.user.balance + bet.profit
           }); 
     
-    document.getElementById('bet-profit').innerHTML = profit/100 + " bits";
-        if(profit > 0){
+    document.getElementById('bet-profit').innerHTML = parseFloat(bet.profit/100).toFixed(2) + " bits";
+     Dispatcher.sendAction('NEW_BET', bet);
+        if(bet.profit > 0){
          document.getElementById('bet-profit').style.color = "green";
         }
-        if(profit <0){
+        if(bet.profit <0){
         document.getElementById('bet-profit').style.color = "red";
         }
     
@@ -2925,7 +2931,7 @@ document.getElementById('bet-button').disabled = false;
     
 }
   
-}, 150);
+}, 200);
 };
 
 

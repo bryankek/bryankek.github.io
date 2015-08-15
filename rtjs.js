@@ -433,13 +433,70 @@ tgTR.onmouseout = function() {
 
 var TWWagered = 0;
 
-function createChips(chipType, numbers, multiplier) {
+function checkAverageBet(){
+
+var averageBet = (worldStore.state.user.betted_wager/worldStore.state.user.betted_count)/100;
     
+    if(averageBet > 0 && averageBet <101){
+        var ratio = 10;
+    };
+    
+    if(averageBet > 100 && averageBet < 151){
+        var ratio = 15;
+    };
+    
+    if(averageBet > 150 && averageBet < 201){
+        var ratio = 20;
+    };
+    if(averageBet > 200 && averageBet < 351){
+        var ratio = 25;
+    };
+    if(averageBet > 350 && averageBet < 501){
+        var ratio = 30;
+    };
+    
+    if(averageBet > 500 && averageBet < 751){
+        var ratio = 40;
+    };
+    
+    if(averageBet > 750 && averageBet < 1001){
+        var ratio = 50;
+    };
+    
+    if(averageBet > 1000 && averageBet < 1501){
+        var ratio = 60;
+    };
+    
+    if(averageBet > 1500 && averageBet < 2001){
+        var ratio = 70;
+    };
+    
+    if(averageBet > 2000 && averageBet < 3501){
+        var ratio = 80;
+    };
+    
+    if(averageBet > 3500 && averageBet < 5001){
+        var ratio = 80;
+    };
+    
+    if(averageBet > 5000){
+        var ratio = 90;
+    };
+
+    
+    
+return ratio;    
+};
+
+
+
+function createChips(chipType, numbers, multiplier) {
+
 var baseBet = parseInt(document.getElementById("cs-Input").value);
     for(s = 0; s < numbers.length; s++){
         payout[numbers[s]] += baseBet*multiplier;
     };
-    
+
     var div = document.createElement('div');
             TWWagered += baseBet;
             
@@ -451,15 +508,16 @@ var baseBet = parseInt(document.getElementById("cs-Input").value);
 }
 
 function addChips(parent, chipType, numbers, multiplier) {
+
     multiplier = multiplier *100;
 var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 0) {
     parent.appendChild(createChips(chipType, numbers, multiplier));
   } else {
     for(s = 0; s < numbers.length; s++){
-   
         payout[numbers[s]] += baseBet*multiplier;
     };  
+
     var newVal = parseInt(parent.children[0].innerHTML) + baseBet;
      TWWagered += baseBet;
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
@@ -477,14 +535,14 @@ function removeChips(parent, numbers, multiplier) {
         for(s = 0; s < numbers.length; s++){
         payout[numbers[s]] -= (baseBet+newVal)*multiplier;
         };  
-          
+
           
        TWWagered -= (baseBet + newVal);
       } else if (newVal > 0){
           for(s = 0; s < numbers.length; s++){
         payout[numbers[s]] -= baseBet*multiplier;
         };  
-          
+
           TWWagered -= (baseBet);
       
       
