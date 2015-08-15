@@ -459,6 +459,7 @@ var averageBet = (worldStore.state.user.betted_wager/worldStore.state.user.bette
         var ratio = 40;
     };
     
+    
     if(averageBet > 750 && averageBet < 1001){
         var ratio = 50;
     };
