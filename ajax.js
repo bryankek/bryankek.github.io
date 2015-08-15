@@ -1,14 +1,16 @@
 
 function sendAllBets(button) {
-    checkBet();
-   document.getElementById('bet-button').disabled = true;
 
+   document.getElementById('bet-button').disabled = true;
+    setRangeParam();
+    
     var payouts = rangeParam;
+
     var wager = TWWagered *100;
     var hash = betStore.state.nextHash;
-    
+   
     var bodyParams = {
-    client_seed:0,
+    client_seed:Math.floor(Math.random()*(Math.pow(2,32))),
     hash: hash,
     payouts: payouts,
     wager: wager,

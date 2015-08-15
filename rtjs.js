@@ -1,291 +1,23 @@
 var rangeParam =[];
-
-function dzRangeHelper(type, wager){
-
-switch(type){
-    case "1-12":
-        var from = Math.floor((1/37)*(Math.pow(2,32)));
-        var to = Math.floor(((13)/37)*(Math.pow(2,32)));
-        var param = {
-            from: from,
-            to: to,
-            value: wager * 3 * 100
-        };
-        rangeParam.push(param);
-        break;
-    case "13-24":
-        var from = Math.floor((13/37)*(Math.pow(2,32)));
-        var to = Math.floor(((25)/37)*(Math.pow(2,32)));
-        var param = {
-            from: from,
-            to: to,
-            value: wager * 3 * 100
-        };
-        rangeParam.push(param);
-        break;
-    case "25-36":
-        var from = Math.floor((25/37)*(Math.pow(2,32)));
-        var to = Math.floor(((37)/37)*(Math.pow(2,32)));
-        var param = {
-            from: from,
-            to: to,
-            value: wager * 3 * 100
-        };
-        rangeParam.push(param);
-        break;
-    case "R1":   
-  
-        snRangeHelper(3,wager,3);
-        snRangeHelper(6,wager,3);
-        snRangeHelper(9,wager,3);
-        snRangeHelper(12,wager,3);
-        snRangeHelper(15,wager,3);
-        snRangeHelper(18,wager,3);
-        snRangeHelper(21,wager,3);
-        snRangeHelper(24,wager,3);
-        snRangeHelper(27,wager,3);
-        snRangeHelper(30,wager,3);
-        snRangeHelper(33,wager,3);
-        snRangeHelper(36,wager,3);
-        break;
-    case "R2":   
-        snRangeHelper(2,wager,3);
-        snRangeHelper(5,wager,3);
-        snRangeHelper(8,wager,3);
-        snRangeHelper(11,wager,3);
-        snRangeHelper(14,wager,3);
-        snRangeHelper(17,wager,3);
-        snRangeHelper(20,wager,3);
-        snRangeHelper(23,wager,3);
-        snRangeHelper(26,wager,3);
-        snRangeHelper(29,wager,3);
-        snRangeHelper(32,wager,3);
-        snRangeHelper(35,wager,3);
-        break;
-    case "R3":   
-        snRangeHelper(1,wager,3);
-        snRangeHelper(4,wager,3);
-        snRangeHelper(7,wager,3);
-        snRangeHelper(10,wager,3);
-        snRangeHelper(13,wager,3);
-        snRangeHelper(16,wager,3);
-        snRangeHelper(19,wager,3);
-        snRangeHelper(22,wager,3);
-        snRangeHelper(25,wager,3);
-        snRangeHelper(28,wager,3);
-        snRangeHelper(31,wager,3);
-        snRangeHelper(34,wager,3);
-        break;
-    
-};
+var payout =[];
+payout.length = 37;
+for(var c = 0; c<payout.length;c++){
+payout[c] = 0;
 };
 
-function hcRangeHelper(type, wager){
-switch(type){
-    case "1-18":
-        var from = Math.floor((1/37)*(Math.pow(2,32)));
-        var to = Math.floor(((19)/37)*(Math.pow(2,32)));
-        var param = {
-            from: from,
-            to: to,
-            value: wager * 2 * 100
-        };
-        rangeParam.push(param);
-        break;
-    case "19-36":
-        var from = Math.floor((19/37)*(Math.pow(2,32)));
-        var to = Math.floor((37/37)*(Math.pow(2,32)));
-        var param = {
-            from: from,
-            to: to,
-            value: wager * 2 * 100
-        };
-        rangeParam.push(param);
-        break;
-    case "Even":
-        for(d=1; d < 37;d++){
-            if(d%2 == 0){
-            snRangeHelper(d,wager,2);
-            }
+function setRangeParam(){
+rangeParam =[];
+for(var x = 0; x < 37; x++){
+    rangeParam.push(
+        {
+            from: Math.floor((Math.pow(2,32)*x)/37),
+            to: Math.floor((Math.pow(2,32)*(x+1))/37),
+            value: payout[x]
         }
-        break;
-    case "Odd":
-        for(d=1; d < 37;d++){
-            if(d%2 == 1){
-            snRangeHelper(d,wager,2);
-            }
-        }
-        break;
-    case "Red":
-        snRangeHelper(1,wager,2);
-        snRangeHelper(3,wager,2);
-        snRangeHelper(5,wager,2);
-        snRangeHelper(7,wager,2);
-        snRangeHelper(9,wager,2);
-        snRangeHelper(12,wager,2);
-        snRangeHelper(14,wager,2);
-        snRangeHelper(16,wager,2);
-        snRangeHelper(18,wager,2);
-        snRangeHelper(19,wager,2);
-        snRangeHelper(21,wager,2);
-        snRangeHelper(23,wager,2);
-        snRangeHelper(25,wager,2);
-        snRangeHelper(27,wager,2);
-        snRangeHelper(30,wager,2);
-        snRangeHelper(32,wager,2);
-        snRangeHelper(34,wager,2);
-        snRangeHelper(36,wager,2);
-        break;
-    case "Black":
-        snRangeHelper(2,wager,2);
-        snRangeHelper(4,wager,2);
-        snRangeHelper(6,wager,2);
-        snRangeHelper(8,wager,2);
-        snRangeHelper(10,wager,2);
-        snRangeHelper(11,wager,2);
-        snRangeHelper(13,wager,2);
-        snRangeHelper(15,wager,2);
-        snRangeHelper(17,wager,2);
-        snRangeHelper(20,wager,2);
-        snRangeHelper(22,wager,2);
-        snRangeHelper(24,wager,2);
-        snRangeHelper(26,wager,2);
-        snRangeHelper(28,wager,2);
-        snRangeHelper(29,wager,2);
-        snRangeHelper(31,wager,2);
-        snRangeHelper(33,wager,2);
-        snRangeHelper(35,wager,2);
-        break;  
-
-
-
+    );
+}
 }
 
-}
-
-function cnRangeHelper(num, wager){
-var from1 = Math.floor((num/37)*(Math.pow(2,32)));
-var to1 = Math.floor(((num + 1)/37)*(Math.pow(2,32)));
-var from2 = Math.floor(((num+3)/37)*(Math.pow(2,32)));
-var to2 = Math.floor(((num + 4)/37)*(Math.pow(2,32)));
-var from3 = Math.floor(((num+2)/37)*(Math.pow(2,32)));
-var to3 = Math.floor(((num + 3)/37)*(Math.pow(2,32))); 
-var from4 = Math.floor(((num-1)/37)*(Math.pow(2,32)));
-var to4 = Math.floor(((num)/37)*(Math.pow(2,32))); 
-var param1 = {
-from: from1,
-to: to1,
-value: wager * 9 * 100
-};
-var param2 = {
-from: from2,
-to: to2,
-value: wager * 9 * 100
-};
-var param3 = {
-from: from3,
-to: to3,
-value: wager * 9 * 100
-};
-var param4 = {
-from: from4,
-to: to4,
-value: wager * 9 * 100
-};
-    
-rangeParam.push(param1);
-rangeParam.push(param2);
-rangeParam.push(param3);
-rangeParam.push(param4);
-};
-
-
-
-function sbhRangeHelper(num, wager){
-var from = Math.floor(((num-1)/37)*(Math.pow(2,32)));
-var to = Math.floor(((num + 1)/37)*(Math.pow(2,32)));
-
-var param = {
-from: from,
-to: to,
-value: wager * 18 * 100
-};
-rangeParam.push(param);
-};
-
-
-function sbvRangeHelper(num, wager){
-var from1 = Math.floor((num/37)*(Math.pow(2,32)));
-var to1 = Math.floor(((num + 1)/37)*(Math.pow(2,32)));
-var from2 = Math.floor(((num+3)/37)*(Math.pow(2,32)));
-var to2 = Math.floor(((num + 4)/37)*(Math.pow(2,32)));   
-var param1 = {
-from: from1,
-to: to1,
-value: wager * 18 * 100
-};
-var param2 = {
-from: from2,
-to: to2,
-value: wager * 18 * 100
-};
-rangeParam.push(param1);
-rangeParam.push(param2);
-};
-
-
-function snRangeHelper(num, wager, multi){
-var from = Math.floor((num/37)*(Math.pow(2,32)));
-var to = Math.floor(((num + 1)/37)*(Math.pow(2,32)));
-var param = {
-from: from,
-to: to,
-value: wager * multi * 100
-};
-rangeParam.push(param);
-};
-
-function checkBet(){
-    rangeParam=[];
-var chip = document.getElementsByClassName("chip");
-for(var w = 0; w < chip.length; w++){
-var wager = parseInt(chip[w].innerHTML);
-var val = parseInt(chip[w].parentElement.previousElementSibling.innerHTML);
-snRangeHelper(val, wager, 36);
-};
-var SVchip = document.getElementsByClassName("SVchip");
-for(var w = 0; w < SVchip.length; w++){
-var wager = parseInt(SVchip[w].innerHTML);
-var val = parseInt(SVchip[w].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML);
-sbvRangeHelper(val, wager);
-};
-var SHchip = document.getElementsByClassName("SHchip");
-for(var w = 0; w < SHchip.length; w++){
-var wager = parseInt(SHchip[w].innerHTML);
-var val = parseInt(SHchip[w].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML);
-sbhRangeHelper(val, wager);
-};   
-var cnChip = document.getElementsByClassName("cnChip");
-for(var w = 0; w < cnChip.length; w++){
-var wager = parseInt(cnChip[w].innerHTML);
-var val = parseInt(cnChip[w].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML);
-cnRangeHelper(val, wager);
-};      
-    
-var hChip = document.getElementsByClassName("halfChip");
-for(var w = 0; w<hChip.length; w++){
-var type = document.getElementsByClassName("halfChip")[w].parentElement.parentElement.children[0].innerHTML;
-var wager = parseInt(hChip[w].innerHTML);
-hcRangeHelper(type,wager);
-};
-var dChip = document.getElementsByClassName("dozenChip");
-for(var w = 0; w < dChip.length; w++){
-var type = document.getElementsByClassName("dozenChip")[w].parentElement.parentElement.children[0].innerHTML;
-var wager = parseInt(dChip[w].innerHTML);
-dzRangeHelper(type,wager);
-};
-    
-};
 
 
 
@@ -307,10 +39,17 @@ this.parentElement.nextElementSibling.classList.remove("select");
 };
     
 SBV[b].onclick = function(){
-addChips(this, "SVchip");
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var numbers = [num1, num2];
+addChips(this, "SVchip", numbers,18);
+
 };    
 SBV[b].oncontextmenu = function(){
-removeChips(this);
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var numbers = [num1, num2];
+removeChips(this,numbers,18);
 };    
     
 };
@@ -396,10 +135,17 @@ switch(this.parentElement.classList[u]){
 };
     
 SBH[b].onclick = function(){
-addChips(this, "SHchip");
+
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 -1;
+var numbers = [num1, num2];
+addChips(this, "SHchip", numbers,18);
 };    
 SBH[b].oncontextmenu = function(){
-removeChips(this);
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 -1;
+var numbers = [num1, num2];    
+removeChips(this, numbers,18);
 };      
     
     
@@ -489,10 +235,20 @@ switch(this.parentElement.classList[u]){
     };
     
     CB[t].onclick = function(){
-addChips(this, "cnChip");
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var num3 = num1 -1;
+var num4 = num1 +2;
+var numbers = [num1, num2,num3, num4];
+addChips(this, "cnChip", numbers,9);
 };    
 CB[t].oncontextmenu = function(){
-removeChips(this);
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var num3 = num1 -1;
+var num4 = num1 +2;
+var numbers = [num1, num2,num3, num4];
+removeChips(this, numbers,9);
 };  
 };
 
@@ -677,21 +433,33 @@ tgTR.onmouseout = function() {
 
 var TWWagered = 0;
 
-function createChips(chipType) {
+function createChips(chipType, numbers, multiplier) {
+    
 var baseBet = parseInt(document.getElementById("cs-Input").value);
-  var div = document.createElement('div');
+    for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] += baseBet*multiplier;
+    };
+    
+    var div = document.createElement('div');
             TWWagered += baseBet;
+            
     document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
           div.className = chipType;
   div.innerHTML = baseBet;
+    
   return div;
 }
 
-function addChips(parent, chipType) {
+function addChips(parent, chipType, numbers, multiplier) {
+    multiplier = multiplier *100;
 var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 0) {
-    parent.appendChild(createChips(chipType));
+    parent.appendChild(createChips(chipType, numbers, multiplier));
   } else {
+    for(s = 0; s < numbers.length; s++){
+   
+        payout[numbers[s]] += baseBet*multiplier;
+    };  
     var newVal = parseInt(parent.children[0].innerHTML) + baseBet;
      TWWagered += baseBet;
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
@@ -700,14 +468,27 @@ var baseBet = parseInt(document.getElementById("cs-Input").value);
 
 }
 
-function removeChips(parent) {
+function removeChips(parent, numbers, multiplier) {
+    multiplier = multiplier *100;
     var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 1) {
     var newVal = parseInt(parent.children[0].innerHTML) - baseBet;
       if (newVal<1){
+        for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] -= (baseBet+newVal)*multiplier;
+        };  
+          
+          
        TWWagered -= (baseBet + newVal);
       } else if (newVal > 0){
-      TWWagered -= (baseBet);
+          for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] -= baseBet*multiplier;
+        };  
+          
+          TWWagered -= (baseBet);
+      
+      
+      
       }
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
     parent.children[0].innerHTML = newVal.toString();
@@ -729,12 +510,65 @@ for(var y = 0; y < singleBetCV.length; y++){
 singleBetCV[y].onclick = function(){
       if(disableSingleBet != true){      
         if(this.parentElement.className == "tg-blue-alt r2" || this.parentElement.className == "tg-blue-alt r3"||this.parentElement.className == "tg-red-alt r3" || this.parentElement.className == "tg-black-alt r3" ){
-        addChips(this, "halfChip");
+                switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "1-18":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "19-36":
+            var numbers = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Odd":
+            var numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Even":
+            var numbers = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Red":
+            var numbers = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Black":
+            var numbers = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+
+        }
+   
         }else{
         if(this.parentElement.className == "tg-blue-alt r1" || this.parentElement.className == "tg-blue"){
-        addChips(this, "dozenChip");
+        switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "R1":
+            var numbers = [3,6,9,12,15,18,21,24,27,30,33,36];
+            addChips(this,"dozenChip", numbers, 3);
+            break;
+            case "R2":
+            var numbers = [2,5,8,11,14,17,20,23,26,29,32,35];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "R3":
+            var numbers = [1,4,7,10,13,16,19,22,25,28,31,34];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "1-12":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "13-24":
+            var numbers = [13,14,15,16,17,18,19,20,21,22,23,24];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "25-36":
+            var numbers = [25,26,27,28,29,30,31,32,33,34,35,36];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+        }
         }else{
-            addChips(this, "chip");
+            var numbers = [parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML)]
+            addChips(this, "chip", numbers, 36);
         }
         }
     
@@ -742,7 +576,68 @@ singleBetCV[y].onclick = function(){
 };
 singleBetCV[y].oncontextmenu = function(){
      if(disableSingleBet != true){      
-    removeChips(this);
+   if(this.parentElement.className == "tg-blue-alt r2" || this.parentElement.className == "tg-blue-alt r3"||this.parentElement.className == "tg-red-alt r3" || this.parentElement.className == "tg-black-alt r3" ){
+                switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "1-18":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+            removeChips(this, numbers, 2);
+            break;
+            case "19-36":
+            var numbers = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Odd":
+            var numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Even":
+            var numbers = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Red":
+            var numbers = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Black":
+            var numbers = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];
+                 removeChips(this, numbers, 2);
+            break;
+
+        }
+   
+        }else{
+        if(this.parentElement.className == "tg-blue-alt r1" || this.parentElement.className == "tg-blue"){
+        switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "R1":
+            var numbers = [3,6,9,12,15,18,21,24,27,30,33,36];
+                 removeChips(this, numbers, 3);
+            break;
+            case "R2":
+            var numbers = [2,5,8,11,14,17,20,23,26,29,32,35];
+            removeChips(this, numbers, 3);
+            break;
+            case "R3":
+            var numbers = [1,4,7,10,13,16,19,22,25,28,31,34];
+            removeChips(this, numbers, 3);
+            break;
+            case "1-12":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+           removeChips(this, numbers, 3);
+            break;
+            case "13-24":
+            var numbers = [13,14,15,16,17,18,19,20,21,22,23,24];
+            removeChips(this, numbers, 3);
+            break;
+            case "25-36":
+            var numbers = [25,26,27,28,29,30,31,32,33,34,35,36];
+          removeChips(this, numbers, 3);
+            break;
+        }
+        }else{
+            var numbers = [parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML)]
+            removeChips(this, numbers, 36);
+        }
+        }
      }
 };
     
