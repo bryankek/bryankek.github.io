@@ -89,7 +89,15 @@ height: 30px;
                
 				<div id = "r-table" class="game-area"  oncontextmenu="return false;" ondragstart="return false;" ondrop="return false;">
                      <div class="chip-size-input"><span>Chip Size :</span><input min="1" type="number" value ="1" id="cs-Input"></div>
-                    <div class="spinButton" style="background: #34495e;"><div class = "outcome" id = "outcome">36</div><br><button id = "bet-button" onClick="if(TWWagered == 0){alert('Place at least one bet first')}else{sendAllBets(this);}">Spin</button><div class= "outcome-profit" style="text-align:left">Profit : </div><br><br><div class= "outcome-profit" style="" id = "bet-profit">0.00 bits</div></div>
+                    <div class="spinButton" style="background: #34495e;">
+                        <div class = "outcome" id = "outcome">36</div><br>
+                        <button id = "bet-button" onClick="if(TWWagered == 0){alert('Place at least one bet first')}else{sendAllBets(this);}">Spin</button>
+                        <div class= "outcome-profit" style="text-align:left">Profit</div>
+                        <div class= "outcome-profit-val" style="" id = "bet-profit">0.00 bits</div>
+                         <div class= "outcome-profit" style="text-align:left">Loss</div>
+                        <div class= "outcome-profit-val" style="" id = "bet-loss">0.00 bits</div>
+                        <div class= "outcome-profit" style="text-align:left">Net</div>
+                        <div class= "outcome-profit-val" style="" id = "bet-net">0.00 bits</div></div>
   <div class = "rt"></div>
   <div class="rt-inner"></div>
   <div class="rt-inner-2"></div>

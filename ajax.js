@@ -25,7 +25,7 @@ MoneyPot.placeCustomBet(bodyParams, {
           // Update next bet hash
             Dispatcher.sendAction('SET_NEXT_HASH', bet.next_hash);
             var target = convertRawToNumber(bet.outcome)
-            animateRoll(target, bet);
+            animateRoll(target, bet, wager, bonus);
         
         },
         error: function(xhr) {
@@ -2897,18 +2897,18 @@ alert('profit = ' + (worldStore.state.user.balance - initialBal)/100 + ' bits');
 
 
 
-function animateRoll(target, bet){
+function animateRoll(target, bet, wager, bonus){
 document.getElementById("outcome").innerHTML = parseInt(Math.random() * 36);
 var duration = 1;
 var countLoop;
 var startCount = setInterval(function(){ 
-duration = duration +10;
-if(duration > 199){
-  duration = 199;
+duration = duration +5;
+if(duration >39){
+  duration = 39;
 }  
 clearInterval(countLoop);
 countLoop = setInterval(countup, duration);
-if(duration > 198 && parseInt(document.getElementById("outcome").innerHTML) == target){
+if(duration > 38 && parseInt(document.getElementById("outcome").innerHTML) == target){
 clearInterval(countLoop);
 clearInterval(startCount);
     
@@ -2918,39 +2918,25 @@ document.getElementById('bet-button').disabled = false;
             balance: worldStore.state.user.balance + bet.profit
           }); 
     
-    document.getElementById('bet-profit').innerHTML = parseFloat(bet.profit/100).toFixed(2) + " bits";
+    document.getElementById('bet-net').innerHTML = parseFloat(bet.profit/100).toFixed(2) + " bits";
      Dispatcher.sendAction('NEW_BET', bet);
         if(bet.profit > 0){
-         document.getElementById('bet-profit').style.color = "green";
+         document.getElementById('bet-net').style.color = "green";
         }
         if(bet.profit <0){
-        document.getElementById('bet-profit').style.color = "red";
+        document.getElementById('bet-net').style.color = "red";
         }
-    highlightChips(target);
+    highlightChips(target,wager,bonus);
     disableChips = false;
-    
-}
-  
-}, 200);
-};
-
-
-function countup(){
-  var outcome = parseInt(document.getElementById("outcome").innerHTML);
-  outcome++;
-  if(outcome > 36){
-    outcome = 0;
-  }
-    
-  document.getElementById("outcome").innerHTML = outcome;
-document.getElementById("outcome").style.backgroundColor = "black";
-  switch(outcome){
+    document.getElementById("outcome").style.backgroundColor = "black";
+      switch(target){
       case 0:
           document.getElementById("outcome").style.backgroundColor = "#009901";
           break;
     case 1:
     case 3:
     case 5:
+    case 7:          
     case 6:
     case 9:
     case 12:
@@ -2969,5 +2955,21 @@ document.getElementById("outcome").style.backgroundColor = "black";
            document.getElementById("outcome").style.backgroundColor = "#a90329";
           break;
   }
+}
+  
+}, 40);
+};
+
+
+function countup(){
+  var outcome = parseInt(document.getElementById("outcome").innerHTML);
+  outcome++;
+  if(outcome > 36){
+    outcome = 0;
+  }
+    
+  document.getElementById("outcome").innerHTML = outcome;
+document.getElementById("outcome").style.backgroundColor = "#475360";
+
     
 }

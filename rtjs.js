@@ -31,7 +31,7 @@ return number;
 }
 
 
-function highlightChips(outcome){
+function highlightChips(outcome, totalwagered, bonus){
 var totalProfit = 0;
 var totalLoss = 0;
 var green = "green";
@@ -46,40 +46,40 @@ var HC = document.getElementsByClassName("halfChip");
 for(var x = 0;x<SVC.length;x++){
 if(SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)){
 SVC[x].style.background = green;
-totalProfit += 17 * parseInt(SVC[x].innerHTML);
+totalProfit += 17 * parseFloat(SVC[x].innerHTML);
 }else{
 SVC[x].style.background = red;
-totalLoss += parseInt(SVC[x].innerHTML);
+totalLoss += parseFloat(SVC[x].innerHTML);
 }
 };
  
 for(var x = 0;x<SHC.length;x++){
 if(SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)){
 SHC[x].style.background = green;
-totalProfit += 17 * parseInt(SHC[x].innerHTML);
+totalProfit += 17 * parseFloat(SHC[x].innerHTML);
 }else{
 SHC[x].style.background = red;
-totalLoss += parseInt(SHC[x].innerHTML);
+totalLoss += parseFloat(SHC[x].innerHTML);
 }
 };
 
 for(var x = 0;x<Chip.length;x++){
 if(Chip[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome){
 Chip[x].style.background = green;
-totalProfit += 35 * parseInt(Chip[x].innerHTML);
+totalProfit += 35 * parseFloat(Chip[x].innerHTML);
 }else{
 Chip[x].style.background = red;
-totalLoss += parseInt(Chip[x].innerHTML);
+totalLoss += parseFloat(Chip[x].innerHTML);
 }
 };    
 
 for(var x = 0;x<CNC.length;x++){
 if(CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -2)){
 CNC[x].style.background = green;
-totalProfit += 8 * parseInt(CNC[x].innerHTML);
+totalProfit += 8 * parseFloat(CNC[x].innerHTML);
 }else{
 CNC[x].style.background = red;
-totalLoss += parseInt(CNC[x].innerHTML);
+totalLoss += parseFloat(CNC[x].innerHTML);
 }
 };    
 
@@ -87,59 +87,59 @@ for(var x = 0;x<DZC.length;x++){
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-12"){
 if(outcome >= 1 && outcome <=12){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 }
     
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "13-24"){
 if(outcome >= 13 && outcome <=24){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 };
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "25-36"){
 if(outcome >= 25 && outcome <=36){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 };
 
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R1"){
 if(outcome%3 == 0){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 };
 
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R2"){
 if(outcome%3 == 2 || outcome == 2){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 };    
 
 if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R3"){
 if(outcome%3 == 1 || outcome == 1){    
 DZC[x].style.background = green;
-totalProfit += 2 * parseInt(DZC[x].innerHTML);
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
 }else{
 DZC[x].style.background = red;
-totalLoss += parseInt(DZC[x].innerHTML);
+totalLoss += parseFloat(DZC[x].innerHTML);
 }
 }; 
     
@@ -150,69 +150,87 @@ for(var x = 0;x<HC.length;x++){
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-18"){
 if(outcome >=1 && outcome<=18){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 };    
 
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "19-36"){
 if(outcome >=19 && outcome<=36){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 }; 
 
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Odd"){
 if(outcome%2 == 1){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 }; 
 
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Even"){
 if(outcome%2 == 0){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 };   
     
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Red"){
 if(outcome == 1||outcome == 3||outcome == 5||outcome == 7||outcome == 9||outcome == 12||outcome == 14||outcome == 16||outcome == 18||outcome == 19||outcome == 21||outcome == 23||outcome == 25||outcome == 27||outcome == 30||outcome == 32||outcome == 34||outcome == 36){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 };      
 
 if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Black"){
 if(outcome == 2||outcome == 4||outcome == 6||outcome == 8||outcome == 10||outcome == 11||outcome == 13||outcome == 15||outcome == 17||outcome == 20||outcome == 22||outcome == 24||outcome == 26||outcome == 28||outcome == 29||outcome == 31||outcome == 33||outcome == 35){
 HC[x].style.background = green;
-totalProfit += parseInt(HC[x].innerHTML);
+totalProfit += parseFloat(HC[x].innerHTML);
 }else{
 HC[x].style.background = red;
-totalLoss += parseInt(HC[x].innerHTML);
+totalLoss += parseFloat(HC[x].innerHTML);
 }
 };       
 
 };
+    
+if(outcome == 0){
+totalProfit += (totalwagered/100) * bonus;
+}
 
 console.log("total profit: " + totalProfit);
 console.log("total loss: " + totalLoss);
 console.log("net profit: " + (totalProfit-totalLoss));
+
+document.getElementById('bet-profit').innerHTML = totalProfit.toFixed(2) + " bits";    
+if(totalProfit !=0){
+    document.getElementById('bet-profit').style.color = "green";
+}else{
+ document.getElementById('bet-profit').style.color = "white";
+}
+document.getElementById('bet-loss').innerHTML = "-"+ totalLoss.toFixed(2) + " bits";    
+if(totalLoss !=0){
+    document.getElementById('bet-loss').style.color = "red";
+}else{
+ document.getElementById('bet-loss').style.color = "white";
+}
+    
 };
 
 
