@@ -1,5 +1,5 @@
 function sendAllBets(button) {
-
+disableChips = true;
    document.getElementById('bet-button').disabled = true;
 
     var bonus = checkAverageBet();
@@ -851,7 +851,7 @@ var UserBox = React.createClass({
           
           el.ul(
               {style:{width:'280px',marginRight:'-1px'}},
-        el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openDepositPopup},'Deposit')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openWithdrawPopup},'Withdraw')),el.li(null,el.a({onClick:this._onLogout},'Logout'))
+        el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openDepositPopup},'Deposit')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openWithdrawPopup},'Withdraw')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._onLogout},'Logout'))
             
             
             
@@ -2913,6 +2913,7 @@ clearInterval(countLoop);
 clearInterval(startCount);
     
 document.getElementById('bet-button').disabled = false;
+
             Dispatcher.sendAction('UPDATE_USER', {
             balance: worldStore.state.user.balance + bet.profit
           }); 
@@ -2925,8 +2926,8 @@ document.getElementById('bet-button').disabled = false;
         if(bet.profit <0){
         document.getElementById('bet-profit').style.color = "red";
         }
-    
-    
+    highlightChips(target);
+    disableChips = false;
     
 }
   

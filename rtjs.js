@@ -1,5 +1,7 @@
 var rangeParam =[];
 var payout =[];
+var disableChips = false;
+
 payout.length = 37;
 for(var c = 0; c<payout.length;c++){
 payout[c] = 0;
@@ -27,6 +29,191 @@ var number = x;
 }
 return number;    
 }
+
+
+function highlightChips(outcome){
+var totalProfit = 0;
+var totalLoss = 0;
+var green = "green";
+var red = "red";
+var SVC = document.getElementsByClassName("SVchip");
+var SHC = document.getElementsByClassName("SHchip");
+var Chip = document.getElementsByClassName("chip");
+var CNC = document.getElementsByClassName("cnChip");
+var DZC = document.getElementsByClassName("dozenChip");
+var HC = document.getElementsByClassName("halfChip");
+    
+for(var x = 0;x<SVC.length;x++){
+if(SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)){
+SVC[x].style.background = green;
+totalProfit += 17 * parseInt(SVC[x].innerHTML);
+}else{
+SVC[x].style.background = red;
+totalLoss += parseInt(SVC[x].innerHTML);
+}
+};
+ 
+for(var x = 0;x<SHC.length;x++){
+if(SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)){
+SHC[x].style.background = green;
+totalProfit += 17 * parseInt(SHC[x].innerHTML);
+}else{
+SHC[x].style.background = red;
+totalLoss += parseInt(SHC[x].innerHTML);
+}
+};
+
+for(var x = 0;x<Chip.length;x++){
+if(Chip[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome){
+Chip[x].style.background = green;
+totalProfit += 35 * parseInt(Chip[x].innerHTML);
+}else{
+Chip[x].style.background = red;
+totalLoss += parseInt(Chip[x].innerHTML);
+}
+};    
+
+for(var x = 0;x<CNC.length;x++){
+if(CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -2)){
+CNC[x].style.background = green;
+totalProfit += 8 * parseInt(CNC[x].innerHTML);
+}else{
+CNC[x].style.background = red;
+totalLoss += parseInt(CNC[x].innerHTML);
+}
+};    
+
+for(var x = 0;x<DZC.length;x++){
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-12"){
+if(outcome >= 1 && outcome <=12){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+}
+    
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "13-24"){
+if(outcome >= 13 && outcome <=24){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+};
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "25-36"){
+if(outcome >= 25 && outcome <=36){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+};
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R1"){
+if(outcome%3 == 0){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+};
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R2"){
+if(outcome%3 == 2 || outcome == 2){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+};    
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R3"){
+if(outcome%3 == 1 || outcome == 1){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseInt(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseInt(DZC[x].innerHTML);
+}
+}; 
+    
+};
+    
+for(var x = 0;x<HC.length;x++){
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-18"){
+if(outcome >=1 && outcome<=18){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+};    
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "19-36"){
+if(outcome >=19 && outcome<=36){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+}; 
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Odd"){
+if(outcome%2 == 1){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+}; 
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Even"){
+if(outcome%2 == 0){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+};   
+    
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Red"){
+if(outcome == 1||outcome == 3||outcome == 5||outcome == 7||outcome == 9||outcome == 12||outcome == 14||outcome == 16||outcome == 18||outcome == 19||outcome == 21||outcome == 23||outcome == 25||outcome == 27||outcome == 30||outcome == 32||outcome == 34||outcome == 36){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+};      
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Black"){
+if(outcome == 2||outcome == 4||outcome == 6||outcome == 8||outcome == 10||outcome == 11||outcome == 13||outcome == 15||outcome == 17||outcome == 20||outcome == 22||outcome == 24||outcome == 26||outcome == 28||outcome == 29||outcome == 31||outcome == 33||outcome == 35){
+HC[x].style.background = green;
+totalProfit += parseInt(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseInt(HC[x].innerHTML);
+}
+};       
+
+};
+
+console.log("total profit: " + totalProfit);
+console.log("total loss: " + totalLoss);
+console.log("net profit: " + (totalProfit-totalLoss));
+};
 
 
 var disableSingleBet = false;
@@ -511,13 +698,14 @@ var baseBet = parseInt(document.getElementById("cs-Input").value);
             
     document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
           div.className = chipType;
+    div.style.background = "#FFB84D";
   div.innerHTML = baseBet;
     
   return div;
 }
 
 function addChips(parent, chipType, numbers, multiplier) {
-
+    if(disableChips == false){
     multiplier = multiplier *100;
 var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 0) {
@@ -531,11 +719,13 @@ var baseBet = parseInt(document.getElementById("cs-Input").value);
      TWWagered += baseBet;
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
     parent.children[0].innerHTML = newVal.toString();
+    parent.children[0].style.background = "#FFB84D";
   }
-
+    }
 }
 
 function removeChips(parent, numbers, multiplier) {
+    if(disableChips == false){
     multiplier = multiplier *100;
     var baseBet = parseInt(document.getElementById("cs-Input").value);
   if (parent.children.length == 1) {
@@ -559,15 +749,16 @@ function removeChips(parent, numbers, multiplier) {
       }
           document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
     parent.children[0].innerHTML = newVal.toString();
+    parent.children[0].style.background = "#FFB84D";
 
     if (newVal < 1) {
-
+        
       parent.removeChild(parent.children[0]);
         
     }
 
   }
-
+    }
 }
 
 
@@ -641,6 +832,7 @@ singleBetCV[y].onclick = function(){
     
     }
 };
+    
 singleBetCV[y].oncontextmenu = function(){
      if(disableSingleBet != true){      
    if(this.parentElement.className == "tg-blue-alt r2" || this.parentElement.className == "tg-blue-alt r3"||this.parentElement.className == "tg-red-alt r3" || this.parentElement.className == "tg-black-alt r3" ){
