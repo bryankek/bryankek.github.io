@@ -1,4 +1,3 @@
-
 function sendAllBets(button) {
 
    document.getElementById('bet-button').disabled = true;
@@ -25,7 +24,7 @@ MoneyPot.placeCustomBet(bodyParams, {
             payout[0] -= TWWagered * bonus;
           // Update next bet hash
             Dispatcher.sendAction('SET_NEXT_HASH', bet.next_hash);
-            var target = Math.floor((bet.outcome/Math.pow(2,32))*37);
+            var target = convertRawToNumber(bet.outcome)
             animateRoll(target, bet);
         
         },

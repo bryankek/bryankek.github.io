@@ -19,6 +19,14 @@ for(var x = 0; x < 37; x++){
 }
 
 
+function convertRawToNumber(outcome){
+for(var x = 0; x<rangeParam.length; x++){
+if(outcome>=rangeParam[x].from && outcome<rangeParam[x].to){
+var number = x;
+}    
+}
+return number;    
+}
 
 
 var disableSingleBet = false;
