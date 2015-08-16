@@ -838,7 +838,13 @@ var UserBox = React.createClass({
       innerNode = 
         // Logged in as...
         el.div(
-          {onClick:this._onRefreshUser},
+          {onClick:this._onRefreshUser,
+           style:{  
+               paddingRight: '0px',
+               paddingLeft: '0px'
+          }
+          
+          },
 
           el.span(null, worldStore.state.user.uname),
      
