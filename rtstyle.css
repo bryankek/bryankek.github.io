@@ -49,24 +49,25 @@ text-align: right;
         height: 75px;
     outline:none;
     color:white;
+        cursor: pointer;
 }
 
 .spinButton button:hover{
 background:#87CEEB;
-cursor:button;
+   cursor: pointer;
 outline:none;
 }
 
 .spinButton button:disabled:hover{
     background:#475360;
-cursor:button;
+cursor:none;
 outline:none;
 color:grey;
 }
 
 .spinButton button:disabled{
     background:#475360;
-cursor:button;
+cursor:none;
 outline:none;
 color:grey;
 }
@@ -246,6 +247,7 @@ width:918px;
  height:60px;
  margin-left:-33px;
  margin-top:-30px;
+    cursor:pointer;
 }
 
 
@@ -287,6 +289,11 @@ width:918px;
 user-select: none;
 text-decoration: none;
     cursor: default;
+   
+
+    
+    
+    
 }
 
 .chip, .dozenChip, .halfChip{
@@ -359,6 +366,7 @@ text-decoration: none;
  height:180px;
  margin-left:-33px;
  margin-top:-87px;
+cursor:pointer;
 }
 
 .tg-zero p{
@@ -374,6 +382,7 @@ margin-left:8px;
     height: 60px;
     margin-left: -33px;
     margin-top: -30px;
+    cursor:pointer;
 }
 
 .corner-bet{
@@ -393,7 +402,7 @@ margin-left:8px;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+      cursor: pointer;
 }
 
 .split-betV{
@@ -413,7 +422,7 @@ text-decoration: none;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 .split-betH{
@@ -433,7 +442,7 @@ text-decoration: none;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+    cursor: pointer;
 }
 
 
@@ -448,6 +457,7 @@ text-decoration: none;
     height: 60px;
     margin-left: -33px;
     margin-top: -30px;
+    cursor:pointer;
 }
  
 .tg-blue-alt{
@@ -486,6 +496,7 @@ background:none;
     height: 58px;
     margin-left: -132px;
     margin-top: -29px;
+      cursor:pointer;
     
   }
   .r2 button{
@@ -497,6 +508,7 @@ background:none;
     height: 58px;
     margin-left: -197px;
     margin-top: -29px;
+      cursor:pointer;
   }
   .r3 button{
     background:none;
@@ -507,6 +519,7 @@ width: 198px;
     height: 58px;
     margin-left: -99px;
     margin-top: -29px;
+      cursor:pointer;
   }
  
 .tg-red button:hover {
