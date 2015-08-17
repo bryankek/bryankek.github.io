@@ -62,12 +62,16 @@ var config = {
   redirect_uri: 'https://roulett.oshi.xyz',
   mp_browser_uri: 'https://www.moneypot.com',
   mp_api_uri: 'https://api.moneypot.com',
-  chat_uri: 'https://a-chat-server.herokuapp.com',
+  chat_uri: '//socket.moneypot.com',
   // - Show debug output only if running on localhost
   debug: isRunningLocally(),
   // - Set this to true if you want users that come to http:// to be redirected
   //   to https://
   //force_https_redirect: !isRunningLocally()
+    
+  chat_buffer_size: 250,
+  // - The amount of bets to show on screen in each tab
+  bet_buffer_size: 25
 };
 
 
@@ -183,6 +187,17 @@ var genUuid = function() {
 
 var helpers = {};
 
+
+// For displaying HH:MM timestamp in chat
+//
+// String (Date JSON) -> String
+helpers.formatDateToTime = function(dateJson) {
+  var date = new Date(dateJson);
+  return _.padLeft(date.getHours().toString(), 2, '0') +
+    ':' +
+    _.padLeft(date.getMinutes().toString(), 2, '0');
+};
+
 helpers.randomHouseEdge = function(multiplier,wager){
      console.assert(typeof multiplier === 'number');
      console.assert(typeof wager === 'number');
@@ -250,17 +265,17 @@ helpers.calcNumber = function(cond, winProb) {
 
 helpers.roleToLabelElement = function(role) {
   switch(role) {
-    case 'admin':
+    case 'ADMIN':
       return el.span({style:{
         border: 'solid 1px',
         'borderRadius':  '6px'
       }}, 'MP Staff');
-    case 'mod':
+    case 'MOD':
       return el.span({style:{
         border: 'solid 1px',
         'borderRadius':  '6px'
       }}, 'Mod');
-    case 'owner':
+    case 'OWNER':
       return el.span({style:{
         border: 'solid 1px',
         'borderRadius':  '6px'
@@ -525,7 +540,7 @@ if (window.history && window.history.replaceState) {
 ////////////////////////////////////////////////////////////
 
 var chatStore = new Store('chat', {
-  messages: new CBuffer(250),
+  messages: new CBuffer(config.chat_buffer_size),
   waitingForServer: false,
   userList: {},
   showUserList: false,
@@ -537,10 +552,14 @@ var chatStore = new Store('chat', {
   Dispatcher.registerCallback('INIT_CHAT', function(data) {
     console.log('[ChatStore] received INIT_CHAT');
     // Give each one unique id
-    var messages = data.room.history.map(function(message) {
+    var messages = data.chat.messages.map(function(message) {
       message.id = genUuid();
       return message;
     });
+
+    // Reset the CBuffer since this event may fire multiple times,
+    // e.g. upon every reconnection to chat-server.
+    self.state.messages.empty();
 
     self.state.messages.push.apply(self.state.messages, messages);
 
@@ -548,7 +567,7 @@ var chatStore = new Store('chat', {
     self.state.loadingInitialMessages = false;
 
     // Load userList
-    self.state.userList = data.room.users;
+    self.state.userList = data.chat.userlist;
     self.emitter.emit('change', self.state);
     self.emitter.emit('init');
   });
@@ -582,23 +601,16 @@ var chatStore = new Store('chat', {
     self.emitter.emit('change', self.state);
   });
 
-  Dispatcher.registerCallback('NEW_SYSTEM_MESSAGE', function(text) {
-    console.log('[ChatStore] received NEW_SYSTEM_MESSAGE');
-    self.state.messages.push({
-      id: genUuid(),
-      text: text,
-      user: {uname: '[SYSTEM]'}
-    });
-    self.emitter.emit('change', self.state);
-    self.emitter.emit('new_message');
-  });
-
   // Message is { text: String }
   Dispatcher.registerCallback('SEND_MESSAGE', function(text) {
     console.log('[ChatStore] received SEND_MESSAGE');
     self.state.waitingForServer = true;
     self.emitter.emit('change', self.state);
-    socket.emit('new_message', text);
+    socket.emit('new_message', { text: text }, function(err) {
+      if (err) {
+        alert('Chat Error: ' + err);
+      }
+    });
   });
 });
 
@@ -684,6 +696,7 @@ var worldStore = new Store('world', {
   Dispatcher.registerCallback('UPDATE_USER', function(data) {
     self.state.user = _.merge({}, self.state.user, data);
     self.emitter.emit('change', self.state);
+    document.getElementById('level').innerHTML = "Bonus " + checkAverageBet() + "%";
     
   });
 
@@ -846,7 +859,8 @@ var UserBox = React.createClass({
           
           },
 
-          el.span(null, worldStore.state.user.uname),
+          el.span(null, worldStore.state.user.uname), 
+          el.span({id: 'level',style:{marginLeft:'15px'}}, "Bonus " + checkAverageBet() + "%"), 
      
         el.span(
             {style:{marginLeft:'15px'}},
@@ -856,7 +870,7 @@ var UserBox = React.createClass({
           
           
           el.ul(
-              {style:{width:'280px',marginRight:'-1px'}},
+              {style:{width:'360px',marginRight:'-1px'}},
         el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openDepositPopup},'Deposit')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._openWithdrawPopup},'Withdraw')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({onClick:this._onLogout},'Logout'))
             
             
@@ -941,20 +955,9 @@ var ChatBoxInput = React.createClass({
   render: function() {
     return (
       el.div(
-        {    style: {
-               
-                width:'100%',
-                borderTop: 'solid 1px',
-                borderBottom: 'solid 1px',
-                marginLeft:'0px',
-                paddingTop:'2px',
-                paddingBottom:'2px'
-                
-         
-                
-                },className: 'row'},
+        {className: 'row'},
         el.div(
-          {className: 'col-md-9',style:{width:'70%',paddingLeft:'10px'}},
+          {className: 'col-md-9'},
           chatStore.state.loadingInitialMessages ?
             el.div(
               {
@@ -970,17 +973,11 @@ var ChatBoxInput = React.createClass({
             el.input(
               {
                 id: 'chat-input',
-                className: 'form-control',
-                style: {
-                width: '100%',
-                paddingLeft:'0px'
-                },
-                
-                style:{color:'white'},
+                style:{  border: '1px solid black', background: '#5E778F', outline:'none', borderRadius: '5px', color: 'white', marginLeft:'35px', marginBottom:'35px', width:'500px', height: '30px'},
                 type: 'text',
                 value: this.state.text,
                 placeholder: worldStore.state.user ?
-                  'Click here and begin typing...' :
+                  'Chat' :
                   'Login to chat',
                 onChange: this._onChange,
                 onKeyPress: this._onKeyPress,
@@ -992,19 +989,15 @@ var ChatBoxInput = React.createClass({
             )
         ),
         el.div(
-          {className: 'col-md-3', style:{
-                paddingLeft: '0px'}},
+          {className: 'col-md-3'},
           el.button(
             {
-                style: {
-                'marginTop':  '4px',
-                border:'solid 1px'
-                },
+                 style:{position:'absolute', height: '30px',right:'0', top:'0', marginRight:'-55px', marginTop:'15px'},
               type: 'button',
-              className: 'button large',
-              /*disabled: !worldStore.state.user ||
+              className: 'chatButton',
+              disabled: !worldStore.state.user ||
                 chatStore.state.waitingForServer ||
-                this.state.text.trim().length === 0,*/
+                this.state.text.trim().length === 0,
               onClick: this._onSend
             },
             'Send'
@@ -1020,15 +1013,15 @@ var ChatUserList = React.createClass({
   render: function() {
     return (
       el.div(
-        {className: 'panel panel-default align-left'},
+        {className: 'panel panel-default'},
         el.div(
-          {className: 'panel-heading', style:{'listStyle':'none'    }},
+          {style:{listStyle:'none',position:'absolute', top:'0',right:'0',marginRight:'185px'}},
           'UserList'
         ),
         el.div(
-          {className: 'panel-body'},
+          {style:{listStyle:'none',position:'absolute', top:'0',left:'0', marginTop:'35px',marginLeft:'595px'}},
           el.ul(
-            {},
+            {style:{listStyle:'none'}},
             _.values(chatStore.state.userList).map(function(u) {
               return el.li(
                 {
@@ -1089,75 +1082,68 @@ var ChatBox = React.createClass({
     return el.div(
       {id: 'chat-box'},
       el.div(
-        {className: 'align-left panel panel-default',style:{width:'115%'}},
+        {className: 'panel panel-default'},
         el.div(
-          {className: 'panel-body',style:{ overflow: 'hidden', width:'100%',height:'250px', }},
+          {className: 'panel-body'},
           el.ul(
-            {className: 'chat-list list-unstyled', 
-             style: {
-            paddingLeft:'0px',
-             'listStyle': 'none',
-             overflowY: 'auto',
-              overflowX: 'hidden',
-                 overflowWrap:'break-word',
-            
-                 height: '240px',
-                 width:'100%'
-             },
-                ref: 'chatListRef'},
+            {style:{listStyle:'none', float:'left'}, ref: 'chatListRef'},
             chatStore.state.messages.toArray().map(function(m) {
               return el.li(
                 {
                   // Use message id as unique key
-                  key: m.id,
-                    style:{
-                fontSize:'14px'}
-                   
+                  key: m.id
                 },
-                helpers.roleToLabelElement(m.user.role),
-                ' ',
-                el.code({style:{
-                    fontSize:'14px',
-                 border: 'solid 1px',
-                'borderRadius':  '6px'
-                
-                }}, m.user.uname + ':'),
-                el.div({style:{
-                    fontSize:'16px',
-                'marginLeft':  '6px'
-                
-                }}, ' ' + m.text)
+                el.span(
+                  {
+                    style: {
+                    position:'absolute',
+                    left:'0',
+                    marginLeft: '550px'
+                    }
+                  },
+                  helpers.formatDateToTime(m.created_at),
+                  ' '
+                ),
+                m.user ? helpers.roleToLabelElement(m.user.role) : '',
+                m.user ? ' ' : '',
+                el.code(
+                  null,
+                  m.user ?
+                    // If chat message:
+                    m.user.uname :
+                    // If system message:
+                    'SYSTEM :: ' + m.text
+                ),
+                m.user ?
+                  // If chat message
+                  el.span({style:{position: 'absolute',left: '0',marginTop: '30px',marginLeft: '90px'}}, ' ' + m.text) :
+                  // If system message
+                  ''
               );
             })
           )
         ),
         el.div(
-          {className: 'panel-footer'},
+          {style:{position:'absolute',bottom:'0'}},
           React.createElement(ChatBoxInput, null)
         )
       ),
       // After the chatbox panel
-      el.h1(
+      el.p(
         {
-          className: 'align-left text-right text-muted',
-          style: { marginTop: '15px' }
+          className: 'text-right text-muted',
+          style: {position:'absolute',bottom:'0',right:'0', marginRight:'30px', marginBottom:'15px'}
         },
-        'Users online: ' + Object.keys(chatStore.state.userList).length + ' ',
+        'Users online: ' + Object.keys(chatStore.state.userList).length + ' '
         // Show/Hide userlist button
-        el.button(
-          {
-            className: 'button small',
-            style:{'marginLeft':'15px', border:'solid 1px'},
-            onClick: this._onUserListToggle
-          },
-          chatStore.state.showUserList ? 'Hide' : 'Show'
-        )
+       
       ),
       // Show userlist
-      chatStore.state.showUserList ? React.createElement(ChatUserList, null) : ''
+      React.createElement(ChatUserList, null)
     );
   }
 });
+
 
 var BetBoxChance = React.createClass({
   displayName: 'BetBoxChance',
@@ -2469,9 +2455,20 @@ function connectToChatServer() {
       console.log('[socket] Disconnected');
     });
 
-    socket.on('system_message', function(text) {
-      console.log('[socket] Received system message:', text);
-      Dispatcher.sendAction('NEW_SYSTEM_MESSAGE', text);
+    // When subscribed to DEPOSITS:
+
+    socket.on('unconfirmed_balance_change', function(payload) {
+      console.log('[socket] unconfirmed_balance_change:', payload);
+      Dispatcher.sendAction('UPDATE_USER', {
+        unconfirmed_balance: payload.balance
+      });
+    });
+
+    socket.on('balance_change', function(payload) {
+      console.log('[socket] (confirmed) balance_change:', payload);
+      Dispatcher.sendAction('UPDATE_USER', {
+        balance: payload.balance
+      });
     });
 
     // message is { text: String, user: { role: String, uname: String} }
@@ -2480,22 +2477,27 @@ function connectToChatServer() {
       Dispatcher.sendAction('NEW_MESSAGE', message);
     });
 
-    socket.on('user_muted', function(data) {
-      console.log('[socket] User muted:', data);
-    });
-
-    socket.on('user_unmuted', function(data) {
-      console.log('[socket] User unmuted:', data);
-    });
-
     socket.on('user_joined', function(user) {
       console.log('[socket] User joined:', user);
       Dispatcher.sendAction('USER_JOINED', user);
     });
 
+    // `user` is object { uname: String }
     socket.on('user_left', function(user) {
       console.log('[socket] User left:', user);
       Dispatcher.sendAction('USER_LEFT', user);
+    });
+
+    socket.on('new_bet', function(bet) {
+      console.log('[socket] New bet:', bet);
+
+      // Ignore bets that aren't of kind "simple_dice".
+      if (bet.kind !== 'simple_dice') {
+        console.log('[weird] received bet from socket that was NOT a simple_dice bet');
+        return;
+      }
+
+      Dispatcher.sendAction('NEW_ALL_BET', bet);
     });
 
     // Received when your client doesn't comply with chat-server api
@@ -2506,12 +2508,12 @@ function connectToChatServer() {
     // Once we connect to chat server, we send an auth message to join
     // this app's lobby channel.
 
-    // A hash of the current user's accessToken is only sent if you have one
-    var hashedToken;
-    if (worldStore.state.accessToken) {
-      hashedToken =  CryptoJS.SHA256(worldStore.state.accessToken).toString();
-    }
-    var authPayload = { app_id: config.app_id, hashed_token: hashedToken};
+    var authPayload = {
+      app_id: config.app_id,
+      access_token: worldStore.state.accessToken,
+      subscriptions: ['CHAT', 'DEPOSITS', 'BETS']
+    };
+
     socket.emit('auth', authPayload, function(err, data) {
       if (err) {
         console.log('[socket] Auth failure:', err);
@@ -2522,7 +2524,6 @@ function connectToChatServer() {
     });
   });
 }
-
 // This function is passed to the recaptcha.js script and called when
 // the script loads and exposes the window.grecaptcha object. We pass it
 // as a prop into the faucet component so that the faucet can update when
@@ -2644,6 +2645,11 @@ var App = React.createClass({
 React.render(
 React.createElement(Navbar, null),
   document.getElementById('userBox')
+);
+
+React.render(
+React.createElement(ChatBox, null),
+  document.getElementById('chatBox')
 );
 
 /*

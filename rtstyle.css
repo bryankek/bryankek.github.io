@@ -49,6 +49,25 @@ text-align: right;
     background: #a90329;
 }
 
+
+.chatButton{
+    position: absolute;
+    border: 5px solid grey;
+    background:#475360;
+     border-radius:25px;
+
+
+    outline:none;
+    color:white;
+        cursor: pointer;
+}
+
+.chatButton:hover{
+background:#87CEEB;
+   cursor: pointer;
+outline:none;
+}
+
 .spinButton button{
     position: absolute;
     border: 5px solid grey;
