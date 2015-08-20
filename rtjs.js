@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function rtToggle(parent) {
 document.getElementById('r-table').classList.add("game-show");
 document.getElementById('r-table').classList.remove("game-hide");
