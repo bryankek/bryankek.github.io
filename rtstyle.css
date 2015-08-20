@@ -90,7 +90,7 @@ outline:none;
 
 .spinButton button:disabled:hover{
     background:#475360;
-cursor:none;
+cursor:default;
 outline:none;
 color:grey;
 }

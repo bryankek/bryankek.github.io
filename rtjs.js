@@ -1,1 +1,4092 @@
-var _0x2bcb=["\x67\x61\x6D\x65\x2D\x73\x68\x6F\x77","\x61\x64\x64","\x63\x6C\x61\x73\x73\x4C\x69\x73\x74","\x72\x2D\x74\x61\x62\x6C\x65","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x42\x79\x49\x64","\x67\x61\x6D\x65\x2D\x68\x69\x64\x65","\x72\x65\x6D\x6F\x76\x65","\x64\x69\x63\x65\x47\x61\x6D\x65","\x61\x63\x74\x69\x76\x65\x53\x65\x6C\x65\x63\x74\x69\x6F\x6E","\x64\x54\x72\x69\x67\x67\x65\x72","\x72\x54\x72\x69\x67\x67\x65\x72","\x63\x68\x61\x74\x2D\x73\x68\x6F\x77","\x74\x6F\x67\x67\x6C\x65","\x63\x68\x61\x74\x42\x6F\x78","\x63\x68\x61\x74\x2D\x68\x69\x64\x65","\x73\x74\x61\x74\x2D\x68\x69\x64\x65","\x62\x65\x74\x53\x74\x61\x74\x73","\x73\x74\x61\x74\x2D\x73\x68\x6F\x77","\x62\x54\x72\x69\x67\x67\x65\x72","\x63\x54\x72\x69\x67\x67\x65\x72","\x6C\x65\x6E\x67\x74\x68","\x70\x6F\x77","\x66\x6C\x6F\x6F\x72","\x70\x75\x73\x68","\x66\x72\x6F\x6D","\x74\x6F","\x67\x72\x65\x65\x6E","\x72\x65\x64","\x53\x56\x63\x68\x69\x70","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x43\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x53\x48\x63\x68\x69\x70","\x63\x68\x69\x70","\x63\x6E\x43\x68\x69\x70","\x64\x6F\x7A\x65\x6E\x43\x68\x69\x70","\x68\x61\x6C\x66\x43\x68\x69\x70","\x69\x6E\x6E\x65\x72\x48\x54\x4D\x4C","\x70","\x67\x65\x74\x45\x6C\x65\x6D\x65\x6E\x74\x73\x42\x79\x54\x61\x67\x4E\x61\x6D\x65","\x70\x61\x72\x65\x6E\x74\x45\x6C\x65\x6D\x65\x6E\x74","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64","\x73\x74\x79\x6C\x65","\x31\x2D\x31\x32","\x31\x33\x2D\x32\x34","\x32\x35\x2D\x33\x36","\x52\x31","\x52\x32","\x52\x33","\x31\x2D\x31\x38","\x31\x39\x2D\x33\x36","\x4F\x64\x64","\x45\x76\x65\x6E","\x52\x65\x64","\x42\x6C\x61\x63\x6B","\x62\x65\x74\x2D\x70\x72\x6F\x66\x69\x74","\x74\x6F\x46\x69\x78\x65\x64","\x20\x62\x69\x74\x73","\x63\x6F\x6C\x6F\x72","\x77\x68\x69\x74\x65","\x62\x65\x74\x2D\x6C\x6F\x73\x73","\x2D","\x73\x70\x6C\x69\x74\x2D\x62\x65\x74\x56","\x6F\x6E\x6D\x6F\x75\x73\x65\x6F\x76\x65\x72","\x73\x65\x6C\x65\x63\x74","\x6E\x65\x78\x74\x45\x6C\x65\x6D\x65\x6E\x74\x53\x69\x62\x6C\x69\x6E\x67","\x6F\x6E\x6D\x6F\x75\x73\x65\x6F\x75\x74","\x6F\x6E\x63\x6C\x69\x63\x6B","\x50","\x6F\x6E\x63\x6F\x6E\x74\x65\x78\x74\x6D\x65\x6E\x75","\x73\x70\x6C\x69\x74\x2D\x62\x65\x74\x48","\x33","\x36","\x39","\x31\x32","\x31\x35","\x31\x38","\x32\x31","\x32\x34","\x32\x37","\x33\x30","\x33\x33","\x33\x36","\x32","\x35","\x38","\x31\x31","\x31\x34","\x31\x37","\x32\x30","\x32\x33","\x32\x36","\x32\x39","\x33\x32","\x33\x35","\x63\x6F\x72\x6E\x65\x72\x2D\x62\x65\x74","\x74\x67\x2D\x72\x65\x64","\x74\x67\x2D\x72\x65\x64\x2D\x61\x6C\x74","\x74\x67\x2D\x62\x6C\x61\x63\x6B","\x74\x67\x2D\x62\x6C\x61\x63\x6B\x2D\x61\x6C\x74","\x6F\x64\x64","\x74\x67\x2D\x62\x6C\x75\x65\x2D\x61\x6C\x74\x20\x72\x33","\x65\x76\x65\x6E","\x74\x67\x2D\x62\x6C\x75\x65\x2D\x61\x6C\x74\x20\x72\x32","\x66\x68","\x73\x68","\x74\x67\x2D\x62\x6C\x75\x65\x2D\x61\x6C\x74\x20\x72\x31","\x66\x74","\x73\x74","\x74\x74","\x74\x67\x2D\x62\x6C\x75\x65","\x66\x72","\x73\x72","\x74\x72","\x62\x65\x74\x74\x65\x64\x5F\x77\x61\x67\x65\x72","\x75\x73\x65\x72","\x73\x74\x61\x74\x65","\x62\x65\x74\x74\x65\x64\x5F\x63\x6F\x75\x6E\x74","\x76\x61\x6C\x75\x65","\x63\x73\x2D\x49\x6E\x70\x75\x74","\x64\x69\x76","\x63\x72\x65\x61\x74\x65\x45\x6C\x65\x6D\x65\x6E\x74","\x74\x6F\x74\x61\x6C\x2D\x77\x61\x67\x65\x72\x65\x64","\x63\x6C\x61\x73\x73\x4E\x61\x6D\x65","\x23\x46\x46\x42\x38\x34\x44","\x63\x68\x69\x6C\x64\x72\x65\x6E","\x61\x70\x70\x65\x6E\x64\x43\x68\x69\x6C\x64","\x72\x65\x6D\x6F\x76\x65\x43\x68\x69\x6C\x64","\x63\x68\x69\x70\x43\x56","\x74\x67\x2D\x72\x65\x64\x2D\x61\x6C\x74\x20\x72\x33","\x74\x67\x2D\x62\x6C\x61\x63\x6B\x2D\x61\x6C\x74\x20\x72\x33","\x64\x69\x73\x61\x62\x6C\x65\x64","\x62\x65\x74\x2D\x62\x75\x74\x74\x6F\x6E","\x6E\x65\x78\x74\x48\x61\x73\x68","\x72\x61\x6E\x64\x6F\x6D","\x53\x45\x54\x5F\x4E\x45\x58\x54\x5F\x48\x41\x53\x48","\x6E\x65\x78\x74\x5F\x68\x61\x73\x68","\x73\x65\x6E\x64\x41\x63\x74\x69\x6F\x6E","\x6F\x75\x74\x63\x6F\x6D\x65","\x45\x72\x72\x6F\x72","\x6C\x6F\x67","\x72\x65\x73\x70\x6F\x6E\x73\x65\x4A\x53\x4F\x4E","\x65\x72\x72\x6F\x72","\x49\x6E\x74\x65\x72\x6E\x61\x6C\x20\x45\x72\x72\x6F\x72","\x55\x50\x44\x41\x54\x45\x5F\x57\x41\x47\x45\x52","\x73\x74\x72","\x77\x61\x67\x65\x72","\x70\x6C\x61\x63\x65\x43\x75\x73\x74\x6F\x6D\x42\x65\x74","\x52\x6F\x75\x6C\x65\x74\x6F\x73\x68\x69","\x36\x4C\x64\x4E\x76\x67\x67\x54\x41\x41\x41\x41\x41\x4E\x64\x33\x63\x6E\x2D\x41\x44\x35\x34\x67\x51\x46\x4F\x59\x46\x75\x34\x53\x69\x33\x46\x59\x53\x50\x71\x30","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x72\x6F\x75\x6C\x65\x74\x74\x2E\x6F\x73\x68\x69\x2E\x78\x79\x7A","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x6D\x6F\x6E\x65\x79\x70\x6F\x74\x2E\x63\x6F\x6D","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x70\x69\x2E\x6D\x6F\x6E\x65\x79\x70\x6F\x74\x2E\x63\x6F\x6D","\x2F\x2F\x73\x6F\x63\x6B\x65\x74\x2E\x6D\x6F\x6E\x65\x79\x70\x6F\x74\x2E\x63\x6F\x6D","\x72\x65\x76\x65\x72\x73\x65","\x74\x6F\x41\x72\x72\x61\x79","\x69\x64","\x66\x69\x72\x73\x74","\x41\x42\x54\x61\x62\x6C\x65","\x54\x52","\x54\x44","\x75\x6E\x61\x6D\x65","\x61","\x68\x72\x65\x66","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x77\x77\x77\x2E\x6D\x6F\x6E\x65\x79\x70\x6F\x74\x2E\x63\x6F\x6D\x2F\x62\x65\x74\x73\x2F","\x70\x72\x6F\x66\x69\x74","\x78","\x72\x67\x62\x28\x32\x30\x34\x2C\x20\x30\x2C\x20\x30\x29","\x72\x67\x62\x28\x30\x2C\x20\x32\x35\x35\x2C\x20\x35\x31\x29","\x63\x68\x69\x6C\x64\x4E\x6F\x64\x65\x73","\x69\x6E\x73\x65\x72\x74\x42\x65\x66\x6F\x72\x65","\x66\x6F\x72\x63\x65\x5F\x68\x74\x74\x70\x73\x5F\x72\x65\x64\x69\x72\x65\x63\x74","\x70\x72\x6F\x74\x6F\x63\x6F\x6C","\x6C\x6F\x63\x61\x74\x69\x6F\x6E","\x68\x74\x74\x70\x73\x3A","\x73\x75\x62\x73\x74\x72\x69\x6E\x67","\x68\x6F\x73\x74","\x74\x65\x73\x74","\x44\x4F\x4D","\x72\x65\x70\x6C\x61\x63\x65","\x78\x78\x78\x78\x78\x78\x78\x78\x2D\x78\x78\x78\x78\x2D\x34\x78\x78\x78\x2D\x79\x78\x78\x78\x2D\x78\x78\x78\x78\x78\x78\x78\x78\x78\x78\x78\x78","\x66\x6F\x72\x6D\x61\x74\x44\x61\x74\x65\x54\x6F\x54\x69\x6D\x65","\x67\x65\x74\x48\x6F\x75\x72\x73","\x30","\x70\x61\x64\x4C\x65\x66\x74","\x3A","\x67\x65\x74\x4D\x69\x6E\x75\x74\x65\x73","\x72\x61\x6E\x64\x6F\x6D\x48\x6F\x75\x73\x65\x45\x64\x67\x65","\x6E\x75\x6D\x62\x65\x72","\x61\x73\x73\x65\x72\x74","\x6D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x54\x6F\x57\x69\x6E\x50\x72\x6F\x62","\x63\x61\x6C\x63\x4E\x75\x6D\x62\x65\x72","\x3C","\x3E","\x74\x61\x72\x67\x65\x74\x6F\x75\x74\x63\x6F\x6D\x65","\x3C\x20","\x3E\x20","\x72\x6F\x6C\x65\x54\x6F\x4C\x61\x62\x65\x6C\x45\x6C\x65\x6D\x65\x6E\x74","\x35\x70\x78","\x36\x70\x78","\x4D\x50\x20\x53\x74\x61\x66\x66","\x73\x70\x61\x6E","\x41\x44\x4D\x49\x4E","\x4D\x6F\x64","\x4D\x4F\x44","\x4F\x77\x6E\x65\x72","\x4F\x57\x4E\x45\x52","","\x67\x65\x74\x48\x61\x73\x68\x50\x61\x72\x61\x6D\x73","\x20","\x68\x61\x73\x68","\x65\x78\x65\x63","\x67\x65\x74\x50\x72\x65\x63\x69\x73\x69\x6F\x6E","\x6D\x61\x74\x63\x68","\x6D\x61\x78","\x68\x74\x74\x70\x73\x3A\x2F\x2F\x61\x70\x69\x2E\x6D\x6F\x6E\x65\x79\x70\x6F\x74\x2E\x63\x6F\x6D\x2F\x76\x31\x2F\x6C\x69\x73\x74\x2D\x62\x65\x74\x73\x3F\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x3D","\x61\x63\x63\x65\x73\x73\x54\x6F\x6B\x65\x6E","\x26\x26\x6C\x69\x6D\x69\x74\x3D","\x26\x26\x61\x70\x70\x5F\x69\x64\x3D","\x61\x70\x70\x5F\x69\x64","\x26\x26\x67\x72\x65\x61\x74\x65\x72\x5F\x74\x68\x61\x6E\x3D","\x6A\x73\x6F\x6E","\x47\x45\x54","\x74\x65\x78\x74\x2F\x70\x6C\x61\x69\x6E","\x61\x6A\x61\x78","\x61\x70\x69\x56\x65\x72\x73\x69\x6F\x6E","\x76\x31","\x4D\x75\x73\x74\x20\x68\x61\x76\x65\x20\x61\x63\x63\x65\x73\x73\x54\x6F\x6B\x65\x6E\x20\x73\x65\x74\x20\x74\x6F\x20\x63\x61\x6C\x6C\x20\x4D\x6F\x6E\x65\x79\x50\x6F\x74\x20\x41\x50\x49","\x6D\x70\x5F\x61\x70\x69\x5F\x75\x72\x69","\x2F","\x3F\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x3D","\x73\x74\x72\x69\x6E\x67\x69\x66\x79","\x73\x75\x63\x63\x65\x73\x73","\x63\x6F\x6D\x70\x6C\x65\x74\x65","\x67\x65\x74\x54\x6F\x6B\x65\x6E\x49\x6E\x66\x6F","\x2F\x74\x6F\x6B\x65\x6E","\x67\x65\x6E\x65\x72\x61\x74\x65\x42\x65\x74\x48\x61\x73\x68","\x2F\x68\x61\x73\x68\x65\x73","\x50\x4F\x53\x54","\x67\x65\x74\x44\x65\x70\x6F\x73\x69\x74\x41\x64\x64\x72\x65\x73\x73","\x2F\x64\x65\x70\x6F\x73\x69\x74\x2D\x61\x64\x64\x72\x65\x73\x73","\x63\x6C\x61\x69\x6D\x46\x61\x75\x63\x65\x74","\x48\x69\x74\x74\x69\x6E\x67\x20\x50\x4F\x53\x54\x20\x2F\x63\x6C\x61\x69\x6D\x2D\x66\x61\x75\x63\x65\x74","\x2F\x63\x6C\x61\x69\x6D\x2D\x66\x61\x75\x63\x65\x74","\x70\x6C\x61\x63\x65\x53\x69\x6D\x70\x6C\x65\x44\x69\x63\x65\x42\x65\x74","\x2F\x62\x65\x74\x73\x2F\x73\x69\x6D\x70\x6C\x65\x2D\x64\x69\x63\x65","\x2F\x62\x65\x74\x73\x2F\x63\x75\x73\x74\x6F\x6D","\x63\x61\x6C\x6C\x62\x61\x63\x6B\x73","\x72\x65\x67\x69\x73\x74\x65\x72\x43\x61\x6C\x6C\x62\x61\x63\x6B","\x55\x6E\x73\x75\x70\x70\x6F\x72\x74\x65\x64\x20\x61\x63\x74\x69\x6F\x6E\x4E\x61\x6D\x65\x3A\x20","\x66\x6F\x72\x45\x61\x63\x68","\x65\x6D\x69\x74\x74\x65\x72","\x63\x61\x6C\x6C","\x6F\x6E","\x6F\x66\x66","\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E","\x5B\x74\x6F\x6B\x65\x6E\x20\x6D\x61\x6E\x61\x67\x65\x72\x5D\x20\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x20\x69\x6E\x20\x68\x61\x73\x68\x20\x70\x61\x72\x61\x6D\x73","\x65\x78\x70\x69\x72\x65\x73\x5F\x69\x6E","\x6E\x6F\x77","\x73\x65\x74\x49\x74\x65\x6D","\x65\x78\x70\x69\x72\x65\x73\x5F\x61\x74","\x5B\x74\x6F\x6B\x65\x6E\x20\x6D\x61\x6E\x61\x67\x65\x72\x5D\x20\x61\x63\x63\x65\x73\x73\x5F\x74\x6F\x6B\x65\x6E\x20\x69\x6E\x20\x6C\x6F\x63\x61\x6C\x53\x74\x6F\x72\x61\x67\x65","\x72\x65\x6D\x6F\x76\x65\x49\x74\x65\x6D","\x5B\x74\x6F\x6B\x65\x6E\x20\x6D\x61\x6E\x61\x67\x65\x72\x5D\x20\x6E\x6F\x20\x61\x63\x63\x65\x73\x73\x20\x74\x6F\x6B\x65\x6E","\x68\x69\x73\x74\x6F\x72\x79","\x72\x65\x70\x6C\x61\x63\x65\x53\x74\x61\x74\x65","\x74\x69\x74\x6C\x65","\x23","\x63\x68\x61\x74","\x63\x68\x61\x74\x5F\x62\x75\x66\x66\x65\x72\x5F\x73\x69\x7A\x65","\x49\x4E\x49\x54\x5F\x43\x48\x41\x54","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x49\x4E\x49\x54\x5F\x43\x48\x41\x54","\x6D\x61\x70","\x6D\x65\x73\x73\x61\x67\x65\x73","\x65\x6D\x70\x74\x79","\x61\x70\x70\x6C\x79","\x6C\x6F\x61\x64\x69\x6E\x67\x49\x6E\x69\x74\x69\x61\x6C\x4D\x65\x73\x73\x61\x67\x65\x73","\x75\x73\x65\x72\x4C\x69\x73\x74","\x75\x73\x65\x72\x6C\x69\x73\x74","\x63\x68\x61\x6E\x67\x65","\x65\x6D\x69\x74","\x69\x6E\x69\x74","\x4E\x45\x57\x5F\x4D\x45\x53\x53\x41\x47\x45","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x4E\x45\x57\x5F\x4D\x45\x53\x53\x41\x47\x45","\x6E\x65\x77\x5F\x6D\x65\x73\x73\x61\x67\x65","\x54\x4F\x47\x47\x4C\x45\x5F\x43\x48\x41\x54\x5F\x55\x53\x45\x52\x4C\x49\x53\x54","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x54\x4F\x47\x47\x4C\x45\x5F\x43\x48\x41\x54\x5F\x55\x53\x45\x52\x4C\x49\x53\x54","\x73\x68\x6F\x77\x55\x73\x65\x72\x4C\x69\x73\x74","\x55\x53\x45\x52\x5F\x4A\x4F\x49\x4E\x45\x44","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x55\x53\x45\x52\x5F\x4A\x4F\x49\x4E\x45\x44\x3A","\x55\x53\x45\x52\x5F\x4C\x45\x46\x54","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x55\x53\x45\x52\x5F\x4C\x45\x46\x54\x3A","\x53\x45\x4E\x44\x5F\x4D\x45\x53\x53\x41\x47\x45","\x5B\x43\x68\x61\x74\x53\x74\x6F\x72\x65\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x53\x45\x4E\x44\x5F\x4D\x45\x53\x53\x41\x47\x45","\x77\x61\x69\x74\x69\x6E\x67\x46\x6F\x72\x53\x65\x72\x76\x65\x72","\x43\x68\x61\x74\x20\x45\x72\x72\x6F\x72\x3A\x20","\x62\x65\x74","\x31","\x32\x2E\x30\x30","\x53\x65\x72\x76\x65\x72\x48\x61\x73\x68","\x43\x6C\x69\x65\x6E\x74\x53\x65\x65\x64","\x6D\x65\x72\x67\x65","\x49\x4E\x56\x41\x4C\x49\x44\x5F\x57\x41\x47\x45\x52","\x62\x61\x6C\x61\x6E\x63\x65","\x43\x41\x4E\x4E\x4F\x54\x5F\x41\x46\x46\x4F\x52\x44\x5F\x57\x41\x47\x45\x52","\x6E\x75\x6D","\x55\x50\x44\x41\x54\x45\x5F\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52","\x6D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x77\x6F\x72\x6C\x64","\x4D\x59\x5F\x42\x45\x54\x53","\x55\x50\x44\x41\x54\x45\x5F\x55\x53\x45\x52","\x6C\x65\x76\x65\x6C","\x42\x6F\x6E\x75\x73\x20","\x25","\x55\x53\x45\x52\x5F\x4C\x4F\x47\x49\x4E","\x75\x73\x65\x72\x5F\x75\x70\x64\x61\x74\x65","\x55\x53\x45\x52\x5F\x4C\x4F\x47\x4F\x55\x54","\x62\x65\x74\x73","\x53\x54\x41\x52\x54\x5F\x4C\x4F\x41\x44\x49\x4E\x47","\x69\x73\x4C\x6F\x61\x64\x69\x6E\x67","\x53\x54\x4F\x50\x5F\x4C\x4F\x41\x44\x49\x4E\x47","\x43\x48\x41\x4E\x47\x45\x5F\x54\x41\x42","\x73\x74\x72\x69\x6E\x67","\x63\x75\x72\x72\x54\x61\x62","\x4E\x45\x57\x5F\x42\x45\x54","\x6F\x62\x6A\x65\x63\x74","\x54\x4F\x47\x47\x4C\x45\x5F\x48\x4F\x54\x4B\x45\x59\x53","\x68\x6F\x74\x6B\x65\x79\x73\x45\x6E\x61\x62\x6C\x65\x64","\x44\x49\x53\x41\x42\x4C\x45\x5F\x48\x4F\x54\x4B\x45\x59\x53","\x53\x54\x41\x52\x54\x5F\x52\x45\x46\x52\x45\x53\x48\x49\x4E\x47\x5F\x55\x53\x45\x52","\x69\x73\x52\x65\x66\x72\x65\x73\x68\x69\x6E\x67\x55\x73\x65\x72","\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6C\x6C\x79\x20\x6C\x6F\x61\x64\x65\x64\x20\x75\x73\x65\x72\x20\x66\x72\x6F\x6D\x20\x74\x6F\x6B\x65\x6E\x73\x20\x65\x6E\x64\x70\x6F\x69\x6E\x74","\x61\x75\x74\x68","\x45\x72\x72\x6F\x72\x3A","\x53\x54\x4F\x50\x5F\x52\x45\x46\x52\x45\x53\x48\x49\x4E\x47\x5F\x55\x53\x45\x52","\x47\x52\x45\x43\x41\x50\x54\x43\x48\x41\x5F\x4C\x4F\x41\x44\x45\x44","\x67\x72\x65\x63\x61\x70\x74\x63\x68\x61","\x67\x72\x65\x63\x61\x70\x74\x63\x68\x61\x5F\x6C\x6F\x61\x64\x65\x64","\x55\x73\x65\x72\x42\x6F\x78","\x66\x6F\x72\x63\x65\x55\x70\x64\x61\x74\x65","\x6D\x70\x5F\x62\x72\x6F\x77\x73\x65\x72\x5F\x75\x72\x69","\x2F\x64\x69\x61\x6C\x6F\x67\x2F\x77\x69\x74\x68\x64\x72\x61\x77\x3F\x61\x70\x70\x5F\x69\x64\x3D","\x6D\x61\x6E\x61\x67\x65\x2D\x61\x75\x74\x68","\x2C","\x6A\x6F\x69\x6E","\x77\x69\x64\x74\x68\x3D\x34\x32\x30","\x68\x65\x69\x67\x68\x74\x3D\x34\x35\x30","\x6C\x65\x66\x74\x3D\x31\x30\x30","\x74\x6F\x70\x3D\x31\x30\x30","\x6F\x70\x65\x6E","\x66\x6F\x63\x75\x73","\x2F\x64\x69\x61\x6C\x6F\x67\x2F\x64\x65\x70\x6F\x73\x69\x74\x3F\x61\x70\x70\x5F\x69\x64\x3D","\x4C\x6F\x61\x64\x69\x6E\x67\x2E\x2E\x2E","\x5F\x6F\x6E\x52\x65\x66\x72\x65\x73\x68\x55\x73\x65\x72","\x30\x70\x78","\x31\x35\x70\x78","\x33\x36\x30\x70\x78","\x2D\x31\x70\x78","\x31\x70\x78\x20\x73\x6F\x6C\x69\x64\x20\x23\x63\x36\x64\x30\x64\x61","\x5F\x6F\x70\x65\x6E\x44\x65\x70\x6F\x73\x69\x74\x50\x6F\x70\x75\x70","\x44\x65\x70\x6F\x73\x69\x74","\x6C\x69","\x5F\x6F\x70\x65\x6E\x57\x69\x74\x68\x64\x72\x61\x77\x50\x6F\x70\x75\x70","\x57\x69\x74\x68\x64\x72\x61\x77","\x5F\x6F\x6E\x4C\x6F\x67\x6F\x75\x74","\x4C\x6F\x67\x6F\x75\x74","\x75\x6C","\x2F\x6F\x61\x75\x74\x68\x2F\x61\x75\x74\x68\x6F\x72\x69\x7A\x65","\x3F\x61\x70\x70\x5F\x69\x64\x3D","\x26\x72\x65\x64\x69\x72\x65\x63\x74\x5F\x75\x72\x69\x3D","\x72\x65\x64\x69\x72\x65\x63\x74\x5F\x75\x72\x69","\x4C\x6F\x67\x69\x6E\x20\x77\x69\x74\x68\x20\x4D\x6F\x6E\x65\x79\x70\x6F\x74","\x63\x72\x65\x61\x74\x65\x43\x6C\x61\x73\x73","\x4E\x61\x76\x62\x61\x72","\x43\x68\x61\x74\x42\x6F\x78\x49\x6E\x70\x75\x74","\x74\x61\x72\x67\x65\x74","\x73\x65\x74\x53\x74\x61\x74\x65","\x74\x65\x78\x74","\x77\x68\x69\x63\x68","\x74\x72\x69\x6D","\x31\x30\x30\x25","\x72\x6F\x77","\x63\x6F\x6C\x2D\x6D\x64\x2D\x39","\x37\x70\x78","\x74\x65\x78\x74\x2D\x6D\x75\x74\x65\x64","\x67\x6C\x79\x70\x68\x69\x63\x6F\x6E\x20\x67\x6C\x79\x70\x68\x69\x63\x6F\x6E\x2D\x72\x65\x66\x72\x65\x73\x68\x20\x72\x6F\x74\x61\x74\x65","\x20\x4C\x6F\x61\x64\x69\x6E\x67\x2E\x2E\x2E","\x63\x68\x61\x74\x2D\x69\x6E\x70\x75\x74","\x31\x70\x78\x20\x73\x6F\x6C\x69\x64\x20\x62\x6C\x61\x63\x6B","\x23\x35\x45\x37\x37\x38\x46","\x6E\x6F\x6E\x65","\x33\x35\x70\x78","\x33\x30\x70\x78","\x43\x68\x61\x74","\x4C\x6F\x67\x69\x6E\x20\x74\x6F\x20\x63\x68\x61\x74","\x5F\x6F\x6E\x43\x68\x61\x6E\x67\x65","\x5F\x6F\x6E\x4B\x65\x79\x50\x72\x65\x73\x73","\x5F\x6F\x6E\x46\x6F\x63\x75\x73","\x69\x6E\x70\x75\x74","\x63\x6F\x6C\x2D\x6D\x64\x2D\x33","\x61\x62\x73\x6F\x6C\x75\x74\x65","\x31\x31\x30\x25","\x62\x75\x74\x74\x6F\x6E","\x63\x68\x61\x74\x42\x75\x74\x74\x6F\x6E","\x5F\x6F\x6E\x53\x65\x6E\x64","\x53\x65\x6E\x64","\x43\x68\x61\x74\x55\x73\x65\x72\x4C\x69\x73\x74","\x70\x61\x6E\x65\x6C\x20\x70\x61\x6E\x65\x6C\x2D\x64\x65\x66\x61\x75\x6C\x74","\x32\x30\x25","\x55\x73\x65\x72\x4C\x69\x73\x74","\x6C\x65\x66\x74","\x37\x30\x25","\x35\x30\x70\x78","\x72\x6F\x6C\x65","\x76\x61\x6C\x75\x65\x73","\x72\x65\x73\x69\x7A\x65","\x68\x65\x69\x67\x68\x74","\x63\x70\x68\x65\x69\x67\x68\x74","\x63\x6C\x69\x65\x6E\x74\x48\x65\x69\x67\x68\x74","\x70\x78","\x77\x69\x64\x74\x68","\x63\x6C\x69\x65\x6E\x74","\x61\x64\x64\x45\x76\x65\x6E\x74\x4C\x69\x73\x74\x65\x6E\x65\x72","\x43\x68\x61\x74\x42\x6F\x78","\x67\x65\x74\x44\x4F\x4D\x4E\x6F\x64\x65","\x63\x68\x61\x74\x4C\x69\x73\x74\x52\x65\x66","\x72\x65\x66\x73","\x73\x63\x72\x6F\x6C\x6C\x48\x65\x69\x67\x68\x74","\x73\x63\x72\x6F\x6C\x6C\x54\x6F\x70","\x69\x6E\x6E\x65\x72\x48\x65\x69\x67\x68\x74","\x44\x69\x73\x74\x61\x6E\x63\x65\x46\x72\x6F\x6D\x42\x6F\x74\x74\x6F\x6D\x3A","\x63\x68\x61\x74\x2D\x62\x6F\x78","\x70\x61\x6E\x65\x6C\x2D\x62\x6F\x64\x79","\x68\x69\x64\x64\x65\x6E","\x73\x63\x72\x6F\x6C\x6C","\x63\x72\x65\x61\x74\x65\x64\x5F\x61\x74","\x23\x35\x46\x36\x46\x38\x31","\x53\x59\x53\x54\x45\x4D\x20\x3A\x3A\x20","\x63\x6F\x64\x65","\x62\x72","\x31\x30\x70\x78","\x35\x30\x25","\x74\x65\x78\x74\x2D\x72\x69\x67\x68\x74\x20\x74\x65\x78\x74\x2D\x6D\x75\x74\x65\x64","\x35\x25","\x55\x73\x65\x72\x73\x20\x6F\x6E\x6C\x69\x6E\x65\x3A\x20","\x6B\x65\x79\x73","\x42\x65\x74\x42\x6F\x78\x43\x68\x61\x6E\x63\x65","\x68\x31","\x25\x20\x2D\x20","\x62\x6F\x6C\x64","\x43\x68\x61\x6E\x63\x65\x3A","\x42\x65\x74\x42\x6F\x78\x50\x72\x6F\x66\x69\x74","\x32\x30\x70\x78","\x50\x72\x6F\x66\x69\x74\x3A\x20","\x42\x65\x74\x42\x6F\x78\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x49\x4E\x56\x41\x4C\x49\x44\x5F\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52","\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x4C\x4F\x57","\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x48\x49\x47\x48","\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x50\x52\x45\x43\x49\x53\x45","\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x20\x63\x68\x61\x6E\x67\x65\x64","\x59\x6F\x75\x20\x65\x6E\x74\x65\x72\x65\x64","\x61\x73\x20\x79\x6F\x75\x72\x20\x6D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x61\x6C\x69\x67\x6E\x2D\x6C\x65\x66\x74\x20\x66\x6F\x72\x6D\x2D\x67\x72\x6F\x75\x70","\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x68\x32","\x61\x6C\x69\x67\x6E\x2D\x6C\x65\x66\x74\x20\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x20\x69\x6E\x70\x75\x74\x2D\x6C\x67","\x32\x35\x70\x78","\x33\x30\x30","\x5F\x6F\x6E\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x43\x68\x61\x6E\x67\x65","\x42\x65\x74\x42\x6F\x78\x57\x61\x67\x65\x72","\x72\x6F\x75\x6E\x64","\x61\x6C\x69\x67\x6E\x2D\x72\x69\x67\x68\x74\x20\x66\x6F\x72\x6D\x2D\x67\x72\x6F\x75\x70","\x23\x34\x34\x34","\x57\x61\x67\x65\x72","\x61\x6C\x69\x67\x6E\x2D\x72\x69\x67\x68\x74\x20\x66\x6F\x72\x6D\x2D\x63\x6F\x6E\x74\x72\x6F\x6C\x20\x69\x6E\x70\x75\x74\x2D\x6C\x67","\x5F\x6F\x6E\x57\x61\x67\x65\x72\x43\x68\x61\x6E\x67\x65","\x42\x69\x74\x73","\x61\x6C\x69\x67\x6E\x2D\x72\x69\x67\x68\x74\x20","\x34\x30\x25","\x62\x74\x6E\x2D\x67\x72\x6F\x75\x70","\x31\x36\x25","\x31\x30\x25","\x62\x75\x74\x74\x6F\x6E\x20\x62\x69\x67","\x73\x6F\x6C\x69\x64\x20\x31\x70\x78\x20\x77\x68\x69\x74\x65","\x31\x32\x30\x70\x78","\x5F\x6F\x6E\x48\x61\x6C\x76\x65\x57\x61\x67\x65\x72","\x31\x2F\x32\x78","\x28\x58\x29","\x6B\x62\x64","\x34\x25","\x5F\x6F\x6E\x44\x6F\x75\x62\x6C\x65\x57\x61\x67\x65\x72","\x32\x78\x20","\x28\x43\x29","\x5F\x6F\x6E\x4D\x61\x78\x57\x61\x67\x65\x72","\x4D\x61\x78","\x28\x56\x29","\x42\x65\x74\x42\x6F\x78\x42\x75\x74\x74\x6F\x6E","\x50\x6C\x61\x63\x69\x6E\x67\x20\x62\x65\x74\x2E\x2E\x2E","\x6D\x65\x74\x61","\x73\x65\x63\x72\x65\x74","\x7C","\x73\x61\x6C\x74","\x63\x6F\x6E\x64","\x6F\x75\x74\x63\x6F\x6D\x65\x61\x6E\x69\x6D","\x75\x70\x64\x61\x74\x65","\x50\x72\x65\x76\x42\x65\x74\x49\x44","\x62\x65\x74\x5F\x69\x64","\x50\x72\x65\x76\x53\x65\x72\x76\x65\x72\x48\x61\x73\x68","\x50\x72\x65\x76\x43\x6C\x69\x65\x6E\x74\x53\x65\x65\x64","\x50\x72\x65\x76\x42\x65\x74\x46\x61\x69\x72","\x56\x65\x72\x69\x66\x69\x65\x64","\x53\x6F\x6D\x65\x74\x68\x69\x6E\x67\x20\x77\x65\x6E\x74\x20\x77\x72\x6F\x6E\x67\x2C\x20\x70\x6C\x65\x61\x73\x65\x20\x63\x68\x65\x63\x6B\x20\x6F\x6E\x20\x74\x68\x65\x20\x64\x65\x74\x61\x69\x6C\x65\x64\x20","\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6C\x6C\x79\x20\x70\x6C\x61\x63\x65\x64\x20\x62\x65\x74\x3A","\x59\x6F\x75\x20\x63\x61\x6E\x6E\x6F\x74\x20\x61\x66\x66\x6F\x72\x64\x20\x77\x61\x67\x65\x72","\x49\x6E\x76\x61\x6C\x69\x64\x20\x77\x61\x67\x65\x72","\x49\x6E\x76\x61\x6C\x69\x64\x20\x6D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72","\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x20\x74\x6F\x6F\x20\x70\x72\x65\x63\x69\x73\x65","\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x20\x74\x6F\x6F\x20\x68\x69\x67\x68","\x4D\x75\x6C\x74\x69\x70\x6C\x69\x65\x72\x20\x74\x6F\x6F\x20\x6C\x6F\x77","\x62\x75\x74\x74\x6F\x6E\x20\x73\x6D\x61\x6C\x6C","\x49\x6E\x76\x61\x6C\x69\x64\x20\x62\x65\x74","\x63\x6F\x6C\x2D\x78\x73\x2D\x36","\x62\x65\x74\x2D\x68\x69","\x38\x30\x70\x78","\x48\x69\x67\x68\x20","\x28\x48\x29","\x62\x65\x74\x2D\x6C\x6F","\x31\x35\x25","\x4C\x6F\x77\x20","\x28\x4C\x29","\x73\x6F\x6C\x69\x64\x20\x31\x70\x78","\x4C\x6F\x67\x69\x6E\x20\x77\x69\x74\x68\x20\x4D\x6F\x6E\x65\x79\x50\x6F\x74","\x61\x6C\x69\x67\x6E\x2D\x6C\x65\x66\x74","\x63\x6F\x6C\x2D\x6D\x64\x2D\x32","\x63\x6F\x6C\x2D\x6D\x64\x2D\x38","\x63\x6F\x6C\x2D\x73\x6D\x2D\x36","\x42\x61\x6C\x61\x6E\x63\x65\x3A\x20","\x48\x6F\x74\x6B\x65\x79\x54\x6F\x67\x67\x6C\x65","\x34\x2E\x36\x25","\x5F\x6F\x6E\x43\x6C\x69\x63\x6B","\x48\x6F\x74\x6B\x65\x79\x73\x3A\x20","\x6C\x61\x62\x65\x6C\x20\x6C\x61\x62\x65\x6C\x2D\x73\x75\x63\x63\x65\x73\x73","\x4F\x4E","\x6C\x61\x62\x65\x6C\x20\x6C\x61\x62\x65\x6C\x2D\x64\x65\x66\x61\x75\x6C\x74","\x4F\x46\x46","\x42\x65\x74\x42\x6F\x78","\x37\x25","\x63\x6F\x6C\x2D\x78\x73\x2D\x31\x32","\x68\x72","\x70\x61\x6E\x65\x6C\x2D\x66\x6F\x6F\x74\x65\x72\x20\x63\x6C\x65\x61\x72\x66\x69\x78","\x54\x61\x62\x73","\x72\x6F\x77\x20\x6E\x61\x76\x20\x6E\x61\x76\x2D\x74\x61\x62\x73","\x41\x4C\x4C\x5F\x42\x45\x54\x53","\x61\x63\x74\x69\x76\x65","\x61\x62\x62\x75\x74\x74\x6F\x6E","\x6A\x61\x76\x61\x73\x63\x72\x69\x70\x74\x3A\x76\x6F\x69\x64\x28\x30\x29","\x41\x6C\x6C\x20\x42\x65\x74\x73","\x6D\x62\x62\x75\x74\x74\x6F\x6E","\x4D\x79\x20\x42\x65\x74\x73","\x72\x65\x63\x61\x70\x74\x63\x68\x61\x5F\x73\x69\x74\x65\x6B\x65\x79","\x46\x41\x55\x43\x45\x54","\x66\x62\x75\x74\x74\x6F\x6E","\x46\x61\x75\x63\x65\x74\x20","\x41\x6C\x6C\x42\x65\x74\x73\x54\x61\x62\x43\x6F\x6E\x74\x65\x6E\x74","\x69\x6E\x74\x65\x72\x76\x61\x6C","\x72\x65\x6E\x64\x65\x72\x65\x64\x20\x6F\x6E\x63\x65","\x61\x75\x74\x6F","\x34\x30\x30\x70\x78","\x74\x61\x62\x6C\x65","\x50\x6C\x61\x79\x65\x72","\x74\x68","\x42\x65\x74\x20\x49\x44","\x50\x72\x6F\x66\x69\x74","\x64\x65\x62\x75\x67","\x44\x75\x6D\x70","\x74\x68\x65\x61\x64","\x74\x64","\x23\x46\x46\x46\x46\x46\x46","\x2B","\x74\x62\x6F\x64\x79","\x4C\x6F\x67\x20\x69\x6E\x20\x66\x69\x72\x73\x74\x20\x74\x6F\x20\x76\x69\x65\x77\x20\x41\x6C\x6C\x20\x42\x65\x74\x73","\x4D\x79\x42\x65\x74\x73\x54\x61\x62\x43\x6F\x6E\x74\x65\x6E\x74","\x49\x44","\x4F\x75\x74\x63\x6F\x6D\x65","\x54\x61\x72\x67\x65\x74","\x2F\x62\x65\x74\x73\x2F","\x37\x35\x70\x78","\x20\x20","\x70\x72\x65","\x46\x61\x75\x63\x65\x74\x54\x61\x62\x43\x6F\x6E\x74\x65\x6E\x74","\x53\x48\x4F\x57\x5F\x52\x45\x43\x41\x50\x54\x43\x48\x41","\x72\x65\x63\x61\x70\x74\x63\x68\x61\x2D\x74\x61\x72\x67\x65\x74","\x5F\x6F\x6E\x52\x65\x63\x61\x70\x74\x63\x68\x61\x53\x75\x62\x6D\x69\x74","\x72\x65\x6E\x64\x65\x72","\x72\x65\x63\x61\x70\x74\x63\x68\x61\x20\x73\x75\x62\x6D\x69\x74\x74\x65\x64\x3A\x20","\x57\x41\x49\x54\x49\x4E\x47\x5F\x46\x4F\x52\x5F\x53\x45\x52\x56\x45\x52","\x61\x6D\x6F\x75\x6E\x74","\x53\x55\x43\x43\x45\x53\x53\x46\x55\x4C\x4C\x59\x5F\x43\x4C\x41\x49\x4D\x45\x44","\x46\x41\x55\x43\x45\x54\x5F\x41\x4C\x52\x45\x41\x44\x59\x5F\x43\x4C\x41\x49\x4D\x45\x44","\x41\x4C\x52\x45\x41\x44\x59\x5F\x43\x4C\x41\x49\x4D\x45\x44","\x6C\x65\x61\x64","\x59\x6F\x75\x20\x6D\x75\x73\x74\x20\x6C\x6F\x67\x69\x6E\x20\x74\x6F\x20\x63\x6C\x61\x69\x6D\x20\x66\x61\x75\x63\x65\x74","\x53\x75\x63\x63\x65\x73\x73\x66\x75\x6C\x6C\x79\x20\x63\x6C\x61\x69\x6D\x65\x64\x20","\x63\x6C\x61\x69\x6D\x41\x6D\x6F\x75\x6E\x74","\x20\x62\x69\x74\x73\x2E","\x20\x59\x6F\x75\x20\x63\x61\x6E\x20\x63\x6C\x61\x69\x6D\x20\x61\x67\x61\x69\x6E\x20\x69\x6E\x20\x35\x20\x6D\x69\x6E\x75\x74\x65\x73\x2E","\x55\x6E\x68\x61\x6E\x64\x6C\x65\x64\x20\x66\x61\x75\x63\x65\x74\x20\x73\x74\x61\x74\x65","\x66\x61\x75\x63\x65\x74\x53\x74\x61\x74\x65","\x54\x61\x62\x43\x6F\x6E\x74\x65\x6E\x74","\x62\x61\x63\x6B\x67\x72\x6F\x75\x6E\x64\x43\x6F\x6C\x6F\x72","\x72\x67\x62\x28\x31\x32\x32\x2C\x20\x31\x39\x31\x2C\x20\x31\x32\x32\x29","\x20\x23\x33\x42\x41\x36\x36\x36","\x55\x6E\x73\x75\x70\x70\x6F\x72\x74\x65\x64\x20\x63\x75\x72\x72\x54\x61\x62\x20\x76\x61\x6C\x75\x65\x3A\x20","\x46\x6F\x6F\x74\x65\x72","\x74\x65\x78\x74\x2D\x63\x65\x6E\x74\x65\x72\x20\x74\x65\x78\x74\x2D\x6D\x75\x74\x65\x64","\x32\x30\x30\x70\x78","\x50\x6F\x77\x65\x72\x65\x64\x20\x62\x79\x20","\x4D\x6F\x6E\x65\x79\x70\x6F\x74","\x43\x6F\x6E\x6E\x65\x63\x74\x69\x6E\x67\x20\x74\x6F\x20\x63\x68\x61\x74\x20\x73\x65\x72\x76\x65\x72\x2E\x20\x41\x63\x63\x65\x73\x73\x54\x6F\x6B\x65\x6E\x3A","\x63\x68\x61\x74\x5F\x75\x72\x69","\x63\x6F\x6E\x6E\x65\x63\x74","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x43\x6F\x6E\x6E\x65\x63\x74\x65\x64","\x64\x69\x73\x63\x6F\x6E\x6E\x65\x63\x74","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x44\x69\x73\x63\x6F\x6E\x6E\x65\x63\x74\x65\x64","\x75\x6E\x63\x6F\x6E\x66\x69\x72\x6D\x65\x64\x5F\x62\x61\x6C\x61\x6E\x63\x65\x5F\x63\x68\x61\x6E\x67\x65","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x75\x6E\x63\x6F\x6E\x66\x69\x72\x6D\x65\x64\x5F\x62\x61\x6C\x61\x6E\x63\x65\x5F\x63\x68\x61\x6E\x67\x65\x3A","\x62\x61\x6C\x61\x6E\x63\x65\x5F\x63\x68\x61\x6E\x67\x65","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x28\x63\x6F\x6E\x66\x69\x72\x6D\x65\x64\x29\x20\x62\x61\x6C\x61\x6E\x63\x65\x5F\x63\x68\x61\x6E\x67\x65\x3A","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x52\x65\x63\x65\x69\x76\x65\x64\x20\x63\x68\x61\x74\x20\x6D\x65\x73\x73\x61\x67\x65\x3A","\x75\x73\x65\x72\x5F\x6A\x6F\x69\x6E\x65\x64","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x55\x73\x65\x72\x20\x6A\x6F\x69\x6E\x65\x64\x3A","\x75\x73\x65\x72\x5F\x6C\x65\x66\x74","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x55\x73\x65\x72\x20\x6C\x65\x66\x74\x3A","\x6E\x65\x77\x5F\x62\x65\x74","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x4E\x65\x77\x20\x62\x65\x74\x3A","\x6B\x69\x6E\x64","\x73\x69\x6D\x70\x6C\x65\x5F\x64\x69\x63\x65","\x5B\x77\x65\x69\x72\x64\x5D\x20\x72\x65\x63\x65\x69\x76\x65\x64\x20\x62\x65\x74\x20\x66\x72\x6F\x6D\x20\x73\x6F\x63\x6B\x65\x74\x20\x74\x68\x61\x74\x20\x77\x61\x73\x20\x4E\x4F\x54\x20\x61\x20\x73\x69\x6D\x70\x6C\x65\x5F\x64\x69\x63\x65\x20\x62\x65\x74","\x4E\x45\x57\x5F\x41\x4C\x4C\x5F\x42\x45\x54","\x63\x6C\x69\x65\x6E\x74\x5F\x65\x72\x72\x6F\x72","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x43\x6C\x69\x65\x6E\x74\x20\x65\x72\x72\x6F\x72\x3A","\x77\x61\x72\x6E","\x43\x48\x41\x54","\x44\x45\x50\x4F\x53\x49\x54\x53","\x42\x45\x54\x53","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x41\x75\x74\x68\x20\x66\x61\x69\x6C\x75\x72\x65\x3A","\x5B\x73\x6F\x63\x6B\x65\x74\x5D\x20\x41\x75\x74\x68\x20\x73\x75\x63\x63\x65\x73\x73\x3A","\x6B\x65\x79\x64\x6F\x77\x6E","\x73\x74\x6F\x70\x50\x72\x6F\x70\x61\x67\x61\x74\x69\x6F\x6E","\x70\x72\x65\x76\x65\x6E\x74\x44\x65\x66\x61\x75\x6C\x74","\x63\x6C\x69\x63\x6B","\x23\x62\x65\x74\x2D\x6C\x6F","\x23\x62\x65\x74\x2D\x68\x69","\x6D\x65\x73\x73\x61\x67\x65","\x6F\x72\x69\x67\x69\x6E","\x64\x61\x74\x61","\x55\x50\x44\x41\x54\x45\x5F\x42\x41\x4C\x41\x4E\x43\x45","\x4F\x75\x74\x63\x6F\x6D\x65\x53\x74\x61\x74\x73","\x4F\x43\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x34\x30\x70\x78","\x31\x30\x30\x70\x78","\x2D\x2D","\x41\x70\x70","\x63\x6F\x6E\x74\x61\x69\x6E\x65\x72","\x63\x6F\x6C\x2D\x73\x6D\x2D\x35","\x63\x6F\x6C\x2D\x73\x6D\x2D\x37","\x75\x73\x65\x72\x42\x6F\x78","\x6D\x61\x78\x54\x50","\x6D\x61\x78\x53\x4C","\x62\x65\x74\x53\x69\x7A\x65","\x78\x4C\x6F\x73\x73","\x66\x4C\x6F\x73\x73","\x78\x57\x69\x6E","\x66\x57\x69\x6E","\x73\x4C\x6F\x73\x73","\x73\x57\x69\x6E","\x62\x65\x74\x4D\x6F\x64\x65","\x70\x72\x6F\x66\x69\x74\x20\x3D\x20","\x6C\x61\x73\x74","\x62\x65\x74\x2D\x6E\x65\x74","\x62\x6C\x61\x63\x6B","\x23\x30\x30\x39\x39\x30\x31","\x23\x61\x39\x30\x33\x32\x39","\x23\x34\x37\x35\x33\x36\x30"];function rtToggle(_0x84a3x2){document[_0x2bcb[4]](_0x2bcb[3])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[0]);document[_0x2bcb[4]](_0x2bcb[3])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[5]);document[_0x2bcb[4]](_0x2bcb[7])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[0]);document[_0x2bcb[4]](_0x2bcb[7])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[5]);_0x84a3x2[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[8]);document[_0x2bcb[4]](_0x2bcb[9])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[8]);}function diceToggle(_0x84a3x2){document[_0x2bcb[4]](_0x2bcb[7])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[0]);document[_0x2bcb[4]](_0x2bcb[7])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[5]);document[_0x2bcb[4]](_0x2bcb[3])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[0]);document[_0x2bcb[4]](_0x2bcb[3])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[5]);_0x84a3x2[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[8]);document[_0x2bcb[4]](_0x2bcb[10])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[8]);}function chatToggle(_0x84a3x2){document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[11]);document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[14]);document[_0x2bcb[4]](_0x2bcb[16])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[15]);document[_0x2bcb[4]](_0x2bcb[16])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[17]);_0x84a3x2[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[8]);document[_0x2bcb[4]](_0x2bcb[18])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[8]);}function statToggle(_0x84a3x2){document[_0x2bcb[4]](_0x2bcb[16])[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[17]);document[_0x2bcb[4]](_0x2bcb[16])[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[15]);document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[11]);document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[14]);_0x84a3x2[_0x2bcb[2]][_0x2bcb[12]](_0x2bcb[8]);document[_0x2bcb[4]](_0x2bcb[19])[_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[8]);}var rangeParam=[];var payout=[];var disableChips=false;payout[_0x2bcb[20]]=37;for(var c=0;c<payout[_0x2bcb[20]];c++){payout[c]=0};function setRangeParam(){rangeParam=[];for(var _0x84a3xb=0;_0x84a3xb<37;_0x84a3xb++){rangeParam[_0x2bcb[23]]({from:Math[_0x2bcb[22]]((Math[_0x2bcb[21]](2,32)*_0x84a3xb)/37),to:Math[_0x2bcb[22]]((Math[_0x2bcb[21]](2,32)*(_0x84a3xb+1))/37),value:payout[_0x84a3xb]})};}function convertRawToNumber(_0x84a3xd){for(var _0x84a3xb=0;_0x84a3xb<rangeParam[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3xd>=rangeParam[_0x84a3xb][_0x2bcb[24]]&&_0x84a3xd<rangeParam[_0x84a3xb][_0x2bcb[25]]){var _0x84a3xe=_0x84a3xb}};return _0x84a3xe;}function highlightChips(_0x84a3xd,_0x84a3x10,_0x84a3x11){var _0x84a3x12=0;var _0x84a3x13=0;var _0x84a3x14=_0x2bcb[26];var _0x84a3x15=_0x2bcb[27];var _0x84a3x16=document[_0x2bcb[29]](_0x2bcb[28]);var _0x84a3x17=document[_0x2bcb[29]](_0x2bcb[30]);var _0x84a3x18=document[_0x2bcb[29]](_0x2bcb[31]);var _0x84a3x19=document[_0x2bcb[29]](_0x2bcb[32]);var _0x84a3x1a=document[_0x2bcb[29]](_0x2bcb[33]);var _0x84a3x1b=document[_0x2bcb[29]](_0x2bcb[34]);for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x16[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x16[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x84a3xd||_0x84a3x16[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==(_0x84a3xd-3)){_0x84a3x16[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=17*parseFloat(_0x84a3x16[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x16[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x16[_0x84a3xb][_0x2bcb[35]]);}};for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x17[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x17[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x84a3xd||_0x84a3x17[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==(_0x84a3xd+1)){_0x84a3x17[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=17*parseFloat(_0x84a3x17[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x17[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x17[_0x84a3xb][_0x2bcb[35]]);}};for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x18[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x18[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x84a3xd){_0x84a3x18[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=35*parseFloat(_0x84a3x18[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x18[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x18[_0x84a3xb][_0x2bcb[35]]);}};for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x19[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x19[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x84a3xd||_0x84a3x19[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==(_0x84a3xd+1)||_0x84a3x19[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==(_0x84a3xd-3)||_0x84a3x19[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==(_0x84a3xd-2)){_0x84a3x19[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=8*parseFloat(_0x84a3x19[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x19[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x19[_0x84a3xb][_0x2bcb[35]]);}};for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x1a[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[41]){if(_0x84a3xd>=1&&_0x84a3xd<=12){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[42]){if(_0x84a3xd>=13&&_0x84a3xd<=24){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[43]){if(_0x84a3xd>=25&&_0x84a3xd<=36){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[44]){if(_0x84a3xd%3==0){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[45]){if(_0x84a3xd%3==2||_0x84a3xd==2){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1a[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[46]){if(_0x84a3xd%3==1||_0x84a3xd==1){_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=2*parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1a[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1a[_0x84a3xb][_0x2bcb[35]]);}};};for(var _0x84a3xb=0;_0x84a3xb<_0x84a3x1b[_0x2bcb[20]];_0x84a3xb++){if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[47]){if(_0x84a3xd>=1&&_0x84a3xd<=18){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[48]){if(_0x84a3xd>=19&&_0x84a3xd<=36){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[49]){if(_0x84a3xd%2==1){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[50]){if(_0x84a3xd%2==0){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[51]){if(_0x84a3xd==1||_0x84a3xd==3||_0x84a3xd==5||_0x84a3xd==7||_0x84a3xd==9||_0x84a3xd==12||_0x84a3xd==14||_0x84a3xd==16||_0x84a3xd==18||_0x84a3xd==19||_0x84a3xd==21||_0x84a3xd==23||_0x84a3xd==25||_0x84a3xd==27||_0x84a3xd==30||_0x84a3xd==32||_0x84a3xd==34||_0x84a3xd==36){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};if(_0x84a3x1b[_0x84a3xb][_0x2bcb[38]][_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[36])[0][_0x2bcb[35]]==_0x2bcb[52]){if(_0x84a3xd==2||_0x84a3xd==4||_0x84a3xd==6||_0x84a3xd==8||_0x84a3xd==10||_0x84a3xd==11||_0x84a3xd==13||_0x84a3xd==15||_0x84a3xd==17||_0x84a3xd==20||_0x84a3xd==22||_0x84a3xd==24||_0x84a3xd==26||_0x84a3xd==28||_0x84a3xd==29||_0x84a3xd==31||_0x84a3xd==33||_0x84a3xd==35){_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x14;_0x84a3x12+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}else {_0x84a3x1b[_0x84a3xb][_0x2bcb[40]][_0x2bcb[39]]=_0x84a3x15;_0x84a3x13+=parseFloat(_0x84a3x1b[_0x84a3xb][_0x2bcb[35]]);}};};if(_0x84a3xd==0){_0x84a3x12+=(_0x84a3x10/100)*_0x84a3x11};document[_0x2bcb[4]](_0x2bcb[53])[_0x2bcb[35]]=_0x84a3x12[_0x2bcb[54]](2)+_0x2bcb[55];if(_0x84a3x12!=0){document[_0x2bcb[4]](_0x2bcb[53])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[26]}else {document[_0x2bcb[4]](_0x2bcb[53])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[57]};document[_0x2bcb[4]](_0x2bcb[58])[_0x2bcb[35]]=_0x2bcb[59]+_0x84a3x13[_0x2bcb[54]](2)+_0x2bcb[55];if(_0x84a3x13!=0){document[_0x2bcb[4]](_0x2bcb[58])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[27]}else {document[_0x2bcb[4]](_0x2bcb[58])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[57]};}var disableSingleBet=false;var SBV=document[_0x2bcb[29]](_0x2bcb[60]);for(var b=0;b<33;b++){SBV[b][_0x2bcb[61]]=function(){disableSingleBet=true;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);this[_0x2bcb[38]][_0x2bcb[63]][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);};SBV[b][_0x2bcb[64]]=function(){disableSingleBet=false;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);this[_0x2bcb[38]][_0x2bcb[63]][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);};SBV[b][_0x2bcb[65]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f+3;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20];addChips(this,_0x2bcb[28],_0x84a3x21,18);};SBV[b][_0x2bcb[67]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f+3;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20];removeChips(this,_0x84a3x21,18);};};var SBH=document[_0x2bcb[29]](_0x2bcb[68]);for(var b=0;b<24;b++){SBH[b][_0x2bcb[61]]=function(){disableSingleBet=true;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);for(var _0x84a3x23=0;_0x84a3x23<this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[20]];_0x84a3x23++){switch(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23]){case _0x2bcb[69]:;case _0x2bcb[70]:;case _0x2bcb[71]:;case _0x2bcb[72]:;case _0x2bcb[73]:;case _0x2bcb[74]:;case _0x2bcb[75]:;case _0x2bcb[76]:;case _0x2bcb[77]:;case _0x2bcb[78]:;case _0x2bcb[79]:;case _0x2bcb[80]:;case _0x2bcb[81]:;case _0x2bcb[82]:;case _0x2bcb[83]:;case _0x2bcb[84]:;case _0x2bcb[85]:;case _0x2bcb[86]:;case _0x2bcb[87]:;case _0x2bcb[88]:;case _0x2bcb[89]:;case _0x2bcb[90]:;case _0x2bcb[91]:;case _0x2bcb[92]:var _0x84a3x24=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])-1;document[_0x2bcb[29]](_0x84a3x24)[0][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);break ;;}};};SBH[b][_0x2bcb[64]]=function(){disableSingleBet=false;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);for(var _0x84a3x23=0;_0x84a3x23<this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[20]];_0x84a3x23++){switch(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23]){case _0x2bcb[69]:;case _0x2bcb[70]:;case _0x2bcb[71]:;case _0x2bcb[72]:;case _0x2bcb[73]:;case _0x2bcb[74]:;case _0x2bcb[75]:;case _0x2bcb[76]:;case _0x2bcb[77]:;case _0x2bcb[78]:;case _0x2bcb[79]:;case _0x2bcb[80]:;case _0x2bcb[81]:;case _0x2bcb[82]:;case _0x2bcb[83]:;case _0x2bcb[84]:;case _0x2bcb[85]:;case _0x2bcb[86]:;case _0x2bcb[87]:;case _0x2bcb[88]:;case _0x2bcb[89]:;case _0x2bcb[90]:;case _0x2bcb[91]:;case _0x2bcb[92]:var _0x84a3x24=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])-1;document[_0x2bcb[29]](_0x84a3x24)[0][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);break ;;}};};SBH[b][_0x2bcb[65]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f-1;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20];addChips(this,_0x2bcb[30],_0x84a3x21,18);};SBH[b][_0x2bcb[67]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f-1;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20];removeChips(this,_0x84a3x21,18);};};var CB=document[_0x2bcb[29]](_0x2bcb[93]);for(var t=0;t<22;t++){CB[t][_0x2bcb[61]]=function(){disableSingleBet=true;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);for(var _0x84a3x23=0;_0x84a3x23<this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[20]];_0x84a3x23++){switch(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23]){case _0x2bcb[69]:;case _0x2bcb[70]:;case _0x2bcb[71]:;case _0x2bcb[72]:;case _0x2bcb[73]:;case _0x2bcb[74]:;case _0x2bcb[75]:;case _0x2bcb[76]:;case _0x2bcb[77]:;case _0x2bcb[78]:;case _0x2bcb[79]:;case _0x2bcb[81]:;case _0x2bcb[82]:;case _0x2bcb[83]:;case _0x2bcb[84]:;case _0x2bcb[85]:;case _0x2bcb[86]:;case _0x2bcb[87]:;case _0x2bcb[88]:;case _0x2bcb[89]:;case _0x2bcb[90]:;case _0x2bcb[91]:var _0x84a3x27=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])-1;var _0x84a3x28=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])+2;var _0x84a3x29=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])+3;document[_0x2bcb[29]](_0x84a3x27)[0][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);document[_0x2bcb[29]](_0x84a3x28)[0][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);document[_0x2bcb[29]](_0x84a3x29)[0][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62]);break ;;}};};CB[t][_0x2bcb[64]]=function(){disableSingleBet=false;this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);for(var _0x84a3x23=0;_0x84a3x23<this[_0x2bcb[38]][_0x2bcb[2]][_0x2bcb[20]];_0x84a3x23++){switch(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23]){case _0x2bcb[69]:;case _0x2bcb[70]:;case _0x2bcb[71]:;case _0x2bcb[72]:;case _0x2bcb[73]:;case _0x2bcb[74]:;case _0x2bcb[75]:;case _0x2bcb[76]:;case _0x2bcb[77]:;case _0x2bcb[78]:;case _0x2bcb[79]:;case _0x2bcb[81]:;case _0x2bcb[82]:;case _0x2bcb[83]:;case _0x2bcb[84]:;case _0x2bcb[85]:;case _0x2bcb[86]:;case _0x2bcb[87]:;case _0x2bcb[88]:;case _0x2bcb[89]:;case _0x2bcb[90]:;case _0x2bcb[91]:var _0x84a3x27=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])-1;var _0x84a3x28=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])+2;var _0x84a3x29=parseInt(this[_0x2bcb[38]][_0x2bcb[2]][_0x84a3x23])+3;document[_0x2bcb[29]](_0x84a3x27)[0][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);document[_0x2bcb[29]](_0x84a3x28)[0][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);document[_0x2bcb[29]](_0x84a3x29)[0][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62]);break ;;}};};CB[t][_0x2bcb[65]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f+3;var _0x84a3x2a=_0x84a3x1f-1;var _0x84a3x2b=_0x84a3x1f+2;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20,_0x84a3x2a,_0x84a3x2b];addChips(this,_0x2bcb[32],_0x84a3x21,9);};CB[t][_0x2bcb[67]]=function(){var _0x84a3x1f=parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]);var _0x84a3x20=_0x84a3x1f+3;var _0x84a3x2a=_0x84a3x1f-1;var _0x84a3x2b=_0x84a3x1f+2;var _0x84a3x21=[_0x84a3x1f,_0x84a3x20,_0x84a3x2a,_0x84a3x2b];removeChips(this,_0x84a3x21,9);};};var tgRed=document[_0x2bcb[29]](_0x2bcb[94]);var tgRedAlt=document[_0x2bcb[29]](_0x2bcb[95])[0];tgRedAlt[_0x2bcb[61]]=function(){for(var _0x84a3x2e=0;_0x84a3x2e<tgRed[_0x2bcb[20]];_0x84a3x2e++){tgRed[_0x84a3x2e][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgRedAlt[_0x2bcb[64]]=function(){for(var _0x84a3x2f=0;_0x84a3x2f<tgRed[_0x2bcb[20]];_0x84a3x2f++){tgRed[_0x84a3x2f][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgBlack=document[_0x2bcb[29]](_0x2bcb[96]);var tgBlackAlt=document[_0x2bcb[29]](_0x2bcb[97])[0];tgBlackAlt[_0x2bcb[61]]=function(){for(var _0x84a3x32=0;_0x84a3x32<tgBlack[_0x2bcb[20]];_0x84a3x32++){tgBlack[_0x84a3x32][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgBlackAlt[_0x2bcb[64]]=function(){for(var _0x84a3x33=0;_0x84a3x33<tgBlack[_0x2bcb[20]];_0x84a3x33++){tgBlack[_0x84a3x33][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgOddElms=document[_0x2bcb[29]](_0x2bcb[98]);var tgOddBet=document[_0x2bcb[29]](_0x2bcb[99])[0];tgOddBet[_0x2bcb[61]]=function(){for(var y=0;y<tgOddElms[_0x2bcb[20]];y++){tgOddElms[y][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgOddBet[_0x2bcb[64]]=function(){for(var y=0;y<tgOddElms[_0x2bcb[20]];y++){tgOddElms[y][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgEvElms=document[_0x2bcb[29]](_0x2bcb[100]);var tgEvBet=document[_0x2bcb[29]](_0x2bcb[99])[1];tgEvBet[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgEvElms[_0x2bcb[20]];_0x84a3x39++){tgEvElms[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgEvBet[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgEvElms[_0x2bcb[20]];_0x84a3x39++){tgEvElms[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgFH=document[_0x2bcb[29]](_0x2bcb[101])[0];var tgFHElm=document[_0x2bcb[29]](_0x2bcb[102]);tgFH[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFHElm[_0x2bcb[20]];_0x84a3x39++){tgFHElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgFH[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFHElm[_0x2bcb[20]];_0x84a3x39++){tgFHElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgSH=document[_0x2bcb[29]](_0x2bcb[101])[1];var tgSHElm=document[_0x2bcb[29]](_0x2bcb[103]);tgSH[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSHElm[_0x2bcb[20]];_0x84a3x39++){tgSHElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgSH[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSHElm[_0x2bcb[20]];_0x84a3x39++){tgSHElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgFT=document[_0x2bcb[29]](_0x2bcb[104])[0];var tgFTElm=document[_0x2bcb[29]](_0x2bcb[105]);tgFT[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFTElm[_0x2bcb[20]];_0x84a3x39++){tgFTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgFT[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFTElm[_0x2bcb[20]];_0x84a3x39++){tgFTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgST=document[_0x2bcb[29]](_0x2bcb[104])[1];var tgSTElm=document[_0x2bcb[29]](_0x2bcb[106]);tgST[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSTElm[_0x2bcb[20]];_0x84a3x39++){tgSTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgST[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSTElm[_0x2bcb[20]];_0x84a3x39++){tgSTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgTT=document[_0x2bcb[29]](_0x2bcb[104])[2];var tgTTElm=document[_0x2bcb[29]](_0x2bcb[107]);tgTT[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgTTElm[_0x2bcb[20]];_0x84a3x39++){tgTTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgTT[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgTTElm[_0x2bcb[20]];_0x84a3x39++){tgTTElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgFR=document[_0x2bcb[29]](_0x2bcb[108])[0];var tgFRElm=document[_0x2bcb[29]](_0x2bcb[109]);tgFR[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFRElm[_0x2bcb[20]];_0x84a3x39++){tgFRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgFR[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgFRElm[_0x2bcb[20]];_0x84a3x39++){tgFRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgSR=document[_0x2bcb[29]](_0x2bcb[108])[1];var tgSRElm=document[_0x2bcb[29]](_0x2bcb[110]);tgSR[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSRElm[_0x2bcb[20]];_0x84a3x39++){tgSRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgSR[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgSRElm[_0x2bcb[20]];_0x84a3x39++){tgSRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var tgTR=document[_0x2bcb[29]](_0x2bcb[108])[2];var tgTRElm=document[_0x2bcb[29]](_0x2bcb[111]);tgTR[_0x2bcb[61]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgTRElm[_0x2bcb[20]];_0x84a3x39++){tgTRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[1]](_0x2bcb[62])}};tgTR[_0x2bcb[64]]=function(){for(var _0x84a3x39=0;_0x84a3x39<tgTRElm[_0x2bcb[20]];_0x84a3x39++){tgTRElm[_0x84a3x39][_0x2bcb[2]][_0x2bcb[6]](_0x2bcb[62])}};var TWWagered=0;function checkAverageBet(){var _0x84a3x4c=(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[112]]/worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[115]])/100;var _0x84a3x4d=0;if(_0x84a3x4c>0&&_0x84a3x4c<101){_0x84a3x4d=10};if(_0x84a3x4c>100&&_0x84a3x4c<151){_0x84a3x4d=15};if(_0x84a3x4c>150&&_0x84a3x4c<201){_0x84a3x4d=20};if(_0x84a3x4c>200&&_0x84a3x4c<351){_0x84a3x4d=25};if(_0x84a3x4c>350&&_0x84a3x4c<501){_0x84a3x4d=30};if(_0x84a3x4c>500&&_0x84a3x4c<751){_0x84a3x4d=40};if(_0x84a3x4c>750&&_0x84a3x4c<1001){_0x84a3x4d=50};if(_0x84a3x4c>1000&&_0x84a3x4c<1501){_0x84a3x4d=60};if(_0x84a3x4c>1500&&_0x84a3x4c<2001){_0x84a3x4d=70};if(_0x84a3x4c>2000&&_0x84a3x4c<3501){_0x84a3x4d=80};if(_0x84a3x4c>3500&&_0x84a3x4c<5001){_0x84a3x4d=80};if(_0x84a3x4c>5000){_0x84a3x4d=90};return _0x84a3x4d;}function createChips(_0x84a3x4f,_0x84a3x21,_0x84a3x50){var _0x84a3x51=parseInt(document[_0x2bcb[4]](_0x2bcb[117])[_0x2bcb[116]]);for(s=0;s<_0x84a3x21[_0x2bcb[20]];s++){payout[_0x84a3x21[s]]+=_0x84a3x51*_0x84a3x50};var _0x84a3x52=document[_0x2bcb[119]](_0x2bcb[118]);TWWagered+=_0x84a3x51;document[_0x2bcb[4]](_0x2bcb[120])[_0x2bcb[35]]=TWWagered+_0x2bcb[55];_0x84a3x52[_0x2bcb[121]]=_0x84a3x4f;_0x84a3x52[_0x2bcb[40]][_0x2bcb[39]]=_0x2bcb[122];_0x84a3x52[_0x2bcb[35]]=_0x84a3x51;return _0x84a3x52;}function addChips(_0x84a3x2,_0x84a3x4f,_0x84a3x21,_0x84a3x50){if(disableChips==false){_0x84a3x50=_0x84a3x50*100;var _0x84a3x51=parseInt(document[_0x2bcb[4]](_0x2bcb[117])[_0x2bcb[116]]);if(_0x84a3x2[_0x2bcb[123]][_0x2bcb[20]]==0){_0x84a3x2[_0x2bcb[124]](createChips(_0x84a3x4f,_0x84a3x21,_0x84a3x50))}else {for(s=0;s<_0x84a3x21[_0x2bcb[20]];s++){payout[_0x84a3x21[s]]+=_0x84a3x51*_0x84a3x50};var _0x84a3x54=parseInt(_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[35]])+_0x84a3x51;TWWagered+=_0x84a3x51;document[_0x2bcb[4]](_0x2bcb[120])[_0x2bcb[35]]=TWWagered+_0x2bcb[55];_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[35]]=_0x84a3x54.toString();_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[40]][_0x2bcb[39]]=_0x2bcb[122];};}}function removeChips(_0x84a3x2,_0x84a3x21,_0x84a3x50){if(disableChips==false){_0x84a3x50=_0x84a3x50*100;var _0x84a3x51=parseInt(document[_0x2bcb[4]](_0x2bcb[117])[_0x2bcb[116]]);if(_0x84a3x2[_0x2bcb[123]][_0x2bcb[20]]==1){var _0x84a3x54=parseInt(_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[35]])-_0x84a3x51;if(_0x84a3x54<1){for(s=0;s<_0x84a3x21[_0x2bcb[20]];s++){payout[_0x84a3x21[s]]-=(_0x84a3x51+_0x84a3x54)*_0x84a3x50};TWWagered-=(_0x84a3x51+_0x84a3x54);}else {if(_0x84a3x54>0){for(s=0;s<_0x84a3x21[_0x2bcb[20]];s++){payout[_0x84a3x21[s]]-=_0x84a3x51*_0x84a3x50};TWWagered-=(_0x84a3x51);}};document[_0x2bcb[4]](_0x2bcb[120])[_0x2bcb[35]]=TWWagered+_0x2bcb[55];_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[35]]=_0x84a3x54.toString();_0x84a3x2[_0x2bcb[123]][0][_0x2bcb[40]][_0x2bcb[39]]=_0x2bcb[122];if(_0x84a3x54<1){_0x84a3x2[_0x2bcb[125]](_0x84a3x2[_0x2bcb[123]][0])};};}}var singleBetCV=document[_0x2bcb[29]](_0x2bcb[126]);for(var y=0;y<singleBetCV[_0x2bcb[20]];y++){singleBetCV[y][_0x2bcb[65]]=function(){if(disableSingleBet!=true){if(this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[101]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[99]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[127]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[128]){switch(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]){case _0x2bcb[47]:var _0x84a3x21=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;case _0x2bcb[48]:var _0x84a3x21=[19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;case _0x2bcb[49]:var _0x84a3x21=[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;case _0x2bcb[50]:var _0x84a3x21=[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;case _0x2bcb[51]:var _0x84a3x21=[1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;case _0x2bcb[52]:var _0x84a3x21=[2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];addChips(this,_0x2bcb[34],_0x84a3x21,2);break ;;}}else {if(this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[104]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[108]){switch(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]){case _0x2bcb[44]:var _0x84a3x21=[3,6,9,12,15,18,21,24,27,30,33,36];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;case _0x2bcb[45]:var _0x84a3x21=[2,5,8,11,14,17,20,23,26,29,32,35];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;case _0x2bcb[46]:var _0x84a3x21=[1,4,7,10,13,16,19,22,25,28,31,34];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;case _0x2bcb[41]:var _0x84a3x21=[1,2,3,4,5,6,7,8,9,10,11,12];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;case _0x2bcb[42]:var _0x84a3x21=[13,14,15,16,17,18,19,20,21,22,23,24];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;case _0x2bcb[43]:var _0x84a3x21=[25,26,27,28,29,30,31,32,33,34,35,36];addChips(this,_0x2bcb[33],_0x84a3x21,3);break ;;}}else {var _0x84a3x21=[parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]])];addChips(this,_0x2bcb[31],_0x84a3x21,36);}}}};singleBetCV[y][_0x2bcb[67]]=function(){if(disableSingleBet!=true){if(this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[101]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[99]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[127]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[128]){switch(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]){case _0x2bcb[47]:var _0x84a3x21=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];removeChips(this,_0x84a3x21,2);break ;;case _0x2bcb[48]:var _0x84a3x21=[19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];removeChips(this,_0x84a3x21,2);break ;;case _0x2bcb[49]:var _0x84a3x21=[1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];removeChips(this,_0x84a3x21,2);break ;;case _0x2bcb[50]:var _0x84a3x21=[2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];removeChips(this,_0x84a3x21,2);break ;;case _0x2bcb[51]:var _0x84a3x21=[1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];removeChips(this,_0x84a3x21,2);break ;;case _0x2bcb[52]:var _0x84a3x21=[2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];removeChips(this,_0x84a3x21,2);break ;;}}else {if(this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[104]||this[_0x2bcb[38]][_0x2bcb[121]]==_0x2bcb[108]){switch(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]]){case _0x2bcb[44]:var _0x84a3x21=[3,6,9,12,15,18,21,24,27,30,33,36];removeChips(this,_0x84a3x21,3);break ;;case _0x2bcb[45]:var _0x84a3x21=[2,5,8,11,14,17,20,23,26,29,32,35];removeChips(this,_0x84a3x21,3);break ;;case _0x2bcb[46]:var _0x84a3x21=[1,4,7,10,13,16,19,22,25,28,31,34];removeChips(this,_0x84a3x21,3);break ;;case _0x2bcb[41]:var _0x84a3x21=[1,2,3,4,5,6,7,8,9,10,11,12];removeChips(this,_0x84a3x21,3);break ;;case _0x2bcb[42]:var _0x84a3x21=[13,14,15,16,17,18,19,20,21,22,23,24];removeChips(this,_0x84a3x21,3);break ;;case _0x2bcb[43]:var _0x84a3x21=[25,26,27,28,29,30,31,32,33,34,35,36];removeChips(this,_0x84a3x21,3);break ;;}}else {var _0x84a3x21=[parseInt(this[_0x2bcb[38]][_0x2bcb[37]](_0x2bcb[66])[0][_0x2bcb[35]])];removeChips(this,_0x84a3x21,36);}}}};};function sendAllBets(_0x84a3x58){disableChips=true;document[_0x2bcb[4]](_0x2bcb[130])[_0x2bcb[129]]=true;var _0x84a3x11=checkAverageBet();payout[0]+=TWWagered*_0x84a3x11;setRangeParam();var _0x84a3x59=rangeParam;var wager=TWWagered*100;var _0x84a3x5b=betStore[_0x2bcb[114]][_0x2bcb[131]];var _0x84a3x5c={client_seed:Math[_0x2bcb[22]](Math[_0x2bcb[132]]()*(Math[_0x2bcb[21]](2,32))),hash:_0x84a3x5b,payouts:_0x84a3x59,wager:wager,max_subsidy:0};MoneyPot[_0x2bcb[145]](_0x84a3x5c,{success:function(_0x84a3x5d){payout[0]-=TWWagered*_0x84a3x11;Dispatcher[_0x2bcb[135]](_0x2bcb[133],_0x84a3x5d[_0x2bcb[134]]);var _0x84a3x5e=convertRawToNumber(_0x84a3x5d[_0x2bcb[136]]);animateRoll(_0x84a3x5e,_0x84a3x5d,wager,_0x84a3x11);},error:function(_0x84a3x5f){document[_0x2bcb[4]](_0x2bcb[130])[_0x2bcb[129]]=false;payout[0]-=TWWagered*_0x84a3x11;console[_0x2bcb[138]](_0x2bcb[137]);if(_0x84a3x5f[_0x2bcb[139]]&&_0x84a3x5f[_0x2bcb[139]]){alert(_0x84a3x5f[_0x2bcb[139]][_0x2bcb[140]])}else {alert(_0x2bcb[141])};},complete:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]]})}});}var config={app_id:529,app_name:_0x2bcb[146],recaptcha_sitekey:_0x2bcb[147],redirect_uri:_0x2bcb[148],mp_browser_uri:_0x2bcb[149],mp_api_uri:_0x2bcb[150],chat_uri:_0x2bcb[151],debug:isRunningLocally(),chat_buffer_size:250,bet_buffer_size:25};var toggle=true;var RenderNow=function(){if(toggle==true){clearInterval(refreshBet);setInterval(refreshBet,5000);React[_0x2bcb[119]](AllBetsTabContent,null);}else {}};var refreshBet=function(){setTimeout(function(){if(getAllBetData(lastBetID,10)[_0x2bcb[20]]!=0){FirstBuffer[_0x2bcb[23]](getAllBetData(lastBetID,10));SecondBuffer[_0x2bcb[152]]();ThirdBuffer= new CBuffer(100);for(j=(FirstBuffer[_0x2bcb[153]]()[0][_0x2bcb[20]]-1);j> -1;j--){SecondBuffer[_0x2bcb[23]](FirstBuffer[_0x2bcb[153]]()[0][j]);ThirdBuffer[_0x2bcb[23]](FirstBuffer[_0x2bcb[153]]()[0][j]);};SecondBuffer[_0x2bcb[152]]();lastBetID=SecondBuffer[_0x2bcb[155]]()[_0x2bcb[154]];if(document[_0x2bcb[4]](_0x2bcb[156])!=null){for(k=0;k<ThirdBuffer[_0x2bcb[153]]()[_0x2bcb[20]];k++){var _0x84a3x64=document[_0x2bcb[119]](_0x2bcb[157]);var _0x84a3x65=document[_0x2bcb[119]](_0x2bcb[158]);_0x84a3x65[_0x2bcb[35]]=ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[159]];var _0x84a3x66=document[_0x2bcb[119]](_0x2bcb[158]);var _0x84a3x67=document[_0x2bcb[119]](_0x2bcb[160]);_0x84a3x67[_0x2bcb[161]]=_0x2bcb[162]+ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[154]];_0x84a3x66[_0x2bcb[124]](_0x84a3x67);_0x84a3x67[_0x2bcb[35]]=ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[154]];_0x84a3x67[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[57];var _0x84a3x68=document[_0x2bcb[119]](_0x2bcb[158]);_0x84a3x68[_0x2bcb[35]]=ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[144]]/100+_0x2bcb[55];var _0x84a3x69=document[_0x2bcb[119]](_0x2bcb[158]);_0x84a3x69[_0x2bcb[35]]=ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[163]]/100+_0x2bcb[55];var _0x84a3x6a=document[_0x2bcb[119]](_0x2bcb[158]);_0x84a3x6a[_0x2bcb[35]]=((ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[144]]+(ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[163]]>0?ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[163]]:ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[163]]* -1))/ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[144]])[_0x2bcb[54]](2)+_0x2bcb[164];if(ThirdBuffer[_0x2bcb[153]]()[k][_0x2bcb[163]]<0){_0x84a3x69[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[165]}else {_0x84a3x69[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[166]};_0x84a3x64[_0x2bcb[124]](_0x84a3x65);_0x84a3x64[_0x2bcb[124]](_0x84a3x66);_0x84a3x64[_0x2bcb[124]](_0x84a3x68);_0x84a3x64[_0x2bcb[124]](_0x84a3x69);_0x84a3x64[_0x2bcb[124]](_0x84a3x6a);document[_0x2bcb[4]](_0x2bcb[156])[_0x2bcb[168]](_0x84a3x64,document[_0x2bcb[4]](_0x2bcb[156])[_0x2bcb[167]][0]);}};}else {}},1000)};var FirstBuffer= new CBuffer(1);var SecondBuffer= new CBuffer(100);var lastBetID=0;if(config[_0x2bcb[169]]&&window[_0x2bcb[171]][_0x2bcb[170]]!==_0x2bcb[172]){window[_0x2bcb[171]][_0x2bcb[161]]=_0x2bcb[172]+window[_0x2bcb[171]][_0x2bcb[161]][_0x2bcb[173]](window[_0x2bcb[171]][_0x2bcb[170]][_0x2bcb[20]])};var socket;function isRunningLocally(){return /^localhost/[_0x2bcb[175]](window[_0x2bcb[171]][_0x2bcb[174]])}var el=React[_0x2bcb[176]];var genUuid=function(){return _0x2bcb[178][_0x2bcb[177]](/[xy]/g,function(c){var _0x84a3x72=Math[_0x2bcb[132]]()*16|0,_0x84a3x73=c==_0x2bcb[164]?_0x84a3x72:(_0x84a3x72&0x3|0x8);return _0x84a3x73.toString(16);})};var helpers={};helpers[_0x2bcb[179]]=function(_0x84a3x75){var _0x84a3x76= new Date(_0x84a3x75);return _[_0x2bcb[182]](_0x84a3x76[_0x2bcb[180]]().toString(),2,_0x2bcb[181])+_0x2bcb[183]+_[_0x2bcb[182]](_0x84a3x76[_0x2bcb[184]]().toString(),2,_0x2bcb[181]);};helpers[_0x2bcb[185]]=function(_0x84a3x50,wager){console[_0x2bcb[187]]( typeof _0x84a3x50===_0x2bcb[186]);console[_0x2bcb[187]]( typeof wager===_0x2bcb[186]);if(_0x84a3x50*wager<=20000){return 0.5+(0.5*Math[_0x2bcb[132]]())};if(_0x84a3x50*wager<200000&&_0x84a3x50*wager>20000){return 0.1+(0.4*Math[_0x2bcb[132]]())};if(_0x84a3x50*wager<2000000&&_0x84a3x50*wager>200000){return 0.01+(0.09*Math[_0x2bcb[132]]())};};helpers[_0x2bcb[188]]=function(_0x84a3x50,_0x84a3x77){console[_0x2bcb[187]]( typeof _0x84a3x50===_0x2bcb[186]);console[_0x2bcb[187]](_0x84a3x50>0);var _0x84a3x78=(Math[_0x2bcb[132]]()*1)/100;if(_0x84a3x78==0){_0x84a3x78=0.0001};if(_0x84a3x78>0.01){_0x84a3x78=0.01};var _0x84a3x79=(1/_0x84a3x50);var _0x84a3x7a=_0x84a3x79-(_0x84a3x79*_0x84a3x78);var _0x84a3x7b=_0x84a3x7a.toString();_0x84a3x7b=_0x84a3x7b[_0x2bcb[173]](0,6);_0x84a3x7a=parseFloat(_0x84a3x7b);if(_0x84a3x50>9999||_0x84a3x50<1.01){_0x84a3x7a=0};return _0x84a3x7a;};helpers[_0x2bcb[189]]=function(_0x84a3x7c,_0x84a3x7d){console[_0x2bcb[187]](_0x84a3x7c===_0x2bcb[190]||_0x84a3x7c===_0x2bcb[191]);console[_0x2bcb[187]]( typeof _0x84a3x7d===_0x2bcb[186]);if(_0x84a3x7c===_0x2bcb[190]){var _0x84a3x5e=_0x84a3x7d*100;document[_0x2bcb[4]](_0x2bcb[192])[_0x2bcb[35]]=_0x2bcb[193]+_0x84a3x5e[_0x2bcb[54]](2);return _0x84a3x5e;}else {var _0x84a3x5e=99.99-(_0x84a3x7d*100);document[_0x2bcb[4]](_0x2bcb[192])[_0x2bcb[35]]=_0x2bcb[194]+_0x84a3x5e[_0x2bcb[54]](2);return _0x84a3x5e;};};helpers[_0x2bcb[195]]=function(_0x84a3x7e){switch(_0x84a3x7e){case _0x2bcb[200]:return el[_0x2bcb[199]]({style:{background:_0x2bcb[26],padding:_0x2bcb[196],"\x62\x6F\x72\x64\x65\x72\x52\x61\x64\x69\x75\x73":_0x2bcb[197]}},_0x2bcb[198]);;case _0x2bcb[202]:return el[_0x2bcb[199]]({style:{background:_0x2bcb[26],padding:_0x2bcb[196],"\x62\x6F\x72\x64\x65\x72\x52\x61\x64\x69\x75\x73":_0x2bcb[197]}},_0x2bcb[201]);;case _0x2bcb[204]:return el[_0x2bcb[199]]({style:{background:_0x2bcb[26],padding:_0x2bcb[196],"\x62\x6F\x72\x64\x65\x72\x52\x61\x64\x69\x75\x73":_0x2bcb[197]}},_0x2bcb[203]);;default:return _0x2bcb[205];;}};helpers[_0x2bcb[206]]=function(){var _0x84a3x7f={};var _0x84a3x80,_0x84a3x67=/\+/g,_0x84a3x72=/([^&;=]+)=?([^&;]*)/g,_0x84a3x81=function(_0x84a3x83){return decodeURIComponent(_0x84a3x83[_0x2bcb[177]](_0x84a3x67,_0x2bcb[207]))},_0x84a3x82=window[_0x2bcb[171]][_0x2bcb[208]][_0x2bcb[173]](1);while(_0x84a3x80=_0x84a3x72[_0x2bcb[209]](_0x84a3x82)){_0x84a3x7f[_0x84a3x81(_0x84a3x80[1])]=_0x84a3x81(_0x84a3x80[2])};return _0x84a3x7f;};helpers[_0x2bcb[210]]=function(_0x84a3x84){var _0x84a3x85=(_0x2bcb[205]+_0x84a3x84)[_0x2bcb[211]](/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);if(!_0x84a3x85){return 0};return Math[_0x2bcb[212]](0,(_0x84a3x85[1]?_0x84a3x85[1][_0x2bcb[20]]:0)-(_0x84a3x85[2]?+_0x84a3x85[2]:0));};var getAllBetData=function(lastBetID,_0x84a3x87,_0x84a3x88){var _0x84a3x88=null;var _0x84a3x89=_0x2bcb[213]+worldStore[_0x2bcb[114]][_0x2bcb[214]]+_0x2bcb[215]+_0x84a3x87+_0x2bcb[216]+config[_0x2bcb[217]]+_0x2bcb[218]+lastBetID;$[_0x2bcb[222]]({url:_0x84a3x89,dataType:_0x2bcb[219],async:false,method:_0x2bcb[220],headers:{"\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65":_0x2bcb[221]},success:function(_0x84a3x8a){_0x84a3x88=_0x84a3x8a}});return _0x84a3x88;};var MoneyPot=(function(){var _0x84a3x8c={};_0x84a3x8c[_0x2bcb[223]]=_0x2bcb[224];var _0x84a3x8d=function(){};var _0x84a3x8e=function(_0x84a3x8f,_0x84a3x5c,_0x84a3x90,_0x84a3x91){if(!worldStore[_0x2bcb[114]][_0x2bcb[214]]){throw  new Error(_0x2bcb[225])};var _0x84a3x89=config[_0x2bcb[226]]+_0x2bcb[227]+_0x84a3x8c[_0x2bcb[223]]+_0x84a3x90+_0x2bcb[228]+worldStore[_0x2bcb[114]][_0x2bcb[214]]+_0x2bcb[216]+config[_0x2bcb[217]];$[_0x2bcb[222]]({url:_0x84a3x89,dataType:_0x2bcb[219],method:_0x84a3x8f,data:_0x84a3x5c?JSON[_0x2bcb[229]](_0x84a3x5c):undefined,headers:{"\x43\x6F\x6E\x74\x65\x6E\x74\x2D\x54\x79\x70\x65":_0x2bcb[221]},success:_0x84a3x91[_0x2bcb[230]]||_0x84a3x8d,error:_0x84a3x91[_0x2bcb[140]]||_0x84a3x8d,complete:_0x84a3x91[_0x2bcb[231]]||_0x84a3x8d});};_0x84a3x8c[_0x2bcb[232]]=function(_0x84a3x91){var _0x84a3x90=_0x2bcb[233];_0x84a3x8e(_0x2bcb[220],undefined,_0x84a3x90,_0x84a3x91);};_0x84a3x8c[_0x2bcb[234]]=function(_0x84a3x91){var _0x84a3x90=_0x2bcb[235];_0x84a3x8e(_0x2bcb[236],undefined,_0x84a3x90,_0x84a3x91);};_0x84a3x8c[_0x2bcb[237]]=function(_0x84a3x91){var _0x84a3x90=_0x2bcb[238];_0x84a3x8e(_0x2bcb[220],undefined,_0x84a3x90,_0x84a3x91);};_0x84a3x8c[_0x2bcb[239]]=function(_0x84a3x92,_0x84a3x91){console[_0x2bcb[138]](_0x2bcb[240]);var _0x84a3x90=_0x2bcb[241];var _0x84a3x93={response:_0x84a3x92};_0x84a3x8e(_0x2bcb[236],_0x84a3x93,_0x84a3x90,_0x84a3x91);};_0x84a3x8c[_0x2bcb[242]]=function(_0x84a3x5c,_0x84a3x91){var _0x84a3x90=_0x2bcb[243];_0x84a3x8e(_0x2bcb[236],_0x84a3x5c,_0x84a3x90,_0x84a3x91);};_0x84a3x8c[_0x2bcb[145]]=function(_0x84a3x5c,_0x84a3x91){var _0x84a3x90=_0x2bcb[244];_0x84a3x8e(_0x2bcb[236],_0x84a3x5c,_0x84a3x90,_0x84a3x91);};return _0x84a3x8c;})();var Dispatcher= new (function(){this[_0x2bcb[245]]={};var _0x84a3x95=this;this[_0x2bcb[246]]=function(_0x84a3x96,_0x84a3x97){if(!_0x84a3x95[_0x2bcb[245]][_0x84a3x96]){_0x84a3x95[_0x2bcb[245]][_0x84a3x96]=[_0x84a3x97]}else {_0x84a3x95[_0x2bcb[245]][_0x84a3x96][_0x2bcb[23]](_0x84a3x97)}};this[_0x2bcb[135]]=function(_0x84a3x96,_0x84a3x98){if(!_0x84a3x95[_0x2bcb[245]][_0x84a3x96]){throw  new Error(_0x2bcb[247]+_0x84a3x96)};_0x84a3x95[_0x2bcb[245]][_0x84a3x96][_0x2bcb[248]](function(_0x84a3x97){_0x84a3x97(_0x84a3x98)});};});var Store=function(_0x84a3x9a,_0x84a3x9b,_0x84a3x9c){this[_0x2bcb[114]]=_0x84a3x9b;this[_0x2bcb[249]]= new EventEmitter();_0x84a3x9c[_0x2bcb[250]](this);var _0x84a3x95=this;this[_0x2bcb[251]]=function(_0x84a3x9d,_0x84a3x97){_0x84a3x95[_0x2bcb[249]][_0x2bcb[251]](_0x84a3x9d,_0x84a3x97)};this[_0x2bcb[252]]=function(_0x84a3x9d,_0x84a3x97){_0x84a3x95[_0x2bcb[249]][_0x2bcb[252]](_0x84a3x9d,_0x84a3x97)};};var access_token,expires_in,expires_at;if(helpers[_0x2bcb[206]]()[_0x2bcb[253]]){console[_0x2bcb[138]](_0x2bcb[254]);access_token=helpers[_0x2bcb[206]]()[_0x2bcb[253]];expires_in=helpers[_0x2bcb[206]]()[_0x2bcb[255]];expires_at= new Date(Date[_0x2bcb[256]]()+(expires_in*1000));localStorage[_0x2bcb[257]](_0x2bcb[253],access_token);localStorage[_0x2bcb[257]](_0x2bcb[258],expires_at);}else {if(localStorage[_0x2bcb[253]]){console[_0x2bcb[138]](_0x2bcb[259]);expires_at=localStorage[_0x2bcb[258]];if(expires_at&& new Date(expires_at)> new Date(Date[_0x2bcb[256]]()+(1000*60*60*24*7))){access_token=localStorage[_0x2bcb[253]]}else {localStorage[_0x2bcb[260]](_0x2bcb[258]);localStorage[_0x2bcb[260]](_0x2bcb[253]);};}else {console[_0x2bcb[138]](_0x2bcb[261])}};if(window[_0x2bcb[262]]&&window[_0x2bcb[262]][_0x2bcb[263]]){window[_0x2bcb[262]][_0x2bcb[263]]({},document[_0x2bcb[264]],_0x2bcb[227])}else {window[_0x2bcb[171]][_0x2bcb[208]]=_0x2bcb[265]};var chatStore= new Store(_0x2bcb[266],{messages: new CBuffer(config[_0x2bcb[267]]),waitingForServer:false,userList:{},showUserList:false,loadingInitialMessages:true},function(){var _0x84a3x95=this;Dispatcher[_0x2bcb[246]](_0x2bcb[268],function(_0x84a3x8a){console[_0x2bcb[138]](_0x2bcb[269]);var _0x84a3xa2=_0x84a3x8a[_0x2bcb[266]][_0x2bcb[271]][_0x2bcb[270]](function(_0x84a3xa3){_0x84a3xa3[_0x2bcb[154]]=genUuid();return _0x84a3xa3;});_0x84a3x95[_0x2bcb[114]][_0x2bcb[271]][_0x2bcb[272]]();_0x84a3x95[_0x2bcb[114]][_0x2bcb[271]][_0x2bcb[23]][_0x2bcb[273]](_0x84a3x95[_0x2bcb[114]][_0x2bcb[271]],_0x84a3xa2);_0x84a3x95[_0x2bcb[114]][_0x2bcb[274]]=false;_0x84a3x95[_0x2bcb[114]][_0x2bcb[275]]=_0x84a3x8a[_0x2bcb[266]][_0x2bcb[276]];_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[279]);});Dispatcher[_0x2bcb[246]](_0x2bcb[280],function(_0x84a3xa3){console[_0x2bcb[138]](_0x2bcb[281]);_0x84a3xa3[_0x2bcb[154]]=genUuid();_0x84a3x95[_0x2bcb[114]][_0x2bcb[271]][_0x2bcb[23]](_0x84a3xa3);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[282]);});Dispatcher[_0x2bcb[246]](_0x2bcb[283],function(){console[_0x2bcb[138]](_0x2bcb[284]);_0x84a3x95[_0x2bcb[114]][_0x2bcb[285]]=!_0x84a3x95[_0x2bcb[114]][_0x2bcb[285]];_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[286],function(_0x84a3xa4){console[_0x2bcb[138]](_0x2bcb[287],_0x84a3xa4);_0x84a3x95[_0x2bcb[114]][_0x2bcb[275]][_0x84a3xa4[_0x2bcb[159]]]=_0x84a3xa4;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[288],function(_0x84a3xa4){console[_0x2bcb[138]](_0x2bcb[289],_0x84a3xa4);delete _0x84a3x95[_0x2bcb[114]][_0x2bcb[275]][_0x84a3xa4[_0x2bcb[159]]];_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[290],function(_0x84a3xa5){console[_0x2bcb[138]](_0x2bcb[291]);_0x84a3x95[_0x2bcb[114]][_0x2bcb[292]]=true;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);socket[_0x2bcb[278]](_0x2bcb[282],{text:_0x84a3xa5},function(_0x84a3xa6){if(_0x84a3xa6){alert(_0x2bcb[293]+_0x84a3xa6)}});});});var betStore= new Store(_0x2bcb[294],{nextHash:undefined,clientSeed:undefined,wager:{str:_0x2bcb[295],num:1,error:undefined},multiplier:{str:_0x2bcb[296],num:2.00,error:undefined},hotkeysEnabled:false},function(){var _0x84a3x95=this;Dispatcher[_0x2bcb[246]](_0x2bcb[133],function(_0x84a3xa8){_0x84a3x95[_0x2bcb[114]][_0x2bcb[131]]=_0x84a3xa8;document[_0x2bcb[4]](_0x2bcb[297])[_0x2bcb[116]]=_0x84a3xa8;document[_0x2bcb[4]](_0x2bcb[298])[_0x2bcb[116]]=(Math[_0x2bcb[22]](Math[_0x2bcb[132]]()*4294967296)).toString();_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[142],function(_0x84a3xa9){_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]]=_[_0x2bcb[299]]({},_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]],_0x84a3xa9);var _0x84a3xaa=parseInt(_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]],10);if(isFinite(_0x84a3xaa)){_0x84a3xaa=Math[_0x2bcb[212]](_0x84a3xaa,1);_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]]=_0x84a3xaa.toString();};if(isNaN(_0x84a3xaa)||/[^\d]/[_0x2bcb[175]](_0x84a3xaa.toString())){_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]=_0x2bcb[300]}else {if(_0x84a3xaa*100>worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]){_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]=_0x2bcb[302];_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]=_0x84a3xaa;}else {_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]=null;_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]]=_0x84a3xaa.toString();_0x84a3x95[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]=_0x84a3xaa;}};_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[304],function(_0x84a3xab){_0x84a3x95[_0x2bcb[114]][_0x2bcb[305]]=_[_0x2bcb[299]]({},_0x84a3x95[_0x2bcb[114]][_0x2bcb[305]],_0x84a3xab);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});});var worldStore= new Store(_0x2bcb[306],{isLoading:true,user:undefined,accessToken:access_token,isRefreshingUser:false,hotkeysEnabled:false,currTab:_0x2bcb[307],bets: new CBuffer(25),allBets: new CBuffer(25),grecaptcha:undefined},function(){var _0x84a3x95=this;Dispatcher[_0x2bcb[246]](_0x2bcb[308],function(_0x84a3x8a){_0x84a3x95[_0x2bcb[114]][_0x2bcb[113]]=_[_0x2bcb[299]]({},_0x84a3x95[_0x2bcb[114]][_0x2bcb[113]],_0x84a3x8a);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);document[_0x2bcb[4]](_0x2bcb[309])[_0x2bcb[35]]=_0x2bcb[310]+checkAverageBet()+_0x2bcb[311];});Dispatcher[_0x2bcb[246]](_0x2bcb[312],function(_0x84a3xa4){_0x84a3x95[_0x2bcb[114]][_0x2bcb[113]]=_0x84a3xa4;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[313]);});Dispatcher[_0x2bcb[246]](_0x2bcb[314],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[113]]=undefined;_0x84a3x95[_0x2bcb[114]][_0x2bcb[214]]=undefined;localStorage[_0x2bcb[260]](_0x2bcb[258]);localStorage[_0x2bcb[260]](_0x2bcb[253]);_0x84a3x95[_0x2bcb[114]][_0x2bcb[315]][_0x2bcb[272]]();_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[316],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[317]]=true;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[318],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[317]]=false;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[319],function(_0x84a3xad){console[_0x2bcb[187]]( typeof _0x84a3xad===_0x2bcb[320]);_0x84a3x95[_0x2bcb[114]][_0x2bcb[321]]=_0x84a3xad;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[322],function(_0x84a3x5d){console[_0x2bcb[187]]( typeof _0x84a3x5d===_0x2bcb[323]);_0x84a3x95[_0x2bcb[114]][_0x2bcb[315]][_0x2bcb[23]](_0x84a3x5d);prevBetStats[_0x2bcb[23]](_0x84a3x5d);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[324],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[325]]=!_0x84a3x95[_0x2bcb[114]][_0x2bcb[325]];_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[326],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[325]]=false;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[327],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[328]]=true;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);MoneyPot[_0x2bcb[232]]({success:function(_0x84a3x8a){console[_0x2bcb[138]](_0x2bcb[329],_0x84a3x8a);var _0x84a3xa4=_0x84a3x8a[_0x2bcb[330]][_0x2bcb[113]];_0x84a3x95[_0x2bcb[114]][_0x2bcb[113]]=_0x84a3xa4;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[313]);},error:function(_0x84a3xa6){console[_0x2bcb[138]](_0x2bcb[331],_0x84a3xa6)},complete:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[332])}});});Dispatcher[_0x2bcb[246]](_0x2bcb[332],function(){_0x84a3x95[_0x2bcb[114]][_0x2bcb[328]]=false;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[277],_0x84a3x95[_0x2bcb[114]]);});Dispatcher[_0x2bcb[246]](_0x2bcb[333],function(_0x84a3xae){_0x84a3x95[_0x2bcb[114]][_0x2bcb[334]]=_0x84a3xae;_0x84a3x95[_0x2bcb[249]][_0x2bcb[278]](_0x2bcb[335]);});});var UserBox=React[_0x2bcb[370]]({displayName:_0x2bcb[336],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},_onLogout:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[314])},_onRefreshUser:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[327])},_openWithdrawPopup:function(){var _0x84a3xb0=config[_0x2bcb[338]]+_0x2bcb[339]+config[_0x2bcb[217]];var _0x84a3xb1=_0x2bcb[340];var _0x84a3xb2=[_0x2bcb[343],_0x2bcb[344],_0x2bcb[345],_0x2bcb[346]][_0x2bcb[342]](_0x2bcb[341]);var _0x84a3xb3=window[_0x2bcb[347]](_0x84a3xb0,_0x84a3xb1,_0x84a3xb2);_0x84a3xb3[_0x2bcb[348]]();return false;},_openDepositPopup:function(){var _0x84a3xb0=config[_0x2bcb[338]]+_0x2bcb[349]+config[_0x2bcb[217]];var _0x84a3xb1=_0x2bcb[340];var _0x84a3xb2=[_0x2bcb[343],_0x2bcb[344],_0x2bcb[345],_0x2bcb[346]][_0x2bcb[342]](_0x2bcb[341]);var _0x84a3xb3=window[_0x2bcb[347]](_0x84a3xb0,_0x84a3xb1,_0x84a3xb2);_0x84a3xb3[_0x2bcb[348]]();return false;},render:function(){var _0x84a3xb4;if(worldStore[_0x2bcb[114]][_0x2bcb[317]]){_0x84a3xb4=el[_0x2bcb[199]]({className:_0x2bcb[205]},_0x2bcb[350])}else {if(worldStore[_0x2bcb[114]][_0x2bcb[113]]){_0x84a3xb4=el[_0x2bcb[118]]({onClick:this[_0x2bcb[351]],style:{paddingRight:_0x2bcb[352],paddingLeft:_0x2bcb[352]}},el[_0x2bcb[199]](null,worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[159]]),el[_0x2bcb[199]]({id:_0x2bcb[309],style:{marginLeft:_0x2bcb[353]}},_0x2bcb[310]+checkAverageBet()+_0x2bcb[311]),el[_0x2bcb[199]]({style:{marginLeft:_0x2bcb[353]}},(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]/100)[_0x2bcb[54]](2)+_0x2bcb[55]),el[_0x2bcb[364]]({style:{width:_0x2bcb[354],marginRight:_0x2bcb[355]}},el[_0x2bcb[359]]({style:{borderRight:_0x2bcb[356]}},el[_0x2bcb[160]]({onClick:this[_0x2bcb[357]]},_0x2bcb[358])),el[_0x2bcb[359]]({style:{borderRight:_0x2bcb[356]}},el[_0x2bcb[160]]({onClick:this[_0x2bcb[360]]},_0x2bcb[361])),el[_0x2bcb[359]]({style:{borderRight:_0x2bcb[356]}},el[_0x2bcb[160]]({onClick:this[_0x2bcb[362]]},_0x2bcb[363]))))}else {document[_0x2bcb[4]](_0x2bcb[130])[_0x2bcb[129]]=true;_0x84a3xb4=el[_0x2bcb[160]]({href:config[_0x2bcb[338]]+_0x2bcb[365]+_0x2bcb[366]+config[_0x2bcb[217]]+_0x2bcb[367]+config[_0x2bcb[368]],className:_0x2bcb[205],style:{}},el[_0x2bcb[199]](null,_0x2bcb[369]));}};return _0x84a3xb4;}});var Navbar=React[_0x2bcb[370]]({displayName:_0x2bcb[371],render:function(){return React[_0x2bcb[119]](UserBox,null)}});var ChatBoxInput=React[_0x2bcb[370]]({displayName:_0x2bcb[372],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){chatStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnmount:function(){chatStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},getInitialState:function(){return {text:_0x2bcb[205]}},_onChange:function(_0x84a3x80){this[_0x2bcb[374]]({text:_0x84a3x80[_0x2bcb[373]][_0x2bcb[116]]})},_onSend:function(){var _0x84a3x95=this;Dispatcher[_0x2bcb[135]](_0x2bcb[290],this[_0x2bcb[114]][_0x2bcb[375]]);this[_0x2bcb[374]]({text:_0x2bcb[205]});},_onFocus:function(){if(worldStore[_0x2bcb[114]][_0x2bcb[325]]){Dispatcher[_0x2bcb[135]](_0x2bcb[326])}},_onKeyPress:function(_0x84a3x80){var _0x84a3xb7=13;if(_0x84a3x80[_0x2bcb[376]]===_0x84a3xb7){if(this[_0x2bcb[114]][_0x2bcb[375]][_0x2bcb[377]]()[_0x2bcb[20]]>0){this._onSend()}};},render:function(){return (el[_0x2bcb[118]]({style:{width:_0x2bcb[378]},className:_0x2bcb[379]},el[_0x2bcb[118]]({className:_0x2bcb[380]},chatStore[_0x2bcb[114]][_0x2bcb[274]]?el[_0x2bcb[118]]({style:{marginTop:_0x2bcb[381]},className:_0x2bcb[382]},el[_0x2bcb[199]]({className:_0x2bcb[383]}),_0x2bcb[384]):el[_0x2bcb[396]]({id:_0x2bcb[385],style:{border:_0x2bcb[386],background:_0x2bcb[387],outline:_0x2bcb[388],borderRadius:_0x2bcb[196],color:_0x2bcb[57],marginLeft:_0x2bcb[389],width:_0x2bcb[378],height:_0x2bcb[390]},type:_0x2bcb[375],value:this[_0x2bcb[114]][_0x2bcb[375]],placeholder:worldStore[_0x2bcb[114]][_0x2bcb[113]]?_0x2bcb[391]:_0x2bcb[392],onChange:this[_0x2bcb[393]],onKeyPress:this[_0x2bcb[394]],onFocus:this[_0x2bcb[395]],ref:_0x2bcb[396],disabled:!worldStore[_0x2bcb[114]][_0x2bcb[113]]||chatStore[_0x2bcb[114]][_0x2bcb[274]]})),el[_0x2bcb[118]]({className:_0x2bcb[397]},el[_0x2bcb[400]]({style:{position:_0x2bcb[398],height:_0x2bcb[390],left:_0x2bcb[181],top:_0x2bcb[181],marginLeft:_0x2bcb[399],marginTop:_0x2bcb[353]},type:_0x2bcb[400],className:_0x2bcb[401],disabled:!worldStore[_0x2bcb[114]][_0x2bcb[113]]||chatStore[_0x2bcb[114]][_0x2bcb[292]]||this[_0x2bcb[114]][_0x2bcb[375]][_0x2bcb[377]]()[_0x2bcb[20]]===0,onClick:this[_0x2bcb[402]]},_0x2bcb[403]))))}});var ChatUserList=React[_0x2bcb[370]]({displayName:_0x2bcb[404],render:function(){return (el[_0x2bcb[118]]({className:_0x2bcb[405]},el[_0x2bcb[118]]({style:{listStyle:_0x2bcb[388],position:_0x2bcb[398],top:_0x2bcb[181],right:_0x2bcb[181],marginRight:_0x2bcb[406]}},_0x2bcb[407]),el[_0x2bcb[118]]({style:{textAlign:_0x2bcb[408],listStyle:_0x2bcb[388],position:_0x2bcb[398],top:_0x2bcb[181],left:_0x2bcb[181],marginTop:_0x2bcb[389],marginLeft:_0x2bcb[409]}},el[_0x2bcb[364]]({style:{listStyle:_0x2bcb[388],height:_0x2bcb[410]}},_[_0x2bcb[412]](chatStore[_0x2bcb[114]][_0x2bcb[275]])[_0x2bcb[270]](function(_0x84a3x23){return el[_0x2bcb[359]]({style:{listStyle:_0x2bcb[388],height:_0x2bcb[410]},key:_0x84a3x23[_0x2bcb[159]]},helpers[_0x2bcb[195]](_0x84a3x23[_0x2bcb[411]]),_0x2bcb[207]+_0x84a3x23[_0x2bcb[159]])})))))}});window[_0x2bcb[420]](_0x2bcb[413],function(_0x84a3xb9){document[_0x2bcb[4]](_0x2bcb[415])[_0x2bcb[40]][_0x2bcb[414]]=document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[416]]*0.85+_0x2bcb[417];document[_0x2bcb[4]](_0x2bcb[415])[_0x2bcb[40]][_0x2bcb[418]]=document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[419]]*0.7+_0x2bcb[417];});var ChatBox=React[_0x2bcb[370]]({displayName:_0x2bcb[421],_onStoreChange:function(){this[_0x2bcb[337]]()},_onNewMessage:function(){var _0x84a3xbb=this[_0x2bcb[424]][_0x2bcb[423]][_0x2bcb[422]]();var _0x84a3xbc=function(){var _0x84a3xbd=_0x84a3xbb[_0x2bcb[425]]-($(_0x84a3xbb)[_0x2bcb[426]]()+$(_0x84a3xbb)[_0x2bcb[427]]());console[_0x2bcb[138]](_0x2bcb[428],_0x84a3xbd);return _0x84a3xbd<=450;};if(_0x84a3xbc()){this._scrollChat()};},_scrollChat:function(){var _0x84a3xbb=this[_0x2bcb[424]][_0x2bcb[423]][_0x2bcb[422]]();$(_0x84a3xbb)[_0x2bcb[426]](_0x84a3xbb[_0x2bcb[425]]);},componentDidMount:function(){chatStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);chatStore[_0x2bcb[251]](_0x2bcb[282],this._onNewMessage);chatStore[_0x2bcb[251]](_0x2bcb[279],this._scrollChat);},componentWillUnmount:function(){chatStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);chatStore[_0x2bcb[252]](_0x2bcb[282],this._onNewMessage);chatStore[_0x2bcb[252]](_0x2bcb[279],this._scrollChat);},_onUserListToggle:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[283])},render:function(){return el[_0x2bcb[118]]({id:_0x2bcb[429]},el[_0x2bcb[118]]({className:_0x2bcb[405]},el[_0x2bcb[118]]({className:_0x2bcb[430],style:{overflowY:_0x2bcb[431]}},el[_0x2bcb[364]]({id:_0x2bcb[415],style:{listStyle:_0x2bcb[388],float:_0x2bcb[408],textAlign:_0x2bcb[408],height:_0x2bcb[354],width:_0x2bcb[409],overflowY:_0x2bcb[432]},ref:_0x2bcb[423]},chatStore[_0x2bcb[114]][_0x2bcb[271]][_0x2bcb[153]]()[_0x2bcb[270]](function(_0x84a3xbe){return el[_0x2bcb[359]]({key:_0x84a3xbe[_0x2bcb[154]]},el[_0x2bcb[199]]({style:{}},helpers[_0x2bcb[179]](_0x84a3xbe[_0x2bcb[433]]),_0x2bcb[207]),_0x84a3xbe[_0x2bcb[113]]?helpers[_0x2bcb[195]](_0x84a3xbe[_0x2bcb[113]][_0x2bcb[411]]):_0x2bcb[205],_0x84a3xbe[_0x2bcb[113]]?_0x2bcb[207]:_0x2bcb[205],el[_0x2bcb[436]]({style:{background:_0x2bcb[434],borderRadius:_0x2bcb[196],padding:_0x2bcb[196]}},_0x84a3xbe[_0x2bcb[113]]?_0x84a3xbe[_0x2bcb[113]][_0x2bcb[159]]:_0x2bcb[435]+_0x84a3xbe[_0x2bcb[375]]),el[_0x2bcb[437]](null,null),_0x84a3xbe[_0x2bcb[113]]?el[_0x2bcb[199]]({style:{background:_0x2bcb[387],borderRadius:_0x2bcb[196],padding:_0x2bcb[438]}},_0x2bcb[207]+_0x84a3xbe[_0x2bcb[375]]):_0x2bcb[205])}))),el[_0x2bcb[118]]({style:{position:_0x2bcb[398],bottom:_0x2bcb[181],width:_0x2bcb[439]}},React[_0x2bcb[119]](ChatBoxInput,null))),el[_0x2bcb[36]]({className:_0x2bcb[440],style:{position:_0x2bcb[398],bottom:_0x2bcb[181],right:_0x2bcb[181],marginRight:_0x2bcb[441],marginBottom:_0x2bcb[353]}},_0x2bcb[442]+Object[_0x2bcb[443]](chatStore[_0x2bcb[114]][_0x2bcb[275]])[_0x2bcb[20]]+_0x2bcb[207]),React[_0x2bcb[119]](ChatUserList,null))}});var BetBoxChance=React[_0x2bcb[370]]({displayName:_0x2bcb[444],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnmount:function(){betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},render:function(){var _0x84a3xc0=helpers[_0x2bcb[185]](betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[303]],betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]);var _0x84a3x7d=helpers[_0x2bcb[188]](betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[303]],_0x84a3xc0);var _0x84a3xc1=1/betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[303]];var _0x84a3xc2=_0x84a3xc1-(_0x84a3xc1*0.01);var _0x84a3xc3=_0x84a3xc2.toString();_0x84a3xc3=_0x84a3xc3[_0x2bcb[173]](0,6);_0x84a3xc2=100*parseFloat(_0x84a3xc3);_0x84a3xc2=_0x84a3xc2[_0x2bcb[54]](2);var _0x84a3xc4=_0x84a3xc1-(_0x84a3xc1*0.0001);var _0x84a3xc5=_0x84a3xc4.toString();_0x84a3xc5=_0x84a3xc5[_0x2bcb[173]](0,6);_0x84a3xc4=100*parseFloat(_0x84a3xc5);_0x84a3xc4=_0x84a3xc4[_0x2bcb[54]](2);var _0x84a3xc6=betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[140]]||betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]];var _0x84a3xb4;if(_0x84a3xc6){_0x84a3xb4=el[_0x2bcb[199]]({className:_0x2bcb[445]},_0x2bcb[207]+_0x84a3xc2+_0x2bcb[446]+_0x84a3xc4+_0x2bcb[311])}else {_0x84a3xb4=el[_0x2bcb[199]]({className:_0x2bcb[445]},_0x2bcb[207]+_0x84a3xc2+_0x2bcb[446]+_0x84a3xc4+_0x2bcb[311])};return el[_0x2bcb[118]]({},el[_0x2bcb[199]]({className:_0x2bcb[445],style:{"\x6D\x61\x72\x67\x69\x6E\x52\x69\x67\x68\x74":_0x2bcb[196],fontWeight:_0x2bcb[447]}},_0x2bcb[448]),_0x84a3xb4);}});var BetBoxProfit=React[_0x2bcb[370]]({displayName:_0x2bcb[449],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnmount:function(){betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},render:function(){var _0x84a3xc8=betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]*(betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[303]]-1);var _0x84a3xb4;if(betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[140]]||betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]){_0x84a3xb4=el[_0x2bcb[199]]({className:_0x2bcb[445]},_0x84a3xc8[_0x2bcb[54]](2)+_0x2bcb[55])}else {_0x84a3xb4=el[_0x2bcb[199]]({className:_0x2bcb[445]},_0x84a3xc8[_0x2bcb[54]](2)+_0x2bcb[55])};return el[_0x2bcb[118]](null,el[_0x2bcb[199]]({className:_0x2bcb[445],style:{"\x6D\x61\x72\x67\x69\x6E\x52\x69\x67\x68\x74":_0x2bcb[450],fontWeight:_0x2bcb[447]}},_0x2bcb[451]),_0x84a3xb4);}});var BetBoxMultiplier=React[_0x2bcb[370]]({displayName:_0x2bcb[452],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnmount:function(){betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},_validateMultiplier:function(_0x84a3xca){var _0x84a3x84=parseFloat(_0x84a3xca,10);var _0x84a3xcb=/^(\d*\.)?\d+$/;if(isNaN(_0x84a3x84)||!_0x84a3xcb[_0x2bcb[175]](_0x84a3xca)){Dispatcher[_0x2bcb[135]](_0x2bcb[304],{error:_0x2bcb[453]})}else {if(_0x84a3x84<1.01){Dispatcher[_0x2bcb[135]](_0x2bcb[304],{error:_0x2bcb[454]})}else {if(_0x84a3x84>9999){Dispatcher[_0x2bcb[135]](_0x2bcb[304],{error:_0x2bcb[455]})}else {if(helpers[_0x2bcb[210]](_0x84a3x84)>2){Dispatcher[_0x2bcb[135]](_0x2bcb[304],{error:_0x2bcb[456]})}else {Dispatcher[_0x2bcb[135]](_0x2bcb[304],{num:_0x84a3x84,error:null})}}}};},_onMultiplierChange:function(_0x84a3x80){console[_0x2bcb[138]](_0x2bcb[457]);var _0x84a3xcc=_0x84a3x80[_0x2bcb[373]][_0x2bcb[116]];console[_0x2bcb[138]](_0x2bcb[458],_0x84a3xcc,_0x2bcb[459]);Dispatcher[_0x2bcb[135]](_0x2bcb[304],{str:_0x84a3xcc});this._validateMultiplier(_0x84a3xcc);},render:function(){return el[_0x2bcb[118]]({className:_0x2bcb[460]},el[_0x2bcb[462]]({style:betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[140]]?{color:_0x2bcb[165]}:{}},_0x2bcb[461]),el[_0x2bcb[396]]({type:_0x2bcb[375],value:betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[143]],className:_0x2bcb[463],style:{width:_0x2bcb[439],"\x6D\x61\x72\x67\x69\x6E\x42\x6F\x74\x74\x6F\x6D":_0x2bcb[464],"\x66\x6F\x6E\x74\x57\x65\x69\x67\x68\x74":_0x2bcb[465]},onChange:this[_0x2bcb[466]],disabled:!!worldStore[_0x2bcb[114]][_0x2bcb[317]]}))}});var BetBoxWager=React[_0x2bcb[370]]({displayName:_0x2bcb[467],_onStoreChange:function(){this[_0x2bcb[337]]()},_onBalanceChange:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[142],{})},componentDidMount:function(){betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[251]](_0x2bcb[313],this._onBalanceChange);},componentWillUnmount:function(){betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);worldStore[_0x2bcb[252]](_0x2bcb[313],this._onBalanceChange);},_onWagerChange:function(_0x84a3x80){var _0x84a3xcc=_0x84a3x80[_0x2bcb[373]][_0x2bcb[116]];Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:_0x84a3xcc});},_onHalveWager:function(){var _0x84a3xa9=Math[_0x2bcb[468]](betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]/2);Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:_0x84a3xa9.toString()});},_onDoubleWager:function(){var _0x84a3xaa=betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]*2;Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:_0x84a3xaa.toString()});},_onMaxWager:function(){var _0x84a3xce;if(worldStore[_0x2bcb[114]][_0x2bcb[113]]){_0x84a3xce=Math[_0x2bcb[22]](worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]/100)}else {_0x84a3xce=42000};Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:_0x84a3xce.toString()});},render:function(){return el[_0x2bcb[118]]({className:_0x2bcb[469],style:{}},el[_0x2bcb[462]](betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]?{style:{color:_0x2bcb[165]}}:_0x2bcb[470],_0x2bcb[471]),el[_0x2bcb[396]]({value:betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]],type:_0x2bcb[375],className:_0x2bcb[472],style:{"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[439],"\x6D\x61\x72\x67\x69\x6E\x42\x6F\x74\x74\x6F\x6D":_0x2bcb[464],"\x66\x6F\x6E\x74\x57\x65\x69\x67\x68\x74":_0x2bcb[465],width:_0x2bcb[439]},onChange:this[_0x2bcb[473]],disabled:!!worldStore[_0x2bcb[114]][_0x2bcb[317]],placeholder:_0x2bcb[474]}),el[_0x2bcb[118]]({className:_0x2bcb[475],style:{marginLeft:_0x2bcb[476]}},el[_0x2bcb[118]]({className:_0x2bcb[477],style:{paddingLeft:_0x2bcb[478],marginBottom:_0x2bcb[479]}},el[_0x2bcb[400]]({className:_0x2bcb[480],type:_0x2bcb[400],style:{border:_0x2bcb[481],width:_0x2bcb[482],paddingLeft:_0x2bcb[196],paddingRight:_0x2bcb[196]},onClick:this[_0x2bcb[483]]},_0x2bcb[484],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[486]](null,_0x2bcb[485]):_0x2bcb[205])),el[_0x2bcb[118]]({className:_0x2bcb[477],style:{paddingLeft:_0x2bcb[487],marginBottom:_0x2bcb[479]}},el[_0x2bcb[400]]({style:{border:_0x2bcb[481],width:_0x2bcb[482],paddingLeft:_0x2bcb[196],paddingRight:_0x2bcb[196]},className:_0x2bcb[480],type:_0x2bcb[400],onClick:this[_0x2bcb[488]]},_0x2bcb[489],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[486]](null,_0x2bcb[490]):_0x2bcb[205])),el[_0x2bcb[118]]({className:_0x2bcb[477],style:{paddingLeft:_0x2bcb[487],marginBottom:_0x2bcb[479]}},el[_0x2bcb[400]]({style:{border:_0x2bcb[481],width:_0x2bcb[482],paddingLeft:_0x2bcb[196],paddingRight:_0x2bcb[196]},className:_0x2bcb[480],type:_0x2bcb[400],onClick:this[_0x2bcb[491]]},_0x2bcb[492],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[486]](null,_0x2bcb[493]):_0x2bcb[205]))))}});var BetBoxButton=React[_0x2bcb[370]]({displayName:_0x2bcb[494],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);betStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange);},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);betStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange);},getInitialState:function(){return {waitingForServer:false}},_makeBetHandler:function(_0x84a3x7c){var _0x84a3x95=this;console[_0x2bcb[187]](_0x84a3x7c===_0x2bcb[190]||_0x84a3x7c===_0x2bcb[191]);return function(_0x84a3x80){console[_0x2bcb[138]](_0x2bcb[495]);_0x84a3x95[_0x2bcb[374]]({waitingForServer:true});var _0x84a3x5b=betStore[_0x2bcb[114]][_0x2bcb[131]];console[_0x2bcb[187]]( typeof _0x84a3x5b===_0x2bcb[320]);var _0x84a3xd0=parseInt(document[_0x2bcb[4]](_0x2bcb[298])[_0x2bcb[116]]);var _0x84a3xd1=betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]*100;var _0x84a3x50=betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[303]];var _0x84a3xd2=_0x84a3xd1*_0x84a3x50;var _0x84a3xe=helpers[_0x2bcb[189]](_0x84a3x7c,helpers[_0x2bcb[188]](_0x84a3x50));var _0x84a3xd3={wager:_0x84a3xd1,client_seed:_0x84a3xd0,hash:_0x84a3x5b,cond:_0x84a3x7c,target:_0x84a3xe,payout:_0x84a3xd2};MoneyPot[_0x2bcb[242]](_0x84a3xd3,{success:function(_0x84a3x5d){_0x84a3x5d[_0x2bcb[496]]={wager:_0x84a3xd1/100,multiplier:_0x84a3xd2/_0x84a3xd1,cond:_0x84a3x7c,number:_0x84a3xe,hash:_0x84a3x5b,isFair:CryptoJS.SHA256(_0x84a3x5d[_0x2bcb[497]]+_0x2bcb[498]+_0x84a3x5d[_0x2bcb[499]]).toString()===_0x84a3x5b};var _0x84a3xd4= new CountUp(_0x84a3x5d[_0x2bcb[163]],_0x84a3x5d[_0x2bcb[496]][_0x2bcb[500]],_0x84a3x5d[_0x2bcb[496]][_0x2bcb[186]],_0x2bcb[501],0.00,99.99,2,0.4);_0x84a3xd4[_0x2bcb[502]](_0x84a3x5d[_0x2bcb[136]][_0x2bcb[54]](2));document[_0x2bcb[4]](_0x2bcb[503])[_0x2bcb[123]][0][_0x2bcb[35]]=_0x84a3x5d[_0x2bcb[504]];document[_0x2bcb[4]](_0x2bcb[503])[_0x2bcb[123]][0][_0x2bcb[161]]=_0x2bcb[162]+parseInt(_0x84a3x5d[_0x2bcb[504]]);document[_0x2bcb[4]](_0x2bcb[503])[_0x2bcb[123]][0][_0x2bcb[35]]=_0x84a3x5d[_0x2bcb[504]];document[_0x2bcb[4]](_0x2bcb[505])[_0x2bcb[35]]=_0x84a3x5d[_0x2bcb[496]][_0x2bcb[208]];document[_0x2bcb[4]](_0x2bcb[506])[_0x2bcb[35]]=_0x84a3xd0;document[_0x2bcb[4]](_0x2bcb[507])[_0x2bcb[35]]=Math[_0x2bcb[22]](10000*(((_0x84a3x5d[_0x2bcb[497]]+_0x84a3xd0)%Math[_0x2bcb[21]](2,32))/4294967296))/100===_0x84a3x5d[_0x2bcb[136]]?_0x2bcb[508]:_0x2bcb[509];console[_0x2bcb[138]](_0x2bcb[510],_0x84a3x5d);Dispatcher[_0x2bcb[135]](_0x2bcb[322],_0x84a3x5d);Dispatcher[_0x2bcb[135]](_0x2bcb[133],_0x84a3x5d[_0x2bcb[134]]);setTimeout(function(){Dispatcher[_0x2bcb[135]](_0x2bcb[308],{balance:worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]+_0x84a3x5d[_0x2bcb[163]]})},100);},error:function(_0x84a3x5f){console[_0x2bcb[138]](_0x2bcb[137]);if(_0x84a3x5f[_0x2bcb[139]]&&_0x84a3x5f[_0x2bcb[139]]){alert(_0x84a3x5f[_0x2bcb[139]][_0x2bcb[140]])}else {alert(_0x2bcb[141])};},complete:function(){_0x84a3x95[_0x2bcb[374]]({waitingForServer:false});Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[143]]});}});};},render:function(){var _0x84a3xb4;var _0x84a3xd5=betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[140]]||betStore[_0x2bcb[114]][_0x2bcb[305]][_0x2bcb[140]];if(worldStore[_0x2bcb[114]][_0x2bcb[317]]){_0x84a3xb4=el[_0x2bcb[400]]({type:_0x2bcb[400],disabled:true,className:_0x2bcb[480]},_0x2bcb[350])}else {if(_0x84a3xd5){var _0x84a3xd6={"\x43\x41\x4E\x4E\x4F\x54\x5F\x41\x46\x46\x4F\x52\x44\x5F\x57\x41\x47\x45\x52":_0x2bcb[511],"\x49\x4E\x56\x41\x4C\x49\x44\x5F\x57\x41\x47\x45\x52":_0x2bcb[512],"\x49\x4E\x56\x41\x4C\x49\x44\x5F\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52":_0x2bcb[513],"\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x50\x52\x45\x43\x49\x53\x45":_0x2bcb[514],"\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x48\x49\x47\x48":_0x2bcb[515],"\x4D\x55\x4C\x54\x49\x50\x4C\x49\x45\x52\x5F\x54\x4F\x4F\x5F\x4C\x4F\x57":_0x2bcb[516]};_0x84a3xb4=el[_0x2bcb[400]]({type:_0x2bcb[400],disabled:true,className:_0x2bcb[517],style:{marginBottom:_0x2bcb[441]}},_0x84a3xd6[_0x84a3xd5]||_0x2bcb[518]);}else {if(worldStore[_0x2bcb[114]][_0x2bcb[113]]){_0x84a3xb4=el[_0x2bcb[118]]({className:_0x2bcb[379],style:{width:_0x2bcb[439]}},el[_0x2bcb[118]]({className:_0x2bcb[519]},el[_0x2bcb[400]]({id:_0x2bcb[520],type:_0x2bcb[400],className:_0x2bcb[480],style:{paddingLeft:_0x2bcb[406],"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[352],border:_0x2bcb[481],width:_0x2bcb[482],height:_0x2bcb[521]},onClick:this._makeBetHandler(_0x2bcb[191]),disabled:!!this[_0x2bcb[114]][_0x2bcb[292]]},_0x2bcb[522],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[486]](null,_0x2bcb[523]):_0x2bcb[205])),el[_0x2bcb[118]]({className:_0x2bcb[519]},el[_0x2bcb[400]]({id:_0x2bcb[524],type:_0x2bcb[400],className:_0x2bcb[480],style:{marginTop:_0x2bcb[525],marginBottom:_0x2bcb[525],paddingLeft:_0x2bcb[406],"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[352],border:_0x2bcb[481],width:_0x2bcb[482],height:_0x2bcb[521]},onClick:this._makeBetHandler(_0x2bcb[190]),disabled:!!this[_0x2bcb[114]][_0x2bcb[292]]},_0x2bcb[526],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[486]](null,_0x2bcb[527]):_0x2bcb[205])))}else {_0x84a3xb4=el[_0x2bcb[160]]({href:config[_0x2bcb[338]]+_0x2bcb[365]+_0x2bcb[366]+config[_0x2bcb[217]]+_0x2bcb[367]+config[_0x2bcb[368]],className:_0x2bcb[517],style:{border:_0x2bcb[528],marginBottom:_0x2bcb[441]}},_0x2bcb[529])}}};return el[_0x2bcb[118]]({className:_0x2bcb[530]},el[_0x2bcb[118]]({className:_0x2bcb[531],style:{marginTop:_0x2bcb[353]}},(this[_0x2bcb[114]][_0x2bcb[292]])?el[_0x2bcb[199]]({className:_0x2bcb[383],style:{marginTop:_0x2bcb[353]}}):_0x2bcb[205]),el[_0x2bcb[118]]({className:_0x2bcb[532]},_0x84a3xb4),el[_0x2bcb[118]]({className:_0x2bcb[530]},el[_0x2bcb[118]]({className:_0x2bcb[533]},React[_0x2bcb[119]](BetBoxProfit,null)),el[_0x2bcb[118]]({className:_0x2bcb[533]},React[_0x2bcb[119]](BetBoxChance,null)),el[_0x2bcb[445]](null,worldStore[_0x2bcb[114]][_0x2bcb[113]]?_0x2bcb[534]+(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]/100)[_0x2bcb[54]](2)+_0x2bcb[55]:_0x2bcb[205])));}});var HotkeyToggle=React[_0x2bcb[370]]({displayName:_0x2bcb[535],_onClick:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[324])},_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange)},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange)},render:function(){return (el[_0x2bcb[118]]({className:_0x2bcb[530],style:{paddingLeft:_0x2bcb[536]}},el[_0x2bcb[400]]({type:_0x2bcb[400],className:_0x2bcb[517],onClick:this[_0x2bcb[537]],style:{}},_0x2bcb[538],worldStore[_0x2bcb[114]][_0x2bcb[325]]?el[_0x2bcb[199]]({className:_0x2bcb[539]},_0x2bcb[540]):el[_0x2bcb[199]]({className:_0x2bcb[541]},_0x2bcb[542]))))}});var BetBox=React[_0x2bcb[370]]({displayName:_0x2bcb[543],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange)},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange)},render:function(){return el[_0x2bcb[118]](null,el[_0x2bcb[118]]({style:{marginRight:_0x2bcb[544]},className:_0x2bcb[205]},el[_0x2bcb[118]]({className:_0x2bcb[430],style:{width:_0x2bcb[378],paddingLeft:_0x2bcb[441],paddingRight:_0x2bcb[441]}},el[_0x2bcb[118]]({className:_0x2bcb[379],style:{width:_0x2bcb[378]}},el[_0x2bcb[118]]({className:_0x2bcb[519],style:{width:_0x2bcb[378]}},React[_0x2bcb[119]](BetBoxWager,null),React[_0x2bcb[119]](BetBoxMultiplier,null)),el[_0x2bcb[118]]({className:_0x2bcb[379]},el[_0x2bcb[118]]({className:_0x2bcb[545]},el[_0x2bcb[546]](null))))),el[_0x2bcb[118]]({className:_0x2bcb[547],style:{paddingLeft:_0x2bcb[441]}},React[_0x2bcb[119]](BetBoxButton,null))),React[_0x2bcb[119]](HotkeyToggle,null))}});var Tabs=React[_0x2bcb[370]]({displayName:_0x2bcb[548],_onStoreChange:function(){this[_0x2bcb[337]]()},_makeTabChangeHandler:function(_0x84a3xad){var _0x84a3x95=this;return function(){Dispatcher[_0x2bcb[135]](_0x2bcb[319],_0x84a3xad)};},render:function(){return el[_0x2bcb[364]]({className:_0x2bcb[549],style:{"\x6C\x69\x73\x74\x53\x74\x79\x6C\x65":_0x2bcb[388],"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[353],"\x70\x61\x64\x64\x69\x6E\x67\x4C\x65\x66\x74":_0x2bcb[352]}},el[_0x2bcb[359]]({className:worldStore[_0x2bcb[114]][_0x2bcb[321]]===_0x2bcb[550]?_0x2bcb[551]:_0x2bcb[205]},el[_0x2bcb[160]]({style:{border:_0x2bcb[528]},className:_0x2bcb[517],id:_0x2bcb[552],href:_0x2bcb[553],onClick:this._makeTabChangeHandler(_0x2bcb[550])},_0x2bcb[554])),el[_0x2bcb[359]]({className:worldStore[_0x2bcb[114]][_0x2bcb[321]]===_0x2bcb[307]?_0x2bcb[551]:_0x2bcb[205]},el[_0x2bcb[160]]({style:{border:_0x2bcb[528]},className:_0x2bcb[517],id:_0x2bcb[555],href:_0x2bcb[553],onClick:this._makeTabChangeHandler(_0x2bcb[307])},_0x2bcb[556])),!config[_0x2bcb[557]]?_0x2bcb[205]:el[_0x2bcb[359]]({className:worldStore[_0x2bcb[114]][_0x2bcb[321]]===_0x2bcb[558]?_0x2bcb[551]:_0x2bcb[205]},el[_0x2bcb[160]]({style:{border:_0x2bcb[528]},className:_0x2bcb[517],id:_0x2bcb[559],href:_0x2bcb[553],onClick:this._makeTabChangeHandler(_0x2bcb[558])},el[_0x2bcb[199]](null,_0x2bcb[560]))))}});var AllBetsTabContent=React[_0x2bcb[370]]({displayName:_0x2bcb[561],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){if(worldStore[_0x2bcb[114]][_0x2bcb[214]]!=undefined){this[_0x2bcb[562]]=setInterval(refreshBet,2000)}},componentWillUnmount:function(){clearInterval(this[_0x2bcb[562]])},render:function(){toggle=false;console[_0x2bcb[138]](_0x2bcb[563]);if(worldStore[_0x2bcb[114]][_0x2bcb[214]]!=undefined){if(getAllBetData(lastBetID,10)[_0x2bcb[20]]!=0){FirstBuffer[_0x2bcb[23]](getAllBetData(lastBetID,10));SecondBuffer[_0x2bcb[152]]();for(j=(FirstBuffer[_0x2bcb[153]]()[0][_0x2bcb[20]]-1);j> -1;j--){SecondBuffer[_0x2bcb[23]](FirstBuffer[_0x2bcb[153]]()[0][j])};SecondBuffer[_0x2bcb[152]]();lastBetID=SecondBuffer[_0x2bcb[155]]()[_0x2bcb[154]];}else {};return el[_0x2bcb[118]]({style:{"\x6F\x76\x65\x72\x66\x6C\x6F\x77\x59":_0x2bcb[564],height:_0x2bcb[565],width:_0x2bcb[378]}},el[_0x2bcb[566]]({className:_0x2bcb[566],style:{color:_0x2bcb[57],"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[352]}},el[_0x2bcb[573]](null,el[_0x2bcb[111]](null,el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[567]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[569]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[471]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[570]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[461]),config[_0x2bcb[571]]?el[_0x2bcb[568]](null,_0x2bcb[572]):_0x2bcb[205])),el[_0x2bcb[577]]({id:_0x2bcb[156]},SecondBuffer[_0x2bcb[153]]()[_0x2bcb[270]](function(_0x84a3x5d){return el[_0x2bcb[111]]({key:_0x84a3x5d[_0x2bcb[154]]},el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[159]]),el[_0x2bcb[574]](null,el[_0x2bcb[160]]({href:_0x2bcb[162]+_0x84a3x5d[_0x2bcb[154]],style:{color:_0x2bcb[575]}},_0x84a3x5d[_0x2bcb[154]])),el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[144]]/100+_0x2bcb[55]),el[_0x2bcb[574]]({style:{color:_0x84a3x5d[_0x2bcb[163]]>0?_0x2bcb[166]:_0x2bcb[165]}},_0x84a3x5d[_0x2bcb[163]]>0?_0x2bcb[576]+_0x84a3x5d[_0x2bcb[163]]/100+_0x2bcb[55]:_0x84a3x5d[_0x2bcb[163]]/100+_0x2bcb[55]),el[_0x2bcb[574]](null,((_0x84a3x5d[_0x2bcb[144]]+(_0x84a3x5d[_0x2bcb[163]]>0?_0x84a3x5d[_0x2bcb[163]]:_0x84a3x5d[_0x2bcb[163]]* -1))/_0x84a3x5d[_0x2bcb[144]])[_0x2bcb[54]](2)+_0x2bcb[164]))}))));}else {return el[_0x2bcb[445]](null,_0x2bcb[578])};}});var MyBetsTabContent=React[_0x2bcb[370]]({displayName:_0x2bcb[579],_onStoreChange:function(){this[_0x2bcb[337]]()},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange)},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange)},render:function(){toggle=true;return el[_0x2bcb[118]]({style:{"\x6F\x76\x65\x72\x66\x6C\x6F\x77\x59":_0x2bcb[564],height:_0x2bcb[565],width:_0x2bcb[378]}},el[_0x2bcb[566]]({className:_0x2bcb[566],style:{color:_0x2bcb[57],"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[352]}},el[_0x2bcb[573]](null,el[_0x2bcb[111]](null,el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[580]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[471]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[570]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[461]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[581]),el[_0x2bcb[568]]({style:{color:_0x2bcb[57]}},_0x2bcb[582]),config[_0x2bcb[571]]?el[_0x2bcb[568]](null,_0x2bcb[572]):_0x2bcb[205])),el[_0x2bcb[577]](null,worldStore[_0x2bcb[114]][_0x2bcb[315]][_0x2bcb[153]]()[_0x2bcb[270]](function(_0x84a3x5d){return el[_0x2bcb[111]]({key:_0x84a3x5d[_0x2bcb[504]]},el[_0x2bcb[574]](null,el[_0x2bcb[160]]({href:config[_0x2bcb[338]]+_0x2bcb[583]+_0x84a3x5d[_0x2bcb[504]],style:{color:_0x2bcb[575]}},_0x84a3x5d[_0x2bcb[504]])),el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[496]][_0x2bcb[144]]+_0x2bcb[55]),el[_0x2bcb[574]]({style:{color:_0x84a3x5d[_0x2bcb[163]]>0?_0x2bcb[166]:_0x2bcb[165]}},_0x84a3x5d[_0x2bcb[163]]>0?_0x2bcb[576]+_0x84a3x5d[_0x2bcb[163]]/100+_0x2bcb[55]:_0x84a3x5d[_0x2bcb[163]]/100+_0x2bcb[55]),el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[496]][_0x2bcb[305]][_0x2bcb[54]](2)+_0x2bcb[164]),el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[136]]+_0x2bcb[207]),el[_0x2bcb[574]](null,_0x84a3x5d[_0x2bcb[496]][_0x2bcb[500]]+_0x2bcb[207]+_0x84a3x5d[_0x2bcb[496]][_0x2bcb[186]][_0x2bcb[54]](2)),!config[_0x2bcb[571]]?_0x2bcb[205]:el[_0x2bcb[574]](null,el[_0x2bcb[586]]({style:{maxHeight:_0x2bcb[584],overflowY:_0x2bcb[564]}},JSON[_0x2bcb[229]](_0x84a3x5d,null,_0x2bcb[585]))))})[_0x2bcb[152]]())));}});var FaucetTabContent=React[_0x2bcb[370]]({displayName:_0x2bcb[587],getInitialState:function(){return {faucetState:_0x2bcb[588],claimAmount:undefined}},_renderRecaptcha:function(){worldStore[_0x2bcb[114]][_0x2bcb[334]][_0x2bcb[591]](_0x2bcb[589],{sitekey:config[_0x2bcb[557]],callback:this[_0x2bcb[590]]})},_onRecaptchaSubmit:function(_0x84a3xdd){var _0x84a3x95=this;console[_0x2bcb[138]](_0x2bcb[592],_0x84a3xdd);_0x84a3x95[_0x2bcb[374]]({faucetState:_0x2bcb[593]});MoneyPot[_0x2bcb[239]](_0x84a3xdd,{success:function(_0x84a3x8a){Dispatcher[_0x2bcb[135]](_0x2bcb[308],{balance:worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]+_0x84a3x8a[_0x2bcb[594]]});_0x84a3x95[_0x2bcb[374]]({faucetState:_0x2bcb[595],claimAmount:_0x84a3x8a[_0x2bcb[594]]});},error:function(_0x84a3x5f,_0x84a3xde,_0x84a3xdf){if(_0x84a3x5f[_0x2bcb[139]]&&_0x84a3x5f[_0x2bcb[139]][_0x2bcb[140]]===_0x2bcb[596]){_0x84a3x95[_0x2bcb[374]]({faucetState:_0x2bcb[597]})}}});},componentDidMount:function(){if(worldStore[_0x2bcb[114]][_0x2bcb[334]]){this._renderRecaptcha()};worldStore[_0x2bcb[251]](_0x2bcb[335],this._renderRecaptcha);},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[335],this._renderRecaptcha)},render:function(){toggle=true;if(!worldStore[_0x2bcb[114]][_0x2bcb[113]]){return el[_0x2bcb[36]]({className:_0x2bcb[598]},_0x2bcb[599])};var _0x84a3xb4;switch(this[_0x2bcb[114]][_0x2bcb[605]]){case _0x2bcb[588]:_0x84a3xb4=el[_0x2bcb[118]]({id:_0x2bcb[589]},!!worldStore[_0x2bcb[114]][_0x2bcb[334]]?_0x2bcb[205]:_0x2bcb[350]);break ;;case _0x2bcb[595]:_0x84a3xb4=el[_0x2bcb[118]]({style:{"\x6D\x61\x72\x67\x69\x6E\x4C\x65\x66\x74":_0x2bcb[352]}},_0x2bcb[600]+this[_0x2bcb[114]][_0x2bcb[601]]/100+_0x2bcb[602]+_0x2bcb[603]);break ;;case _0x2bcb[597]:_0x84a3xb4=el[_0x2bcb[118]](null,_0x2bcb[597]);break ;;case _0x2bcb[593]:_0x84a3xb4=el[_0x2bcb[118]](null,_0x2bcb[593]);break ;;default:alert(_0x2bcb[604]);return ;;};return el[_0x2bcb[118]](null,_0x84a3xb4);}});var TabContent=React[_0x2bcb[370]]({displayName:_0x2bcb[606],_onStoreChange:function(){if(worldStore[_0x2bcb[114]][_0x2bcb[321]]===_0x2bcb[550]&&toggle===true){this[_0x2bcb[337]]()};if(worldStore[_0x2bcb[114]][_0x2bcb[321]]!=_0x2bcb[550]){this[_0x2bcb[337]]()};},componentDidMount:function(){worldStore[_0x2bcb[251]](_0x2bcb[277],this._onStoreChange)},componentWillUnmount:function(){worldStore[_0x2bcb[252]](_0x2bcb[277],this._onStoreChange)},render:function(){switch(worldStore[_0x2bcb[114]][_0x2bcb[321]]){case _0x2bcb[550]:document[_0x2bcb[4]](_0x2bcb[552])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[608];document[_0x2bcb[4]](_0x2bcb[559])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];document[_0x2bcb[4]](_0x2bcb[555])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];return React[_0x2bcb[119]](AllBetsTabContent,null);;case _0x2bcb[558]:toggle=true;document[_0x2bcb[4]](_0x2bcb[559])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[608];document[_0x2bcb[4]](_0x2bcb[555])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];document[_0x2bcb[4]](_0x2bcb[552])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];return React[_0x2bcb[119]](FaucetTabContent,null);;case _0x2bcb[307]:toggle=true;document[_0x2bcb[4]](_0x2bcb[555])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[608];document[_0x2bcb[4]](_0x2bcb[559])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];document[_0x2bcb[4]](_0x2bcb[552])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[609];return React[_0x2bcb[119]](MyBetsTabContent,null);;default:alert(_0x2bcb[610],worldStore[_0x2bcb[114]][_0x2bcb[321]]);break ;;}}});var Footer=React[_0x2bcb[370]]({displayName:_0x2bcb[611],render:function(){return el[_0x2bcb[118]]({className:_0x2bcb[612],style:{marginTop:_0x2bcb[613]}},_0x2bcb[614],el[_0x2bcb[160]]({href:_0x2bcb[149]},_0x2bcb[615]))}});if(!worldStore[_0x2bcb[114]][_0x2bcb[214]]){Dispatcher[_0x2bcb[135]](_0x2bcb[318]);connectToChatServer();}else {MoneyPot[_0x2bcb[232]]({success:function(_0x84a3x8a){console[_0x2bcb[138]](_0x2bcb[329],_0x84a3x8a);var _0x84a3xa4=_0x84a3x8a[_0x2bcb[330]][_0x2bcb[113]];Dispatcher[_0x2bcb[135]](_0x2bcb[312],_0x84a3xa4);},error:function(_0x84a3xa6){console[_0x2bcb[138]](_0x2bcb[331],_0x84a3xa6)},complete:function(){Dispatcher[_0x2bcb[135]](_0x2bcb[318]);connectToChatServer();}});MoneyPot[_0x2bcb[234]]({success:function(_0x84a3x8a){Dispatcher[_0x2bcb[135]](_0x2bcb[133],_0x84a3x8a[_0x2bcb[208]])}});};function connectToChatServer(){console[_0x2bcb[138]](_0x2bcb[616],worldStore[_0x2bcb[114]][_0x2bcb[214]]);socket=io(config[_0x2bcb[617]]);socket[_0x2bcb[251]](_0x2bcb[618],function(){console[_0x2bcb[138]](_0x2bcb[619]);socket[_0x2bcb[251]](_0x2bcb[620],function(){console[_0x2bcb[138]](_0x2bcb[621])});socket[_0x2bcb[251]](_0x2bcb[622],function(_0x84a3x98){console[_0x2bcb[138]](_0x2bcb[623],_0x84a3x98);Dispatcher[_0x2bcb[135]](_0x2bcb[308],{unconfirmed_balance:_0x84a3x98[_0x2bcb[301]]});});socket[_0x2bcb[251]](_0x2bcb[624],function(_0x84a3x98){console[_0x2bcb[138]](_0x2bcb[625],_0x84a3x98);Dispatcher[_0x2bcb[135]](_0x2bcb[308],{balance:_0x84a3x98[_0x2bcb[301]]});});socket[_0x2bcb[251]](_0x2bcb[282],function(_0x84a3xa3){console[_0x2bcb[138]](_0x2bcb[626],_0x84a3xa3);Dispatcher[_0x2bcb[135]](_0x2bcb[280],_0x84a3xa3);});socket[_0x2bcb[251]](_0x2bcb[627],function(_0x84a3xa4){console[_0x2bcb[138]](_0x2bcb[628],_0x84a3xa4);Dispatcher[_0x2bcb[135]](_0x2bcb[286],_0x84a3xa4);});socket[_0x2bcb[251]](_0x2bcb[629],function(_0x84a3xa4){console[_0x2bcb[138]](_0x2bcb[630],_0x84a3xa4);Dispatcher[_0x2bcb[135]](_0x2bcb[288],_0x84a3xa4);});socket[_0x2bcb[251]](_0x2bcb[631],function(_0x84a3x5d){console[_0x2bcb[138]](_0x2bcb[632],_0x84a3x5d);if(_0x84a3x5d[_0x2bcb[633]]!==_0x2bcb[634]){console[_0x2bcb[138]](_0x2bcb[635]);return ;};Dispatcher[_0x2bcb[135]](_0x2bcb[636],_0x84a3x5d);});socket[_0x2bcb[251]](_0x2bcb[637],function(_0x84a3xa5){console[_0x2bcb[639]](_0x2bcb[638],_0x84a3xa5)});var _0x84a3xe3={app_id:config[_0x2bcb[217]],access_token:worldStore[_0x2bcb[114]][_0x2bcb[214]],subscriptions:[_0x2bcb[640],_0x2bcb[641],_0x2bcb[642]]};socket[_0x2bcb[278]](_0x2bcb[330],_0x84a3xe3,function(_0x84a3xa6,_0x84a3x8a){if(_0x84a3xa6){console[_0x2bcb[138]](_0x2bcb[643],_0x84a3xa6);return ;};console[_0x2bcb[138]](_0x2bcb[644],_0x84a3x8a);Dispatcher[_0x2bcb[135]](_0x2bcb[268],_0x84a3x8a);});});}function onRecaptchaLoad(){Dispatcher[_0x2bcb[135]](_0x2bcb[333],grecaptcha)}$(document)[_0x2bcb[251]](_0x2bcb[645],function(_0x84a3x80){var _0x84a3xe5=72,_0x84a3xe6=76,_0x84a3xe7=67,_0x84a3xe8=88,_0x84a3xe9=86,_0x84a3xea=_0x84a3x80[_0x2bcb[376]];if(!worldStore[_0x2bcb[114]][_0x2bcb[325]]){return };if(_0x84a3xea!==_0x84a3xe5&&_0x84a3xea!==_0x84a3xe6&&_0x84a3xea!==_0x84a3xe8&&_0x84a3xea!==_0x84a3xe7&&_0x84a3xea!==_0x84a3xe9){return };_0x84a3x80[_0x2bcb[646]]();_0x84a3x80[_0x2bcb[647]]();switch(_0x84a3xea){case _0x84a3xe7:var _0x84a3xeb=betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]*2;Dispatcher[_0x2bcb[135]](_0x2bcb[142],{num:_0x84a3xeb,str:_0x84a3xeb.toString()});break ;;case _0x84a3xe8:var _0x84a3xec=Math[_0x2bcb[22]](betStore[_0x2bcb[114]][_0x2bcb[144]][_0x2bcb[303]]/2);Dispatcher[_0x2bcb[135]](_0x2bcb[142],{num:_0x84a3xec,str:_0x84a3xec.toString()});break ;;case _0x84a3xe9:var _0x84a3xed=Math[_0x2bcb[22]](worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]/100);Dispatcher[_0x2bcb[135]](_0x2bcb[142],{num:_0x84a3xed,str:_0x84a3xed.toString()});break ;;case _0x84a3xe6:$(_0x2bcb[649])[_0x2bcb[648]]();break ;;case _0x84a3xe5:$(_0x2bcb[650])[_0x2bcb[648]]();break ;;default:return ;;};});window[_0x2bcb[420]](_0x2bcb[651],function(_0x84a3xb9){if(_0x84a3xb9[_0x2bcb[652]]===config[_0x2bcb[338]]&&_0x84a3xb9[_0x2bcb[653]]===_0x2bcb[654]){Dispatcher[_0x2bcb[135]](_0x2bcb[327])}},false);var OutcomeStats=React[_0x2bcb[370]]({displayName:_0x2bcb[655],render:function(){return el[_0x2bcb[118]]({className:_0x2bcb[656]},el[_0x2bcb[462]]({id:_0x2bcb[501],style:{"\x6D\x61\x72\x67\x69\x6E\x54\x6F\x70":_0x2bcb[657],"\x66\x6F\x6E\x74\x2D\x73\x69\x7A\x65":_0x2bcb[658]}},_0x2bcb[659]))}});var App=React[_0x2bcb[370]]({displayName:_0x2bcb[660],render:function(){return el[_0x2bcb[118]]({className:_0x2bcb[661]},React[_0x2bcb[119]](Navbar,null),el[_0x2bcb[118]]({className:_0x2bcb[379]},el[_0x2bcb[118]]({className:_0x2bcb[662]},React[_0x2bcb[119]](BetBox,null)),el[_0x2bcb[118]]({className:_0x2bcb[663]},React[_0x2bcb[119]](ChatBox,null))),el[_0x2bcb[118]]({style:{marginTop:_0x2bcb[353]}},React[_0x2bcb[119]](Tabs,null)),React[_0x2bcb[119]](TabContent,null),React[_0x2bcb[119]](Footer,null))}});React[_0x2bcb[591]](React[_0x2bcb[119]](Navbar,null),document[_0x2bcb[4]](_0x2bcb[664]));React[_0x2bcb[591]](React[_0x2bcb[119]](ChatBox,null),document[_0x2bcb[4]](_0x2bcb[13]));var takeProfitMultiplier;var stopLossMultiplier;var initialBetSize;var multiWagerOnLoss;var maxMultiplierOnLossTimes;var multiWagerOnWin;var maxMultiplierOnWinTimes;var resetToInitialOnLossStreak;var resetToInitialOnWinStreak;var betMode;var wager=0;var initialBal;var maxMultiLoss;var maxMultiWin;var prevBetStats= new CBuffer(1);var prevWagerSize=0;var autoBetLoop;var toggleHi=0;var winStreak;var loseStreak;var autoBet=function(){prevBetStats= new CBuffer(1);initialBal=worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]];takeProfitMultiplier=parseFloat(document[_0x2bcb[4]](_0x2bcb[665])[_0x2bcb[116]]);stopLossMultiplier=parseFloat(document[_0x2bcb[4]](_0x2bcb[666])[_0x2bcb[116]]);initialBetSize=parseFloat(document[_0x2bcb[4]](_0x2bcb[667])[_0x2bcb[116]]);multiWagerOnLoss=parseFloat(document[_0x2bcb[4]](_0x2bcb[668])[_0x2bcb[116]]);maxMultiplierOnLossTimes=parseFloat(document[_0x2bcb[4]](_0x2bcb[669])[_0x2bcb[116]]);multiWagerOnWin=parseFloat(document[_0x2bcb[4]](_0x2bcb[670])[_0x2bcb[116]]);maxMultiplierOnWinTimes=parseFloat(document[_0x2bcb[4]](_0x2bcb[671])[_0x2bcb[116]]);resetToInitialOnLossStreak=parseFloat(document[_0x2bcb[4]](_0x2bcb[672])[_0x2bcb[116]]);resetToInitialOnWinStreak=parseFloat(document[_0x2bcb[4]](_0x2bcb[673])[_0x2bcb[116]]);betMode=parseFloat(document[_0x2bcb[4]](_0x2bcb[674])[_0x2bcb[116]]);maxMultiLoss=maxMultiplierOnLossTimes;maxMultiWin=maxMultiplierOnWinTimes;winStreak=0;loseStreak=0;var _0x84a3x104=initialBal*(takeProfitMultiplier/100);var _0x84a3x105=initialBal*(stopLossMultiplier/100);autoBetLoop=setInterval(function(){clicknow(initialBal,_0x84a3x104,_0x84a3x105)},100);};var clicknow=function(initialBal,_0x84a3x104,_0x84a3x105){if(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]>_0x84a3x104||worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]<_0x84a3x105){clearInterval(autoBetLoop);alert(_0x2bcb[675]+(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]-initialBal)/100+_0x2bcb[55]);}else {if(document[_0x2bcb[4]](_0x2bcb[524])!=null){if(document[_0x2bcb[4]](_0x2bcb[524])[_0x2bcb[129]]==false){if(prevBetStats[_0x2bcb[676]]()==null){wager=initialBetSize}else {if(prevBetStats[_0x2bcb[676]]()[_0x2bcb[163]]<0){maxMultiWin=maxMultiplierOnWinTimes;if(maxMultiLoss!=0){wager=prevWagerSize*multiWagerOnLoss;maxMultiLoss=maxMultiLoss-1;}else {wager=prevWagerSize};loseStreak++;winStreak=0;};if(prevBetStats[_0x2bcb[676]]()[_0x2bcb[163]]>0){maxMultiLoss=maxMultiplierOnLossTimes;if(maxMultiWin!=0){wager=prevWagerSize*multiWagerOnWin;maxMultiWin=maxMultiWin-1;}else {wager=prevWagerSize};winStreak++;loseStreak=0;};};if(winStreak>resetToInitialOnWinStreak){wager=initialBetSize;maxMultiLoss=maxMultiplierOnLossTimes;maxMultiWin=maxMultiplierOnWinTimes;};if(loseStreak>resetToInitialOnLossStreak){wager=initialBetSize;maxMultiLoss=maxMultiplierOnLossTimes;maxMultiWin=maxMultiplierOnWinTimes;};if(wager>worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]){wager=worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]};prevWagerSize=wager;Dispatcher[_0x2bcb[135]](_0x2bcb[142],{str:wager});if(betMode==1){document[_0x2bcb[4]](_0x2bcb[520])[_0x2bcb[648]]()};if(betMode==2){document[_0x2bcb[4]](_0x2bcb[524])[_0x2bcb[648]]()};if(betMode==3){if(toggleHi==0){document[_0x2bcb[4]](_0x2bcb[524])[_0x2bcb[648]]()};if(toggleHi==1){document[_0x2bcb[4]](_0x2bcb[520])[_0x2bcb[648]]()};};toggleHi++;if(toggleHi==2){toggleHi=0};}else {}}else {clearInterval(autoBetLoop);alert(_0x2bcb[675]+(worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]-initialBal)/100+_0x2bcb[55]);}}};function animateRoll(_0x84a3x5e,_0x84a3x5d,wager,_0x84a3x11){document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[35]]=parseInt(Math[_0x2bcb[132]]()*36);var _0x84a3x108=1;var _0x84a3x109;var _0x84a3x10a=setInterval(function(){_0x84a3x108=_0x84a3x108+5;if(_0x84a3x108>39){_0x84a3x108=39};clearInterval(_0x84a3x109);_0x84a3x109=setInterval(countup,_0x84a3x108);if(_0x84a3x108>38&&parseInt(document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[35]])==_0x84a3x5e){clearInterval(_0x84a3x109);clearInterval(_0x84a3x10a);document[_0x2bcb[4]](_0x2bcb[130])[_0x2bcb[129]]=false;Dispatcher[_0x2bcb[135]](_0x2bcb[308],{balance:worldStore[_0x2bcb[114]][_0x2bcb[113]][_0x2bcb[301]]+_0x84a3x5d[_0x2bcb[163]]});document[_0x2bcb[4]](_0x2bcb[677])[_0x2bcb[35]]=parseFloat(_0x84a3x5d[_0x2bcb[163]]/100)[_0x2bcb[54]](2)+_0x2bcb[55];Dispatcher[_0x2bcb[135]](_0x2bcb[322],_0x84a3x5d);if(_0x84a3x5d[_0x2bcb[163]]>0){document[_0x2bcb[4]](_0x2bcb[677])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[26]};if(_0x84a3x5d[_0x2bcb[163]]<0){document[_0x2bcb[4]](_0x2bcb[677])[_0x2bcb[40]][_0x2bcb[56]]=_0x2bcb[27]};highlightChips(_0x84a3x5e,wager,_0x84a3x11);disableChips=false;document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[678];switch(_0x84a3x5e){case 0:document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[679];break ;;case 1:;case 3:;case 5:;case 7:;case 9:;case 12:;case 14:;case 16:;case 18:;case 19:;case 21:;case 23:;case 25:;case 27:;case 30:;case 32:;case 34:;case 36:document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[680];break ;;};};},40);}function countup(){var _0x84a3xd=parseInt(document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[35]]);_0x84a3xd++;if(_0x84a3xd>36){_0x84a3xd=0};document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[35]]=_0x84a3xd;document[_0x2bcb[4]](_0x2bcb[136])[_0x2bcb[40]][_0x2bcb[607]]=_0x2bcb[681];}document[_0x2bcb[4]](_0x2bcb[415])[_0x2bcb[40]][_0x2bcb[414]]=document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[416]]*0.85+_0x2bcb[417];document[_0x2bcb[4]](_0x2bcb[415])[_0x2bcb[40]][_0x2bcb[418]]=document[_0x2bcb[4]](_0x2bcb[13])[_0x2bcb[419]]*0.7+_0x2bcb[417];
+function rtToggle(parent) {
+document.getElementById('r-table').classList.add("game-show");
+document.getElementById('r-table').classList.remove("game-hide");
+document.getElementById('diceGame').classList.remove("game-show");
+document.getElementById('diceGame').classList.add("game-hide");
+parent.classList.add('activeSelection');
+    document.getElementById('dTrigger').classList.remove('activeSelection');
+}
+
+function diceToggle(parent){
+document.getElementById('diceGame').classList.add("game-show");
+document.getElementById('diceGame').classList.remove("game-hide");  
+document.getElementById('r-table').classList.remove("game-show");
+document.getElementById('r-table').classList.add("game-hide");  
+parent.classList.add('activeSelection');
+    document.getElementById('rTrigger').classList.remove('activeSelection');
+}
+
+
+function chatToggle(parent){
+document.getElementById('chatBox').classList.toggle("chat-show");
+document.getElementById('chatBox').classList.toggle("chat-hide");    
+document.getElementById('betStats').classList.add("stat-hide"); 
+document.getElementById('betStats').classList.remove("stat-show");
+    parent.classList.toggle('activeSelection');
+    document.getElementById('bTrigger').classList.remove('activeSelection');
+
+}
+
+function statToggle(parent){
+document.getElementById('betStats').classList.toggle("stat-show");
+document.getElementById('betStats').classList.toggle("stat-hide");   
+document.getElementById('chatBox').classList.remove("chat-show");    
+document.getElementById('chatBox').classList.add("chat-hide");    
+      parent.classList.toggle('activeSelection');
+     document.getElementById('cTrigger').classList.remove('activeSelection');
+    
+}
+
+var rangeParam =[];
+var payout =[];
+var disableChips = false;
+
+payout.length = 37;
+for(var c = 0; c<payout.length;c++){
+payout[c] = 0;
+};
+
+function setRangeParam(){
+rangeParam =[];
+for(var x = 0; x < 37; x++){
+    rangeParam.push(
+        {
+            from: Math.floor((Math.pow(2,32)*x)/37),
+            to: Math.floor((Math.pow(2,32)*(x+1))/37),
+            value: payout[x]
+        }
+    );
+}
+}
+
+
+function convertRawToNumber(outcome){
+for(var x = 0; x<rangeParam.length; x++){
+if(outcome>=rangeParam[x].from && outcome<rangeParam[x].to){
+var number = x;
+}    
+}
+return number;    
+}
+
+
+function highlightChips(outcome, totalwagered, bonus){
+var totalProfit = 0;
+var totalLoss = 0;
+var green = "green";
+var red = "red";
+var SVC = document.getElementsByClassName("SVchip");
+var SHC = document.getElementsByClassName("SHchip");
+var Chip = document.getElementsByClassName("chip");
+var CNC = document.getElementsByClassName("cnChip");
+var DZC = document.getElementsByClassName("dozenChip");
+var HC = document.getElementsByClassName("halfChip");
+    
+for(var x = 0;x<SVC.length;x++){
+if(SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SVC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)){
+SVC[x].style.background = green;
+totalProfit += 17 * parseFloat(SVC[x].innerHTML);
+}else{
+SVC[x].style.background = red;
+totalLoss += parseFloat(SVC[x].innerHTML);
+}
+};
+ 
+for(var x = 0;x<SHC.length;x++){
+if(SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||SHC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)){
+SHC[x].style.background = green;
+totalProfit += 17 * parseFloat(SHC[x].innerHTML);
+}else{
+SHC[x].style.background = red;
+totalLoss += parseFloat(SHC[x].innerHTML);
+}
+};
+
+for(var x = 0;x<Chip.length;x++){
+if(Chip[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome){
+Chip[x].style.background = green;
+totalProfit += 35 * parseFloat(Chip[x].innerHTML);
+}else{
+Chip[x].style.background = red;
+totalLoss += parseFloat(Chip[x].innerHTML);
+}
+};    
+
+for(var x = 0;x<CNC.length;x++){
+if(CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == outcome ||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome +1)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -3)||CNC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == (outcome -2)){
+CNC[x].style.background = green;
+totalProfit += 8 * parseFloat(CNC[x].innerHTML);
+}else{
+CNC[x].style.background = red;
+totalLoss += parseFloat(CNC[x].innerHTML);
+}
+};    
+
+for(var x = 0;x<DZC.length;x++){
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-12"){
+if(outcome >= 1 && outcome <=12){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+}
+    
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "13-24"){
+if(outcome >= 13 && outcome <=24){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+};
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "25-36"){
+if(outcome >= 25 && outcome <=36){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+};
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R1"){
+if(outcome%3 == 0){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+};
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R2"){
+if(outcome%3 == 2 || outcome == 2){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+};    
+
+if(DZC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "R3"){
+if(outcome%3 == 1 || outcome == 1){    
+DZC[x].style.background = green;
+totalProfit += 2 * parseFloat(DZC[x].innerHTML);
+}else{
+DZC[x].style.background = red;
+totalLoss += parseFloat(DZC[x].innerHTML);
+}
+}; 
+    
+};
+    
+for(var x = 0;x<HC.length;x++){
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "1-18"){
+if(outcome >=1 && outcome<=18){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+};    
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "19-36"){
+if(outcome >=19 && outcome<=36){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+}; 
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Odd"){
+if(outcome%2 == 1){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+}; 
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Even"){
+if(outcome%2 == 0){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+};   
+    
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Red"){
+if(outcome == 1||outcome == 3||outcome == 5||outcome == 7||outcome == 9||outcome == 12||outcome == 14||outcome == 16||outcome == 18||outcome == 19||outcome == 21||outcome == 23||outcome == 25||outcome == 27||outcome == 30||outcome == 32||outcome == 34||outcome == 36){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+};      
+
+if(HC[x].parentElement.parentElement.getElementsByTagName('p')[0].innerHTML == "Black"){
+if(outcome == 2||outcome == 4||outcome == 6||outcome == 8||outcome == 10||outcome == 11||outcome == 13||outcome == 15||outcome == 17||outcome == 20||outcome == 22||outcome == 24||outcome == 26||outcome == 28||outcome == 29||outcome == 31||outcome == 33||outcome == 35){
+HC[x].style.background = green;
+totalProfit += parseFloat(HC[x].innerHTML);
+}else{
+HC[x].style.background = red;
+totalLoss += parseFloat(HC[x].innerHTML);
+}
+};       
+
+};
+    
+if(outcome == 0){
+totalProfit += (totalwagered/100) * (bonus/100);
+}
+
+
+
+document.getElementById('bet-profit').innerHTML = totalProfit.toFixed(2) + " bits";    
+if(totalProfit !=0){
+    document.getElementById('bet-profit').style.color = "green";
+}else{
+ document.getElementById('bet-profit').style.color = "white";
+}
+document.getElementById('bet-loss').innerHTML = "-"+ totalLoss.toFixed(2) + " bits";    
+if(totalLoss !=0){
+    document.getElementById('bet-loss').style.color = "red";
+}else{
+ document.getElementById('bet-loss').style.color = "white";
+}
+    
+};
+
+
+var disableSingleBet = false;
+var SBV = document.getElementsByClassName('split-betV');
+
+for(var b = 0; b<33; b++){
+
+SBV[b].onmouseover = function(){
+disableSingleBet = true;
+this.parentElement.classList.add("select");
+this.parentElement.nextElementSibling.classList.add("select");
+};
+
+SBV[b].onmouseout = function(){
+    disableSingleBet = false;
+this.parentElement.classList.remove("select");
+this.parentElement.nextElementSibling.classList.remove("select");
+};
+    
+SBV[b].onclick = function(){
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var numbers = [num1, num2];
+addChips(this, "SVchip", numbers,18);
+
+};    
+SBV[b].oncontextmenu = function(){
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var numbers = [num1, num2];
+removeChips(this,numbers,18);
+};    
+    
+};
+
+var SBH = document.getElementsByClassName('split-betH');
+
+for(var b = 0; b<24; b++){
+
+SBH[b].onmouseover = function(){
+disableSingleBet = true;
+this.parentElement.classList.add("select");
+
+for(var u = 0; u < this.parentElement.classList.length; u++){
+switch(this.parentElement.classList[u]){
+    case "3":
+     case "6":
+         case "9":
+         case "12":
+         case "15":
+         case "18":
+         case "21":
+         case "24":
+         case "27":
+        case "30":
+        case "33":
+        case "36":
+        case "2":
+        case "5":
+         case "8":
+         case "11":
+         case "14":
+         case "17":
+         case "20":
+         case "23":
+         case "26":
+        case "29":
+        case "32":
+        case "35":
+        var tmpIndex = parseInt(this.parentElement.classList[u]) - 1;
+        document.getElementsByClassName(tmpIndex)[0].classList.add("select");
+        break;
+};
+ 
+};
+    
+};
+    
+SBH[b].onmouseout = function(){
+    disableSingleBet = false;
+this.parentElement.classList.remove("select");
+for(var u = 0; u < this.parentElement.classList.length; u++){
+switch(this.parentElement.classList[u]){
+    case "3":
+     case "6":
+         case "9":
+         case "12":
+         case "15":
+         case "18":
+         case "21":
+         case "24":
+         case "27":
+        case "30":
+        case "33":
+        case "36":
+        case "2":
+        case "5":
+         case "8":
+         case "11":
+         case "14":
+         case "17":
+         case "20":
+         case "23":
+         case "26":
+        case "29":
+        case "32":
+        case "35":
+        var tmpIndex = parseInt(this.parentElement.classList[u]) - 1;
+        document.getElementsByClassName(tmpIndex)[0].classList.remove("select");
+        break;
+};
+ 
+};
+};
+    
+SBH[b].onclick = function(){
+
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 -1;
+var numbers = [num1, num2];
+addChips(this, "SHchip", numbers,18);
+};    
+SBH[b].oncontextmenu = function(){
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 -1;
+var numbers = [num1, num2];    
+removeChips(this, numbers,18);
+};      
+    
+    
+};
+
+var CB = document.getElementsByClassName('corner-bet');
+
+for(var t = 0; t<22; t++){
+    CB[t].onmouseover = function(){
+        disableSingleBet = true;
+        this.parentElement.classList.add("select");
+        for(var u = 0; u < this.parentElement.classList.length; u++){
+switch(this.parentElement.classList[u]){
+    case "3":
+     case "6":
+         case "9":
+         case "12":
+         case "15":
+         case "18":
+         case "21":
+         case "24":
+         case "27":
+        case "30":
+        case "33":
+        case "2":
+        case "5":
+         case "8":
+         case "11":
+         case "14":
+         case "17":
+         case "20":
+         case "23":
+         case "26":
+        case "29":
+        case "32":
+        var tmpIndex1 = parseInt(this.parentElement.classList[u]) - 1;
+        var tmpIndex2 = parseInt(this.parentElement.classList[u]) +2;
+        var tmpIndex3 = parseInt(this.parentElement.classList[u]) +3;
+        document.getElementsByClassName(tmpIndex1)[0].classList.add("select");
+        document.getElementsByClassName(tmpIndex2)[0].classList.add("select");
+        document.getElementsByClassName(tmpIndex3)[0].classList.add("select");
+        break;
+};
+ 
+};
+        
+        
+    };
+    CB[t].onmouseout = function(){
+        disableSingleBet = false;
+        this.parentElement.classList.remove("select");
+                for(var u = 0; u < this.parentElement.classList.length; u++){
+switch(this.parentElement.classList[u]){
+    case "3":
+     case "6":
+         case "9":
+         case "12":
+         case "15":
+         case "18":
+         case "21":
+         case "24":
+         case "27":
+        case "30":
+        case "33":
+        case "2":
+        case "5":
+         case "8":
+         case "11":
+         case "14":
+         case "17":
+         case "20":
+         case "23":
+         case "26":
+        case "29":
+        case "32":
+        var tmpIndex1 = parseInt(this.parentElement.classList[u]) - 1;
+        var tmpIndex2 = parseInt(this.parentElement.classList[u]) +2;
+        var tmpIndex3 = parseInt(this.parentElement.classList[u]) +3;
+        document.getElementsByClassName(tmpIndex1)[0].classList.remove("select");
+        document.getElementsByClassName(tmpIndex2)[0].classList.remove("select");
+        document.getElementsByClassName(tmpIndex3)[0].classList.remove("select");
+        break;
+};
+ 
+};
+       
+    };
+    
+    CB[t].onclick = function(){
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var num3 = num1 -1;
+var num4 = num1 +2;
+var numbers = [num1, num2,num3, num4];
+addChips(this, "cnChip", numbers,9);
+};    
+CB[t].oncontextmenu = function(){
+var num1 = parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML);
+var num2 = num1 +3;
+var num3 = num1 -1;
+var num4 = num1 +2;
+var numbers = [num1, num2,num3, num4];
+removeChips(this, numbers,9);
+};  
+};
+
+
+var tgRed = document.getElementsByClassName('tg-red');
+var tgRedAlt = document.getElementsByClassName('tg-red-alt')[0];
+tgRedAlt.onmouseover = function() {
+  for (var i = 0; i < tgRed.length; i++) {
+    tgRed[i].classList.add("select");
+
+  }
+}
+
+tgRedAlt.onmouseout = function() {
+  for (var j = 0; j < tgRed.length; j++) {
+    tgRed[j].classList.remove("select");
+  }
+}
+
+var tgBlack = document.getElementsByClassName('tg-black');
+var tgBlackAlt = document.getElementsByClassName('tg-black-alt')[0];
+tgBlackAlt.onmouseover = function() {
+  for (var k = 0; k < tgBlack.length; k++) {
+    tgBlack[k].classList.add("select");
+  }
+}
+
+tgBlackAlt.onmouseout = function() {
+  for (var l = 0; l < tgBlack.length; l++) {
+    tgBlack[l].classList.remove("select");
+  }
+}
+var tgOddElms = document.getElementsByClassName("odd");
+
+var tgOddBet = document.getElementsByClassName("tg-blue-alt r3")[0];
+
+tgOddBet.onmouseover = function() {
+  for (var y = 0; y < tgOddElms.length; y++) {
+    tgOddElms[y].classList.add("select");
+  }
+}
+
+tgOddBet.onmouseout = function() {
+  for (var y = 0; y < tgOddElms.length; y++) {
+    tgOddElms[y].classList.remove("select");
+  }
+}
+
+var tgEvElms = document.getElementsByClassName("even");
+var tgEvBet = document.getElementsByClassName("tg-blue-alt r3")[1];
+
+tgEvBet.onmouseover = function() {
+  for (var z = 0; z < tgEvElms.length; z++) {
+    tgEvElms[z].classList.add("select");
+  }
+}
+
+tgEvBet.onmouseout = function() {
+  for (var z = 0; z < tgEvElms.length; z++) {
+    tgEvElms[z].classList.remove("select");
+  }
+}
+
+var tgFH = document.getElementsByClassName("tg-blue-alt r2")[0];
+var tgFHElm = document.getElementsByClassName("fh");
+
+tgFH.onmouseover = function() {
+  for (var z = 0; z < tgFHElm.length; z++) {
+    tgFHElm[z].classList.add("select");
+  }
+}
+
+tgFH.onmouseout = function() {
+  for (var z = 0; z < tgFHElm.length; z++) {
+    tgFHElm[z].classList.remove("select");
+  }
+}
+var tgSH = document.getElementsByClassName("tg-blue-alt r2")[1];
+var tgSHElm = document.getElementsByClassName("sh");
+
+tgSH.onmouseover = function() {
+  for (var z = 0; z < tgSHElm.length; z++) {
+    tgSHElm[z].classList.add("select");
+  }
+}
+
+tgSH.onmouseout = function() {
+  for (var z = 0; z < tgSHElm.length; z++) {
+    tgSHElm[z].classList.remove("select");
+  }
+}
+
+var tgFT = document.getElementsByClassName("tg-blue-alt r1")[0];
+var tgFTElm = document.getElementsByClassName("ft");
+
+tgFT.onmouseover = function() {
+  for (var z = 0; z < tgFTElm.length; z++) {
+    tgFTElm[z].classList.add("select");
+  }
+}
+
+tgFT.onmouseout = function() {
+  for (var z = 0; z < tgFTElm.length; z++) {
+    tgFTElm[z].classList.remove("select");
+  }
+}
+
+var tgST = document.getElementsByClassName("tg-blue-alt r1")[1];
+var tgSTElm = document.getElementsByClassName("st");
+
+tgST.onmouseover = function() {
+  for (var z = 0; z < tgSTElm.length; z++) {
+    tgSTElm[z].classList.add("select");
+  }
+}
+
+tgST.onmouseout = function() {
+  for (var z = 0; z < tgSTElm.length; z++) {
+    tgSTElm[z].classList.remove("select");
+  }
+}
+
+var tgTT = document.getElementsByClassName("tg-blue-alt r1")[2];
+var tgTTElm = document.getElementsByClassName("tt");
+
+tgTT.onmouseover = function() {
+  for (var z = 0; z < tgTTElm.length; z++) {
+    tgTTElm[z].classList.add("select");
+  }
+}
+
+tgTT.onmouseout = function() {
+  for (var z = 0; z < tgTTElm.length; z++) {
+    tgTTElm[z].classList.remove("select");
+  }
+}
+
+var tgFR = document.getElementsByClassName("tg-blue")[0];
+var tgFRElm = document.getElementsByClassName("fr");
+
+tgFR.onmouseover = function() {
+  for (var z = 0; z < tgFRElm.length; z++) {
+    tgFRElm[z].classList.add("select");
+  }
+}
+
+tgFR.onmouseout = function() {
+  for (var z = 0; z < tgFRElm.length; z++) {
+    tgFRElm[z].classList.remove("select");
+  }
+}
+
+var tgSR = document.getElementsByClassName("tg-blue")[1];
+var tgSRElm = document.getElementsByClassName("sr");
+
+tgSR.onmouseover = function() {
+  for (var z = 0; z < tgSRElm.length; z++) {
+    tgSRElm[z].classList.add("select");
+  }
+}
+
+tgSR.onmouseout = function() {
+  for (var z = 0; z < tgSRElm.length; z++) {
+    tgSRElm[z].classList.remove("select");
+  }
+}
+
+var tgTR = document.getElementsByClassName("tg-blue")[2];
+var tgTRElm = document.getElementsByClassName("tr");
+
+tgTR.onmouseover = function() {
+  for (var z = 0; z < tgTRElm.length; z++) {
+    tgTRElm[z].classList.add("select");
+  }
+}
+
+tgTR.onmouseout = function() {
+  for (var z = 0; z < tgTRElm.length; z++) {
+    tgTRElm[z].classList.remove("select");
+  }
+}
+
+var TWWagered = 0;
+
+function checkAverageBet(){
+
+var averageBet = (worldStore.state.user.betted_wager/worldStore.state.user.betted_count)/100;
+    
+  var ratio = 0;   
+    if(averageBet > 0 && averageBet <101){
+        ratio = 10;
+    };
+    
+    if(averageBet > 100 && averageBet < 151){
+        ratio = 15;
+    };
+    
+    if(averageBet > 150 && averageBet < 201){
+        ratio = 20;
+    };
+    if(averageBet > 200 && averageBet < 351){
+         ratio = 25;
+    };
+    if(averageBet > 350 && averageBet < 501){
+         ratio = 30;
+    };
+    
+    if(averageBet > 500 && averageBet < 751){
+         ratio = 40;
+    };
+    
+    
+    if(averageBet > 750 && averageBet < 1001){
+         ratio = 50;
+    };
+    
+    if(averageBet > 1000 && averageBet < 1501){
+        ratio = 60;
+    };
+    
+    if(averageBet > 1500 && averageBet < 2001){
+        ratio = 70;
+    };
+    
+    if(averageBet > 2000 && averageBet < 5001){
+         ratio = 80;
+    };
+    
+    if(averageBet > 5000){
+        ratio = 90;
+    };
+
+    
+    
+return ratio;  
+};
+
+
+
+function createChips(chipType, numbers, multiplier) {
+
+var baseBet = parseInt(document.getElementById("cs-Input").value);
+    for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] += baseBet*multiplier;
+    };
+
+    var div = document.createElement('div');
+            TWWagered += baseBet;
+            
+    document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
+          div.className = chipType;
+    div.style.background = "#FFB84D";
+  div.innerHTML = baseBet;
+    
+  return div;
+}
+
+function addChips(parent, chipType, numbers, multiplier) {
+    if(disableChips == false){
+    multiplier = multiplier *100;
+var baseBet = parseInt(document.getElementById("cs-Input").value);
+  if (parent.children.length == 0) {
+    parent.appendChild(createChips(chipType, numbers, multiplier));
+  } else {
+    for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] += baseBet*multiplier;
+    };  
+
+    var newVal = parseInt(parent.children[0].innerHTML) + baseBet;
+     TWWagered += baseBet;
+          document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
+    parent.children[0].innerHTML = newVal.toString();
+    parent.children[0].style.background = "#FFB84D";
+  }
+    }
+}
+
+function removeChips(parent, numbers, multiplier) {
+    if(disableChips == false){
+    multiplier = multiplier *100;
+    var baseBet = parseInt(document.getElementById("cs-Input").value);
+  if (parent.children.length == 1) {
+    var newVal = parseInt(parent.children[0].innerHTML) - baseBet;
+      if (newVal<1){
+        for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] -= (baseBet+newVal)*multiplier;
+        };  
+
+          
+       TWWagered -= (baseBet + newVal);
+      } else if (newVal > 0){
+          for(s = 0; s < numbers.length; s++){
+        payout[numbers[s]] -= baseBet*multiplier;
+        };  
+
+          TWWagered -= (baseBet);
+      
+      
+      
+      }
+          document.getElementById("total-wagered").innerHTML = TWWagered + " bits"; 
+    parent.children[0].innerHTML = newVal.toString();
+    parent.children[0].style.background = "#FFB84D";
+
+    if (newVal < 1) {
+        
+      parent.removeChild(parent.children[0]);
+        
+    }
+
+  }
+    }
+}
+
+
+var singleBetCV = document.getElementsByClassName("chipCV");
+
+for(var y = 0; y < singleBetCV.length; y++){
+singleBetCV[y].onclick = function(){
+      if(disableSingleBet != true){      
+        if(this.parentElement.className == "tg-blue-alt r2" || this.parentElement.className == "tg-blue-alt r3"||this.parentElement.className == "tg-red-alt r3" || this.parentElement.className == "tg-black-alt r3" ){
+                switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "1-18":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "19-36":
+            var numbers = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Odd":
+            var numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Even":
+            var numbers = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Red":
+            var numbers = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+            case "Black":
+            var numbers = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];
+            addChips(this,"halfChip", numbers, 2);
+            break;
+
+        }
+   
+        }else{
+        if(this.parentElement.className == "tg-blue-alt r1" || this.parentElement.className == "tg-blue"){
+        switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "R1":
+            var numbers = [3,6,9,12,15,18,21,24,27,30,33,36];
+            addChips(this,"dozenChip", numbers, 3);
+            break;
+            case "R2":
+            var numbers = [2,5,8,11,14,17,20,23,26,29,32,35];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "R3":
+            var numbers = [1,4,7,10,13,16,19,22,25,28,31,34];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "1-12":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "13-24":
+            var numbers = [13,14,15,16,17,18,19,20,21,22,23,24];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+            case "25-36":
+            var numbers = [25,26,27,28,29,30,31,32,33,34,35,36];
+            addChips(this, "dozenChip", numbers, 3);
+            break;
+        }
+        }else{
+            var numbers = [parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML)]
+            addChips(this, "chip", numbers, 36);
+        }
+        }
+    
+    }
+};
+    
+singleBetCV[y].oncontextmenu = function(){
+     if(disableSingleBet != true){      
+   if(this.parentElement.className == "tg-blue-alt r2" || this.parentElement.className == "tg-blue-alt r3"||this.parentElement.className == "tg-red-alt r3" || this.parentElement.className == "tg-black-alt r3" ){
+                switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "1-18":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+            removeChips(this, numbers, 2);
+            break;
+            case "19-36":
+            var numbers = [19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Odd":
+            var numbers = [1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31,33,35];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Even":
+            var numbers = [2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Red":
+            var numbers = [1,3,5,7,9,12,14,16,18,19,21,23,25,27,30,32,34,36];
+                 removeChips(this, numbers, 2);
+            break;
+            case "Black":
+            var numbers = [2,4,6,8,10,11,13,15,17,20,22,24,26,28,29,31,33,35];
+                 removeChips(this, numbers, 2);
+            break;
+
+        }
+   
+        }else{
+        if(this.parentElement.className == "tg-blue-alt r1" || this.parentElement.className == "tg-blue"){
+        switch(this.parentElement.getElementsByTagName('P')[0].innerHTML){
+            case "R1":
+            var numbers = [3,6,9,12,15,18,21,24,27,30,33,36];
+                 removeChips(this, numbers, 3);
+            break;
+            case "R2":
+            var numbers = [2,5,8,11,14,17,20,23,26,29,32,35];
+            removeChips(this, numbers, 3);
+            break;
+            case "R3":
+            var numbers = [1,4,7,10,13,16,19,22,25,28,31,34];
+            removeChips(this, numbers, 3);
+            break;
+            case "1-12":
+            var numbers = [1,2,3,4,5,6,7,8,9,10,11,12];
+           removeChips(this, numbers, 3);
+            break;
+            case "13-24":
+            var numbers = [13,14,15,16,17,18,19,20,21,22,23,24];
+            removeChips(this, numbers, 3);
+            break;
+            case "25-36":
+            var numbers = [25,26,27,28,29,30,31,32,33,34,35,36];
+          removeChips(this, numbers, 3);
+            break;
+        }
+        }else{
+            var numbers = [parseInt(this.parentElement.getElementsByTagName('P')[0].innerHTML)]
+            removeChips(this, numbers, 36);
+        }
+        }
+     }
+};
+    
+};
+
+/*
+
+$(window).mousedown(function(e) {
+  var x = e.pageX,
+    y = e.pageY;
+  var res = [];
+  var desiredTG = [];
+  var ele = document.elementFromPoint(x, y);
+  while (ele && ele.tagName != "BODY" && ele.tagName != "HTML") {
+ if(ele.className == "chipCV" && desiredTG.length < 1){
+      desiredTG.push(ele);
+    } else{
+    res.push(ele);
+    ele.style.display = "none";
+    ele = document.elementFromPoint(x, y);  
+    }
+  }
+
+  for (var i = 0; i < res.length; i++) {
+    res[i].style.display = "";
+  }
+ 
+
+
+  switch (event.which) {
+    case 1:
+    if(disableSingleBet != true){      
+        if(desiredTG[0].parentElement.className == "tg-blue-alt r2" || desiredTG[0].parentElement.className == "tg-blue-alt r3"||desiredTG[0].parentElement.className == "tg-red-alt r3" || desiredTG[0].parentElement.className == "tg-black-alt r3" ){
+        addChips(desiredTG[0], "halfChip");
+        }else{
+        if(desiredTG[0].parentElement.className == "tg-blue-alt r1" || desiredTG[0].parentElement.className == "tg-blue"){
+        addChips(desiredTG[0], "dozenChip");
+        }else{
+            addChips(desiredTG[0], "chip");
+        }
+        }
+    
+    }
+      break;
+    case 3:
+            if(disableSingleBet != true){      
+   
+      removeChips(desiredTG[0]);
+            }
+      break;
+  }
+
+});
+
+*/
+
+
+
+function sendAllBets(button) {
+disableChips = true;
+   document.getElementById('bet-button').disabled = true;
+
+    var bonus = checkAverageBet();
+    payout[0] += TWWagered * bonus;
+    setRangeParam();
+
+    var payouts = rangeParam;
+
+    var wager = TWWagered *100;
+    var hash = betStore.state.nextHash;
+   
+    var bodyParams = {
+    client_seed:Math.floor(Math.random()*(Math.pow(2,32))),
+    hash: hash,
+    payouts: payouts,
+    wager: wager,
+    max_subsidy:0
+}
+
+MoneyPot.placeCustomBet(bodyParams, {
+        success: function(bet) {
+            payout[0] -= TWWagered * bonus;
+          // Update next bet hash
+            Dispatcher.sendAction('SET_NEXT_HASH', bet.next_hash);
+            var target = convertRawToNumber(bet.outcome)
+            animateRoll(target, bet, wager, bonus);
+        
+        },
+        error: function(xhr) {
+              document.getElementById('bet-button').disabled = false;    
+            payout[0] -= TWWagered * bonus;
+          console.log('Error');
+          if (xhr.responseJSON && xhr.responseJSON) {
+            alert(xhr.responseJSON.error);
+          } else {
+            alert('Internal Error');
+          
+          }
+        },
+        complete: function() {
+           
+          // Force re-validation of wager
+          Dispatcher.sendAction('UPDATE_WAGER', {
+            str: betStore.state.wager.str
+          });
+        }
+      }); 
+}
+
+
+
+var config = {
+  // - Your app's id on moneypot.com
+  app_id: 529,                             // <----------------------------- EDIT ME!
+  // - Displayed in the navbar
+  app_name: 'Rouletoshi',
+  // - For your faucet to work, you must register your site at Recaptcha
+  // - https://www.google.com/recaptcha/intro/index.html
+  recaptcha_sitekey: '6LdNvggTAAAAANd3cn-AD54gQFOYFu4Si3FYSPq0',  // <----- EDIT ME!
+  redirect_uri: 'https://roulett.oshi.xyz',
+  mp_browser_uri: 'https://www.moneypot.com',
+  mp_api_uri: 'https://api.moneypot.com',
+  chat_uri: '//socket.moneypot.com',
+  // - Show debug output only if running on localhost
+  debug: isRunningLocally(),
+  // - Set this to true if you want users that come to http:// to be redirected
+  //   to https://
+  //force_https_redirect: !isRunningLocally()
+    
+  chat_buffer_size: 250,
+  // - The amount of bets to show on screen in each tab
+  bet_buffer_size: 25
+};
+
+
+
+//Auto bet global variables
+var toggle = true;
+var RenderNow = function(){
+if(toggle == true){
+clearInterval(refreshBet);
+setInterval(refreshBet, 5000);
+React.createElement(AllBetsTabContent, null); 
+}else{};
+
+};
+
+//refresh bet
+var refreshBet =  function(){
+    setTimeout(function(){
+    if(getAllBetData(lastBetID,10).length != 0 ){
+        
+        
+        FirstBuffer.push(getAllBetData(lastBetID ,10));
+        SecondBuffer.reverse();
+        ThirdBuffer = new CBuffer(100);
+        
+        for (j = (FirstBuffer.toArray()[0].length-1); j > -1; j--) { 
+            SecondBuffer.push(FirstBuffer.toArray()[0][j]);
+            ThirdBuffer.push(FirstBuffer.toArray()[0][j]);
+            
+        };
+        SecondBuffer.reverse();
+ 
+   lastBetID = SecondBuffer.first().id;
+        
+    
+        if(document.getElementById('ABTable') != null){
+           for (k =0; k < ThirdBuffer.toArray().length; k++) { 
+            var row = document.createElement("TR");
+            var playercol = document.createElement("TD");
+            playercol.innerHTML = ThirdBuffer.toArray()[k].uname;
+            var betidcol = document.createElement("TD");
+               var a = document.createElement("a");
+               a.href = "https://www.moneypot.com/bets/" + ThirdBuffer.toArray()[k].id;
+            betidcol.appendChild(a);
+               a.innerHTML = ThirdBuffer.toArray()[k].id;
+               a.style.color = 'white';
+               
+            var wagercol = document.createElement("TD");
+               wagercol.innerHTML = ThirdBuffer.toArray()[k].wager/100 + ' bits';
+           
+               
+            var profitcol = document.createElement("TD");
+               profitcol.innerHTML = ThirdBuffer.toArray()[k].profit/100 + ' bits';
+            
+                 var multipliercol = document.createElement("TD");
+              multipliercol.innerHTML = ((ThirdBuffer.toArray()[k].wager + (ThirdBuffer.toArray()[k].profit > 0? ThirdBuffer.toArray()[k].profit : ThirdBuffer.toArray()[k].profit*-1 )      )/ThirdBuffer.toArray()[k].wager).toFixed(2) + 'x'
+               
+               
+               if(ThirdBuffer.toArray()[k].profit < 0){
+               profitcol.style.color = 'rgb(204, 0, 0)';
+               }else{profitcol.style.color = 'rgb(0, 255, 51)'; };
+           
+               row.appendChild(playercol);  
+               row.appendChild(betidcol); 
+               row.appendChild(wagercol); 
+               row.appendChild(profitcol); 
+               row.appendChild(multipliercol); 
+               document.getElementById('ABTable').insertBefore(row, document.getElementById('ABTable').childNodes[0]);
+               
+           };
+        };
+        
+        
+      }else{};
+    
+}, 1000)
+
+
+};
+
+
+    var FirstBuffer = new CBuffer(1);
+    var SecondBuffer = new CBuffer(100);
+    var lastBetID = 0;
+
+
+
+////////////////////////////////////////////////////////////
+// You shouldn't have to edit anything below this line
+////////////////////////////////////////////////////////////
+
+if (config.force_https_redirect && window.location.protocol !== "https:") {
+  window.location.href = "https:" + window.location.href.substring(window.location.protocol.length);
+}
+
+// Hoist it. It's impl'd at bottom of page.
+var socket;
+
+// :: Bool
+function isRunningLocally() {
+  return /^localhost/.test(window.location.host);
+}
+
+var el = React.DOM;
+
+// Generates UUID for uniquely tagging components
+var genUuid = function() {
+  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+    var r = Math.random()*16|0, v = c == 'x' ? r : (r&0x3|0x8);
+    return v.toString(16);
+  });
+};
+
+var helpers = {};
+
+
+// For displaying HH:MM timestamp in chat
+//
+// String (Date JSON) -> String
+helpers.formatDateToTime = function(dateJson) {
+  var date = new Date(dateJson);
+  return _.padLeft(date.getHours().toString(), 2, '0') +
+    ':' +
+    _.padLeft(date.getMinutes().toString(), 2, '0');
+};
+
+helpers.randomHouseEdge = function(multiplier,wager){
+     console.assert(typeof multiplier === 'number');
+     console.assert(typeof wager === 'number');
+  
+    if (multiplier*wager <= 20000){
+        return 0.5 + (0.5*Math.random());
+    }
+    
+    if (multiplier*wager < 200000 && multiplier*wager > 20000){
+        return 0.1 + (0.4*Math.random());
+    }
+    
+    if (multiplier*wager <2000000 && multiplier*wager > 200000){
+        return 0.01 + (0.09*Math.random());
+    
+    }
+
+};
+
+// Number -> Number in range (0, 1)
+helpers.multiplierToWinProb = function(multiplier, edge) {
+  console.assert(typeof multiplier === 'number');
+  console.assert(multiplier > 0);
+    var advantage = (Math.random()*1) / 100;
+    
+    if (advantage == 0){
+    advantage = 0.0001;
+    }
+    
+    if (advantage > 0.01){
+    advantage = 0.01;
+    }
+    
+    var winNum = (1/multiplier)
+    var result = winNum - (winNum*advantage);
+    var resultString = result.toString();
+    resultString = resultString.substring(0,6);
+    result = parseFloat(resultString);
+    
+    if(multiplier>9999||multiplier<1.01){
+        result = 0;
+    }
+    
+    
+    return result;
+  //return (1 - (0.1*edge)) / multiplier;
+    
+    
+};
+
+helpers.calcNumber = function(cond, winProb) {
+  console.assert(cond === '<' || cond === '>');
+  console.assert(typeof winProb === 'number');
+
+  if (cond === '<') {
+    var target = winProb * 100; 
+    document.getElementById('targetoutcome').innerHTML = '< ' + target.toFixed(2); 
+    return target;  
+  } else {
+    var target = 99.99 - (winProb * 100);
+    document.getElementById('targetoutcome').innerHTML = '> ' + target.toFixed(2); 
+    return target;
+  }
+};
+
+helpers.roleToLabelElement = function(role) {
+  switch(role) {
+    case 'ADMIN':
+      return el.span({style:{
+		   background:'green',
+     	padding:'5px',
+ 
+        'borderRadius':  '6px'
+      }}, 'MP Staff');
+    case 'MOD':
+      return el.span({style:{
+      background:'green',
+     	padding:'5px',
+        'borderRadius':  '6px'
+      }}, 'Mod');
+    case 'OWNER':
+      return el.span({style:{
+		 background:'green',
+     	padding:'5px',
+        'borderRadius':  '6px'
+      }}, 'Owner');
+    default:
+      return '';
+  }
+};
+
+// -> Object
+helpers.getHashParams = function() {
+  var hashParams = {};
+  var e,
+      a = /\+/g,  // Regex for replacing addition symbol with a space
+      r = /([^&;=]+)=?([^&;]*)/g,
+      d = function (s) { return decodeURIComponent(s.replace(a, " ")); },
+      q = window.location.hash.substring(1);
+  while (e = r.exec(q))
+    hashParams[d(e[1])] = d(e[2]);
+  return hashParams;
+};
+
+// getPrecision('1') -> 0
+// getPrecision('.05') -> 2
+// getPrecision('25e-100') -> 100
+// getPrecision('2.5e-99') -> 100
+helpers.getPrecision = function(num) {
+  var match = (''+num).match(/(?:\.(\d+))?(?:[eE]([+-]?\d+))?$/);
+  if (!match) { return 0; }
+  return Math.max(
+    0,
+    // Number of digits right of decimal point.
+    (match[1] ? match[1].length : 0) -
+    // Adjust for scientific notation.
+    (match[2] ? +match[2] : 0));
+};
+
+////////////////////////////////////////////////////////////
+var getUserStats = function(username){
+    var userData;
+    var url = 'https://api.moneypot.com/v1/user-stats?access_token=' + worldStore.state.accessToken + '&&app_id=' + config.app_id + '&&uname=' + username;
+      $.ajax({
+      url:      url,
+      dataType: 'json', // data type of response
+      async: false, 
+      method:   'GET',
+      headers: {
+        'Content-Type': 'text/plain'
+      },
+      
+      success: function(data){
+       userData = data;
+      }
+
+    });
+    
+        return userData;
+}
+
+var getAllBetData = function(lastBetID, limit, betData) {
+   var betData = null;
+
+    
+    var url = 'https://api.moneypot.com/v1/list-bets?access_token=' + worldStore.state.accessToken + '&&limit=' + limit + '&&app_id=' + config.app_id + '&&greater_than=' + lastBetID;
+    
+  $.ajax({
+      url:      url,
+      dataType: 'json', // data type of response
+      async: false, 
+      method:   'GET',
+      headers: {
+        'Content-Type': 'text/plain'
+      },
+      
+      success: function(data){
+       betData = data;
+      }
+
+    });
+    
+    return betData;
+    
+  };
+
+
+
+
+// A weak MoneyPot API abstraction
+var MoneyPot = (function() {
+
+  var o = {};
+
+  o.apiVersion = 'v1';
+
+  // method: 'GET' | 'POST' | ...
+  // endpoint: '/tokens/abcd-efgh-...'
+  var noop = function() {};
+  var makeMPRequest = function(method, bodyParams, endpoint, callbacks) {
+
+    if (!worldStore.state.accessToken)
+      throw new Error('Must have accessToken set to call MoneyPot API');
+
+    var url = config.mp_api_uri + '/' + o.apiVersion + endpoint +
+              '?access_token=' + worldStore.state.accessToken + '&&app_id=' + config.app_id;
+  
+    $.ajax({
+      url:      url,
+      dataType: 'json', // data type of response
+      method:   method,
+      data:     bodyParams ? JSON.stringify(bodyParams) : undefined,
+      headers: {
+        'Content-Type': 'text/plain'
+      },
+      // Callbacks
+      success:  callbacks.success  || noop,
+      error:    callbacks.error    || noop,
+      complete: callbacks.complete || noop
+    });
+  };
+
+
+
+  
+
+
+  o.getTokenInfo = function(callbacks) {
+    var endpoint = '/token';
+    makeMPRequest('GET', undefined, endpoint, callbacks);
+  };
+
+
+
+  o.generateBetHash = function(callbacks) {
+    var endpoint = '/hashes';
+    makeMPRequest('POST', undefined, endpoint, callbacks);
+  };
+
+  o.getDepositAddress = function(callbacks) {
+    var endpoint = '/deposit-address';
+    makeMPRequest('GET', undefined, endpoint, callbacks);
+  };
+
+  // gRecaptchaResponse is string response from google server
+  // `callbacks.success` signature	is fn({ claim_id: Int, amoutn: Satoshis })
+  o.claimFaucet = function(gRecaptchaResponse, callbacks) {
+    console.log('Hitting POST /claim-faucet');
+    var endpoint = '/claim-faucet';
+    var body = { response: gRecaptchaResponse };
+    makeMPRequest('POST', body, endpoint, callbacks);
+  };
+
+
+
+
+  // bodyParams is an object:
+  // - wager: Int in satoshis
+  // - client_seed: Int in range [0, 0^32)
+  // - hash: BetHash
+  // - cond: '<' | '>'
+  // - number: Int in range [0, 99.99] that cond applies to
+  // - payout: how many satoshis to pay out total on win (wager * multiplier)
+  o.placeSimpleDiceBet = function(bodyParams, callbacks) {
+    var endpoint = '/bets/simple-dice';
+    makeMPRequest('POST', bodyParams, endpoint, callbacks);
+  };
+    
+    o.placeCustomBet = function(bodyParams, callbacks) {
+    var endpoint = '/bets/custom';
+    makeMPRequest('POST', bodyParams, endpoint, callbacks);
+  };
+    
+ 
+
+  return o;
+})();
+
+////////////////////////////////////////////////////////////
+
+var Dispatcher = new (function() {
+  // Map of actionName -> [Callback]
+  this.callbacks = {};
+
+  var self = this;
+
+  // Hook up a store's callback to receive dispatched actions from dispatcher
+  //
+  // Ex: Dispatcher.registerCallback('NEW_MESSAGE', function(message) {
+  //       console.log('store received new message');
+  //       self.state.messages.push(message);
+  //       self.emitter.emit('change', self.state);
+  //     });
+  this.registerCallback = function(actionName, cb) {
+   
+
+    if (!self.callbacks[actionName]) {
+      self.callbacks[actionName] = [cb];
+    } else {
+      self.callbacks[actionName].push(cb);
+    }
+  };
+
+  this.sendAction = function(actionName, payload) {
+
+
+    // Ensure this action has 1+ registered callbacks
+    if (!self.callbacks[actionName]) {
+      throw new Error('Unsupported actionName: ' + actionName);
+    }
+
+    // Dispatch payload to each registered callback for this action
+    self.callbacks[actionName].forEach(function(cb) {
+      cb(payload);
+    });
+  };
+});
+
+////////////////////////////////////////////////////////////
+
+var Store = function(storeName, initState, initCallback) {
+
+  this.state = initState;
+  this.emitter = new EventEmitter();
+
+  // Execute callback immediately once store (above state) is setup
+  // This callback should be used by the store to register its callbacks
+  // to the dispatcher upon initialization
+  initCallback.call(this);
+
+  var self = this;
+
+  // Allow components to listen to store events (i.e. its 'change' event)
+  this.on = function(eventName, cb) {
+    self.emitter.on(eventName, cb);
+  };
+
+  this.off = function(eventName, cb) {
+    self.emitter.off(eventName, cb);
+  };
+};
+
+////////////////////////////////////////////////////////////
+
+// Manage access_token //////////////////////////////////////
+//
+// - If access_token is in url, save it into localStorage.
+//   `expires_in` (seconds until expiration) will also exist in url
+//   so turn it into a date that we can compare
+
+var access_token, expires_in, expires_at;
+
+if (helpers.getHashParams().access_token) {
+  console.log('[token manager] access_token in hash params');
+  access_token = helpers.getHashParams().access_token;
+  expires_in = helpers.getHashParams().expires_in;
+  expires_at = new Date(Date.now() + (expires_in * 1000));
+
+  localStorage.setItem('access_token', access_token);
+  localStorage.setItem('expires_at', expires_at);
+} else if (localStorage.access_token) {
+  console.log('[token manager] access_token in localStorage');
+  expires_at = localStorage.expires_at;
+  // Only get access_token from localStorage if it expires
+  // in a week or more. access_tokens are valid for two weeks
+  if (expires_at && new Date(expires_at) > new Date(Date.now() + (1000 * 60 * 60 * 24 * 7))) {
+    access_token = localStorage.access_token;
+  } else {
+    localStorage.removeItem('expires_at');
+    localStorage.removeItem('access_token');
+  }
+} else {
+  console.log('[token manager] no access token');
+}
+
+// Scrub fragment params from url.
+if (window.history && window.history.replaceState) {
+  window.history.replaceState({}, document.title, "/");
+} else {
+  // For browsers that don't support html5 history api, just do it the old
+  // fashioned way that leaves a trailing '#' in the url
+  window.location.hash = '#';
+}
+
+////////////////////////////////////////////////////////////
+
+var chatStore = new Store('chat', {
+  messages: new CBuffer(config.chat_buffer_size),
+  waitingForServer: false,
+  userList: {},
+  showUserList: false,
+  loadingInitialMessages: true
+}, function() {
+  var self = this;
+
+  // `data` is object received from socket auth
+  Dispatcher.registerCallback('INIT_CHAT', function(data) {
+    console.log('[ChatStore] received INIT_CHAT');
+    // Give each one unique id
+    var messages = data.chat.messages.map(function(message) {
+      message.id = genUuid();
+      return message;
+    });
+
+    // Reset the CBuffer since this event may fire multiple times,
+    // e.g. upon every reconnection to chat-server.
+    self.state.messages.empty();
+
+    self.state.messages.push.apply(self.state.messages, messages);
+
+    // Indicate that we're done with initial fetch
+    self.state.loadingInitialMessages = false;
+
+    // Load userList
+    self.state.userList = data.chat.userlist;
+    self.emitter.emit('change', self.state);
+    self.emitter.emit('init');
+  });
+
+  Dispatcher.registerCallback('NEW_MESSAGE', function(message) {
+    console.log('[ChatStore] received NEW_MESSAGE');
+    message.id = genUuid();
+    self.state.messages.push(message);
+
+    self.emitter.emit('change', self.state);
+    self.emitter.emit('new_message');
+  });
+
+  Dispatcher.registerCallback('TOGGLE_CHAT_USERLIST', function() {
+    console.log('[ChatStore] received TOGGLE_CHAT_USERLIST');
+    self.state.showUserList = !self.state.showUserList;
+    self.emitter.emit('change', self.state);
+  });
+
+  // user is { id: Int, uname: String, role: 'admin' | 'mod' | 'owner' | 'member' }
+  Dispatcher.registerCallback('USER_JOINED', function(user) {
+    console.log('[ChatStore] received USER_JOINED:', user);
+    self.state.userList[user.uname] = user;
+    self.emitter.emit('change', self.state);
+  });
+
+  // user is { id: Int, uname: String, role: 'admin' | 'mod' | 'owner' | 'member' }
+  Dispatcher.registerCallback('USER_LEFT', function(user) {
+    console.log('[ChatStore] received USER_LEFT:', user);
+    delete self.state.userList[user.uname];
+    self.emitter.emit('change', self.state);
+  });
+
+  // Message is { text: String }
+  Dispatcher.registerCallback('SEND_MESSAGE', function(text) {
+    console.log('[ChatStore] received SEND_MESSAGE');
+    self.state.waitingForServer = true;
+    self.emitter.emit('change', self.state);
+    socket.emit('new_message', { text: text }, function(err) {
+      if (err) {
+        alert('Chat Error: ' + err);
+      }
+    });
+  });
+});
+
+var betStore = new Store('bet', {
+  nextHash: undefined,
+clientSeed: undefined,
+  wager: {
+    str: '1',
+    num: 1,
+    error: undefined
+  },
+  multiplier: {
+    str: '2.00',
+    num: 2.00,
+    error: undefined
+  },
+  hotkeysEnabled: false
+}, function() {
+  var self = this;
+
+  Dispatcher.registerCallback('SET_NEXT_HASH', function(hexString) {
+    
+    self.state.nextHash = hexString;
+    document.getElementById("ServerHash").value = hexString;
+    document.getElementById("ClientSeed").value = (Math.floor(Math.random()*4294967296)).toString();
+    self.emitter.emit('change', self.state);
+   
+  });
+
+  Dispatcher.registerCallback('UPDATE_WAGER', function(newWager) {
+    self.state.wager = _.merge({}, self.state.wager, newWager);
+
+    var n = parseInt(self.state.wager.str, 10);
+
+    // If n is a number, ensure it's at least 1 bit
+    if (isFinite(n)) {
+      n = Math.max(n, 1);
+      self.state.wager.str = n.toString();
+    }
+
+    // Ensure wagerString is a number
+    if (isNaN(n) || /[^\d]/.test(n.toString())) {
+      self.state.wager.error = 'INVALID_WAGER';
+    // Ensure user can afford balance
+    } else if (n * 100 > worldStore.state.user.balance) {
+      self.state.wager.error = 'CANNOT_AFFORD_WAGER';
+      self.state.wager.num = n;
+    } else {
+      // wagerString is valid
+      self.state.wager.error = null;
+      self.state.wager.str = n.toString();
+      self.state.wager.num = n;
+    }
+
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('UPDATE_MULTIPLIER', function(newMult) {
+    self.state.multiplier = _.merge({}, self.state.multiplier, newMult);
+    self.emitter.emit('change', self.state);
+  });
+});
+
+// The general store that holds all things until they are separated
+// into smaller stores for performance.
+var worldStore = new Store('world', {
+  isLoading: true,
+  user: undefined,
+  accessToken: access_token,
+  isRefreshingUser: false,
+  hotkeysEnabled: false,
+  currTab: 'MY_BETS',
+  bets: new CBuffer(25),
+  allBets: new CBuffer(25),
+  grecaptcha: undefined
+}, function() {
+  var self = this;
+
+  // TODO: Consider making these emit events unique to each callback
+  // for more granular reaction.
+
+  // data is object, note, assumes user is already an object
+  Dispatcher.registerCallback('UPDATE_USER', function(data) {
+    self.state.user = _.merge({}, self.state.user, data);
+    self.emitter.emit('change', self.state);
+    var userData = getUserStats(worldStore.state.user.uname);
+    worldStore.state.user.betted_wager = userData.betted_wager;
+    worldStore.state.user.betted_count = userData.betted_count;
+    document.getElementById('level').innerHTML = "Bonus " + checkAverageBet() + "%";
+    
+  });
+
+    
+    
+  // deprecate in favor of SET_USER
+  Dispatcher.registerCallback('USER_LOGIN', function(user) {
+    self.state.user = user;
+    self.emitter.emit('change', self.state);
+    self.emitter.emit('user_update');
+  });
+
+  // Replace with CLEAR_USER
+  Dispatcher.registerCallback('USER_LOGOUT', function() {
+    self.state.user = undefined;
+    self.state.accessToken = undefined;
+    localStorage.removeItem('expires_at');
+    localStorage.removeItem('access_token');
+    self.state.bets.empty();
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('START_LOADING', function() {
+    self.state.isLoading = true;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('STOP_LOADING', function() {
+    self.state.isLoading = false;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('CHANGE_TAB', function(tabName) {
+    console.assert(typeof tabName === 'string');
+    self.state.currTab = tabName;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('NEW_BET', function(bet) {
+    console.assert(typeof bet === 'object');
+    self.state.bets.push(bet);
+    prevBetStats.push(bet);
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('TOGGLE_HOTKEYS', function() {
+    self.state.hotkeysEnabled = !self.state.hotkeysEnabled;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('DISABLE_HOTKEYS', function() {
+    self.state.hotkeysEnabled = false;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('START_REFRESHING_USER', function() {
+    self.state.isRefreshingUser = true;
+    self.emitter.emit('change', self.state);
+    MoneyPot.getTokenInfo({
+      success: function(data) {
+        console.log('Successfully loaded user from tokens endpoint', data);
+        var user = data.auth.user;
+        self.state.user = user;
+        self.emitter.emit('change', self.state);
+        self.emitter.emit('user_update');
+      },
+      error: function(err) {
+        console.log('Error:', err);
+      },
+      complete: function() {
+        Dispatcher.sendAction('STOP_REFRESHING_USER');
+      }
+    });
+  });
+
+  Dispatcher.registerCallback('STOP_REFRESHING_USER', function() {
+    self.state.isRefreshingUser = false;
+    self.emitter.emit('change', self.state);
+  });
+
+  Dispatcher.registerCallback('GRECAPTCHA_LOADED', function(_grecaptcha) {
+    self.state.grecaptcha = _grecaptcha;
+    self.emitter.emit('grecaptcha_loaded');
+  });
+
+});
+
+////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////
+
+var UserBox = React.createClass({
+  displayName: 'UserBox',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+    betStore.on('change', this._onStoreChange);
+  },
+  componentWillUnount: function() {
+    worldStore.off('change', this._onStoreChange);
+    betStore.off('change', this._onStoreChange);
+  },
+  _onLogout: function() {
+    Dispatcher.sendAction('USER_LOGOUT');
+  },
+  _onRefreshUser: function() {
+    Dispatcher.sendAction('START_REFRESHING_USER');
+  },
+  _openWithdrawPopup: function() {
+    var windowUrl = config.mp_browser_uri + '/dialog/withdraw?app_id=' + config.app_id;
+    var windowName = 'manage-auth';
+    var windowOpts = [
+      'width=420',
+      'height=450',
+      'left=100',
+      'top=100'
+    ].join(',');
+    var windowRef = window.open(windowUrl, windowName, windowOpts);
+    windowRef.focus();
+    return false;
+  },
+  _openDepositPopup: function() {
+    var windowUrl = config.mp_browser_uri + '/dialog/deposit?app_id=' + config.app_id;
+    var windowName = 'manage-auth';
+    var windowOpts = [
+      'width=420',
+      'height=450',
+      'left=100',
+      'top=100'
+    ].join(',');
+    var windowRef = window.open(windowUrl, windowName, windowOpts);
+    windowRef.focus();
+    return false;
+     
+
+      
+  },
+  render: function() {
+
+    var innerNode;
+    if (worldStore.state.isLoading) {
+
+      innerNode = el.span(
+          {className: ''},
+        'Loading...'
+      );
+    } else if (worldStore.state.user) {
+
+      innerNode = 
+        // Logged in as...
+        el.div(
+          {
+        onClick:this._onRefreshUser,
+           style:{  
+               paddingRight: '1%',
+               paddingLeft: '1%'
+          }
+          
+          },
+
+          el.span({className: 'font-resize-2'}, worldStore.state.user.uname), 
+          el.span({className: 'font-resize-2',id: 'level',style:{marginLeft:'2%'}}, "Bonus " + checkAverageBet() + "%"), 
+     
+        el.span(
+            {className: 'font-resize-2',style:{marginLeft:'2%'}},
+        (worldStore.state.user.balance / 100).toFixed(2) + ' bits'
+        ), 
+          
+          
+          
+          el.ul(
+              {id:'userboxresize',style:{width:'100.1%',marginRight:'-1px'}},
+        el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({className: 'font-resize-2',onClick:this._openDepositPopup},'Deposit')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({className: 'font-resize-2',onClick:this._openWithdrawPopup},'Withdraw')),el.li({style:{borderRight: '1px solid #c6d0da'}},el.a({className: 'font-resize-2',onClick:this._onLogout},'Logout'))
+            
+            
+            
+        )
+     );
+          
+          
+          
+          
+          
+    } else {
+      // User needs to login
+    document.getElementById('bet-button').disabled = true;
+      innerNode =     el.a(
+          {
+         
+            href: config.mp_browser_uri + '/oauth/authorize' +
+              '?app_id=' + config.app_id +
+              '&redirect_uri=' + config.redirect_uri,
+            className: '',
+            style:{}
+          },
+          el.span({className: 'font-resize-2'},'Login with Moneypot')
+        )}
+
+    return innerNode;
+  
+  }
+});
+
+var Navbar = React.createClass({
+  displayName: 'Navbar',
+  render: function() {
+    return React.createElement(UserBox, null);
+ 
+  }
+});
+
+var ChatBoxInput = React.createClass({
+  displayName: 'ChatBoxInput',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    chatStore.on('change', this._onStoreChange);
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    chatStore.off('change', this._onStoreChange);
+    worldStore.off('change', this._onStoreChange);
+  },
+  //
+  getInitialState: function() {
+    return { text: '' };
+  },
+  // Whenever input changes
+  _onChange: function(e) {
+    this.setState({ text: e.target.value });
+  },
+  // When input contents are submitted to chat server
+  _onSend: function() {
+    var self = this;
+    Dispatcher.sendAction('SEND_MESSAGE', this.state.text);
+    this.setState({ text: '' });
+  },
+  _onFocus: function() {
+    // When users click the chat input, turn off bet hotkeys so they
+    // don't accidentally bet
+    if (worldStore.state.hotkeysEnabled) {
+      Dispatcher.sendAction('DISABLE_HOTKEYS');
+    }
+  },
+  _onKeyPress: function(e) {
+    var ENTER = 13;
+    if (e.which === ENTER) {
+      if (this.state.text.trim().length > 0) {
+        this._onSend();
+      }
+    }
+  },
+  render: function() {
+    return (
+      el.div(
+        {style:{width:'100%'},
+			
+			className: 'row'},
+        el.div(
+          {className: 'col-md-9'},
+          chatStore.state.loadingInitialMessages ?
+            el.div(
+              {
+                style: {marginTop: '7px'},
+                className: 'text-muted'
+              },
+              el.span(
+                {className: 'glyphicon glyphicon-refresh rotate'}
+              ),
+              ' Loading...'
+            )
+          :
+            el.input(
+              {
+                id: 'chat-input',
+                style:{  border: '1px solid black', background: '#5E778F', outline:'none', borderRadius: '5px', color: 'white', marginLeft:'35px', width:'100%', height: '30px'},
+                type: 'text',
+                value: this.state.text,
+                placeholder: worldStore.state.user ?
+                  'Chat' :
+                  'Login to chat',
+                onChange: this._onChange,
+                onKeyPress: this._onKeyPress,
+                onFocus: this._onFocus,
+                ref: 'input',
+                // TODO: disable while fetching messages
+                disabled: !worldStore.state.user || chatStore.state.loadingInitialMessages
+              }
+            )
+        ),
+        el.div(
+          {className: 'col-md-3'},
+          el.button(
+            {
+                 style:{position:'absolute', height: '30px',left:'0', top:'0', marginLeft:'110%', marginTop:'15px'},
+              type: 'button',
+              className: 'chatButton',
+              disabled: !worldStore.state.user ||
+                chatStore.state.waitingForServer ||
+                this.state.text.trim().length === 0,
+              onClick: this._onSend
+            },
+            'Send'
+          )
+        )
+      )
+    );
+  }
+});
+
+var ChatUserList = React.createClass({
+  displayName: 'ChatUserList',
+  render: function() {
+    return (
+      el.div(
+        {className: 'panel panel-default'},
+        el.div(
+          {style:{listStyle:'none',position:'absolute', top:'0',right:'0',marginRight:'20%'}},
+          'UserList'
+        ),
+        el.div(
+          {style:{textAlign:'left',listStyle:'none',position:'absolute', top:'0',left:'0', marginTop:'35px',marginLeft:'70%'}},
+          el.ul(
+            {style:{listStyle:'none', height: '50px'}},
+            _.values(chatStore.state.userList).map(function(u) {
+              return el.li(
+                {style:{listStyle:'none', height: '50px'},
+                  key: u.uname
+                },
+                helpers.roleToLabelElement(u.role),
+                ' ' + u.uname
+              );
+            })
+          )
+        )
+      )
+    );
+  }
+});
+
+
+
+
+
+var ChatBox = React.createClass({
+  displayName: 'ChatBox',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  // New messages should only force scroll if user is scrolled near the bottom
+  // already. This allows users to scroll back to earlier convo without being
+  // forced to scroll to bottom when new messages arrive
+  _onNewMessage: function() {
+    var node = this.refs.chatListRef.getDOMNode();
+
+    // Only scroll if user is within 100 pixels of last message
+    var shouldScroll = function() {
+      var distanceFromBottom = node.scrollHeight - ($(node).scrollTop() + $(node).innerHeight());
+      console.log('DistanceFromBottom:', distanceFromBottom);
+      return distanceFromBottom <= 250;
+    };
+
+    if (shouldScroll()) {
+      this._scrollChat();
+    }
+  },
+  _scrollChat: function() {
+    var node = this.refs.chatListRef.getDOMNode();
+    $(node).scrollTop(node.scrollHeight);
+  },
+  componentDidMount: function() {
+    chatStore.on('change', this._onStoreChange);
+    chatStore.on('new_message', this._onNewMessage);
+    chatStore.on('init', this._scrollChat);
+  },
+  componentWillUnmount: function() {
+    chatStore.off('change', this._onStoreChange);
+    chatStore.off('new_message', this._onNewMessage);
+    chatStore.off('init', this._scrollChat);
+  },
+  //
+  _onUserListToggle: function() {
+    Dispatcher.sendAction('TOGGLE_CHAT_USERLIST');
+  },
+  render: function() {
+    return el.div(
+      {id: 'chat-box'},
+      el.div(
+        {className: 'panel panel-default'},
+        el.div(
+          {className: 'panel-body', style:{}},
+          el.ul(
+            {id: "cpheight",style:{lineHeight:'2.7',listStyle:'none', float:'left',textAlign:'left',
+    height: "360px",
+	
+    width: '70%',
+    overflowY: 'scroll'}, ref: 'chatListRef'},
+            chatStore.state.messages.toArray().map(function(m) {
+              return el.li(
+                {
+                  // Use message id as unique key
+                  key: m.id
+                },
+                el.span(
+                  {
+                    style: {
+                   	background:'#475360',
+                    borderRadius:'5px',
+                    padding:'5px',
+                    marginRight:'5px'
+                    }
+                  },
+                  helpers.formatDateToTime(m.created_at),
+                  ' '
+                ),
+                m.user ? helpers.roleToLabelElement(m.user.role) : '',
+                m.user ? ' ' : '',
+                el.code(
+					{style:{background:'#5E778F',borderRadius:'5px',padding:'5px'}},
+                  m.user ?
+                    // If chat message:
+                    m.user.uname :
+                    // If system message:
+                    'SYSTEM :: ' + m.text
+                ),el.br(null,null),
+                m.user ?
+                  // If chat message
+                  el.span({style:{padding:'10px', paddingLeft:'0px'}}, ' ' + m.text) :
+                  // If system message
+                  ''
+              );
+            })
+          )
+        ),
+        el.div(
+          {style:{position:'absolute',bottom:'0',width:'50%'}},
+          React.createElement(ChatBoxInput, null)
+        )
+      ),
+      // After the chatbox panel
+      el.p(
+        {
+          className: 'text-right text-muted',
+          style: {position:'absolute',bottom:'0',right:'0', marginRight:'5%', marginBottom:'15px'}
+        },
+        'Users online: ' + Object.keys(chatStore.state.userList).length + ' '
+        // Show/Hide userlist button
+       
+      ),
+      // Show userlist
+      React.createElement(ChatUserList, null)
+    );
+  }
+});
+
+
+var BetBoxChance = React.createClass({
+  displayName: 'BetBoxChance',
+  // Hookup to stores
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    betStore.on('change', this._onStoreChange);
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    betStore.off('change', this._onStoreChange);
+    worldStore.off('change', this._onStoreChange);
+  },
+  //
+  render: function() {
+    // 0.00 to 1.00
+    var houseEdge = helpers.randomHouseEdge(betStore.state.multiplier.num, betStore.state.wager.num);
+    
+    var winProb = helpers.multiplierToWinProb(betStore.state.multiplier.num, houseEdge);
+    
+    var baseProb = 1/betStore.state.multiplier.num; 
+    var minProb = baseProb - (baseProb*0.01);
+    var minString = minProb.toString();
+    minString = minString.substring(0,6);
+    minProb = 100* parseFloat(minString);
+    minProb = minProb.toFixed(2);
+      
+    var maxProb = baseProb - (baseProb*0.0001);
+    var maxString = maxProb.toString();
+    maxString = maxString.substring(0,6);
+    maxProb = 100 * parseFloat(maxString);  
+    maxProb = maxProb.toFixed(2);
+      
+    var isError = betStore.state.multiplier.error || betStore.state.wager.error;
+
+    // Just show '--' if chance can't be calculated
+    var innerNode;
+    if (isError) {
+        
+        innerNode = el.span(
+        {className: 'h1'},
+        ' ' + minProb + '% - ' + maxProb + '%'
+      );
+      /*innerNode = el.span(
+        {className: 'lead'},
+        ' --'
+      );*/
+    } else {
+      innerNode = el.span(
+        {className: 'h1'},
+       ' ' + minProb + '% - ' + maxProb + '%'
+      );
+    }
+
+    return el.div(
+      {},
+      el.span(
+        {className: 'h1', style: { 
+            'marginRight': '5px',
+            fontWeight: 'bold' }},
+        'Chance:'
+      ),
+      innerNode
+    );
+  }
+});
+
+var BetBoxProfit = React.createClass({
+  displayName: 'BetBoxProfit',
+  // Hookup to stores
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    betStore.on('change', this._onStoreChange);
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    betStore.off('change', this._onStoreChange);
+    worldStore.off('change', this._onStoreChange);
+  },
+  //
+  render: function() {
+    var profit = betStore.state.wager.num * (betStore.state.multiplier.num - 1);
+
+    var innerNode;
+    if (betStore.state.multiplier.error || betStore.state.wager.error) {
+        innerNode = el.span(
+        {
+          className: 'h1',
+        },
+        profit.toFixed(2) + ' bits'
+      );
+        
+        /*innerNode = el.span(
+        {className: 'lead'},
+        '--'
+      );*/
+    } else {
+      innerNode = el.span(
+        {
+          className: 'h1',
+        },
+       profit.toFixed(2) + ' bits'
+      );
+    }
+
+    return el.div(
+      null,
+      el.span(
+        {className: 'h1', style: { 
+            'marginRight': '20px',
+            fontWeight: 'bold' }},
+        'Profit: '
+      ),
+      innerNode
+    );
+  }
+});
+
+var BetBoxMultiplier = React.createClass({
+  displayName: 'BetBoxMultiplier',
+  // Hookup to stores
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    betStore.on('change', this._onStoreChange);
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    betStore.off('change', this._onStoreChange);
+    worldStore.off('change', this._onStoreChange);
+  },
+  //
+  _validateMultiplier: function(newStr) {
+    var num = parseFloat(newStr, 10);
+
+    // If num is a number, ensure it's at least 0.01x
+    // if (Number.isFinite(num)) {
+    //   num = Math.max(num, 0.01);
+    //   this.props.currBet.setIn(['multiplier', 'str'], num.toString());
+    // }
+
+    var isFloatRegexp = /^(\d*\.)?\d+$/;
+
+    // Ensure str is a number
+    if (isNaN(num) || !isFloatRegexp.test(newStr)) {
+      Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'INVALID_MULTIPLIER' });
+      // Ensure multiplier is >= 1.00x
+    } else if (num < 1.01) {
+      Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'MULTIPLIER_TOO_LOW' });
+      // Ensure multiplier is <= max allowed multiplier (100x for now)
+    } else if (num > 9999) {
+      Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'MULTIPLIER_TOO_HIGH' });
+      // Ensure no more than 2 decimal places of precision
+    } else if (helpers.getPrecision(num) > 2) {
+      Dispatcher.sendAction('UPDATE_MULTIPLIER', { error: 'MULTIPLIER_TOO_PRECISE' });
+      // multiplier str is valid
+    } else {
+      Dispatcher.sendAction('UPDATE_MULTIPLIER', {
+        num: num,
+        error: null
+      });
+    }
+  },
+  _onMultiplierChange: function(e) {
+    console.log('Multiplier changed');
+    var str = e.target.value;
+    console.log('You entered', str, 'as your multiplier');
+    Dispatcher.sendAction('UPDATE_MULTIPLIER', { str: str });
+    this._validateMultiplier(str);
+  },
+  render: function() {
+    return el.div(
+      {className: 'align-left form-group'},
+    
+        el.h2(
+          {
+            style: betStore.state.multiplier.error ? { color: 'rgb(204, 0, 0)' } : {}
+          },
+          'Multiplier'),
+     
+
+        el.input(
+          {
+            type: 'text',
+            value: betStore.state.multiplier.str,
+            className: 'align-left form-control input-lg',
+            style: {
+            width: '50%',
+          
+            'marginBottom': '25px',
+            //'backgroundColor': 'transparent',
+            //'border': '1px solid #ffffff',
+            'fontWeight': '300'
+          
+          },
+            onChange: this._onMultiplierChange,
+            disabled: !!worldStore.state.isLoading
+          }
+        )
+    );
+  }
+});
+
+var BetBoxWager = React.createClass({
+  displayName: 'BetBoxWager',
+  // Hookup to stores
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  _onBalanceChange: function() {
+    // Force validation when user logs in
+    // TODO: Re-force it when user refreshes
+    Dispatcher.sendAction('UPDATE_WAGER', {});
+  },
+  componentDidMount: function() {
+    betStore.on('change', this._onStoreChange);
+    worldStore.on('change', this._onStoreChange);
+    worldStore.on('user_update', this._onBalanceChange);
+  },
+  componentWillUnmount: function() {
+    betStore.off('change', this._onStoreChange);
+    worldStore.off('change', this._onStoreChange);
+    worldStore.off('user_update', this._onBalanceChange);
+  },
+  _onWagerChange: function(e) {
+    var str = e.target.value;
+    Dispatcher.sendAction('UPDATE_WAGER', { str: str });
+  },
+  _onHalveWager: function() {
+    var newWager = Math.round(betStore.state.wager.num / 2);
+    Dispatcher.sendAction('UPDATE_WAGER', { str: newWager.toString() });
+  },
+  _onDoubleWager: function() {
+    var n = betStore.state.wager.num * 2;
+    Dispatcher.sendAction('UPDATE_WAGER', { str: n.toString() });
+
+  },
+  _onMaxWager: function() {
+    // If user is logged in, use their balance as max wager
+    var balanceBits;
+    if (worldStore.state.user) {
+      balanceBits = Math.floor(worldStore.state.user.balance / 100);
+    } else {
+      balanceBits = 42000;
+    }
+    Dispatcher.sendAction('UPDATE_WAGER', { str: balanceBits.toString() });
+  },
+  //
+  render: function() {
+   
+    return el.div(
+      {className: 'align-right form-group', style:{}},
+   
+        el.h2(
+          // If wagerError, make the label red
+          betStore.state.wager.error ? { style: {color: 'rgb(204, 0, 0)'} } : '#444',
+          'Wager')
+      ,
+      el.input(
+        {
+          value: betStore.state.wager.str,
+          type: 'text',
+          className: 'align-right form-control input-lg',
+          style: {
+              'marginLeft': '50%',
+            'marginBottom': '25px',
+         //   'backgroundColor': 'transparent',
+           // 'border': '1px solid #ffffff',
+            'fontWeight': '300',
+            width:'50%'
+          
+          },
+          onChange: this._onWagerChange,
+          disabled: !!worldStore.state.isLoading,
+          placeholder: 'Bits'
+        }
+      ),
+      el.div(
+        {className: 'align-right ', style:{marginLeft:'40%'}},
+        el.div(
+          {className: 'btn-group',style: {paddingLeft:'16%',marginBottom: '10%' }},
+          el.button(
+            {
+            
+                className: 'button big',
+              type: 'button',
+              style: {border:'solid 1px white', width:'120px', paddingLeft:'5px', paddingRight:'5px'},
+              onClick: this._onHalveWager
+            },
+            '1/2x', worldStore.state.hotkeysEnabled ? el.kbd(null, '(X)') : ''
+          )
+        ),
+        el.div(
+          {className: 'btn-group',style: {paddingLeft:'4%',marginBottom: '10%'}},
+          el.button(
+            {
+                style: {border:'solid 1px white', width:'120px', paddingLeft:'5px', paddingRight:'5px'},
+              className: 'button big',
+              type: 'button',
+              onClick: this._onDoubleWager
+            },
+            '2x ', worldStore.state.hotkeysEnabled ? el.kbd(null, '(C)') : ''
+          )
+        ),
+        el.div(
+          {className: 'btn-group',style: {paddingLeft:'4%',marginBottom: '10%'}},
+          el.button(
+            {style: {border:'solid 1px white', width:'120px',paddingLeft:'5px', paddingRight:'5px'},
+              className: 'button big',
+              type: 'button',
+              onClick: this._onMaxWager
+            },
+            'Max', worldStore.state.hotkeysEnabled ? el.kbd(null, '(V)') : ''
+          )
+        )
+      )
+    
+       
+                 
+                 
+                 
+                 );
+  }
+});
+
+var BetBoxButton = React.createClass({
+  displayName: 'BetBoxButton',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+    betStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('change', this._onStoreChange);
+    betStore.off('change', this._onStoreChange);
+  },
+  getInitialState: function() {
+    return { waitingForServer: false };
+  },
+  // cond is '>' or '<'
+  _makeBetHandler: function(cond) {
+    var self = this;
+
+    console.assert(cond === '<' || cond === '>');
+
+    return function(e) {
+      console.log('Placing bet...');
+
+      // Indicate that we are waiting for server response
+      self.setState({ waitingForServer: true });
+
+      var hash = betStore.state.nextHash;
+      console.assert(typeof hash === 'string');
+        
+    var clientSeed = parseInt(document.getElementById("ClientSeed").value);
+
+      var wagerSatoshis = betStore.state.wager.num * 100;
+      var multiplier = betStore.state.multiplier.num;
+      var payoutSatoshis = wagerSatoshis * multiplier;
+
+      var number = helpers.calcNumber(
+        cond, helpers.multiplierToWinProb(multiplier)
+      );
+
+      var params = {
+        wager: wagerSatoshis,
+        client_seed: clientSeed, // TODO
+        hash: hash,
+        cond: cond,
+        target: number,
+        payout: payoutSatoshis
+      };
+
+      MoneyPot.placeSimpleDiceBet(params, {
+        success: function(bet) {
+            bet.meta = {
+            wager:wagerSatoshis/100,
+            multiplier:payoutSatoshis/wagerSatoshis,
+            cond: cond,
+            number: number,
+            hash: hash,
+            isFair: CryptoJS.SHA256(bet.secret + '|' + bet.salt).toString() === hash
+          };
+        var numAnim = new CountUp(bet.profit,bet.meta.cond, bet.meta.number, "outcomeanim", 0.00, 99.99, 2, 0.4);
+        numAnim.update(bet.outcome.toFixed(2));  
+        document.getElementById("PrevBetID").children[0].innerHTML = bet.bet_id;
+        document.getElementById("PrevBetID").children[0].href = "https://www.moneypot.com/bets/" + parseInt(bet.bet_id);
+        document.getElementById("PrevBetID").children[0].innerHTML = bet.bet_id;
+         document.getElementById("PrevServerHash").innerHTML = bet.meta.hash;
+             document.getElementById("PrevClientSeed").innerHTML = clientSeed;
+            
+             document.getElementById("PrevBetFair").innerHTML = Math.floor(10000*(((bet.secret + clientSeed)%Math.pow(2,32))/4294967296))/100 === bet.outcome ? "Verified" : "Something went wrong, please check on the detailed ";
+          console.log('Successfully placed bet:', bet);
+          // Append to bet list
+            Dispatcher.sendAction('NEW_BET', bet);
+            
+            
+          // Update next bet hash
+          Dispatcher.sendAction('SET_NEXT_HASH', bet.next_hash);
+            
+            
+            
+          setTimeout(function(){
+    // We don't get this info from the API, so assoc it for our use
+        
+
+           
+        
+          // Update user balance
+            
+            
+          Dispatcher.sendAction('UPDATE_USER', {
+            balance: worldStore.state.user.balance + bet.profit
+          });
+        
+}, 100); 
+            
+            
+            
+        
+        
+        
+        
+        
+        
+        },
+        error: function(xhr) {
+          console.log('Error');
+          if (xhr.responseJSON && xhr.responseJSON) {
+            alert(xhr.responseJSON.error);
+          } else {
+            alert('Internal Error');
+          }
+        },
+        complete: function() {
+          self.setState({ waitingForServer: false });
+          // Force re-validation of wager
+          Dispatcher.sendAction('UPDATE_WAGER', {
+            str: betStore.state.wager.str
+          });
+        }
+      });
+    };
+  },
+  render: function() {
+    var innerNode;
+
+    // TODO: Create error prop for each input
+    var error = betStore.state.wager.error || betStore.state.multiplier.error;
+
+    if (worldStore.state.isLoading) {
+      // If app is loading, then just disable button until state change
+      innerNode = el.button(
+        {type: 'button', disabled: true, className: 'button big'},
+        'Loading...'
+      );
+    } else if (error) {
+      // If there's a betbox error, then render button in error state
+
+      var errorTranslations = {
+        'CANNOT_AFFORD_WAGER': 'You cannot afford wager',
+        'INVALID_WAGER': 'Invalid wager',
+        'INVALID_MULTIPLIER': 'Invalid multiplier',
+        'MULTIPLIER_TOO_PRECISE': 'Multiplier too precise',
+        'MULTIPLIER_TOO_HIGH': 'Multiplier too high',
+        'MULTIPLIER_TOO_LOW': 'Multiplier too low'
+      };
+
+      innerNode = el.button(
+        {type: 'button',
+         disabled: true,
+         className: 'button small',
+        style:{marginBottom:'5%'}},
+        errorTranslations[error] || 'Invalid bet'
+      );
+    } else if (worldStore.state.user) {
+      // If user is logged in, let them submit bet
+      innerNode =
+        el.div(
+          {className: 'row', style:{width:'50%'}},
+          // bet hi
+          el.div(
+            {className: 'col-xs-6'},
+            el.button(
+              {
+                id: 'bet-hi',
+                type: 'button',
+                className: 'button big',
+               style:{
+                                       paddingLeft:'20%',
+               'marginLeft':'0px',
+                border:'solid 1px white',
+                width:'120px',
+                   height:'80px'
+               },
+                  
+                  
+                onClick: this._makeBetHandler('>'),
+                disabled: !!this.state.waitingForServer
+              },
+              'High ', worldStore.state.hotkeysEnabled ? el.kbd(null, '(H)') : ''
+            )
+          ),
+          // bet lo
+          el.div(
+            {className: 'col-xs-6'},
+            el.button(
+              {
+                id: 'bet-lo',
+                type: 'button',
+                className: 'button big', 
+                style:{
+                    marginTop:'15%',
+                     marginBottom:'15%',
+                    paddingLeft:'20%',
+               'marginLeft':'0px',
+                border:'solid 1px white',
+                    width:'120px',
+                    height:'80px'
+               },
+                onClick: this._makeBetHandler('<'),
+                disabled: !!this.state.waitingForServer
+              },
+              'Low ', worldStore.state.hotkeysEnabled ? el.kbd(null, '(L)') : ''
+            )
+          )
+        );
+    } else {
+      // If user isn't logged in, give them link to /oauth/authorize
+      innerNode = el.a(
+        {
+          href: config.mp_browser_uri + '/oauth/authorize' +
+            '?app_id=' + config.app_id +
+            '&redirect_uri=' + config.redirect_uri,
+          className: 'button small',
+            style: {
+            border:'solid 1px',
+            marginBottom:'5%'
+                
+            }
+        },
+        'Login with MoneyPot'
+      );
+    }
+
+    return   el.div(
+        {className: 'align-left'},
+      el.div(
+        {className: 'col-md-2',style: { marginTop: '15px' }},
+        (this.state.waitingForServer) ?
+          el.span(
+            {
+              className: 'glyphicon glyphicon-refresh rotate',
+              style: { marginTop: '15px' }
+            }
+          ) : ''
+      ),
+      el.div(
+        {className: 'col-md-8'},
+        innerNode
+      ), el.div(
+        {className:'align-left'},
+              el.div(
+                {className: 'col-sm-6'},
+                React.createElement(BetBoxProfit, null)
+              ),
+              el.div(
+                {className: 'col-sm-6'},
+                React.createElement(BetBoxChance, null)
+              ),
+                 el.h1( null,
+                worldStore.state.user?'Balance: ' + (worldStore.state.user.balance / 100).toFixed(2) + ' bits':'')
+               
+            )
+        
+        
+        
+        
+    );
+  }
+});
+
+var HotkeyToggle = React.createClass({
+  displayName: 'HotkeyToggle',
+  _onClick: function() {
+    Dispatcher.sendAction('TOGGLE_HOTKEYS');
+  },
+    
+_onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('change', this._onStoreChange);
+  },
+    
+  render: function() {
+    return (
+      el.div(
+        {className: 'align-left',   style: { paddingLeft: '4.6%' }},
+        el.button(
+          {
+            type: 'button',
+            className: 'button small',
+            onClick: this._onClick,
+            style: { }
+          },
+          'Hotkeys: ',
+          worldStore.state.hotkeysEnabled ?
+            el.span({className: 'label label-success'}, 'ON') :
+          el.span({className: 'label label-default'}, 'OFF')
+        )
+      )
+    );
+  }
+});
+
+var BetBox = React.createClass({
+  displayName: 'BetBox',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('change', this._onStoreChange);
+  },
+  render: function() {
+    return el.div(
+      null,
+      el.div(
+        {
+        style:{
+
+        marginRight: '7%'
+
+            
+        },    
+        className: '',
+       
+        
+        },
+        el.div(
+          {className: 'panel-body',            style:{
+    width: '100%',          
+    paddingLeft: '5%',
+    paddingRight: '5%'
+
+               }},
+          
+          el.div(
+            {className: 'row',  style:{
+    width: '100%'
+               }},
+            el.div(
+              {className: 'col-xs-6',style:{
+    width: '100%'
+               }
+              
+              },
+                React.createElement(BetBoxWager, null),
+                React.createElement(BetBoxMultiplier, null)
+            ),
+        
+            // HR
+            el.div(
+              {className: 'row'},
+              el.div(
+                {className: 'col-xs-12'},
+                el.hr(null)
+              )
+            )
+        
+          )
+        ),
+        el.div(
+          {className: 'panel-footer clearfix', style:{paddingLeft:'5%'}},
+          React.createElement(BetBoxButton, null)
+        )
+      ),
+      React.createElement(HotkeyToggle, null)
+    );
+  }
+});
+
+var Tabs = React.createClass({
+  displayName: 'Tabs',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+
+
+  _makeTabChangeHandler: function(tabName) {
+    var self = this;
+    return function() {
+      Dispatcher.sendAction('CHANGE_TAB', tabName);
+    };
+  },
+  render: function() {
+    return el.ul(
+      {className: 'row nav nav-tabs',
+       style: {
+       'listStyle': 'none',
+
+        'marginLeft': '15px',
+        'paddingLeft': '0px'
+           
+           
+       }
+      
+      
+      },
+      el.li(
+        {
+    
+            
+            className: worldStore.state.currTab === 'ALL_BETS' ? 'active' : ''},
+        el.a(
+          {
+             style:{
+            border:'solid 1px'
+            },
+            className: 'button small',
+            id: 'abbutton',
+            href: 'javascript:void(0)',
+            onClick: this._makeTabChangeHandler('ALL_BETS')
+              
+              
+              
+          },
+          'All Bets'
+        )
+      ),
+      el.li(
+        {className: worldStore.state.currTab === 'MY_BETS' ? 'active' : ''},
+        el.a(
+          {
+            style:{
+            border:'solid 1px'
+            },
+              className: 'button small',  
+               id: 'mbbutton',
+            href: 'javascript:void(0)',
+            onClick: this._makeTabChangeHandler('MY_BETS')
+          },
+          'My Bets'
+        )
+      ),
+      !config.recaptcha_sitekey ? '' :
+        el.li(
+          {className: worldStore.state.currTab === 'FAUCET' ? 'active' : ''},
+          el.a(
+            {
+                 style:{
+            border:'solid 1px'
+            },
+                className: 'button small',  
+                 id: 'fbutton',
+              href: 'javascript:void(0)',
+              onClick: this._makeTabChangeHandler('FAUCET')
+            },
+            el.span(null, 'Faucet ')
+          )
+        )
+    );
+  }
+});
+
+
+
+
+
+var AllBetsTabContent = React.createClass({
+  displayName: 'AllBetsTabContent',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+ componentDidMount: function() {
+    if(worldStore.state.accessToken != undefined){
+    this.interval = setInterval(refreshBet, 2000); 
+    }
+ 
+  },
+  componentWillUnmount: function() {
+     clearInterval(this.interval);
+  },
+ 
+
+
+    
+  render: function() {
+toggle = false;
+console.log('rendered once');
+    if(worldStore.state.accessToken != undefined){
+      if(getAllBetData(lastBetID,10).length != 0 ){
+        //console.log('update ' + lastBetID);  
+        
+        FirstBuffer.push(getAllBetData(lastBetID ,10));
+        SecondBuffer.reverse();
+        for (j = (FirstBuffer.toArray()[0].length-1); j > -1; j--) { 
+            SecondBuffer.push(FirstBuffer.toArray()[0][j]);
+        };
+        SecondBuffer.reverse();
+ 
+   lastBetID = SecondBuffer.first().id;
+        
+        
+        
+      } else{};
+      
+             return el.div(
+          {style:{
+          
+           'overflowY': 'auto',
+            height: '400px',
+            width:'100%'
+          
+          }}
+          
+          
+          ,
+      el.table(
+        {className: 'table',
+         style:{
+           color: 'white',
+           'marginLeft':'0px'
+          
+          }
+        
+        
+        
+        
+        },
+        el.thead(
+          null,
+          el.tr(
+            null,
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Player'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Bet ID'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Wager'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Profit'), el.th({style:{
+            color: 'white'
+          
+          }}, 'Multiplier'),
+           
+            config.debug ? el.th(null, 'Dump') : ''
+          )
+        ),
+        
+        el.tbody(
+            {id:'ABTable'},
+       
+           SecondBuffer.toArray().map(function(bet) {
+          return  el.tr({key:bet.id}, 
+          
+            el.td(null, bet.uname),
+               
+                        
+            el.td(null, 
+                 
+                  el.a(
+                  {href: 'https://www.moneypot.com/bets/' + bet.id,
+                   style:{
+                     color: '#FFFFFF'
+                   }
+                  
+                  
+                  
+                  },
+                  bet.id
+                )
+                 
+                 
+                 ),
+            el.td(null, bet.wager/100 + ' bits'), 
+                        
+            el.td(
+                {style: {color: bet.profit > 0 ? 'rgb(0, 255, 51)' : 'rgb(204, 0, 0)'}},
+                bet.profit > 0 ?
+                  '+' + bet.profit/100  + ' bits' :
+                  bet.profit/100  + ' bits'
+              ),
+                         el.td(null,
+               ((bet.wager + (bet.profit > 0? bet.profit : bet.profit*-1 )      )/bet.wager).toFixed(2) + 'x'
+              )
+   
+            
+            )
+      
+      
+      
+            })
+            
+        )
+      )
+    );
+      
+ 
+  }
+      else{
+          return el.h1(null, 'Log in first to view All Bets')
+      
+      }
+  
+  
+  
+  }
+});
+
+
+
+
+
+
+
+
+
+
+var MyBetsTabContent = React.createClass({
+  displayName: 'MyBetsTabContent',
+  _onStoreChange: function() {
+    this.forceUpdate();
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('change', this._onStoreChange);
+  },
+    
+  render: function() {
+      toggle = true;
+    return el.div(
+      {style:{
+          
+           'overflowY': 'auto',
+            height: '400px',
+            width:'100%'
+          
+          }},
+      el.table(
+        {className: 'table',
+        
+        style:{
+            color: 'white',
+           'marginLeft':'0px'
+          
+          }
+        
+        },
+        el.thead(
+          null,
+          el.tr(
+            null,
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'ID'),    
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Wager'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Profit'),    
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Multiplier'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Outcome'),
+            el.th({style:{
+            color: 'white'
+          
+          }}, 'Target'),
+            config.debug ? el.th(null, 'Dump') : ''
+          )
+        ),
+        el.tbody(
+          null,
+          worldStore.state.bets.toArray().map(function(bet) {
+            return el.tr(
+              {
+                key: bet.bet_id
+              },
+              // bet id
+              el.td(
+                null,
+                el.a(
+                  {href: config.mp_browser_uri + '/bets/' + bet.bet_id,
+                  style:{
+                     color: '#FFFFFF'
+                   }
+                  },
+                  bet.bet_id
+                )
+              ),
+                
+                el.td(
+                null,bet.meta.wager + ' bits'),
+                
+              // profit
+              el.td(
+                {style: {color: bet.profit > 0 ? 'rgb(0, 255, 51)' : 'rgb(204, 0, 0)'}},
+                bet.profit > 0 ?
+                  '+' + bet.profit/100 + ' bits' :
+                  bet.profit/100 + ' bits'
+              ),
+                
+                el.td(
+                null,bet.meta.multiplier.toFixed(2) + 'x'),
+              // outcome
+              el.td(
+                null,
+                bet.outcome + ' '
+                
+              ),
+              // target
+              el.td(
+                null,
+                bet.meta.cond + ' ' + bet.meta.number.toFixed(2)
+              ),
+              // dump
+              !config.debug ? '' :
+                el.td(
+                  null,
+                  el.pre(
+                    {
+                      style: {
+                        maxHeight: '75px',
+                        overflowY: 'auto'
+                      }
+                    },
+                    JSON.stringify(bet, null, '  ')
+                  )
+                )
+            );
+          }).reverse()
+        )
+      )
+    );
+  }
+});
+
+var FaucetTabContent = React.createClass({
+  displayName: 'FaucetTabContent',
+  getInitialState: function() {
+    return {
+      // SHOW_RECAPTCHA | SUCCESSFULLY_CLAIM | ALREADY_CLAIMED | WAITING_FOR_SERVER
+      faucetState: 'SHOW_RECAPTCHA',
+      // :: Integer that's updated after the claim from the server so we
+      // can show user how much the claim was worth without hardcoding it
+      // - It will be in satoshis
+      claimAmount: undefined
+    };
+  },
+  // This function is extracted so that we can call it on update and mount
+  // when the window.grecaptcha instance loads
+  _renderRecaptcha: function() {
+    worldStore.state.grecaptcha.render(
+      'recaptcha-target',
+      {
+        sitekey: config.recaptcha_sitekey,
+        callback: this._onRecaptchaSubmit
+      }
+    );
+  },
+  // `response` is the g-recaptcha-response returned from google
+  _onRecaptchaSubmit: function(response) {
+    var self = this;
+    console.log('recaptcha submitted: ', response);
+
+    self.setState({ faucetState: 'WAITING_FOR_SERVER' });
+
+    MoneyPot.claimFaucet(response, {
+      // `data` is { claim_id: Int, amount: Satoshis }
+      success: function(data) {
+        Dispatcher.sendAction('UPDATE_USER', {
+          balance: worldStore.state.user.balance + data.amount
+        });
+        self.setState({
+          faucetState: 'SUCCESSFULLY_CLAIMED',
+          claimAmount: data.amount
+        });
+        // self.props.faucetClaimedAt.update(function() {
+        //   return new Date();
+        // });
+      },
+      error: function(xhr, textStatus, errorThrown) {
+        if (xhr.responseJSON && xhr.responseJSON.error === 'FAUCET_ALREADY_CLAIMED') {
+          self.setState({ faucetState: 'ALREADY_CLAIMED' });
+        }
+      }
+    });
+  },
+  // This component will mount before window.grecaptcha is loaded if user
+  // clicks the Faucet tab before the recaptcha.js script loads, so don't assume
+  // we have a grecaptcha instance
+  componentDidMount: function() {
+    if (worldStore.state.grecaptcha) {
+      this._renderRecaptcha();
+    }
+
+    worldStore.on('grecaptcha_loaded', this._renderRecaptcha);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('grecaptcha_loaded', this._renderRecaptcha);
+  },
+  render: function() {
+      toggle = true;
+
+    // If user is not logged in, let them know only logged-in users can claim
+    if (!worldStore.state.user) {
+      return el.p(
+        {className: 'lead'},
+        'You must login to claim faucet'
+      );
+    }
+
+    var innerNode;
+    // SHOW_RECAPTCHA | SUCCESSFULLY_CLAIMED | ALREADY_CLAIMED | WAITING_FOR_SERVER
+    switch(this.state.faucetState) {
+    case 'SHOW_RECAPTCHA':
+      innerNode = el.div(
+        { id: 'recaptcha-target' },
+        !!worldStore.state.grecaptcha ? '' : 'Loading...'
+      );
+      break;
+    case 'SUCCESSFULLY_CLAIMED':
+      innerNode = el.div(
+          {style:{
+          'marginLeft': '0px'
+          
+          
+          
+          }},
+        'Successfully claimed ' + this.state.claimAmount/100 + ' bits.' +
+          // TODO: What's the real interval?
+          ' You can claim again in 5 minutes.'
+      );
+      break;
+    case 'ALREADY_CLAIMED':
+      innerNode = el.div(
+        null,
+        'ALREADY_CLAIMED'
+      );
+      break;
+    case 'WAITING_FOR_SERVER':
+      innerNode = el.div(
+        null,
+        'WAITING_FOR_SERVER'
+      );
+      break;
+    default:
+      alert('Unhandled faucet state');
+      return;
+    }
+
+    return el.div(
+      null,
+      innerNode
+    );
+  }
+});
+
+var TabContent = React.createClass({
+  displayName: 'TabContent',
+  _onStoreChange: function() {
+      if(worldStore.state.currTab === 'ALL_BETS' && toggle === true){
+    this.forceUpdate();
+      }
+      
+      if(worldStore.state.currTab != 'ALL_BETS'){
+    this.forceUpdate();
+      }
+      
+  },
+  componentDidMount: function() {
+    worldStore.on('change', this._onStoreChange);
+  },
+  componentWillUnmount: function() {
+    worldStore.off('change', this._onStoreChange);
+  },
+  render: function() {
+    switch(worldStore.state.currTab) {
+       case 'ALL_BETS':
+            
+        document.getElementById('abbutton').style.backgroundColor = 'rgb(122, 191, 122)';
+                   document.getElementById('fbutton').style.backgroundColor = ' #3BA666';
+                document.getElementById('mbbutton').style.backgroundColor = ' #3BA666';
+         return React.createElement(AllBetsTabContent, null);
+        
+        
+        case 'FAUCET':
+        toggle = true;
+              document.getElementById('fbutton').style.backgroundColor = 'rgb(122, 191, 122)';
+                   document.getElementById('mbbutton').style.backgroundColor = ' #3BA666';
+                document.getElementById('abbutton').style.backgroundColor = ' #3BA666';
+        return React.createElement(FaucetTabContent, null);
+      case 'MY_BETS':
+         toggle = true;
+              document.getElementById('mbbutton').style.backgroundColor = 'rgb(122, 191, 122)';
+                document.getElementById('fbutton').style.backgroundColor = ' #3BA666';
+                document.getElementById('abbutton').style.backgroundColor = ' #3BA666';
+        return React.createElement(MyBetsTabContent, null);
+      
+      default:
+        alert('Unsupported currTab value: ', worldStore.state.currTab);
+        break;
+    }
+  }
+});
+
+var Footer = React.createClass({
+  displayName: 'Footer',
+  render: function() {
+    return el.div(
+      {
+        className: 'text-center text-muted',
+        style: {
+          marginTop: '200px'
+         
+        }
+        
+      },
+      
+     
+      'Powered by ',
+      
+      
+      el.a(
+        {
+          href: 'https://www.moneypot.com'
+        },
+        'Moneypot'
+      )
+    );
+  }
+});
+
+
+// If not accessToken,
+// If accessToken, then
+if (!worldStore.state.accessToken) {
+  Dispatcher.sendAction('STOP_LOADING');
+  connectToChatServer();
+} else {
+  // Load user from accessToken
+  MoneyPot.getTokenInfo({
+    success: function(data) {
+      console.log('Successfully loaded user from tokens endpoint', data);
+      var user = data.auth.user;
+      Dispatcher.sendAction('USER_LOGIN', user);
+    },
+    error: function(err) {
+      console.log('Error:', err);
+    },
+    complete: function() {
+      Dispatcher.sendAction('STOP_LOADING');
+      connectToChatServer();
+    }
+  });
+  // Get next bet hash
+  MoneyPot.generateBetHash({
+    success: function(data) {
+      Dispatcher.sendAction('SET_NEXT_HASH', data.hash);
+    }
+  });
+}
+
+////////////////////////////////////////////////////////////
+// Hook up to chat server
+
+function connectToChatServer() {
+  console.log('Connecting to chat server. AccessToken:',
+              worldStore.state.accessToken);
+
+  socket = io(config.chat_uri);
+
+  socket.on('connect', function() {
+    console.log('[socket] Connected');
+
+    socket.on('disconnect', function() {
+      console.log('[socket] Disconnected');
+    });
+
+    // When subscribed to DEPOSITS:
+
+    socket.on('unconfirmed_balance_change', function(payload) {
+      console.log('[socket] unconfirmed_balance_change:', payload);
+      Dispatcher.sendAction('UPDATE_USER', {
+        unconfirmed_balance: payload.balance
+      });
+    });
+
+    socket.on('balance_change', function(payload) {
+      console.log('[socket] (confirmed) balance_change:', payload);
+      Dispatcher.sendAction('UPDATE_USER', {
+        balance: payload.balance
+      });
+    });
+
+    // message is { text: String, user: { role: String, uname: String} }
+    socket.on('new_message', function(message) {
+      console.log('[socket] Received chat message:', message);
+      Dispatcher.sendAction('NEW_MESSAGE', message);
+    });
+
+    socket.on('user_joined', function(user) {
+      console.log('[socket] User joined:', user);
+      Dispatcher.sendAction('USER_JOINED', user);
+    });
+
+    // `user` is object { uname: String }
+    socket.on('user_left', function(user) {
+      console.log('[socket] User left:', user);
+      Dispatcher.sendAction('USER_LEFT', user);
+    });
+
+    socket.on('new_bet', function(bet) {
+      console.log('[socket] New bet:', bet);
+
+      // Ignore bets that aren't of kind "simple_dice".
+      if (bet.kind !== 'simple_dice') {
+        console.log('[weird] received bet from socket that was NOT a simple_dice bet');
+        return;
+      }
+
+      Dispatcher.sendAction('NEW_ALL_BET', bet);
+    });
+
+    // Received when your client doesn't comply with chat-server api
+    socket.on('client_error', function(text) {
+      console.warn('[socket] Client error:', text);
+    });
+
+    // Once we connect to chat server, we send an auth message to join
+    // this app's lobby channel.
+
+    var authPayload = {
+      app_id: config.app_id,
+      access_token: worldStore.state.accessToken,
+      subscriptions: ['CHAT', 'DEPOSITS', 'BETS']
+    };
+
+    socket.emit('auth', authPayload, function(err, data) {
+      if (err) {
+        console.log('[socket] Auth failure:', err);
+        return;
+      }
+      console.log('[socket] Auth success:', data);
+      Dispatcher.sendAction('INIT_CHAT', data);
+    });
+  });
+}
+// This function is passed to the recaptcha.js script and called when
+// the script loads and exposes the window.grecaptcha object. We pass it
+// as a prop into the faucet component so that the faucet can update when
+// when grecaptcha is loaded.
+function onRecaptchaLoad() {
+  Dispatcher.sendAction('GRECAPTCHA_LOADED', grecaptcha);
+}
+
+$(document).on('keydown', function(e) {
+  var H = 72, L = 76, C = 67, X = 88, V=86, keyCode = e.which;
+
+  // Bail is hotkeys aren't currently enabled to prevent accidental bets
+  if (!worldStore.state.hotkeysEnabled) {
+    return;
+  }
+
+  // Bail if it's not a key we care about
+  if (keyCode !== H && keyCode !== L && keyCode !== X && keyCode !== C && keyCode !== V) {
+    return;
+  }
+
+  // TODO: Remind self which one I need and what they do ^_^;;
+  e.stopPropagation();
+  e.preventDefault();
+
+  switch(keyCode) {
+    case C:  // Increase wager
+      var upWager = betStore.state.wager.num * 2;
+      Dispatcher.sendAction('UPDATE_WAGER', {
+        num: upWager,
+        str: upWager.toString()
+      });
+      break;
+    case X:  // Decrease wager
+      var downWager = Math.floor(betStore.state.wager.num / 2);
+      Dispatcher.sendAction('UPDATE_WAGER', {
+        num: downWager,
+        str: downWager.toString()
+          
+      });
+           break;
+     case V:  // Decrease wager
+      var maxWager = Math.floor(worldStore.state.user.balance / 100);
+
+          
+          Dispatcher.sendAction('UPDATE_WAGER', {
+        num: maxWager,
+        str: maxWager.toString()
+      });
+
+      break;
+    case L:  // Bet lo
+      $('#bet-lo').click();
+      break;
+    case H:  // Bet hi
+      $('#bet-hi').click();
+      break;
+    default:
+      return;
+  }
+});
+
+window.addEventListener('message', function(event) {
+  if (event.origin === config.mp_browser_uri && event.data === 'UPDATE_BALANCE') {
+    Dispatcher.sendAction('START_REFRESHING_USER');
+  }
+}, false);
+
+
+var OutcomeStats = React.createClass({
+    displayName: 'OutcomeStats',
+    render: function() {
+    return el.div(
+    {className: 'OCcontainer'}, 
+        el.h2({id:'outcomeanim', style:{ 'marginTop':'40px', 'font-size':'100px' }},'--')
+    
+    );
+  }
+});
+
+var App = React.createClass({
+  displayName: 'App',
+  render: function() {
+    return el.div(
+      {className: 'container'},
+      // Navbar
+      React.createElement(Navbar, null),
+      // BetBox & ChatBox
+      el.div(
+        {className: 'row'},
+        el.div(
+          {className: 'col-sm-5'},
+          React.createElement(BetBox, null)
+        ),
+        el.div(
+          {className: 'col-sm-7'},
+          React.createElement(ChatBox, null)
+        )
+      ),
+      // Tabs
+      el.div(
+        {style: {marginTop: '15px'}},
+        React.createElement(Tabs, null)
+      ),
+      // Tab Contents
+      React.createElement(TabContent, null),
+      // Footer
+      React.createElement(Footer, null)
+    );
+  }
+});
+/*
+ $('html').addClass('hidden');
+        $(document).ready(function() {
+        $('html').show();  // EDIT: Can also use $('html').removeClass('hidden'); 
+        }); 
+*/
+
+
+
+
+
+React.render(
+React.createElement(Navbar, null),
+  document.getElementById('userBox')
+);
+
+
+
+for(var x=0; x<document.getElementsByClassName('font-resize').length; x++){
+document.getElementsByClassName('font-resize')[x].style.fontSize = (document.getElementsByClassName('font-resize')[x].parentElement.parentElement.clientWidth*0.07) + 'px';	
+
+}
+
+for(var x=0; x<document.getElementsByClassName('font-resize-2').length; x++){
+document.getElementsByClassName('font-resize-2')[x].style.fontSize = (document.getElementsByClassName('font-resize-2')[x].parentElement.parentElement.clientWidth*0.04) + 'px';	
+}    
+
+for(var x=0; x<document.getElementsByClassName('font-resize-3').length; x++){
+document.getElementsByClassName('font-resize-3')[x].style.fontSize = (document.getElementsByClassName('font-resize-3')[x].parentElement.parentElement.clientWidth*0.07) + 'px';	
+} 
+
+for(var x=0; x<document.getElementsByClassName('font-resize-4').length; x++){
+document.getElementsByClassName('font-resize-4')[x].style.fontSize = (document.getElementsByClassName('font-resize-4')[x].parentElement.clientWidth*0.08) + 'px';	
+} 
+for(var x=0; x<document.getElementsByClassName('font-resize-5').length; x++){
+document.getElementsByClassName('font-resize-5')[x].style.fontSize = (document.getElementsByClassName('font-resize-5')[x].parentElement.clientWidth*0.105) + 'px';	
+} 
+
+
+React.render(
+React.createElement(ChatBox, null),
+  document.getElementById('chatBox')
+);
+
+
+
+document.getElementById('cpheight').style.height = document.getElementById('chatBox').clientHeight*0.85 + 'px';
+document.getElementById('cpheight').style.width = document.getElementById('chatBox').clientWidth*0.7 + 'px';	
+
+/*
+React.render(
+React.createElement(BetBoxWager, null),
+  document.getElementById('betboxwager')
+);
+
+React.render(
+React.createElement(BetBoxMultiplier, null),
+  document.getElementById('betboxmultiplier')
+);
+
+React.render(
+React.createElement(BetBoxButton, null),
+  document.getElementById('betboxbutton')
+);
+
+React.render(
+React.createElement(HotkeyToggle, null),
+  document.getElementById('hotkeyToggle')
+);
+
+React.render(
+React.createElement(ChatBox, null),
+  document.getElementById('chatbox')
+);
+
+React.render(
+React.createElement(Tabs, null),
+  document.getElementById('table')
+);
+
+
+React.render(
+React.createElement(TabContent, null),
+  document.getElementById('tablecontent')
+);
+
+
+
+
+/*
+
+React.render(
+React.createElement(ChatBox, null),
+  document.getElementById('chatbox')
+);*/
+
+
+
+
+
+
+var takeProfitMultiplier;         //set the value in %. Stop after winning a percentage of initial balance size.
+var stopLossMultiplier;            //set the value in %. Stop after losing a percentage of initial balance size.
+var initialBetSize;                 //initial bet size in bits.
+var multiWagerOnLoss;               //multiply previous bet size by how many times on loss.
+var maxMultiplierOnLossTimes;       //set the frequency for how many times to multiply by factor above on loss.
+var multiWagerOnWin;                //multiply previous bet size by how many times on win.
+var maxMultiplierOnWinTimes;        //set the frequency for how many times to multiply by factor above on win.
+var resetToInitialOnLossStreak;    //reset to initial bet size after exceeding this loss streak.
+var resetToInitialOnWinStreak;      //reset to initial bet size after exceeding this win streak.
+var betMode;                   //1 = high only, 2 = low only, 3 = alternate hi-lo.
+
+var wager = 0;
+var initialBal;
+var maxMultiLoss;
+var maxMultiWin;
+
+var prevBetStats = new CBuffer(1);
+
+
+var prevWagerSize = 0;
+var autoBetLoop;
+var toggleHi = 0;
+var winStreak;
+var loseStreak;
+
+
+var autoBet = function(){
+//config
+prevBetStats = new CBuffer(1);   
+initialBal = worldStore.state.user.balance;
+takeProfitMultiplier =  parseFloat(document.getElementById('maxTP').value);        
+stopLossMultiplier =  parseFloat(document.getElementById('maxSL').value);            
+initialBetSize =  parseFloat(document.getElementById('betSize').value);                
+multiWagerOnLoss =  parseFloat(document.getElementById('xLoss').value);              
+maxMultiplierOnLossTimes =  parseFloat(document.getElementById('fLoss').value);      
+multiWagerOnWin =  parseFloat(document.getElementById('xWin').value);                
+maxMultiplierOnWinTimes =  parseFloat(document.getElementById('fWin').value);       
+resetToInitialOnLossStreak =  parseFloat(document.getElementById('sLoss').value);     
+resetToInitialOnWinStreak =  parseFloat(document.getElementById('sWin').value);      
+betMode = parseFloat(document.getElementById('betMode').value);                   
+maxMultiLoss = maxMultiplierOnLossTimes;
+maxMultiWin = maxMultiplierOnWinTimes;
+winStreak=0;
+loseStreak=0;
+
+var takeProfit = initialBal * (takeProfitMultiplier/100);
+var stopLoss = initialBal * (stopLossMultiplier/100);
+
+    
+autoBetLoop = setInterval(function(){clicknow(initialBal, takeProfit,stopLoss)},100);
+
+};
+
+
+
+
+var clicknow = function(initialBal, takeProfit,stopLoss){
+
+
+    
+
+
+    
+if(worldStore.state.user.balance > takeProfit|| worldStore.state.user.balance < stopLoss){
+//initialBal = worldStore.state.user.balance;
+clearInterval(autoBetLoop);
+
+alert('profit = ' + (worldStore.state.user.balance - initialBal)/100 + ' bits');
+    
+}
+else{
+    
+if(document.getElementById('bet-lo') != null){
+ 
+if(document.getElementById('bet-lo').disabled == false){
+
+    
+if(prevBetStats.last() == null){
+wager = initialBetSize;
+}
+    
+else{
+
+
+    
+if(prevBetStats.last().profit < 0 ){
+maxMultiWin = maxMultiplierOnWinTimes;
+if(maxMultiLoss != 0){    
+wager = prevWagerSize * multiWagerOnLoss;
+maxMultiLoss = maxMultiLoss - 1;
+
+}
+    
+else{
+wager = prevWagerSize;  
+
+};
+loseStreak++;
+winStreak = 0;
+};
+
+if(prevBetStats.last().profit > 0 ){
+maxMultiLoss = maxMultiplierOnLossTimes;
+if(maxMultiWin != 0){    
+wager = prevWagerSize * multiWagerOnWin;
+maxMultiWin = maxMultiWin -1;
+}else{
+wager = prevWagerSize;
+
+};
+winStreak++;
+loseStreak = 0;
+};
+};
+    
+
+
+    
+if(winStreak > resetToInitialOnWinStreak){
+wager = initialBetSize;
+maxMultiLoss = maxMultiplierOnLossTimes;
+maxMultiWin = maxMultiplierOnWinTimes;
+};
+    
+    
+if(loseStreak > resetToInitialOnLossStreak){
+wager = initialBetSize;
+maxMultiLoss = maxMultiplierOnLossTimes;
+maxMultiWin = maxMultiplierOnWinTimes;
+};
+
+    
+if(wager>worldStore.state.user.balance){
+wager = worldStore.state.user.balance;
+};
+    
+    prevWagerSize = wager;
+
+
+    
+    
+    
+//var wager = (Math.random()*0.25*(worldStore.state.user.balance/100)).toFixed(2);
+//var wager = (Math.random()*0.05*(initialBal/100)).toFixed(2);
+//var multi =  2 + parseFloat((1*Math.random()).toFixed(2));
+//var multi =  1.9;
+
+
+
+Dispatcher.sendAction('UPDATE_WAGER', {
+            str: wager
+          });
+/*
+document.getElementById('betboxmultiplier').children[0].children[1].value = multi;
+Dispatcher.sendAction('UPDATE_MULTIPLIER', {
+        num: multi,
+        error: null
+      });
+      */
+    
+if(betMode == 1){
+document.getElementById('bet-hi').click();  
+
+};
+if(betMode == 2){
+    
+document.getElementById('bet-lo').click();  
+
+};
+    
+if(betMode == 3){
+
+    
+if(toggleHi == 0){
+document.getElementById('bet-lo').click();  
+
+};
+
+if(toggleHi == 1){
+document.getElementById('bet-hi').click();  
+};    
+  
+};
+
+    toggleHi++;
+    if(toggleHi == 2){
+    toggleHi = 0;
+    };
+    
+    
+}else{
+};
+}
+    else{
+clearInterval(autoBetLoop);
+
+alert('profit = ' + (worldStore.state.user.balance - initialBal)/100 + ' bits');
+    
+    
+    };
+};
+
+}
+
+
+
+function animateRoll(target, bet, wager, bonus){
+document.getElementById("outcome").innerHTML = parseInt(Math.random() * 36);
+var duration = 1;
+var countLoop;
+var startCount = setInterval(function(){ 
+duration = duration +5;
+if(duration >39){
+  duration = 39;
+}  
+clearInterval(countLoop);
+countLoop = setInterval(countup, duration);
+if(duration > 38 && parseInt(document.getElementById("outcome").innerHTML) == target){
+clearInterval(countLoop);
+clearInterval(startCount);
+    
+document.getElementById('bet-button').disabled = false;
+
+            Dispatcher.sendAction('UPDATE_USER', {
+            balance: worldStore.state.user.balance + bet.profit
+          }); 
+    
+    document.getElementById('bet-net').innerHTML = parseFloat(bet.profit/100).toFixed(2) + " bits";
+     Dispatcher.sendAction('NEW_BET', bet);
+        if(bet.profit > 0){
+         document.getElementById('bet-net').style.color = "green";
+        }
+        if(bet.profit <0){
+        document.getElementById('bet-net').style.color = "red";
+        }
+    highlightChips(target,wager,bonus);
+    disableChips = false;
+    document.getElementById("outcome").style.backgroundColor = "black";
+      switch(target){
+      case 0:
+          document.getElementById("outcome").style.backgroundColor = "#009901";
+          break;
+    case 1:
+    case 3:
+    case 5:
+    case 7:          
+    case 9:
+    case 12:
+    case 14:
+    case 16:
+    case 18:
+    case 19:
+    case 21:
+    case 23:
+    case 25:
+    case 27:
+    case 30:
+    case 32:
+    case 34:
+    case 36:
+           document.getElementById("outcome").style.backgroundColor = "#a90329";
+          break;
+  }
+}
+  
+}, 40);
+};
+
+
+function countup(){
+  var outcome = parseInt(document.getElementById("outcome").innerHTML);
+  outcome++;
+  if(outcome > 36){
+    outcome = 0;
+  }
+    
+  document.getElementById("outcome").innerHTML = outcome;
+document.getElementById("outcome").style.backgroundColor = "#475360";
+
+    
+}
+
+
+window.addEventListener('resize', function(event){
+document.getElementById('cpheight').style.height = document.getElementById('chatBox').clientHeight*0.85 + 'px';
+document.getElementById('cpheight').style.width = document.getElementById('chatBox').clientWidth*0.7 + 'px';	
+for(var x=0; x<document.getElementsByClassName('font-resize').length; x++){
+document.getElementsByClassName('font-resize')[x].style.fontSize = (document.getElementsByClassName('font-resize')[x].parentElement.parentElement.clientWidth*0.07) + 'px';	
+}
+    
+for(var x=0; x<document.getElementsByClassName('font-resize-2').length; x++){
+document.getElementsByClassName('font-resize-2')[x].style.fontSize = (document.getElementsByClassName('font-resize-2')[x].parentElement.parentElement.clientWidth*0.04) + 'px';	
+}  
+    
+for(var x=0; x<document.getElementsByClassName('font-resize-3').length; x++){
+document.getElementsByClassName('font-resize-3')[x].style.fontSize = (document.getElementsByClassName('font-resize-3')[x].parentElement.parentElement.clientWidth*0.07) + 'px';	
+}     
+for(var x=0; x<document.getElementsByClassName('font-resize-4').length; x++){
+document.getElementsByClassName('font-resize-4')[x].style.fontSize = (document.getElementsByClassName('font-resize-4')[x].parentElement.clientWidth*0.08) + 'px';	
+} 
+for(var x=0; x<document.getElementsByClassName('font-resize-5').length; x++){
+document.getElementsByClassName('font-resize-5')[x].style.fontSize = (document.getElementsByClassName('font-resize-5')[x].parentElement.clientWidth*0.105) + 'px';	
+}   
+});
+
