@@ -36,19 +36,19 @@
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main" style="border-bottom: 1px solid #c6d0da;">
 	
-             
+                 
                 
-                <li class = "gn-menu-alt" style="width: 15%" id="provably-fair" >
-               <div    style="color:white;padding-left:5%;padding-right:5%">
+                <li class = "gn-menu-alt" id="provably-fair" >
+               <div>
 
-                   <span  onClick="TINY.box.show({url:'provablyfair.html',width:600,height:400})"><a  class="font-resize-3" style="border-left:none">Provably Fair ?</a> </span>
-                        <ul style="border: 1px solid #c6d0da;border-top:none;width:100%;">
-                        <li style="border-bottom: 1px solid #c6d0da;text-align:center;border-top: 1px solid #c6d0da;" ><a class="font-resize-3" style="padding-left:5%;padding-right:5%; border-left: none;">Server Hash:</a>
-                        <input readonly class="font-resize-3" style="padding-left:5%;padding-right:5%;width:60%;text-align:center;
+                   <span  onClick="TINY.box.show({url:'provablyfair.html',width:600,height:400})"><a style="border-left:none">Provably Fair ?</a> </span>
+                        <ul style="border: 1px solid #c6d0da;border-top:none;margin-right: -280px;width:520px;">
+                        <li style="border-bottom: 1px solid #c6d0da;text-align:left;border-top: 1px solid #c6d0da;" ><a style=" border-left: none;">Server Hash:</a>
+                        <input readonly style="width:200px;text-align:center;
                  border: 1px solid black;           
                    cursor:text        ;
     background: #5E778F;
-
+    margin-left: 20px;
     height: 30px;
     outline:none;
     border-radius:5px;
@@ -58,13 +58,13 @@
                             
                             
                             "   id="ServerHash"></li>
-                        <li class="font-resize-3" style="text-align:center"><a style="padding-left:5%;padding-right:5%; border-left: none;">Client Seed:</a></li>
-                        <li class="font-resize-3" style="text-align:center"><input id="ClientSeed" style="padding-left:2%;padding-right:5%;width:60%;text-align:center;
+                        <li style="text-align:left"><a style=" border-left: none;">Client Seed:</a></li>
+                        <li style="text-align:left"><input id="ClientSeed" style="width:200px;text-align:center;
                             
                              border: 1px solid black;            
 
     background: #5E778F;
-
+    margin-left: 20px;
 height: 30px;
     outline:none;
     border-radius: 5px;
@@ -78,24 +78,24 @@ height: 30px;
            
                     </div>
              </li>
-                      <li class = "gn-menu-alt" id="userBox" style="cursor:pointer;width:25%;height:58px:border-right">
+                      <li class = "gn-menu-alt" id="userBox" style="cursor:pointer;width:359px;height:58px:border-right">
          
                 
                 </li>
 				
                 
-                <li class = "gn-menu-alt" style="width: 15%"><a style="color:white;padding-left:5%;padding-right:5%"><span class="font-resize" onClick="TINY.box.show({url:'instruction.html',width:700,height:450})">How to play?</span></a></li>
+                <li style="width: 180px;border-left:1px solid #c6d0da "><a style="color:white"><span onClick="TINY.box.show({url:'instruction.html',width:700,height:450})">How to play?</span></a></li>
                 
-                <li class = "gn-menu-alt" style="width:15%;float:left"><a href="#" style="padding-left:5%;padding-right:5%"><span class="font-resize">Roulett.oshi<code>&nbsp;Beta</code></span></a></li>
+                <li style="float:left"><a href="#"><span>Roulett.oshi<code>&nbsp;Beta</code></span></a></li>
 				
 			</ul>
             
             
             <ul id="gn-bottom" class="gn-menu-bottom" style="">
-                <li style="width:10%;" class = "gn-bottom-alt" ><a id = "rTrigger" class="font-resize-4 activeSelection" onclick = "rtToggle(this)" style="padding-left:5%;padding-right:5%;border-left:1px solid #c6d0da">Roulette</a></li>
-                <li style="width:8%;" class = "gn-bottom-alt" ><a class="font-resize-5" id = "dTrigger" onclick = "diceToggle(this)"  style="padding-left:5%;padding-right:5%;border-left:1px solid #c6d0da">Dice</a></li>
+                <li class = "gn-bottom-alt" ><a id = "rTrigger" class="activeSelection" onclick = "rtToggle(this)" style="border-left:1px solid #c6d0da">Roulette</a></li>
+                <li class = "gn-bottom-alt" ><a id = "dTrigger" onclick = "diceToggle(this)"  style="border-left:1px solid #c6d0da">Dice</a></li>
            
-                <li class = "gn-bottom-alt chat-trigger" style="width:8%;float:left;"><a class="font-resize-5" id = "cTrigger" onclick = "chatToggle(this)" style="padding-left:5%;padding-right:5%;border-right:1px solid #c6d0da">Chat</a>
+                <li class = "gn-bottom-alt chat-trigger" style="float:left;"><a id = "cTrigger" onclick = "chatToggle(this)" style="border-right:1px solid #c6d0da">Chat</a>
                 <div id="chatBox"  class = "chat-hide"> chat</div>
                 
                 
@@ -104,7 +104,7 @@ height: 30px;
                 
                 
                 
-                <li style="width:10%;" class = "gn-bottom-alt " ><a  class="font-resize-4" id = "bTrigger" onclick = "statToggle(this)" style="padding-left:5%;padding-right:5%;border-left:none">Bet Stats</a>
+                <li class = "gn-bottom-alt " ><a id = "bTrigger" onclick = "statToggle(this)" style="border-left:none">Bet Stats</a>
                 
                  <div id="betStats" class = "stat-hide">Coming soon. Under construction</div>
                 </li>
