@@ -53,6 +53,9 @@ width:100%;
 
 }
 
+
+
+
 .activeSelection{
 background:#5f6f81;
 }
@@ -106,9 +109,13 @@ background:#5f6f81;
    
 }
 
+#userboxresize li a:hover{
+background: #5f6f81;
+}
+
 #betStats{
-width: 45%;
-height: 70%;
+width: 65%;
+height: 65%;
 position: fixed;
 left:0;
 bottom: 0;
@@ -122,6 +129,71 @@ background: #34495e;
 
 
 }
+
+#statnav{
+margin-left:1%;
+width:100%;
+left:0;
+}
+
+#statnav button{
+	padding-left:10%;
+	padding-right:10%;
+	width:30%;
+	border:5px solid #5F6F81;
+	border-radius: 5px;
+	outline:none;
+	    font-size: 20px;
+    font-family: Impact, Charcoal, sans-serif !important;
+	color:white;
+	background: #475360;
+}
+
+#statnav button:hover{
+background:#87CEEB;
+   cursor: pointer;
+outline:none;
+}
+
+
+#MyBetStats{
+border-top:5px solid #5F6F81;
+    width: 100%;
+    height: 80%;
+   bottom:0;
+	margin-bottom:5%;
+	overflow-y: scroll;
+}
+
+#MyBetStats table{
+
+    width: 100%;
+;
+}
+
+#MyBetStats td{
+font-family: Impact, Charcoal, sans-serif !important;
+font-size: 17px;
+width:10%;
+}
+#MyBetStats tr:first-child{
+border-bottom:5px solid #5F6F81;
+
+}
+
+#AllBetStats{
+border-left: 5px solid #5F6F81;
+    width: 40%;
+    height: 50%;
+    bottom: 0;
+    position: fixed;
+    right: 0;
+}
+#Statistics{
+
+width: 60%;
+}
+
 
 .chat-show{
     z-index:-1000;
@@ -226,11 +298,12 @@ border-bottom-right-radius: 0px;
 
 .gn-bottom-alt{
 	position: relative;
-    right:0;
-   
+    right:0; 
 }
 
-
+.gn-bottom-alt:hover{
+background: #5f6f81;
+}
 
 
 .gn-menu-bottom {
@@ -248,6 +321,10 @@ border-bottom-right-radius: 0px;
 .gn-menu-alt {
 	position: relative;
     right:0;
+}
+
+.gn-menu-alt:hover {
+        background: #5f6f81;
 }
 
 .gn-menu-alt ul {
@@ -369,7 +446,8 @@ border-left: 1px solid #c6d0da;
 
 .gn-menu-main > li:last-child {
 		float: left;
-		border-right: 1px solid #c6d0da;		
+		border-right: 1px solid #c6d0da;	
+
 }
 
 .gn-menu-bottom > li:last-child {

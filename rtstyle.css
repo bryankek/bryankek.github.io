@@ -24,15 +24,15 @@ margin-top: 5%;
 
 .outcome-profit{
 text-align: right;
-    font-size: 35px;
+    font-size: 24px;
     height:60px
 
 }
 
 .outcome-profit-val{
     margin-top:-50px;
-    margin-left:120px;
-    position: absolute;
+	float:right;
+
     text-align: right;
     font-size: 25px;
     height:40px
@@ -51,7 +51,7 @@ text-align: right;
 
 
 .chatButton{
-    position: absolute;
+
     border: 5px solid grey;
     background:#475360;
      border-radius:25px;
@@ -67,6 +67,30 @@ background:#87CEEB;
    cursor: pointer;
 outline:none;
 }
+
+#clearChipButton{
+    position: absolute;
+    border: 5px solid grey;
+    background: #475360;
+    border-radius: 25px;
+    margin-top: 217px;
+    margin-left: 890px;
+    width: 71px;
+    height: 75px;
+    outline: none;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: Impact, Charcoal, sans-serif !important;
+    z-index: 10;
+
+}
+#clearChipButton:hover{
+background:#87CEEB;
+   cursor: pointer;
+outline:none;
+}
+
 
 .spinButton button{
     position: absolute;
@@ -90,7 +114,7 @@ outline:none;
 
 .spinButton button:disabled:hover{
     background:#475360;
-cursor:none;
+cursor:default;
 outline:none;
 color:grey;
 }
