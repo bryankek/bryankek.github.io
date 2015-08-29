@@ -53,8 +53,27 @@ width:100%;
 
 }
 
+#history{
+    width: 2.5%;
+    height: 77%;
+    background: #34495E;
+    position: absolute;
+    border: 4px solid grey;
+	
+    margin-left: 0.3%;
+}
 
+.hchild{
+background: black;
+    height: 6.3%;
+    width: 100%;
+    text-align: center;
+    padding: 20% 10% 10% 1%;
+    border-bottom: 4px solid grey;
+    color: white;
+    font-family: impact, charcoal, sans-serif;
 
+}
 
 .activeSelection{
 background:#5f6f81;
@@ -87,7 +106,7 @@ background:#5f6f81;
 
 
 .stat-show{
-    z-index:-1000;
+    z-index:100;
       -ms-transform: translate(0%,0%); /* IE 9 */
    	-webkit-transform: translate(0%,0%); /* Safari */
     transform: translate(0%,0%);
@@ -99,10 +118,10 @@ background:#5f6f81;
 }
 
 .stat-hide{
-    z-index:-1000;
-    -ms-transform: translate(-120%,0); /* IE 9 */
-   	-webkit-transform: translate(-120%,0); /* Safari */
-    transform: translate(-120%,0);
+    z-index:100;
+    -ms-transform: translate(0,120%); /* IE 9 */
+   	-webkit-transform: translate(0,120%); /* Safari */
+    transform: translate(0,120%);
         -webkit-transition: -webkit-transform 0.3s, width 0.3s;
     -moz-transition: -moz-transform 0.3s, width 0.3s;
     transition: transform 0.3s, width 0.3s;
@@ -114,11 +133,12 @@ background: #5f6f81;
 }
 
 #betStats{
-width: 65%;
-height: 65%;
+width: 55%;
+height: 80%;
 position: fixed;
 left:0;
 bottom: 0;
+color:white;
 margin-bottom:60px;
 border: 10px solid #5F6F81;
 border-bottom:none;
@@ -126,12 +146,13 @@ border-radius:5px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px; 
 background: #34495e;
+text-align: center;
 
 
 }
 
 #statnav{
-margin-left:1%;
+margin-left:0%;
 width:100%;
 left:0;
 }
@@ -139,14 +160,19 @@ left:0;
 #statnav button{
 	padding-left:10%;
 	padding-right:10%;
-	width:30%;
-	border:5px solid #5F6F81;
-	border-radius: 5px;
-	outline:none;
-	    font-size: 20px;
+	padding-top: 2%;
+		padding-bottom: 2%;
+	float:left;
+
+	border:1px solid #5F6F81;
+border-radius: 5px
+		height:10%;
+		width:30%;
+	    font-size: 15px;
     font-family: Impact, Charcoal, sans-serif !important;
 	color:white;
 	background: #475360;
+	outline:none;
 }
 
 #statnav button:hover{
@@ -196,7 +222,7 @@ width: 60%;
 
 
 .chat-show{
-    z-index:-1000;
+    z-index:100;
       -ms-transform: translate(0%,0%); /* IE 9 */
    	-webkit-transform: translate(0%,0%); /* Safari */
     transform: translate(0%,0%);
@@ -208,10 +234,10 @@ width: 60%;
 }
 
 .chat-hide{
-    z-index:-1000;
-    -ms-transform: translate(-120%,0); /* IE 9 */
-   	-webkit-transform: translate(-120%,0); /* Safari */
-    transform: translate(-120%,0);
+    z-index:100;
+    -ms-transform: translate(0,120%); /* IE 9 */
+   	-webkit-transform: translate(0,120%); /* Safari */
+    transform: translate(0,120%);
         -webkit-transition: -webkit-transform 0.3s, width 0.3s;
     -moz-transition: -moz-transform 0.3s, width 0.3s;
     transition: transform 0.3s, width 0.3s;
@@ -224,8 +250,8 @@ width: 60%;
 }
 
 #chatBox{
-width: 65%;
-height: 70%;
+width: 55%;
+height: 80%;
 position: fixed;
 left:0;
 bottom: 0;
@@ -235,8 +261,8 @@ border-bottom:none;
 border-radius:5px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px; 
-
-    
+color: white;
+    	    font-size: 13px;
     
     background-color: #34495e;
     -moz-background-image: linear-gradient(90deg, #34495e 70%,#475360 20%);
@@ -351,7 +377,7 @@ border-left: 1px solid #c6d0da;
 
 .gn-menu-alt div:hover > ul { 
    visibility: visible;
-    z-index: -10;
+    z-index: -100;
     -webkit-transform: translateY(240px);
     -moz-transform: translateY(240px);
     transform: translateY(240px);

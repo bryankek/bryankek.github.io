@@ -322,7 +322,87 @@ width:918px;
 
 }
 
-.chip, .SVchip, .SHchip, .cnChip, .dozenChip, .halfChip {
+
+.street-bet{
+    position: absolute;
+    width: 45px;
+    height: 10px;
+
+    margin-left: -10px;
+    margin-top: 23px;
+    z-index: 1;
+	cursor:pointer;
+}
+.ds-bet{
+    position: absolute;
+    width: 21px;
+    height: 10px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: 23px;
+    z-index: 1;
+}
+
+.four-bet{
+    position: absolute;
+    width: 21px;
+    height: 10px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: 81px;
+    z-index: 1;
+}
+
+.tri1-bet{
+    position: absolute;
+    width: 21px;
+    height: 12px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: -35px;
+    z-index: 1;
+}
+
+.tri2-bet{
+       position: absolute;
+    width: 21px;
+    height: 12px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: 23px;
+    z-index: 1;
+}
+.split03-bet{
+    position: absolute;
+    width: 20px;
+    height: 42px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: -77px;
+    z-index: 1;
+}
+.split02-bet{
+    position: absolute;
+    width: 20px;
+    height: 46px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: -23px;
+
+    z-index: 1;
+}
+.split01-bet{
+     position: absolute;
+    width: 20px;
+    height: 46px;
+	cursor:pointer;
+    margin-left: 35px;
+    margin-top: 34px;
+    z-index: 1;
+	
+}
+
+.s1Chip,.s2Chip,.s3Chip, .chip, .SVchip, .SHchip, .cnChip, .dozenChip, .halfChip, .streetChip, .dsChip, .fourChip, .tri1Chip,.tri2Chip {
   width:31px;
   height:31px;
   padding-top:4px;
@@ -342,17 +422,133 @@ width:918px;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+cursor:pointer;
    
 
-    
-    
     
 }
 
 .chip, .dozenChip, .halfChip{
       margin-left:12px;
   margin-top:-13px;
+}
+
+
+
+.fourChip {
+  font: arial;
+cursor: pointer;
+  margin-left:-5px;
+  margin-top:-5px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+
+.tri1Chip {
+  font: arial;
+
+  margin-left:-5px;
+  margin-top:-5px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+.tri2Chip {
+  font: arial;
+
+  margin-left:-5px;
+  margin-top:-4px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+
+.s3Chip {
+  font: arial;
+cursor: pointer;
+  margin-left:-5px;
+  margin-top:6px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+.s2Chip {
+  font: arial;
+
+  margin-left:-5px;
+  margin-top:10px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+.s1Chip {
+  font: arial;
+
+  margin-left:-5px;
+  margin-top:11px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+
+.streetChip {
+  font: arial;
+
+  margin-left:7px;
+  margin-top:-4px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+
+}
+.dsChip {
+  font: arial;
+
+  margin-left:-5px;
+  margin-top:-4px;
+      -webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+text-decoration: none;
+  
 }
 
 .SVchip {
@@ -367,7 +563,7 @@ text-decoration: none;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+
 }
 
 .SHchip {
@@ -382,7 +578,7 @@ text-decoration: none;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+
 }
 
 .cnChip {
@@ -397,17 +593,17 @@ text-decoration: none;
 -ms-user-select: none;
 user-select: none;
 text-decoration: none;
-    cursor: default;
+
 }
 
 .SHchip:hover{
-    cursor: default;
+
 }
 .SVchip:hover{
-    cursor: default;
+
 }
 .cnChip:hover{
-    cursor: default;
+
 }
 
 

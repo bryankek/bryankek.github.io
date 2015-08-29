@@ -37,6 +37,11 @@
 
 </audio>
         
+		<div id="history">
+
+		
+		</div>
+		
 		<div class="container">
 			<ul id="gn-menu" class="gn-menu-main" style="border-bottom: 1px solid #c6d0da;">
 	
@@ -82,7 +87,7 @@ height: 30px;
            
                     </div>
              </li>
-                      <li class = "gn-menu-alt" id="userBox" style="cursor:pointer;width:25%;height:58px:border-right">
+                      <li class = "gn-menu-alt" id="userBox" style="cursor:pointer;width:30%;height:58px:border-right">
          
                 
                 </li>
@@ -100,20 +105,23 @@ height: 30px;
                 <li style="width:8%;" class = "gn-bottom-alt" ><a class="font-resize-5" id = "dTrigger" onclick = "diceToggle(this)"  style="padding-left:5%;padding-right:5%;border-left:1px solid #c6d0da">Dice</a></li>
            
                 <li class = "gn-bottom-alt chat-trigger" style="width:8%;float:left;"><a class="font-resize-5" id = "cTrigger" onclick = "chatToggle(this)" style="padding-left:5%;padding-right:5%;border-right:1px solid #c6d0da">Chat</a>
-                <div id="chatBox"  class = "chat-hide"> chat</div>
-                
+   
                 
                 </li>
                 
-                
+       
                 
                 
                 <li style="width:10%;" class = "gn-bottom-alt " ><a  class="font-resize-4" id = "bTrigger" onclick = "statToggle(this)" style="padding-left:5%;padding-right:5%;border-left:none">Bet Stats</a>
-                
+                </li>
+      
+            
+            </ul>
+            	             <div id="chatBox"  class = "chat-hide"> chat</div>
+                                
                  <div id="betStats" class = "stat-hide">
 					 <div id="statnav">
-					<button>(coming soon)</button>
-					 <button>(coming soon)</button>
+					 <button>All Bets</button>
 					 <button>My Bets</button>
 					 
 					 </div>
@@ -135,11 +143,6 @@ height: 30px;
 					
 				
 					</div>
-                </li>
-                
-            
-            </ul>
-            
                 <div id = "diceGame" class="game-area game-hide">Roulette not your cup of tea? Stick with dice. Coming soon</div>
             
             
@@ -189,7 +192,16 @@ height: 30px;
 
   <table class="tg">
     <tr>
-      <td class="tg-zero 0" rowspan="3"><p>0</p><button class = "chipCV"></button></td>
+      <td class="tg-zero 0" rowspan="3"><p>0</p><button class = "chipCV"></button>
+		<div class="four-bet"> </div>
+		<div class="tri1-bet"> </div>
+		  <div class="tri2-bet"> </div>
+		  <div class="split03-bet"> </div>
+		  <div class="split02-bet"> </div>
+		  <div class="split01-bet"> </div>
+		</td>
+		
+		
       <td class="tg-red f12 odd fh ft fr 3"><p>3</p><button class = "chipCV"></button>
         <div class="split-betV"> </div>
         <div class="split-betH"></div>
@@ -317,41 +329,68 @@ height: 30px;
     </tr>
     <tr>
       <td class="tg-red f12 odd fh ft tr 1"><p>1</p><button class = "chipCV"></button>
-                 <div class="split-betV"></div>
+          <div class="street-bet"></div>
+		  <div class="ds-bet"></div>  
+		  <div class="split-betV"></div>
 
         </td>
       <td class="tg-black f12 even fh ft tr 4"><p>4</p><button class = "chipCV"></button>
+		  <div class="street-bet"></div>
+		  <div class="ds-bet"></div>
                <div class="split-betV"></div>
         </td>
       <td class="tg-red f12 odd fh ft tr 7"><p>7</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet">    </div> 
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-black even fh ft tr 10"><p>10</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet">  </div>   
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-black odd fh st tr 13"><p>13</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet">  </div>   
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-red even fh st tr 16"><p>16</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet">  </div>  
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-red odd sh st tr 19"><p>19</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet"> </div>  
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-black even sh st tr 22"><p>22</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+              <div class="street-bet"></div>
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-red odd sh tt tr 25"><p>25</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet"> </div>    
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-black even sh tt tr 28"><p>28</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet"> </div>    
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
       <td class="tg-black odd sh tt tr 31"><p>31</p><button class = "chipCV"></button>
-               <div class="split-betV"></div>
+          <div class="street-bet"></div>   
+		  <div class="ds-bet"></div>
+		  <div class="split-betV"></div>
         </td>
-      <td class="tg-red even sh tt tr 34"><p>34</p><button class = "chipCV"></button></td>
-      <td class="tg-blue"><p>R3</p><button class = "chipCV"></button></td>
+      <td class="tg-red even sh tt tr 34"><p>34</p><button class = "chipCV"></button>
+		
+		  <div class="street-bet"></div>
+		</td>
+      
+		
+		<td class="tg-blue"><p>R3</p><button class = "chipCV"></button></td>
     </tr>
     <tr><td colspan="14" style="border:none"></td></tr>
     <tr><td colspan="14" style="border:none"></td></tr>
