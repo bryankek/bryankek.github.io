@@ -37,7 +37,7 @@
 			return false;
 		}
 		
-		var dataString = '&name=' + name + '&email=' + email + '&guest=' + guest + '&attending=' + attending;
+		var dataString = '&name=' + name + '&email=' + email + '&guest=' + guest + '&attending=' + attending '&_replyto=bryankek@gmail.com';
 		var form = $(this);
 		var str = form.serialize(); 
 		$.ajax({
