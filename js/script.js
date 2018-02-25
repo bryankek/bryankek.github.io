@@ -37,7 +37,7 @@
 			return false;
 		}
 		
-		var dataString = '&name=' + name + '&email=' + email + '&guest=' + guest + '&attending=' + attending '&_replyto=bryankek@gmail.com';
+		var dataString = '&name=' + name + '&email=' + email + '&number=' + guest + '&attending=' + attending;
 		var form = $(this);
 		var str = form.serialize(); 
 		$.ajax({
@@ -46,7 +46,7 @@
 			data: dataString,
 			dataType: "json",
 			success: function() {
-			$('#div_'+type).html("<div id='form_send_message'>Thank you for your respond, we will confirm your RSVP as soon as possible. Kindly kindly WhatsApp <a href=\"https://goo.gl/8ni5YF\">Bryan</a> or <a href=\"https://goo.gl/Yaat2o\">Sharina</a> if no confirmation is received within 1 day.</div>", 1500);	
+			$('#div_'+type).html("<div id='form_send_message'>Thank you for your respond, we will confirm your RSVP as soon as possible. Kindly WhatsApp <a href=\"https://goo.gl/8ni5YF\">Bryan</a> or <a href=\"https://goo.gl/Yaat2o\">Sharina</a> if no confirmation is received within 1 day.</div>", 1500);	
 		}
 		});
 		}
