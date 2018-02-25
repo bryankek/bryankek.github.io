@@ -46,7 +46,7 @@
 			data: dataString,
 			dataType: "json",
 			success: function() {
-			$('#div_'+type).html("<div id='form_send_message'>Thank you for your respond, we will confirm your RSVP as soon as possible. Kindly contact us via Whatsapp(0166400438/0143513821) if no confirmation is received within 1 day.</div>", 1500);	
+			$('#div_'+type).html("<div id='form_send_message'>Thank you for your respond, we will confirm your RSVP as soon as possible. Kindly kindly WhatsApp <a href=\"https://goo.gl/8ni5YF\">Bryan</a> or <a href=\"https://goo.gl/Yaat2o\">Sharina</a> if no confirmation is received within 1 day.</div>", 1500);	
 		}
 		});
 		}
