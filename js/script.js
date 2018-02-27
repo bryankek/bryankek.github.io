@@ -119,7 +119,7 @@
 
 		
 		/*CountDown*/
-		$('.married_coundown').countdown({until: new Date('March 17, 2018 17:00:00')});
+		$('.married_coundown').countdown({until: new Date('March 24, 2018 17:00:00')});
 		
 		/*OWL Carousel in Our Story*/
 		$(".story_wrapper").owlCarousel({
