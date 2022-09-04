@@ -9,6 +9,11 @@ show_call_box: true
 ---
 
 # Healthcare you deserve.
+Do you require healthcare services?\
+We are open on\
 
-At Klinik Merdeka we take pride in providng you with the healthcare you deserve.
-Do you have any health related questions? Or are you looking to work with us? Please contact us and let us know.
+| Day                         | Opening Hours   |
+| --------------------------- | --------------- |
+| Monday - Friday             | 9.00am - 9.00pm |
+| Saturday                    | 9.00am - 5:00pm |
+| Closed on Sundays and Public Holidays         |
