@@ -9,7 +9,7 @@ show_call_box: true
 ---
 
 # Healthcare you deserve.
-We are open on: \
+We are open on: 
 
 | Day                         | Opening Hours   |
 | --------------------------- | --------------- |
