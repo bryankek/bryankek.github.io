@@ -17,8 +17,9 @@ We are open on:
 | Saturday                              | 9.00am - 5:00pm |
 | Sundays/Public Holidays               | Closed          |      
 
-Our panels
+# Our Panels
 
 ![ASP Medical Group](/images/panel/asp.jpg =128x)
+[<img src="./images/panel/asp.jpg" width="120px" />]
 
 Please contact us to learn more.
