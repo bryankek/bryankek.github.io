@@ -3,10 +3,13 @@ title: Klinik Merdeka
 layout: home
 description: Healthcare you deserve.
 intro_image: "images/illustrations/pointing.svg"
-intro_image_absolute: true
+intro_image_absolute: false
 intro_image_hide_on_mobile: false
 show_call_box: true
 ---
+# Healthcare you deserve
+At Klinik Merdeka, we strive to provide you with high quality healthcare.\ 
+We have been operating since 2014 (previously known as Klinik Dr Gian) and we are the trusted clinic for many residents and businesses in our area.\
 ## Our Panels
 <img src="./images/panel/asp.jpg" width="120px" />
 <img src="./images/panel/healthmetrics.png" width="120px" />
@@ -21,5 +24,6 @@ show_call_box: true
 | Saturday                              | 9.00am - 5:00pm |
 | Sundays/Public Holidays               | Closed          |      
 
+<br>
 
-Please contact us to learn more.
+## Please contact us to learn more.
