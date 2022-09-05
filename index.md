@@ -18,7 +18,7 @@ We have been operating since 2014 (previously known as Klinik Dr Gian) and we ar
 
 ## We are open on: 
 
-| Days                                  | Opening Hours   |
+| Days &nbsp; &nbsp; &nbsp; &nbsp;| Opening Hours  &nbsp; &nbsp; |
 | ------------------------------------- | :-------------: |
 | Monday - Friday                       | 9.00am - 9.00pm |
 | Saturday                              | 9.00am - 5:00pm |
