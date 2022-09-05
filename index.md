@@ -2,9 +2,9 @@
 title: Klinik Merdeka
 layout: home
 description: Healthcare you deserve.
-intro_image: "images/illustrations/pointing.svg"
+intro_image: "images/illustrations/medicine.jpg"
 intro_image_absolute: false
-intro_image_hide_on_mobile: false
+intro_image_hide_on_mobile: true
 show_call_box: true
 ---
 # Healthcare you deserve
