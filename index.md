@@ -19,7 +19,6 @@ We are open on:
 
 Our panels
 
-![ASP Medical Group](/images/panel/asp.jpg =128X)
-
+![ASP Medical Group](/images/panel/asp.jpg =128x)
 
 Please contact us to learn more.
