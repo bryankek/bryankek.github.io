@@ -3,7 +3,7 @@ title: Contact
 layout: contact
 description: Contact
 ---
-# We are open on: 
+## We are open on: 
 
 | Days &nbsp; &nbsp; &nbsp; &nbsp;| Opening Hours  &nbsp; &nbsp; |
 | ------------------------------------- | :-------------: |

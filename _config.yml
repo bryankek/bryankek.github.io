@@ -4,11 +4,11 @@ title: 'Klinik Merdeka'
 
 logo:
   mobile: "images/logo/logo.svg"
-  mobile_height: "128px"
-  mobile_width: "480px"
+  mobile_height: "78px"
+  mobile_width: "320px"
   desktop: "images/logo/logo.svg"
-  desktop_height: "64px"
-  desktop_width: "240px"
+  desktop_height: "78px"
+  desktop_width: "320px"
 
 home: 
   limit_services: 6
