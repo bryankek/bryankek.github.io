@@ -22,6 +22,7 @@ We have been operating since 2014 (previously known as Klinik Dr Gian) and we ar
 | ------------------------------------- | :-------------: |
 | Monday - Friday                       | 9.00am - 9.00pm |
 | Saturday                              | 9.00am - 5:00pm |
-| Sundays/Public Holidays               | Closed          |      
+| Sunday                                | Closed          |      
+| Public Holiday                        | Closed          |    
 
 ## Please contact us to learn more.

@@ -3,9 +3,9 @@ permalink: pretty
 title: 'Klinik Merdeka'
 
 logo:
-  mobile: "images/logo/logo-mobile.svg"
-  mobile_height: "64px"
-  mobile_width: "240px"
+  mobile: "images/logo/logo.svg"
+  mobile_height: "128px"
+  mobile_width: "480px"
   desktop: "images/logo/logo.svg"
   desktop_height: "64px"
   desktop_width: "240px"
