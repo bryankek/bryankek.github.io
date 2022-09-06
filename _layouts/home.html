@@ -24,14 +24,14 @@ bodyClass: "page-home"
     <div class="row pt-3 pb-3 justify-content-start">
       <h2>Our Panels:</h2>
     </div>
-    <div class="row justify-content-start">
+    <div class="justify-content-start">
       {% for feature in site.data.features %}
-      <div class="col-12 col-md-1 col-lg-2 mb-2">
+      <div class="col-12 col-md-1 col-lg-1 mb-1">
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}"/></div>
       </div>
       {% endfor %}
     </div>
-    <div class="row pt-3 pb-3 justify-content-start">
+    <div class="pt-3 pb-3 justify-content-start">
       <h2>Our Contact:</h2>
     </div>
     {% if page.show_call_box %}
