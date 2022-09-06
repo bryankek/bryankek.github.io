@@ -24,9 +24,9 @@ bodyClass: "page-home"
     <div class="pt-3 pb-3 justify-content-start">
       <h2>Our Panels:</h2>
     </div>
-    <div class="justify-content-start">
+    <div class="row justify-content-start">
       {% for feature in site.data.features %}
-      <div class="col-12 col-md-6 col-lg-4 mb-2">
+      <div class="col-12 col-md-2 col-lg-2 mb-2">
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}"/></div>
       </div>
       {% endfor %}
