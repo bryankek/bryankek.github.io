@@ -1,29 +1,30 @@
 [
   {
-    "title": "Free Consultation",
-    "description": "New clients receive an obligation free consultation.",
+    "title": "ASP Medical Group",
     "image": {
-      "url": "images/features/noun_branding_1885335.svg",
-      "width": 80,
-      "height": 80
+      "url": "./images/panel/asp.jpg",
+      "width": 120
     }
   },
   {
-    "title": "Certified Accountants",
-    "description": "All members of our team are certified accountants.",
+    "title": "Healthmetrics",
     "image": {
-      "url": "images/features/noun_The Process_1885341.svg",
-      "width": 80,
-      "height": 80
+      "url": "./images/panel/healthmetrics.png",
+      "width": 120
     }
   },
   {
-    "title": "Tax Compliance",
-    "description": "We stay up to date on the latest changes to the tax code.",
+    "title": "Integrated Health Plans (IHP)",
     "image": {
-      "url": "images/features/noun_3d modeling_1885342.svg",
-      "width": 80,
-      "height": 80
+      "url": "./images/panel/IHP.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Micare",
+    "image": {
+      "url": "./images/panel/micare.jpeg",
+      "width": 120
     }
   }
 ]
