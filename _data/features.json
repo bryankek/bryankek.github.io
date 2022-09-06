@@ -26,5 +26,82 @@
       "url": "./images/panel/micare.png",
       "width": 120
     }
+  },
+  {
+    "title": "Aver Asia Rental",
+    "image": {
+      "url": "./images/panel/aver.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Extreme Labels",
+    "image": {
+      "url": "./images/panel/extreme.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "GHS Foods",
+    "image": {
+      "url": "./images/panel/ghs.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Hexachase",
+    "image": {
+      "url": "./images/panel/hexachase.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Perceptive Logistics",
+    "image": {
+      "url": "./images/panel/perceptive.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "San Shu Gong",
+    "image": {
+      "url": "./images/panel/san.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Tan Kim Hock",
+    "image": {
+      "url": "./images/panel/tan.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "The Tree Fruit Industries",
+    "image": {
+      "url": "./images/panel/tree.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "The Tree Fruit Manufacturing",
+    "image": {
+      "url": "./images/panel/tree2.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Omiyuki Osaka Confectionery",
+    "image": {
+      "url": "./images/panel/omiyuki.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Visdynamics Research",
+    "image": {
+      "url": "./images/panel/vis.png",
+      "width": 120
+    }
   }
 ]
