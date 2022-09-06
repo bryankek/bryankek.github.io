@@ -23,13 +23,13 @@ bodyClass: "page-home"
 
 {% if site.data.features %}
 <div class="strip">
-  <div class="container">
-    <h1>Our Panels</h1>
-  </div>
   <div class="container pt-6 pb-6 pt-md-10 pb-md-10">
-    <div class="row justify-content-center">
+    <div class="col-12">
+      <h1>Our Panels</h1>
+    </div>
+    <div class="row justify-content-left">
       {% for feature in site.data.features %}
-      <div class="col-12 col-md-1 col-lg-4 mb-2">
+      <div class="col-12 col-md-1 col-lg-2 mb-2">
           <div class="feature-image"><img alt="{{ feature.title }} logo" src="{{ feature.image.url | relative_url }}" width="{{ feature.image.width }}"/></div>
       </div>
       {% endfor %}
