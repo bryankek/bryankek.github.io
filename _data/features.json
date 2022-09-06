@@ -2,7 +2,7 @@
   {
     "title": "ASP Medical Group",
     "image": {
-      "url": "./images/panel/asp.jpg",
+      "url": "./images/panel/asp.png",
       "width": 120
     }
   },
@@ -23,7 +23,7 @@
   {
     "title": "Micare",
     "image": {
-      "url": "./images/panel/micare.jpeg",
+      "url": "./images/panel/micare.png",
       "width": 120
     }
   }
