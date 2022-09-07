@@ -103,5 +103,26 @@
       "url": "./images/panel/vis.png",
       "width": 120
     }
+  },
+  {
+    "title": "Econsave",
+    "image": {
+      "url": "./images/panel/econsave.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Central Malaya Papers",
+    "image": {
+      "url": "./images/panel/cmp.png",
+      "width": 120
+    }
+  },
+  {
+    "title": "Hayan Prints",
+    "image": {
+      "url": "./images/panel/hayan.png",
+      "width": 120
+    }
   }
 ]
