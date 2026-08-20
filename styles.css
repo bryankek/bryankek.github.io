@@ -194,11 +194,12 @@ body {
   z-index: 10;
 }
 
-/* Lang Switcher Pill */
-.card-header-actions {
+/* Lang Switcher Pill (Footer) */
+.card-footer-actions {
   display: flex;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .lang-switcher-pill {
@@ -997,13 +998,68 @@ body {
 
 /* Mobile Screens Styles Override */
 @media (max-width: 480px) {
+  html {
+    font-size: 15px; /* Scale base font size down on mobile */
+  }
+
   .linktree-card {
-    padding: 1.75rem;
+    padding: 1.25rem 0.75rem;
     border-radius: var(--radius-md);
   }
 
   .profile-name-title {
-    font-size: 1.5rem;
+    font-size: 1.45rem;
+  }
+
+  .lang-btn {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+
+  .lang-dropdown-select {
+    padding: 5px 6px;
+    font-size: 0.7rem;
+  }
+
+  /* Collapsible Switcher Pill on Mobile */
+  .lang-switcher-pill {
+    position: relative;
+    cursor: pointer;
+    transition: var(--transition-normal);
+    padding-right: 30px !important;
+  }
+
+  .lang-switcher-pill::after {
+    content: '';
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    border-right: 2px solid var(--text-secondary);
+    border-bottom: 2px solid var(--text-secondary);
+    transform: translateY(-70%) rotate(45deg);
+    transition: transform var(--transition-normal);
+    pointer-events: none;
+  }
+
+  .lang-switcher-pill.expanded {
+    padding-right: 4px !important;
+  }
+
+  .lang-switcher-pill.expanded::after {
+    display: none;
+  }
+
+  /* Hide inactive buttons and dropdown when collapsed */
+  .lang-switcher-pill:not(.expanded) .lang-btn:not(.active),
+  .lang-switcher-pill:not(.expanded) .lang-dropdown-wrapper {
+    display: none !important;
+  }
+
+  .speech-container {
+    font-size: 0.82rem;
+    line-height: 1.55;
   }
 
   .form-row {

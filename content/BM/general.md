@@ -19,14 +19,13 @@ cta_instagram: Sertai saya di Instagram
 cta_tiktok: Tontoni saya di TikTok
 cv_title: Latar Belakang Profesional
 cv_subtitle: Kelayakan akademik, sejarah kerjaya perubatan, dan advokasi.
-cta_save_contact: Simpan Kenalan
+cta_save_contact: Simpan Kontak
 cta_share_profile: Kongsi Profil
 status_active: Aktif & Dalam Talian
 footer_copyright: © 2026 Dr. Bryan Kek. Hak cipta terpelihara.
 contact_saved_msg: Kenalan disimpan!
 profile_credentials: Calon untuk N.19 Kesidang
 share_modal_title: Kongsi Profil
-share_preview_label: Preview
 speech_title: Latar Belakang & Wawasan
 vcard_fn: Dr. Bryan Kek
 vcard_org: BERSAMA

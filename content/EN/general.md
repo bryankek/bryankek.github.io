@@ -14,9 +14,9 @@ metric3_val: ♾️
 metric3_lbl: Lives Touched
 cta_threads: Join the conversation & discussions
 cta_x: Thoughts, real-time updates & commentary
-cta_facebook: Grassroots Action & Updates
-cta_instagram: Daily Insights & Health Tips
-cta_tiktok: Civic Education & Shorts
+cta_facebook: Join me on FB
+cta_instagram: Join me on Instagram
+cta_tiktok: Watch me on TikTok
 cv_title: Professional Background
 cv_subtitle: Academic qualifications, medical career history, and public advocacy.
 cta_save_contact: Save Contact
@@ -26,7 +26,6 @@ footer_copyright: © 2026 Dr. Bryan Kek. All rights reserved.
 contact_saved_msg: Contact saved!
 profile_credentials: Candidate for N.19 Kesidang
 share_modal_title: Share Profile
-share_preview_label: Preview Open Graph Card
 speech_title: Background & Vision
 vcard_fn: Dr. Bryan Kek
 vcard_org: BERSAMA

@@ -1,14 +1,27 @@
-Hai semua, saya Dr. Bryan Kek, calon BERSAMA bagi kawasan N.19 Kesidang untuk Pilihan Raya Negeri Melaka yang akan datang. Ramai mengenali saya sebagai doktor komuniti dan pendengar yang sentiasa berada di lapangan bersama masyarakat. Saya anak jati Melaka, dan keluarga saya mempunyai akar yang mendalam di Kesidang. Di sinilah tempat saya membesar, belajar erti kehidupan, dan kembali untuk berkhidmat dengan sepenuh hati saya.
+>Pohon beringin daunnya rendang,
+>Tumbuh subur di pinggir bukit;
+>Menang kalah adat bertanding,
+>**Tolak dinosaur kita bangkit.**
 
-Dari klinik ke komuniti, tugas harian saya adalah mendengar dan menyembuhkan. Di sepanjang perjalanan saya memberikan rawatan perubatan dan penjagaan paliatif ke rumah-rumah pesakit, saya melihat sendiri beban berat yang dipikul secara senyap oleh golongan muda kita. Kebanyakan generasi muda hari ini terperangkap dalam dilema antara membina kerjaya untuk mencari rezeki dengan tanggungjawab menjaga ibu bapa yang telah berusia, terlantar sakit, atau menghadapi penyakit kronik. Mereka mahu berbakti, tetapi beban kos perubatan, masa, dan keletihan emosi amatlah menekan.
+Salam sejahtera semua, saya Dr. Bryan Kek, calon BERSAMA bagi kawasan N.19 Kesidang. Ramai mengenali saya sebagai doktor komuniti dan pendengar yang sentiasa berada di lapangan bersama masyarakat. 
 
-Namun apakah yang kita lihat di pentas politik hari ini? Kita disajikan dengan politik dinosaur, politik lapuk yang taksub dengan perebutan kuasa, retorik kosong yang diulang-ulang setiap kali musim pilihan raya, serta janji-janji manis yang tidak pernah menyelesaikan isu sebenar rakyat marhaen. Sejujurnya, saya sudah muak dan bosan dengan corak politik lama ini. Kekecewaan inilah yang mendorong saya untuk tampil ke hadapan; kerana jika kita tidak bangkit membawa pembaharuan, nasib rakyat dan generasi muda akan terus terbiar di tangan mereka yang enggan berubah.
+Saya anak jati Melaka, dan keluarga saya berakar umbi dari Kesidang. Di sinilah tempat saya membesar, belajar erti kehidupan, dan tempat saya kembali berkhidmat dengan sepenuh hati.
+
+Dari klinik ke komuniti, tugas harian saya adalah **mendengar dan merawat**. 
+
+Sepanjang turun padang memberikan rawatan perubatan serta rawatan paliatif ke rumah, saya melihat sendiri satu hakikat berat yang dipikul dalam diam oleh anak-anak muda kita. 
+
+Ramai generasi muda hari ini tersepit dalam dilema antara membina kerjaya mencari rezeki dengan tanggungjawab menjaga ibu bapa yang semakin uzur, terlantar, atau berdepan penyakit kronik. Beban kos perubatan, masa, dan keletihan emosi amat menekan.
+
+Namun apakah yang kita lihat di pentas politik hari ini? Kita disajikan dengan politik dinosaur, politik lapuk yang taksub dengan perebutan kuasa, retorik kosong yang diulang-ulang setiap kali musim pilihan raya, serta janji-janji manis yang tidak pernah menyelesaikan isu sebenar rakyat biasa. 
+
+Terus terang saya katakan, saya sudah muak dan bosan dengan corak politik lama ini. Rasa jelak inilah yang mendorong saya untuk melangkah ke hadapan; kerana jika kita tidak bangkit membawa pembaharuan, nasib rakyat dan generasi muda akan terus terabai di tangan mereka yang enggan berubah. 
 
 > **dinosaur / politik dinosaur (kata nama)**
-> Dalam politik, merujuk kepada tokoh, organisasi, atau cara berfikir yang tergolong dalam era lampau, menolak pembaharuan baharu, dan gagal menyesuaikan diri dengan realiti sosial atau teknologi semasa.
-> *Contoh: "Ahli politik veteran itu dianggap sebagai dinosaur politik kerana menentang strategi kempen moden."*
+> Merujuk kepada ahli politik di Malaysia yang masih mengamalkan politik lapuk, gila kuasa, hanya mementingkan kepentingan peribadi, dan sekadar berlakon (wayang) demi meraih undi rakyat tanpa membawa sebarang pembaharuan yang bermakna.
+> Contoh: "Rakyat sudah muak dengan dinosaur politik yang hanya tahu berwayang setiap kali tibanya musim pilihan raya."
 
-Saya faham bahawa bertanding di kawasan yang mempunyai penyandang memerlukan saya membuktikan keupayaan saya. Oleh itu, saya tidak meminta anda memilih saya semata-mata kerana gelaran perubatan saya, tetapi nilailah saya berdasarkan rekod perkhidmatan, prinsip, dan tindakan nyata yang berlandaskan empat janji utama saya, SAMA:
+Saya faham, bertanding di kawasan yang mempunyai penyandang memerlukan saya membuktikan keupayaan diri. Oleh itu, saya tidak meminta anda memilih saya semata-mata kerana gelaran doktor, tetapi nilailah saya berdasarkan rekod kerja, prinsip, dan tindakan nyata berasaskan empat janji utama saya, SAMA:
 
 > **Sepakat**
 > Bekerjasama dengan rakyat untuk berkhidmat demi kebaikan bersama.
@@ -17,11 +30,18 @@ Saya faham bahawa bertanding di kawasan yang mempunyai penyandang memerlukan say
 > Mengamalkan ketelusan dan bertindak dengan penuh integriti.
 > 
 > **Meneliti**
-> Membuat keputusan berasaskan fakta dan data, bukan omong kosong.
+> Membuat keputusan berasaskan fakta dan data, bukan sembang kencang saja.
 > 
 > **Adil**
-> Memperjuangkan keterangkuman dan mengutamakan rakyat.
+> Memperjuangkan keadilan untuk semua lapisan rakyat.
 
-Komitmen saya adalah untuk memperluas perkhidmatan perubatan dan penjagaan paliatif di rumah bagi warga emas dan pesakit terlantar, mengurangkan beban kewangan serta emosi penjaga, dan mewujudkan peluang kemahiran ekonomi agar belia kita dapat maju tanpa mengabaikan ibu bapa tercinta. Saya berdiri di sini dengan tenaga muda, hati yang ikhlas, dan keazaman untuk mendengar serta menyelesaikan masalah bersama-sama anda.
+Komitmen saya adalah memperluas perkhidmatan kesihatan dan sokongan rawatan paliatif terus ke rumah pesakit, meringankan beban kos serta emosi para penjaga, dan membuka ruang kemahiran ekonomi agar anak-anak muda kita boleh terus maju tanpa perlu mengabaikan ibu bapa tercinta.
 
-**Sertai saya dan BERSAMA dalam membina Kesidang, Melaka, dan Malaysia yang lebih baik.**
+Saya berdiri di sini membawa tenaga muda, hati yang tulus, dan kesungguhan untuk mendengar serta menyelesaikan masalah bersama anda.
+
+>Indah selasih mekar berseri,
+>Petik sekuntum di tepi barat;
+>Ikhlas berkhidmat sepenuh hati,
+>**Saya sentiasa BERSAMA rakyat.**
+
+**Mari BERSAMA saya dalam membina Kesidang, Melaka, dan Malaysia yang lebih baik.**

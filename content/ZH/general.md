@@ -14,9 +14,9 @@ metric3_val: ♾️
 metric3_lbl: 惠及生命
 cta_threads: 参与对话与讨论
 cta_x: 实时观点、动态更新与评论
-cta_facebook: 基层行动与动态
-cta_instagram: 每日见解与健康提示
-cta_tiktok: 公民教育与短视频
+cta_facebook: 在 FB 关注我
+cta_instagram: 在 Instagram 关注我
+cta_tiktok: 在 TikTok 关注我
 cv_title: 专业背景
 cv_subtitle: 学术资格、医疗职业生涯历史以及公共倡导。
 cta_save_contact: 保存联系人
@@ -26,7 +26,6 @@ footer_copyright: © 2026 郭杰勋医生 (Dr. Bryan Kek). 版权所有。
 contact_saved_msg: 联系人已保存！
 profile_credentials: N.19 格西当州议席候选人 (N.19 Kesidang)
 share_modal_title: 分享主页
-share_preview_label: 预览 Open Graph 社交卡片
 speech_title: 背景与愿景
 vcard_fn: 郭杰勋医生 (Dr. Bryan Kek)
 vcard_org: 同心党 BERSAMA

@@ -59,6 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initLanguageSwitcher() {
   const langButtons = document.querySelectorAll('.lang-btn');
   const moreLangsSelect = document.getElementById('more-langs');
+  const switcher = document.querySelector('.lang-switcher-pill');
   
   // Update active state initially
   updateUIActiveState(currentLang);
@@ -70,6 +71,7 @@ function initLanguageSwitcher() {
       if (selectedLang) {
         currentLang = selectedLang;
         changeLanguage(currentLang);
+        if (switcher) switcher.classList.remove('expanded');
       }
     });
   });
@@ -81,6 +83,29 @@ function initLanguageSwitcher() {
       if (selectedLang) {
         currentLang = selectedLang;
         changeLanguage(currentLang);
+        if (switcher) switcher.classList.remove('expanded');
+      }
+    });
+  }
+
+  // Handle collapsible switcher on mobile
+  if (switcher) {
+    switcher.addEventListener('click', (e) => {
+      // If clicking inside the select or on an inactive button, let it select
+      const select = e.target.closest('select');
+      const inactiveBtn = e.target.closest('.lang-btn:not(.active)');
+      
+      if (select || inactiveBtn) {
+        return;
+      }
+      
+      switcher.classList.toggle('expanded');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!switcher.contains(e.target)) {
+        switcher.classList.remove('expanded');
       }
     });
   }
