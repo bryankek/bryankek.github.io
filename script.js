@@ -50,6 +50,7 @@ if (initialPath === '/' || initialPath === '/index.html') {
 document.addEventListener('DOMContentLoaded', () => {
   initLanguageSwitcher();
   initAccordions();
+  initMobileStickyHeader();
   
   // Set default translations and load content
   changeLanguage(currentLang);
@@ -743,5 +744,20 @@ function initAccordions() {
         }, 300);
       }
     });
+  });
+}
+
+// 8. Sticky Mini-Header Scroll Listener (All Viewports)
+function initMobileStickyHeader() {
+  const miniHeader = document.getElementById('mobile-sticky-header');
+  if (!miniHeader) return;
+
+  window.addEventListener('scroll', () => {
+    // Show when scroll position is greater than 350px (past the avatar/hero card)
+    if (window.scrollY > 350) {
+      miniHeader.classList.add('show');
+    } else {
+      miniHeader.classList.remove('show');
+    }
   });
 }

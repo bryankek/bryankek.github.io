@@ -5,7 +5,7 @@ nav_cv: Latar Belakang
 nav_contact: Hubungi
 profile_name: Dr. Bryan Kek Kit Hun
 profile_title: Doktor Komuniti
-profile_tagline: Professional perubatan memperjuangkan agenda sivik dari akar umbi demi memacu perubahan sistemik.
+profile_tagline: Professional perubatan yang memperjuangkan agenda sivik dari akar umbi demi perubahan sistemik.
 metric1_val: 10
 metric1_lbl: Tahun Pengalaman
 metric2_val: 35k+

@@ -24,16 +24,16 @@ Terus terang saya katakan, saya sudah muak dan bosan dengan corak politik lama i
 Saya faham, bertanding di kawasan yang mempunyai penyandang memerlukan saya membuktikan keupayaan diri. Oleh itu, saya tidak meminta anda memilih saya semata-mata kerana gelaran doktor, tetapi nilailah saya berdasarkan rekod kerja, prinsip, dan tindakan nyata berasaskan empat janji utama saya, SAMA:
 
 > **Sepakat**
-> Bekerjasama dengan rakyat untuk berkhidmat demi kebaikan bersama.
+> Saya akan sepakat dan bekerjasama dengan rakyat demi kebaikan bersama.
 > 
 > **Amanah**
-> Mengamalkan ketelusan dan bertindak dengan penuh integriti.
+> Saya akan sentiasa amanah dan bertindak dengan penuh integriti.
 > 
 > **Meneliti**
-> Membuat keputusan berasaskan fakta dan data, bukan sembang kencang saja.
+> Saya akan membuat keputusan berasaskan fakta dan bukan sembang kencang saja.
 > 
 > **Adil**
-> Memperjuangkan keadilan untuk semua lapisan rakyat.
+> Saya akan bertindak adil pada semua dan mendahulukan kepentingan rakyat.
 
 Komitmen saya adalah memperluas perkhidmatan kesihatan dan sokongan rawatan paliatif terus ke rumah pesakit, meringankan beban kos serta emosi para penjaga, dan membuka ruang kemahiran ekonomi agar anak-anak muda kita boleh terus maju tanpa perlu mengabaikan ibu bapa tercinta.
 
