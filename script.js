@@ -638,23 +638,34 @@ function copyToClipboardFromModal() {
 
 // 5. Download Contact (vCard)
 function downloadVCard() {
+  const fn = currentGeneral.vcard_fn || "Dr. Bryan Kek";
+  const org = currentGeneral.vcard_org || "Sinar Community Mobile Clinic";
+  const title = currentGeneral.vcard_title || "Public Health Practitioner & Civic Advocate";
+  const tel = currentGeneral.vcard_tel || "+60168804697";
+  const email = currentGeneral.vcard_email || "contact@drbryankek.my";
+  const url = currentGeneral.vcard_url || "https://dr.bryankek.my";
+
+  const nameParts = fn.split(' ');
+  const lastName = nameParts.length > 1 ? nameParts[nameParts.length - 1] : '';
+  const firstName = nameParts.length > 0 ? nameParts.slice(0, -1).join(' ') : fn;
+
   const vcard = `BEGIN:VCARD
 VERSION:3.0
-N:Kek;Bryan;Dr.;;
-FN:Dr. Bryan Kek
-ORG:Sinar Community Mobile Clinic
-TITLE:Public Health Practitioner & Civic Advocate
-TEL;TYPE=CELL,VOICE:+60168804697
-EMAIL;TYPE=PREF,INTERNET:contact@drbryankek.my
-URL:https://dr.bryankek.my
-REV:2026-08-20T12:00:00Z
+N:${lastName};${firstName};;;
+FN:${fn}
+ORG:${org}
+TITLE:${title}
+TEL;TYPE=CELL,VOICE:${tel}
+EMAIL;TYPE=PREF,INTERNET:${email}
+URL:${url}
+REV:${new Date().toISOString()}
 END:VCARD`;
 
   const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8;' });
-  const url = URL.createObjectURL(blob);
+  const blobUrl = URL.createObjectURL(blob);
   const link = document.createElement('a');
-  link.href = url;
-  link.setAttribute('download', 'Dr_Bryan_Kek.vcf');
+  link.href = blobUrl;
+  link.setAttribute('download', `${fn.replace(/[^a-zA-Z0-9]/g, '_')}.vcf`);
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);

@@ -17,30 +17,23 @@ cta_x: Sertai perbualan & perbincangan di X
 cta_facebook: Sertai saya di FB
 cta_instagram: Sertai saya di Instagram
 cta_tiktok: Tontoni saya di TikTok
-cta_copy_link: Salin Pautan Portfolio
-msg_link_copied: Pautan portfolio disalin ke papan klip!
 cv_title: Latar Belakang Profesional
-cv_subtitle: Kelayakan akademik, sejarah kerjaya perubatan, dan sorotan advokasi awam.
-contact_title: Hantar Mesej Terus
-contact_subtitle: Mempunyai sebarang pertanyaan atau ingin bekerjasama? Isi butiran untuk bersembang terus di WhatsApp.
-contact_btn: Hantar via WhatsApp
-form_label_name: Nama Penuh
-form_label_phone: Nombor Telefon
-form_label_email: Alamat E-mel
-form_label_message: Mesej Anda
-msg_form_success: Membuka WhatsApp... Sila hantar mesej untuk menghubungi.
-msg_form_error: Sila isi semua butiran dengan betul.
-msg_submitting: Menghantar...
+cv_subtitle: Kelayakan akademik, sejarah kerjaya perubatan, dan advokasi.
 cta_save_contact: Simpan Kenalan
 cta_share_profile: Kongsi Profil
 status_active: Aktif & Dalam Talian
 footer_copyright: © 2026 Dr. Bryan Kek. Hak cipta terpelihara.
 contact_saved_msg: Kenalan disimpan!
 profile_credentials: Calon untuk N.19 Kesidang
-form_placeholder_name: Nama Anda
-form_placeholder_phone: +60123456789
-form_placeholder_email: nama@emel.com
-form_placeholder_message: Taip mesej anda di sini...
 share_modal_title: Kongsi Profil
-share_preview_label: Pratonton Kad Open Graph
+share_preview_label: Preview
+speech_title: Latar Belakang & Wawasan
+vcard_fn: Dr. Bryan Kek
+vcard_org: BERSAMA
+vcard_title: Doktor Komuniti, Pejuang Sivik
+vcard_tel: +60168804697
+vcard_email: drbryankek@gmail.com
+vcard_url: https://dr.bryankek.my
+
+
 
