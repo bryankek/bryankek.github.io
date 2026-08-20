@@ -5,6 +5,10 @@ From the clinic to the community, my daily duty is to listen and heal. Throughou
 
 But what do we see on the political stage today? We are presented with dinosaur politics, stale politics obsessed with power struggles, empty rhetoric repeated every election season, and sweet promises that never solve the real issues of the grassroots. Frankly speaking, I am sick and tired of this old political pattern. This frustration is what drove me to step forward; because if we do not rise to bring reform, the fate of the people and the younger generation will continue to be neglected in the hands of those who refuse to change.
 
+> **dinosaur (noun) / dinosaur politics**
+> In politics, a prominent figure, organization, or way of thinking that belongs to a past era, resists new reforms, and fails to adapt to current social or technological realities.
+> *Example: "The veteran lawmaker was viewed as a political dinosaur for opposing modern campaign strategies."*
+
 I understand that contesting in a constituency with an incumbent requires me to prove my capability. Therefore, I do not ask you to choose me solely because of my medical title, but judge me based on my track record, principles, and concrete actions founded on my four key promises, SAMA
 
 > **Sepakat**
@@ -17,7 +21,7 @@ I understand that contesting in a constituency with an incumbent requires me to 
 > Making decisions based on facts and data, not empty talk.
 > 
 > **Adil**
-> Championing inclusivity and putting the people first.
+> Championing inclusivity fairly and putting the people first.
 
 My commitment is to expand medical services and home-based palliative care for the elderly and bedridden patients, easing the financial and emotional burden on caregivers, and creating economic skill opportunities so our youth can progress without neglecting their beloved parents. I stand here with youthful energy, a sincere heart, and a determination to listen and solve problems together with you.
 

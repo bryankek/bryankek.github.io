@@ -1,4 +1,7 @@
-let currentLang = 'EN';
+// Calculate base URL for assets and content dynamically
+const basePath = window.location.pathname.match(/^\/(ms|en|cn)(\/|$)/) ? '../' : './';
+
+let currentLang = 'BM'; // Default is Malay (BM)
 let currentGeneral = {};
 const contentCache = {};
 
@@ -20,12 +23,27 @@ function mapGoogtransToLangKey(googCode) {
   return googCode; // custom language code
 }
 
-// Check cookie value on load to resolve currentLang
-const cookieLang = getGoogtransLanguage();
-if (cookieLang) {
-  currentLang = mapGoogtransToLangKey(cookieLang);
-} else {
-  currentLang = localStorage.getItem('dr_bryan_lang') || 'EN';
+// Resolve initial language from path, cookie, localStorage, or default
+function detectInitialLanguage() {
+  const path = window.location.pathname;
+  if (path.startsWith('/ms')) return 'BM';
+  if (path.startsWith('/en')) return 'EN';
+  if (path.startsWith('/cn')) return 'ZH';
+  
+  const cookieLang = getGoogtransLanguage();
+  if (cookieLang) {
+    return mapGoogtransToLangKey(cookieLang);
+  }
+  return localStorage.getItem('dr_bryan_lang') || 'BM';
+}
+
+currentLang = detectInitialLanguage();
+
+// Redirect to language subpath if at the root path
+const initialPath = window.location.pathname;
+if (initialPath === '/' || initialPath === '/index.html') {
+  const targetPath = currentLang === 'EN' ? '/en/' : (currentLang === 'ZH' ? '/cn/' : '/ms/');
+  window.location.replace(targetPath);
 }
 
 // Initialize Elements & Event Listeners
@@ -217,10 +235,10 @@ async function fetchLanguageContent(lang) {
   try {
     // 1. Fetch baseline English content
     const [generalRes, speechRes, skillsRes, cvRes] = await Promise.all([
-      fetch('content/EN/general.md'),
-      fetch('content/EN/speech.md'),
-      fetch('content/EN/skills.md'),
-      fetch('content/EN/cv.md')
+      fetch(basePath + 'content/EN/general.md'),
+      fetch(basePath + 'content/EN/speech.md'),
+      fetch(basePath + 'content/EN/skills.md'),
+      fetch(basePath + 'content/EN/cv.md')
     ]);
 
     const [generalText, speechText, skillsText, cvText] = await Promise.all([
@@ -244,10 +262,10 @@ async function fetchLanguageContent(lang) {
     // 2. Overwrite with specific language overrides if lang is not EN
     if (lang !== 'EN') {
       const [overrideGeneral, overrideSpeech, overrideSkills, overrideCv] = await Promise.all([
-        fetchOverrideFile(`content/${lang}/general.md`),
-        fetchOverrideFile(`content/${lang}/speech.md`),
-        fetchOverrideFile(`content/${lang}/skills.md`),
-        fetchOverrideFile(`content/${lang}/cv.md`)
+        fetchOverrideFile(basePath + `content/${lang}/general.md`),
+        fetchOverrideFile(basePath + `content/${lang}/speech.md`),
+        fetchOverrideFile(basePath + `content/${lang}/skills.md`),
+        fetchOverrideFile(basePath + `content/${lang}/cv.md`)
       ]);
 
       if (overrideGeneral) {
@@ -423,6 +441,14 @@ function parseCV(text) {
 async function changeLanguage(lang) {
   localStorage.setItem('dr_bryan_lang', lang);
   
+  // Redirect to the appropriate subdirectory if pathname doesn't match
+  const targetPath = lang === 'EN' ? '/en/' : (lang === 'ZH' ? '/cn/' : '/ms/');
+  const currentPath = window.location.pathname;
+  if (currentPath !== targetPath && currentPath !== targetPath.slice(0, -1)) {
+    window.location.href = targetPath;
+    return;
+  }
+  
   // Update document language tag appropriately
   let docLang = 'en';
   if (lang === 'ZH') docLang = 'zh';
@@ -534,6 +560,77 @@ function showToast(message) {
 function copyProfileLink() {
   navigator.clipboard.writeText(window.location.href).then(() => {
     showToast(currentGeneral.msg_link_copied || "Link copied!");
+  }).catch(err => {
+    console.error('Could not copy text: ', err);
+  });
+}
+
+// 4.1 Social Sharing Logic
+function shareProfile() {
+  const shareData = {
+    title: document.title,
+    text: currentGeneral.profile_tagline || "Dr. Bryan Kek's official portfolio.",
+    url: window.location.href
+  };
+
+  // If Native Share API is supported and not in an iframe, use it
+  if (navigator.share && window.self === window.top) {
+    navigator.share(shareData)
+      .catch(err => {
+        if (err.name !== 'AbortError') {
+          console.error('Error sharing:', err);
+          fallbackShare();
+        }
+      });
+  } else {
+    fallbackShare();
+  }
+}
+
+function fallbackShare() {
+  const currentUrl = encodeURIComponent(window.location.href);
+  const shareText = encodeURIComponent(`${document.title} - ${currentGeneral.profile_tagline || ""}\n\n`);
+
+  // Update Sharing Links
+  const whatsappEl = document.getElementById('share-whatsapp');
+  const telegramEl = document.getElementById('share-telegram');
+  const facebookEl = document.getElementById('share-facebook');
+  const twitterEl = document.getElementById('share-twitter');
+  const linkedinEl = document.getElementById('share-linkedin');
+  const previewLinkEl = document.getElementById('share-preview-link');
+
+  if (whatsappEl) whatsappEl.href = `https://api.whatsapp.com/send?text=${shareText}${currentUrl}`;
+  if (telegramEl) telegramEl.href = `https://t.me/share/url?url=${currentUrl}&text=${shareText}`;
+  if (facebookEl) facebookEl.href = `https://www.facebook.com/sharer/sharer.php?u=${currentUrl}`;
+  if (twitterEl) twitterEl.href = `https://twitter.com/intent/tweet?url=${currentUrl}&text=${shareText}`;
+  if (linkedinEl) linkedinEl.href = `https://www.linkedin.com/sharing/share-offsite/?url=${currentUrl}`;
+  if (previewLinkEl) previewLinkEl.href = `https://www.opengraph.xyz/url/${currentUrl}`;
+
+  // Open the Modal overlay
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.add('open');
+  }
+}
+
+function closeShareModal() {
+  const modal = document.getElementById('share-modal');
+  if (modal) {
+    modal.classList.remove('open');
+  }
+}
+
+function handleOutsideClick(event) {
+  const modalContent = document.querySelector('.modal-content');
+  if (modalContent && !modalContent.contains(event.target)) {
+    closeShareModal();
+  }
+}
+
+function copyToClipboardFromModal() {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    showToast(currentGeneral.msg_link_copied || "Link copied!");
+    closeShareModal();
   }).catch(err => {
     console.error('Could not copy text: ', err);
   });

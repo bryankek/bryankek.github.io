@@ -41,3 +41,6 @@ form_placeholder_name: Your Name
 form_placeholder_phone: +60123456789
 form_placeholder_email: name@email.com
 form_placeholder_message: Type your message here...
+share_modal_title: Share Profile
+share_preview_label: Preview Open Graph Card
+
