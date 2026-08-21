@@ -211,13 +211,39 @@ function triggerGoogleTranslate(lang) {
 
   if (langCode === '') {
     // Reset cookie to pristine English
+    const host = window.location.hostname;
+    
+    // Clear cookie for no domain
     document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.host;
+    
+    // Clear cookie for current hostname and host (with port)
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + host;
+    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + host;
+    if (window.location.host !== host) {
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.host;
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + window.location.host;
+    }
+    
+    // Clear cookie for parent domains (e.g. .bryankek.my if host is dr.bryankek.my)
+    const hostParts = host.split('.');
+    if (hostParts.length >= 2) {
+      const domainName = hostParts.slice(-2).join('.');
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domainName;
+      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domainName;
+    }
     
     const currentActive = getGoogtransLanguage();
     if (currentActive && currentActive !== 'en') {
-      window.location.reload(true);
-      return;
+      const reloadCount = parseInt(sessionStorage.getItem('googtrans_reload_count') || '0', 10);
+      if (reloadCount < 3) {
+        sessionStorage.setItem('googtrans_reload_count', (reloadCount + 1).toString());
+        window.location.reload(true);
+        return;
+      } else {
+        console.warn('Google Translate cookie could not be cleared, stopping infinite reload loop.');
+      }
+    } else {
+      sessionStorage.removeItem('googtrans_reload_count');
     }
   } else {
     const cookieString = `/en/${langCode}`;
