@@ -5,36 +5,20 @@ let currentLang = 'BM'; // Default is Malay (BM)
 let currentGeneral = {};
 const contentCache = {};
 
-function getGoogtransLanguage() {
-  const name = 'googtrans';
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) {
-    const val = parts.pop().split(';').shift();
-    return val.split('/').pop();
-  }
-  return null;
-}
-
-function mapGoogtransToLangKey(googCode) {
-  if (googCode === 'ms') return 'BM';
-  if (googCode === 'zh-CN') return 'ZH';
-  if (googCode === 'en') return 'EN';
-  return googCode; // custom language code
-}
-
-// Resolve initial language from path, cookie, localStorage, or default
+// Resolve initial language from path, localStorage, browser, or default
 function detectInitialLanguage() {
   const path = window.location.pathname;
   if (path.startsWith('/ms')) return 'BM';
   if (path.startsWith('/en')) return 'EN';
   if (path.startsWith('/cn')) return 'ZH';
   
-  const cookieLang = getGoogtransLanguage();
-  if (cookieLang) {
-    return mapGoogtransToLangKey(cookieLang);
-  }
-  return localStorage.getItem('dr_bryan_lang') || 'BM';
+  const saved = localStorage.getItem('dr_bryan_lang');
+  if (saved) return saved;
+
+  const browserLang = (navigator.language || '').toLowerCase();
+  if (browserLang.startsWith('zh')) return 'ZH';
+  if (browserLang.startsWith('en')) return 'EN';
+  return 'BM'; // default
 }
 
 currentLang = detectInitialLanguage();
@@ -59,8 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // 1. Language Switcher
 function initLanguageSwitcher() {
   const langButtons = document.querySelectorAll('.lang-btn');
-  const moreLangsSelect = document.getElementById('more-langs');
-  const switcher = document.querySelector('.lang-switcher-pill');
   
   // Update active state initially
   updateUIActiveState(currentLang);
@@ -72,198 +54,20 @@ function initLanguageSwitcher() {
       if (selectedLang) {
         currentLang = selectedLang;
         changeLanguage(currentLang);
-        if (switcher) switcher.classList.remove('expanded');
       }
     });
   });
-
-  // Setup change listener for dropdown
-  if (moreLangsSelect) {
-    moreLangsSelect.addEventListener('change', (e) => {
-      const selectedLang = e.target.value;
-      if (selectedLang) {
-        currentLang = selectedLang;
-        changeLanguage(currentLang);
-        if (switcher) switcher.classList.remove('expanded');
-      }
-    });
-  }
-
-  // Handle collapsible switcher on mobile
-  if (switcher) {
-    switcher.addEventListener('click', (e) => {
-      // If clicking inside the select or on an inactive button, let it select
-      const select = e.target.closest('select');
-      const inactiveBtn = e.target.closest('.lang-btn:not(.active)');
-      
-      if (select || inactiveBtn) {
-        return;
-      }
-      
-      switcher.classList.toggle('expanded');
-    });
-
-    // Close when clicking outside
-    document.addEventListener('click', (e) => {
-      if (!switcher.contains(e.target)) {
-        switcher.classList.remove('expanded');
-      }
-    });
-  }
-
-  // Populate dynamic dropdown languages from Google Translate once ready
-  const nativeLanguageMap = {
-    'af': 'Afrikaans', 'sq': 'Shqip', 'am': 'አማርኛ', 'ar': 'العربية', 'hy': 'Հայերեն', 'as': 'অসমীয়া', 'ay': 'Aymar', 'az': 'Azərbaycan dili', 'bm': 'Bamanankan', 'eu': 'Euskara', 'be': 'Беларуская', 'bn': 'বাংলা', 'bho': 'भোজपुरी', 'bs': 'Bosanski', 'bg': 'Български', 'ca': 'Català', 'ceb': 'Cebuano', 'ny': 'Chichewa', 'zh-CN': '中文 (简体)', 'zh-TW': '中文 (繁體)', 'co': 'Corsu', 'hr': 'Hrvatski', 'cs': 'Čeština', 'da': 'Dansk', 'dv': 'ދިވެހި', 'doi': 'डोगरी', 'nl': 'Nederlands', 'en': 'English', 'eo': 'Esperanto', 'et': 'Eesti', 'ee': 'Eʋegbe', 'tl': 'Tagalog', 'fil': 'Tagalog', 'fi': 'Suomi', 'fr': 'Français', 'fy': 'Frysk', 'gl': 'Galego', 'ka': 'ქართული', 'de': 'Deutsch', 'el': 'Ελληνικά', 'gn': 'Guarani', 'gu': 'ગુજરાતી', 'ht': 'Kreyòl ayisyen', 'ha': 'Hausa', 'haw': 'ʻŌlelo Hawaiʻi', 'iw': 'עברית', 'he': 'עברית', 'hi': 'हिन्दी', 'hmn': 'Hmong', 'hu': 'Magyar', 'is': 'Íslenska', 'ig': 'Igbo', 'ilo': 'Ilokano', 'id': 'Bahasa Indonesia', 'ga': 'Gaeilge', 'it': 'Italiano', 'ja': '日本語', 'jw': 'Basa Jawa', 'jv': 'Basa Jawa', 'kn': 'ಕನ್ನಡ', 'kk': 'Қазақ тілі', 'km': 'ខ្មែរ', 'rw': 'Kinyarwanda', 'ko': '한국어', 'ko-KP:': '조선말', 'kri': 'Krio', 'ku': 'Kurdî', 'ckb': 'کوردی (سۆرانی)', 'ky': 'Кыргызча', 'lo': 'ລາວ', 'la': 'Latina', 'lv': 'Latviešu', 'lt': 'Lietuvių', 'lg': 'Luganda', 'lb': 'Lëtzebuergesch', 'mk': 'Македонски', 'mg': 'Malagasy', 'ms': 'Bahasa Melayu', 'ml': 'മലയാളം', 'mt': 'Malti', 'mi': 'Te Reo Māori', 'mr': 'மராठी', 'mni-Mtei': 'মৈতৈলোন্', 'lus': 'Mizo', 'mn': 'Монгол', 'my': 'မြန်မာ', 'ne': 'नेपाली', 'no': 'Norsk', 'or': 'ଓଡ଼ିଆ', 'om': 'Afaan Oromoo', 'ps': 'پښتو', 'fa': 'فارسی', 'pl': 'Polski', 'pt': 'Português', 'pa': 'ਪੰਜਾਬੀ', 'qu': 'Runa Simi', 'ro': 'Română', 'ru': 'Русский', 'sm': 'Gagana Samoa', 'sa': 'संस्कृतम्', 'gd': 'Gàidhlig', 'nso': 'Sepedi', 'sr': 'Српски', 'st': 'Sesotho', 'sn': 'ChiShona', 'sd': 'سنڌي', 'si': 'සිංහල', 'sk:': 'Slovenčina', 'sl': 'Slovenščina', 'so': 'Soomaali', 'es': 'Español', 'su': 'Basa Sunda', 'sw': 'Kiswahili', 'sv': 'Svenska', 'tg': 'Тоҷикӣ', 'ta': 'தமிழ்', 'tt': 'Tatar', 'te': 'తెలుగు', 'th': 'ไทย', 'ti': 'ትግርኛ', 'ts': 'Xitsonga', 'tr': 'Türkçe', 'tk': 'Türkmen dili', 'ak': 'Twi', 'uk': 'Українська', 'ur': 'اردو', 'ug': 'ئۇيغۇرچە', 'uz': 'Oʻzbekcha', 'vi': 'Tiếng Việt', 'cy': 'Cymraeg', 'xh': 'isiXhosa', 'yi': 'ייִדיש', 'yo': 'Yorùbá', 'zu': 'isiZulu'
-  };
-
-  const priorityCodes = ['ms', 'zh-CN', 'ta', 'ja', 'ko', 'de', 'fr', 'es', 'it', 'ar', 'id'];
-
-  const fetchInterval = setInterval(() => {
-    const googleSelect = document.querySelector('.goog-te-combo');
-    if (googleSelect && googleSelect.options.length > 20) {
-      clearInterval(fetchInterval);
-
-      const options = Array.from(googleSelect.options)
-        .filter(opt => opt.value !== '')
-        .map(opt => ({
-          value: opt.value,
-          text: nativeLanguageMap[opt.value] || opt.text
-        }));
-
-      // Exclude main shortcut languages to avoid redundancy
-      const filteredOptions = options.filter(opt => !['en', 'ms', 'zh-CN'].includes(opt.value));
-
-      const topLangs = priorityCodes
-        .map(code => filteredOptions.find(l => l.value === code))
-        .filter(Boolean);
-      const otherLangs = filteredOptions.filter(l => !priorityCodes.includes(l.value));
-
-      if (moreLangsSelect) {
-        moreLangsSelect.innerHTML = '<option value="" disabled selected>🌐 More</option>';
-
-        if (topLangs.length > 0) {
-          const topGroup = document.createElement('optgroup');
-          topGroup.label = 'Frequently Used';
-          topLangs.forEach(lang => {
-            const opt = document.createElement('option');
-            opt.value = lang.value;
-            opt.textContent = lang.text;
-            topGroup.appendChild(opt);
-          });
-          moreLangsSelect.appendChild(topGroup);
-        }
-
-        if (otherLangs.length > 0) {
-          const otherGroup = document.createElement('optgroup');
-          otherGroup.label = 'All Languages';
-          otherLangs.forEach(lang => {
-            const opt = document.createElement('option');
-            opt.value = lang.value;
-            opt.textContent = lang.text;
-            otherGroup.appendChild(opt);
-          });
-          moreLangsSelect.appendChild(otherGroup);
-        }
-
-        // Restore value in select dropdown if active language is one of the options
-        const currentCookieVal = getGoogtransLanguage();
-        if (currentCookieVal && !['en', 'ms', 'zh-CN'].includes(currentCookieVal)) {
-          moreLangsSelect.value = currentCookieVal;
-          moreLangsSelect.classList.add('active');
-        }
-      }
-    }
-  }, 500);
 }
 
 function updateUIActiveState(lang) {
   const langButtons = document.querySelectorAll('.lang-btn');
-  const moreLangsSelect = document.getElementById('more-langs');
-
-  const mainLangs = ['BM', 'EN', 'ZH'];
-  if (mainLangs.includes(lang)) {
-    langButtons.forEach(btn => {
-      if (btn.getAttribute('data-lang') === lang) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-    if (moreLangsSelect) {
-      moreLangsSelect.value = '';
-      moreLangsSelect.classList.remove('active');
-    }
-  } else {
-    langButtons.forEach(btn => btn.classList.remove('active'));
-    if (moreLangsSelect) {
-      moreLangsSelect.value = lang;
-      moreLangsSelect.classList.add('active');
-    }
-  }
-}
-
-function triggerGoogleTranslate(lang) {
-  let langCode = '';
-  if (lang === 'BM') langCode = 'ms';
-  else if (lang === 'ZH') langCode = 'zh-CN';
-  else if (lang === 'EN') langCode = '';
-  else langCode = lang;
-
-  if (langCode === '') {
-    // Reset cookie to pristine English
-    const host = window.location.hostname;
-    
-    // Clear cookie for no domain
-    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
-    
-    // Clear cookie for current hostname and host (with port)
-    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + host;
-    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + host;
-    if (window.location.host !== host) {
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + window.location.host;
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + window.location.host;
-    }
-    
-    // Clear cookie for parent domains (e.g. .bryankek.my if host is dr.bryankek.my)
-    const hostParts = host.split('.');
-    if (hostParts.length >= 2) {
-      const domainName = hostParts.slice(-2).join('.');
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=" + domainName;
-      document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/; domain=." + domainName;
-    }
-    
-    const currentActive = getGoogtransLanguage();
-    if (currentActive && currentActive !== 'en') {
-      const reloadCount = parseInt(sessionStorage.getItem('googtrans_reload_count') || '0', 10);
-      if (reloadCount < 3) {
-        sessionStorage.setItem('googtrans_reload_count', (reloadCount + 1).toString());
-        window.location.reload(true);
-        return;
-      } else {
-        console.warn('Google Translate cookie could not be cleared, stopping infinite reload loop.');
-      }
+  langButtons.forEach(btn => {
+    if (btn.getAttribute('data-lang') === lang) {
+      btn.classList.add('active');
     } else {
-      sessionStorage.removeItem('googtrans_reload_count');
+      btn.classList.remove('active');
     }
-  } else {
-    const cookieString = `/en/${langCode}`;
-    const domain = window.location.hostname;
-    const cookieBase = `googtrans=${cookieString}; path=/;`;
-    
-    document.cookie = cookieBase;
-    if (domain !== 'localhost' && domain !== '127.0.0.1') {
-      document.cookie = `${cookieBase} domain=.${domain};`;
-    }
-  }
-
-  const googleSelect = document.querySelector('.goog-te-combo');
-  if (googleSelect) {
-    googleSelect.value = langCode;
-    googleSelect.dispatchEvent(new Event('change', { bubbles: true, cancelable: true }));
-  }
-
-  // Highlight the CORRECT clicked language (BM, ZH, TA, EN, or custom language code)
-  updateUIActiveState(lang);
+  });
 }
 
 async function fetchOverrideFile(path) {
@@ -286,37 +90,32 @@ async function fetchLanguageContent(lang) {
 
   try {
     // 1. Fetch baseline English content
-    const [generalRes, speechRes, skillsRes, cvRes] = await Promise.all([
+    const [generalRes, speechRes, cvRes] = await Promise.all([
       fetch(basePath + 'content/EN/general.md'),
       fetch(basePath + 'content/EN/speech.md'),
-      fetch(basePath + 'content/EN/skills.md'),
       fetch(basePath + 'content/EN/cv.md')
     ]);
 
-    const [generalText, speechText, skillsText, cvText] = await Promise.all([
+    const [generalText, speechText, cvText] = await Promise.all([
       generalRes.text(),
       speechRes.text(),
-      skillsRes.text(),
       cvRes.text()
     ]);
 
     let finalGeneral = parseGeneral(generalText);
     let finalSpeech = speechText;
-    let finalSkills = skillsText;
     let finalCv = cvText;
 
     let overriddenGeneral = false;
     let overriddenSpeech = false;
-    let overriddenSkills = false;
     let overriddenCv = false;
     let generalKeys = [];
 
     // 2. Overwrite with specific language overrides if lang is not EN
     if (lang !== 'EN') {
-      const [overrideGeneral, overrideSpeech, overrideSkills, overrideCv] = await Promise.all([
+      const [overrideGeneral, overrideSpeech, overrideCv] = await Promise.all([
         fetchOverrideFile(basePath + `content/${lang}/general.md`),
         fetchOverrideFile(basePath + `content/${lang}/speech.md`),
-        fetchOverrideFile(basePath + `content/${lang}/skills.md`),
         fetchOverrideFile(basePath + `content/${lang}/cv.md`)
       ]);
 
@@ -330,10 +129,7 @@ async function fetchLanguageContent(lang) {
         finalSpeech = overrideSpeech;
         overriddenSpeech = true;
       }
-      if (overrideSkills) {
-        finalSkills = overrideSkills;
-        overriddenSkills = true;
-      }
+
       if (overrideCv) {
         finalCv = overrideCv;
         overriddenCv = true;
@@ -343,12 +139,10 @@ async function fetchLanguageContent(lang) {
     contentCache[lang] = {
       general: finalGeneral,
       speech: parseSpeech(finalSpeech),
-      skills: parseSkills(finalSkills),
       cv: parseCV(finalCv),
       overridden: {
         general: overriddenGeneral,
         speech: overriddenSpeech,
-        skills: overriddenSkills,
         cv: overriddenCv,
         generalKeys: generalKeys
       }
@@ -404,26 +198,7 @@ function parseSpeech(text) {
   return html;
 }
 
-// Parsing lists (- ) for skills
-function parseSkills(text) {
-  const lines = text.split(/\r?\n/);
-  let html = '<div class="skills-grid">';
-  for (let line of lines) {
-    line = line.trim();
-    if (!line || !line.startsWith('-')) continue;
-    const skill = line.replace(/^-\s*/, '').trim();
-    html += `
-      <div class="skill-chip">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"
-          stroke-linecap="round" stroke-linejoin="round">
-          <polyline points="20 6 9 17 4 12"></polyline>
-        </svg>
-        <span>${skill}</span>
-      </div>`;
-  }
-  html += '</div>';
-  return html;
-}
+
 
 // Parsing horizontal rule (---) divided sections for timeline
 function parseCV(text) {
@@ -549,16 +324,7 @@ async function changeLanguage(lang) {
     }
   });
 
-  // Render specialized lists
-  const skillsContainer = document.getElementById('skills-container');
-  if (skillsContainer) {
-    skillsContainer.innerHTML = data.skills;
-    if (data.overridden && data.overridden.skills) {
-      skillsContainer.classList.add('notranslate');
-    } else {
-      skillsContainer.classList.remove('notranslate');
-    }
-  }
+
 
   const cvContainer = document.getElementById('cv-container');
   if (cvContainer) {
@@ -580,8 +346,8 @@ async function changeLanguage(lang) {
     }
   }
 
-  // Trigger or reset Google Translate, and update UI highlights
-  triggerGoogleTranslate(lang);
+  // Update UI language switcher highlight state
+  updateUIActiveState(lang);
 }
 
 // 3. Custom Toast Notification

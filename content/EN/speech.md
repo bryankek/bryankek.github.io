@@ -26,7 +26,7 @@ I understand that contesting in a constituency with an incumbent requires me to 
 > I will practice transparency and act with integrity.
 > 
 > **Merit (Fakta)**
-> I will make decisions based on merit and facts, not just empty talk.
+> I will make decisions based on merit and facts, not empty talk.
 > 
 > **Adil**
 > I will champion inclusivity fairly and put the people first.

@@ -30,7 +30,7 @@ Saya faham, bertanding di kawasan yang mempunyai penyandang memerlukan saya memb
 > Saya akan sentiasa amanah dan bertindak dengan penuh integriti.
 > 
 > **Merit (Fakta)**
-> Saya akan membuat keputusan berasaskan merit ataupun fakta dan bukan sembang kencang saja.
+> Saya akan membuat keputusan berasaskan merit dan fakta, bukan sembang kencang saja.
 > 
 > **Adil**
 > Saya akan bertindak adil pada semua dan mendahulukan kepentingan rakyat.
