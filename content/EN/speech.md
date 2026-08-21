@@ -25,8 +25,8 @@ I understand that contesting in a constituency with an incumbent requires me to 
 > **Amanah**
 > I will practice transparency and act with integrity.
 > 
-> **Meneliti**
-> I will make decisions based on facts and data, not empty talk.
+> **Merit (Fakta)**
+> I will make decisions based on merit and facts, not just empty talk.
 > 
 > **Adil**
 > I will champion inclusivity fairly and put the people first.
