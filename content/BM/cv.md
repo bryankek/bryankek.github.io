@@ -15,7 +15,7 @@ Wakil pengamal perubatan swasta di Melaka. Berkhidmat dalam Jawatankuasa Kerja K
 ## 2016 - 2022
 ### Pegawai Perubatan
 **Kementerian Kesihatan Malaysia**
-Berpengalaman di pelbagai peringkat penjagaan kesihatan merangkumi tetapan prahospital, perubatan kecemasan serta penjagaan pesakit dalam. Terlatih untuk membuat keputusan berasaskan bukti, metodikal, dan kekal tenang di bawah tekanan yang tinggi.
+Berpengalaman di pelbagai peringkat penjagaan kesihatan merangkumi tetapan prahospital, perubatan kecemasan serta penjagaan pesakit dalam. Terlatih untuk membuat keputusan berasaskan bukti secara metodikal dan kekal tenang di bawah tekanan yang tinggi.
 
 ---
 

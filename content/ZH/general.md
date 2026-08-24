@@ -9,7 +9,7 @@ profile_tagline: 将专业医学经验与基层公民倡导相结合，推动系
 metric1_val: 10
 metric1_lbl: 执业年限
 metric2_val: 35k+
-metric2_lbl: 诊治患者
+metric2_lbl: 诊治人次
 metric3_val: ♾️
 metric3_lbl: 惠及生命
 cta_threads: 参与对话与讨论

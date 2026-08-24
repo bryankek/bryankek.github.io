@@ -305,7 +305,11 @@ async function changeLanguage(lang) {
     } else if (key === 'speech_content') {
       // Handled separately below
     } else if (currentGeneral[key]) {
-      el.innerHTML = currentGeneral[key];
+      if (key === 'metric3_val' && currentGeneral[key].includes('♾️')) {
+        el.innerHTML = `<svg class="metric-infinity-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12c-2-2.67-4-4-6-4a4 4 0 1 0 0 8c2 0 4-1.33 6-4zm0 0c2 2.67 4 4 6 4a4 4 0 1 0 0-8c-2 0-4 1.33-6 4z"></path></svg>`;
+      } else {
+        el.innerHTML = currentGeneral[key];
+      }
       // Mark as notranslate if this specific general key is overridden
       if (data.overridden && data.overridden.generalKeys && data.overridden.generalKeys.includes(key)) {
         el.classList.add('notranslate');

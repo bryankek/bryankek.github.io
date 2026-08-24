@@ -398,6 +398,17 @@ animation: drift 25s infinite alternate ease-in-out;
   font-size: 1.05rem;
   font-weight: 800;
   color: var(--accent-gold);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 1.25em;
+}
+
+.metric-infinity-icon {
+  width: 1.2em;
+  height: 1.2em;
+  stroke: currentColor;
+  display: block;
 }
 
 .micro-metric-lbl {
