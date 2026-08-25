@@ -33,6 +33,7 @@ vcard_title: Doktor Komuniti, Pejuang Sivik
 vcard_tel: +60168804697
 vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
+join_btn: Sertai Ahli BERSAMA
 
 
 

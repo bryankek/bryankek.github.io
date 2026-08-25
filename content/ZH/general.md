@@ -33,6 +33,7 @@ vcard_title: 社区医生, 公民倡导者
 vcard_tel: +60168804697
 vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
+join_btn: 加入 BERSAMA 党员
 
 
 
