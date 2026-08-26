@@ -19,7 +19,11 @@ const i18n = {
     download_btn: 'Muat Turun',
     msg_copied: 'Disalin ke papan klip!',
     msg_color_copied: 'Kod warna HEX disalin!',
-    loading: 'Memuat turun...'
+    loading: 'Memuat turun...',
+    sec_cv: 'Latar Belakang Profesional',
+    sec_cv_desc: 'Garis masa kerjaya perubatan, jawatan profesional, dan latar belakang akademik Dr. Bryan Kek.',
+    sec_speech: 'Ucapan Kempen & Mesej Khas',
+    sec_speech_desc: 'Teks ucapan penuh dan mesej kempen rasmi daripada Dr. Bryan Kek.'
   },
   EN: {
     back_to_profile: 'Back to Profile',
@@ -40,7 +44,11 @@ const i18n = {
     download_btn: 'Download',
     msg_copied: 'Copied to clipboard!',
     msg_color_copied: 'HEX color code copied!',
-    loading: 'Loading...'
+    loading: 'Loading...',
+    sec_cv: 'Professional Background',
+    sec_cv_desc: 'Timeline of medical career, professional positions, and academic background of Dr. Bryan Kek.',
+    sec_speech: 'Campaign Speech & Message',
+    sec_speech_desc: 'Full campaign speech transcript and official message from Dr. Bryan Kek.'
   },
   ZH: {
     back_to_profile: '返回主页',
@@ -61,7 +69,11 @@ const i18n = {
     download_btn: '下载素材',
     msg_copied: '已复制到剪贴板！',
     msg_color_copied: 'HEX 颜色代码已复制！',
-    loading: '加载中...'
+    loading: '加载中...',
+    sec_cv: '专业背景',
+    sec_cv_desc: '郭杰汉医生的医学职业生涯、专业职务及学术背景时间线。',
+    sec_speech: '竞选演说与讯息',
+    sec_speech_desc: '郭杰汉医生的完整竞选演说及官方讯息。'
   }
 };
 
@@ -88,9 +100,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   currentLang = detectLanguage();
   initLanguageSwitcher();
   initBioTabs();
+  initLanguageTabs();
   
-  // Load and parse mediakit.md
-  await loadMediaKitContent();
+  // Load and parse mediakit.md, CV, and Speech concurrently
+  await Promise.all([
+    loadMediaKitContent(),
+    loadCVAndSpeechContent()
+  ]);
   
   // Translate UI and load corresponding language contents
   changeLanguage(currentLang);
@@ -415,4 +431,185 @@ function showToast(message) {
     toast.classList.remove('show');
     toast.addEventListener('transitionend', () => toast.remove());
   }, 3000);
+}
+
+// 9. Load CV and Speech Content
+async function loadCVAndSpeechContent() {
+  const languages = ['BM', 'EN', 'ZH'];
+  const basePath = '../';
+  
+  try {
+    const fetchPromises = [];
+    for (const lang of languages) {
+      fetchPromises.push(
+        fetch(basePath + `content/${lang}/cv.md`).then(res => res.ok ? res.text() : ''),
+        fetch(basePath + `content/${lang}/speech.md`).then(res => res.ok ? res.text() : '')
+      );
+    }
+    
+    const results = await Promise.all(fetchPromises);
+    
+    // results array: [cvBM, speechBM, cvEN, speechEN, cvZH, speechZH]
+    const cvBM = results[0];
+    const speechBM = results[1];
+    const cvEN = results[2];
+    const speechEN = results[3];
+    const cvZH = results[4];
+    const speechZH = results[5];
+    
+    // Render CVs
+    const cvContainerBM = document.getElementById('cv-content-bm');
+    const cvContainerEN = document.getElementById('cv-content-en');
+    const cvContainerZH = document.getElementById('cv-content-zh');
+    if (cvContainerBM) cvContainerBM.innerHTML = parseCV(cvBM);
+    if (cvContainerEN) cvContainerEN.innerHTML = parseCV(cvEN);
+    if (cvContainerZH) cvContainerZH.innerHTML = parseCV(cvZH);
+    
+    // Render Speeches
+    const speechContainerBM = document.getElementById('speech-content-bm');
+    const speechContainerEN = document.getElementById('speech-content-en');
+    const speechContainerZH = document.getElementById('speech-content-zh');
+    if (speechContainerBM) speechContainerBM.innerHTML = parseSpeech(speechBM);
+    if (speechContainerEN) speechContainerEN.innerHTML = parseSpeech(speechEN);
+    if (speechContainerZH) speechContainerZH.innerHTML = parseSpeech(speechZH);
+    
+  } catch (error) {
+    console.error('Failed to load CV or Speech content:', error);
+  }
+}
+
+// Parsing paragraphs & blockquotes (>) for speech
+function parseSpeech(text) {
+  text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
+  const paragraphs = text.split(/\n\n+/);
+  let html = '<div class="speech-container">';
+  
+  for (let p of paragraphs) {
+    p = p.trim();
+    if (!p) continue;
+    
+    // Support markdown bold syntax (**text**)
+    p = p.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+    
+    // Check if it is a blockquote/poem (starts with >)
+    if (p.startsWith('>')) {
+      const lines = p.split('\n').map(line => line.replace(/^>\s*/, '').trim());
+      html += `<div class="poem-block">${lines.join('<br>')}</div>`;
+    } else {
+      // Regular paragraph
+      if (p.includes('Bersama-samalah') || p.includes('Join me') || p.includes('让我们携手') || p.includes('ஒரு சிறந்த')) {
+        html += `<p class="speech-paragraph" style="font-weight: 600; text-align: center;">${p.replace(/\n/g, '<br>')}</p>`;
+      } else {
+        html += `<p class="speech-paragraph">${p.replace(/\n/g, '<br>')}</p>`;
+      }
+    }
+  }
+  html += '</div>';
+  return html;
+}
+
+// Parsing horizontal rule (---) divided sections for timeline
+function parseCV(text) {
+  text = text.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+  const items = text.split(/\n---\n+/);
+  let html = '<div class="timeline">';
+  
+  for (const item of items) {
+    const trimmed = item.trim();
+    if (!trimmed) continue;
+    
+    let period = '';
+    let role = '';
+    let org = '';
+    let desc = '';
+    
+    const lines = trimmed.split('\n');
+    let isEdu = false;
+    
+    for (let line of lines) {
+      line = line.trim();
+      if (!line) continue;
+      
+      if (line.startsWith('## ')) {
+        period = line.replace('## ', '').trim();
+      } else if (line.startsWith('### ')) {
+        role = line.replace('### ', '').trim();
+        // Check if degree/education
+        const roleLower = role.toLowerCase();
+        if (
+          roleLower.includes('master') || 
+          roleLower.includes('doctor') || 
+          roleLower.includes('sarjana') || 
+          roleLower.includes('doktor perubatan') || 
+          roleLower.includes('sarjana muda') || 
+          roleLower.includes('医学士') || 
+          roleLower.includes('硕士')
+        ) {
+          isEdu = true;
+        }
+      } else if (line.startsWith('**') && line.endsWith('**')) {
+        org = line.slice(2, -2).trim();
+      } else {
+        desc = line;
+      }
+    }
+    
+    const markerClass = isEdu ? 'timeline-item education' : 'timeline-item';
+    html += `
+      <div class="${markerClass}">
+        <div class="timeline-marker"></div>
+        <div class="timeline-content">
+          <span class="timeline-date">${period}</span>
+          <h3 class="timeline-role">${role}</h3>
+          <h4 class="timeline-org">${org}</h4>
+          <p class="timeline-desc">${desc}</p>
+        </div>
+      </div>`;
+  }
+  
+  html += '</div>';
+  return html;
+}
+
+// 10. Language selection tabs toggling for CV and Speech
+function initLanguageTabs() {
+  // 1. CV Tabs
+  const cvBtns = document.querySelectorAll('#cv-lang-tabs .lang-tab-btn');
+  const cvPanes = document.querySelectorAll('#cv-pane-BM, #cv-pane-EN, #cv-pane-ZH');
+  
+  cvBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      cvBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      cvPanes.forEach(pane => {
+        if (pane.id === `cv-pane-${lang}`) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
+  
+  // 2. Speech Tabs
+  const speechBtns = document.querySelectorAll('#speech-lang-tabs .lang-tab-btn');
+  const speechPanes = document.querySelectorAll('#speech-pane-BM, #speech-pane-EN, #speech-pane-ZH');
+  
+  speechBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const lang = btn.getAttribute('data-lang');
+      speechBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      speechPanes.forEach(pane => {
+        if (pane.id === `speech-pane-${lang}`) {
+          pane.classList.add('active');
+        } else {
+          pane.classList.remove('active');
+        }
+      });
+    });
+  });
 }

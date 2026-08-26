@@ -43,17 +43,13 @@ Dr. Kek komited merapatkan jurang sistem kesihatan menerusi lawatan ke rumah bag
 马六甲 N.19 格西当州议席候选人
 ## Biographies
 ### Short Bio
-郭杰汉医生（Dr. Bryan Kek Kit Hun）是马六甲社区医生、公共卫生倡导者和改革倡对者。作为 BERSAMA 党 N.19 格西当州议席候选人，他在峇株安南经营 Klinik Merdeka 诊所，将超过 10 年的临床经验与积极倡导安宁疗护（临终关怀）为基本人权的基层服务相结合。
+敬请期待
 
 ### Medium Bio
-郭杰汉医生（Dr. Bryan Kek Kit Hun）是一位医疗从业者、公共卫生倡导者和公民改革领袖。他是 BERSAMA 党马六甲 N.19 格西当州议席的候选人。郭医生持有医学士（M.D.）学位，并在峇株安南经营 Klinik Merdeka 诊所。他拥有超过 10 年的临床经验，曾担任马来西亚医药协会（MMA）马六甲分会委员会的私立医生代表（后因参政投身选举而辞去该职务）。作为安宁疗护的坚定倡导者，他践行“所有照护都是积极照护”的理念，为社区卧床患者提供涵盖身体、心理、社会和精神支持的全面上门临终关怀服务。
+敬请期待
 
 ### Full Bio
-郭杰汉医生（Dr. Bryan Kek Kit Hun）是马六甲知名的社区医生、公共卫生倡导者和公民社会活动家。他是即将到来的州选举中 N.19 格西当选区的 BERSAMA 官方候选人。
-
-郭医生获得医学士（M.D.）学位，专注于卫生系统与社区福利研究。他在马六甲峇株安南美佳花园（Taman Merdeka Jaya）经营 Klinik Merdeka 诊所，为当地家庭提供优质诊疗。在过去超过 10 年的医学生涯中，他曾服务于公立医院和私立医疗领域，并曾担任马来西亚医药协会（MMA）马六甲分会委员会的私立医生代表，后因投身政治选举而辞去该职务。他大力倡导安宁疗护（临终关怀），视其为每一位患者应有的基本人权。
-
-郭医生致力于通过提供上门安宁疗护来填补现有的医疗体制空白。在“所有照护都是积极照护”（all care is active care）的理念指引下，他专注于解决格西当区内卧床长者和终末期患者面临的四重痛苦：身体疼痛、心理焦虑恐惧、社会孤立负担以及精神归宿。通过将基础临床诊疗直接送到患者家中，他确保患者获得积极的症状管理并保有生命尊严。作为格西当的候选人，防沙治水是他的施政焦点，包括升级当地排水系统以防治闪电水灾、扩大可负担基层医疗、扶持地方小微企业以及强化社区主导的福利项目。郭医生致力于为州议会带来科学实证、富同理心且专业的领导力。
+敬请期待
 
 # ASSETS
 - [Official Portrait - Formal Suit (Full Shot, Facing Left)](/assets/mediakit/portrait_formal_full_left.jpg) - High-resolution portrait of Dr. Bryan Kek in a formal suit, facing left. (JPG, 2487 x 3730 px, 4.7 MB)
