@@ -108,6 +108,26 @@ body {
   margin-bottom: 10px;
 }
 
+.hero-profile-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.hero-profile-img {
+  width: 105px;
+  height: 105px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3.5px solid var(--accent-gold);
+  box-shadow: 0 4px 15px rgba(32, 32, 112, 0.2);
+  transition: transform var(--transition-normal);
+}
+
+.hero-profile-img:hover {
+  transform: scale(1.05);
+}
+
 .brand-badge {
   display: inline-block;
   background-color: var(--accent-gold);
