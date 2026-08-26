@@ -34,6 +34,5 @@ vcard_tel: +60168804697
 vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
 join_btn: Join BERSAMA Member
-
-
-
+link_schedule: Official Schedule
+link_mediakit: Official Media Kit

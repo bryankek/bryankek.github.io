@@ -38,6 +38,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set default translations and load content
   changeLanguage(currentLang);
+  
+  // Load first upcoming schedule preview from Google Sheets
+  loadUpcomingSchedulePreview();
 });
 
 // 1. Language Switcher
@@ -352,6 +355,9 @@ async function changeLanguage(lang) {
 
   // Update UI language switcher highlight state
   updateUIActiveState(lang);
+  
+  // Re-render schedule preview if loaded
+  renderSchedulePreview();
 }
 
 // 3. Custom Toast Notification
@@ -463,8 +469,8 @@ function copyToClipboardFromModal() {
 // 5. Download Contact (vCard)
 function downloadVCard() {
   const fn = currentGeneral.vcard_fn || "Dr. Bryan Kek";
-  const org = currentGeneral.vcard_org || "Sinar Community Mobile Clinic";
-  const title = currentGeneral.vcard_title || "Public Health Practitioner & Civic Advocate";
+  const org = currentGeneral.vcard_org || "Klinik Merdeka";
+  const title = currentGeneral.vcard_title || "Community Doctor & Civic Advocate";
   const tel = currentGeneral.vcard_tel || "+60168804697";
   const email = currentGeneral.vcard_email || "contact@drbryankek.my";
   const url = currentGeneral.vcard_url || "https://dr.bryankek.my";
@@ -558,4 +564,206 @@ function initMobileStickyHeader() {
       miniHeader.classList.remove('show');
     }
   });
+}
+
+// 9. Schedule Preview on profile page
+let firstUpcomingEvent = null;
+
+function getEventSortKey(event) {
+  const dateParts = event.date.split('/');
+  if (dateParts.length !== 3) return 0;
+  const day = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1;
+  const year = parseInt(dateParts[2], 10);
+  
+  const padTime = event.timeStart.padStart(4, '0');
+  const hour = parseInt(padTime.substring(0, 2), 10) || 0;
+  const minute = parseInt(padTime.substring(2, 4), 10) || 0;
+  
+  return new Date(year, month, day, hour, minute).getTime();
+}
+
+function getEventEndSortKey(event) {
+  const dateParts = event.date.split('/');
+  if (dateParts.length !== 3) return 0;
+  const day = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1;
+  const year = parseInt(dateParts[2], 10);
+  
+  const endTimeStr = event.timeEnd || event.timeStart;
+  const padTime = endTimeStr.padStart(4, '0');
+  const hour = parseInt(padTime.substring(0, 2), 10) || 0;
+  const minute = parseInt(padTime.substring(2, 4), 10) || 0;
+  
+  return new Date(year, month, day, hour, minute).getTime();
+}
+
+function formatTime12h(timeStr) {
+  if (!timeStr) return '';
+  const padded = timeStr.padStart(4, '0');
+  const hour24 = parseInt(padded.substring(0, 2), 10);
+  const minute = padded.substring(2, 4);
+  const ampm = hour24 >= 12 ? 'PM' : 'AM';
+  const hour12 = hour24 % 12 === 0 ? 12 : hour24 % 12;
+  return `${hour12}:${minute} ${ampm}`;
+}
+
+// robust CSV parser (re-used from schedules page)
+function parseCSVData(csvText) {
+  const lines = [];
+  let currentLine = [];
+  let currentToken = '';
+  let inQuotes = false;
+
+  for (let i = 0; i < csvText.length; i++) {
+    const char = csvText[i];
+    const nextChar = csvText[i + 1];
+
+    if (inQuotes) {
+      if (char === '"') {
+        if (nextChar === '"') {
+          currentToken += '"';
+          i++;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        currentToken += char;
+      }
+    } else {
+      if (char === '"') {
+        inQuotes = true;
+      } else if (char === ',') {
+        currentLine.push(currentToken.trim());
+        currentToken = '';
+      } else if (char === '\n' || char === '\r') {
+        currentLine.push(currentToken.trim());
+        currentToken = '';
+        if (currentLine.length > 0 && currentLine.some(cell => cell !== '')) {
+          lines.push(currentLine);
+        }
+        currentLine = [];
+        if (char === '\r' && nextChar === '\n') {
+          i++;
+        }
+      } else {
+        currentToken += char;
+      }
+    }
+  }
+  if (currentToken !== '' || currentLine.length > 0) {
+    currentLine.push(currentToken.trim());
+    lines.push(currentLine);
+  }
+  return lines;
+}
+
+async function loadUpcomingSchedulePreview() {
+  const sheetsUrl = 'https://docs.google.com/spreadsheets/d/1r40ubYnXlQ6b484jNT7dmsBhHZjt4UDIwsH0fjOiNQs/export?format=csv';
+  try {
+    const response = await fetch(sheetsUrl);
+    if (!response.ok) return;
+    const csvText = await response.text();
+    const csvData = parseCSVData(csvText);
+    
+    if (csvData.length <= 1) return;
+    const rows = csvData.slice(1);
+    const events = [];
+    
+    for (const row of rows) {
+      if (row.length < 6) continue;
+      events.push({
+        date: row[0],
+        lokasi: row[1] || '',
+        mapLink: row[2] || '',
+        timeStart: row[3] || '',
+        timeEnd: row[4] || '',
+        activityEN: row[5] || '',
+        activityBM: row[6] || '',
+        activityCN: row[7] || '',
+        descEN: row[8] || '',
+        descBM: row[9] || '',
+        descCN: row[10] || ''
+      });
+    }
+    
+    const now = Date.now();
+    const upcoming = [];
+    events.forEach(evt => {
+      const sortKey = getEventSortKey(evt);
+      const endSortKey = getEventEndSortKey(evt);
+      if (endSortKey >= now) {
+        upcoming.push({ ...evt, sortKey });
+      }
+    });
+    
+    if (upcoming.length === 0) return;
+    upcoming.sort((a, b) => a.sortKey - b.sortKey);
+    
+    firstUpcomingEvent = upcoming[0];
+    renderSchedulePreview();
+  } catch (error) {
+    console.error('Failed to load upcoming schedule preview:', error);
+  }
+}
+
+function renderSchedulePreview() {
+  const container = document.getElementById('profile-schedule-preview');
+  if (!container || !firstUpcomingEvent) return;
+  
+  let badgeText = 'Akan Datang';
+  let activityTitle = firstUpcomingEvent.activityBM;
+  let descText = firstUpcomingEvent.descBM;
+  
+  if (currentLang === 'EN') {
+    badgeText = 'Upcoming Schedule';
+    const hasEN = firstUpcomingEvent.activityEN && (!firstUpcomingEvent.descBM || firstUpcomingEvent.descEN);
+    if (hasEN) {
+      activityTitle = firstUpcomingEvent.activityEN;
+      descText = firstUpcomingEvent.descEN || '';
+    }
+  } else if (currentLang === 'ZH') {
+    badgeText = '最新日程';
+    const hasCN = firstUpcomingEvent.activityCN && (!firstUpcomingEvent.descBM || firstUpcomingEvent.descCN);
+    if (hasCN) {
+      activityTitle = firstUpcomingEvent.activityCN;
+      descText = firstUpcomingEvent.descCN || '';
+    }
+  }
+  
+  const timeStartFmt = formatTime12h(firstUpcomingEvent.timeStart);
+  const timeEndFmt = formatTime12h(firstUpcomingEvent.timeEnd);
+  const timeRange = timeEndFmt ? `${timeStartFmt} - ${timeEndFmt}` : timeStartFmt;
+  const timeDisplay = `${firstUpcomingEvent.date} | ${timeRange}`;
+  
+  const locationName = firstUpcomingEvent.lokasi || 'Kesidang, Melaka';
+  const locationHtml = firstUpcomingEvent.mapLink 
+    ? `<a href="${firstUpcomingEvent.mapLink}" target="_blank" class="preview-location-link">${locationName}</a>`
+    : locationName;
+    
+  container.innerHTML = `
+    <div class="preview-badge-row">
+      <span class="preview-badge">${badgeText}</span>
+    </div>
+    <h4 class="preview-activity-title">${activityTitle}</h4>
+    ${descText ? `<p class="preview-activity-desc">${descText}</p>` : ''}
+    <div class="preview-time-location">
+      <div class="preview-time">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </svg>
+        <span>${timeDisplay}</span>
+      </div>
+      <div class="preview-location">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+          <circle cx="12" cy="10" r="3"></circle>
+        </svg>
+        <span>${locationHtml}</span>
+      </div>
+    </div>
+  `;
+  
+  container.style.display = 'flex';
 }

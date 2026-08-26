@@ -34,6 +34,5 @@ vcard_tel: +60168804697
 vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
 join_btn: Sertai Ahli BERSAMA
-
-
-
+link_schedule: Jadual & Pergerakan Dr Bryan
+link_mediakit: Kit Media Rasmi
