@@ -608,6 +608,35 @@ function formatTime12h(timeStr) {
   return `${hour12}:${minute} ${ampm}`;
 }
 
+// Get day of week localized by current active language
+function getDayOfWeekLocalized(dateStr, lang) {
+  if (!dateStr) return '';
+  const dateParts = dateStr.split('/');
+  if (dateParts.length !== 3) return '';
+  const day = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1; // 0-indexed month
+  const year = parseInt(dateParts[2], 10);
+  
+  if (isNaN(day) || isNaN(month) || isNaN(year)) return '';
+  
+  const dateObj = new Date(year, month, day);
+  if (isNaN(dateObj.getTime())) return '';
+  
+  const dayNum = dateObj.getDay();
+  
+  const bmDays = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
+  const enDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const zhDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+  
+  if (lang === 'ZH') {
+    return ` (${zhDays[dayNum]})`;
+  } else if (lang === 'EN') {
+    return ` (${enDays[dayNum]})`;
+  } else {
+    return ` (${bmDays[dayNum]})`;
+  }
+}
+
 // robust CSV parser (re-used from schedules page)
 function parseCSVData(csvText) {
   const lines = [];
@@ -734,7 +763,7 @@ function renderSchedulePreview() {
   const timeStartFmt = formatTime12h(firstUpcomingEvent.timeStart);
   const timeEndFmt = formatTime12h(firstUpcomingEvent.timeEnd);
   const timeRange = timeEndFmt ? `${timeStartFmt} - ${timeEndFmt}` : timeStartFmt;
-  const timeDisplay = `${firstUpcomingEvent.date} | ${timeRange}`;
+  const timeDisplay = `${firstUpcomingEvent.date}${getDayOfWeekLocalized(firstUpcomingEvent.date, currentLang)} | ${timeRange}`;
   
   const locationName = firstUpcomingEvent.lokasi || 'Kesidang, Melaka';
   const locationHtml = firstUpcomingEvent.mapLink 
