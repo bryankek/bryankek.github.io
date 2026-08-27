@@ -229,6 +229,29 @@ function formatTime12h(timeStr) {
   return `${hour12}:${minute} ${ampm}`;
 }
 
+// Get day of week in trilingual format (BM / EN / ZH)
+function getDayOfWeekTrilingual(dateStr) {
+  if (!dateStr) return '';
+  const dateParts = dateStr.split('/');
+  if (dateParts.length !== 3) return '';
+  const day = parseInt(dateParts[0], 10);
+  const month = parseInt(dateParts[1], 10) - 1; // 0-indexed month
+  const year = parseInt(dateParts[2], 10);
+  
+  if (isNaN(day) || isNaN(month) || isNaN(year)) return '';
+  
+  const dateObj = new Date(year, month, day);
+  if (isNaN(dateObj.getTime())) return '';
+  
+  const dayNum = dateObj.getDay();
+  
+  const bmDays = ['Ahad', 'Isnin', 'Selasa', 'Rabu', 'Khamis', 'Jumaat', 'Sabtu'];
+  const enDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  const zhDays = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期五', '星期六'];
+  
+  return ` (${bmDays[dayNum]} / ${enDays[dayNum]} / ${zhDays[dayNum]})`;
+}
+
 // 5. Render to UI
 function renderEvents() {
   const upcomingListEl = document.getElementById('upcoming-events-list');
@@ -297,7 +320,7 @@ function buildEventsHtml(events, tabType) {
             <line x1="8" y1="2" x2="8" y2="6"></line>
             <line x1="3" y1="10" x2="21" y2="10"></line>
           </svg>
-          <span>${date}</span>
+          <span>${date}${getDayOfWeekTrilingual(date)}</span>
         </div>
         <div class="date-events-list">
     `;
