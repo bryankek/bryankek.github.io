@@ -3,7 +3,7 @@
 >Menang kalah adat bertanding,
 >**Tolak dinosaur kita bangkit.**
 
-Hi everyone, I am Dr. Bryan Kek, the BERSAMA candidate for N.19 Kesidang for the upcoming Melaka State Election. Many know me as a community doctor and a listener who is always on the ground with the community. I am born and bred in Melaka, and my family has deep roots in Kesidang. This is where I grew up, and learned the meaning of life and where I returned to serve with all my heart.
+Hi everyone, I am Dr. Bryan Kek, representing BERSAMA for N.19 Kesidang for the upcoming Melaka State Election. Many know me as a community doctor and a listener who is always on the ground with the community. I am born and bred in Melaka, and my family has deep roots in Kesidang. This is where I grew up, and learned the meaning of life and where I returned to serve with all my heart.
 
 From the clinic to the community, my daily duty is to listen and heal. Throughout my journey of providing medical care and palliative care to homes, I have witnessed the burden quietly borne by our youth. 
 
@@ -17,7 +17,7 @@ Frankly speaking, I am sick and tired of dinosaur politics. This frustration is 
 > Refers to politicians in Malaysia who practice old-style politics, driven solely by personal gain, power struggles, and empty political theater (wayang), while failing to deliver any genuine reform or service to the people.
 > Example: "Voters are tired of political dinosaurs who put on a show during elections but ignore the real needs of the community."
 
-I understand that contesting in a constituency with an incumbent requires me to prove my capability. Therefore, I do not ask you to choose me solely because of my medical title, but judge me based on my track record, principles, and concrete actions founded on my four main promise, SAMA
+I understand that preparing to contest in a constituency with an incumbent requires me to prove my capability. Therefore, I do not ask you to choose me solely because of my medical title, but judge me based on my track record, principles, and concrete actions founded on my four main promise, SAMA
 
 > **Sepakat**
 > I will always be here to work with the people for a better future.

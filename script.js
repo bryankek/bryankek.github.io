@@ -395,7 +395,7 @@ function copyProfileLink() {
 
 // 4.1 Social Sharing Logic
 function shareProfile() {
-  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon N.19 Kesidang | Candidate for N.19 Kesidang | N.19 格西当州议席候选人";
+  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon Bayangan N.19 Kesidang | Proposed Candidate for N.19 Kesidang | N.19 格西当州议席准候选人";
   const shareData = {
     title: "Dr. Bryan Kek",
     text: trilingualInfo,
@@ -418,7 +418,7 @@ function shareProfile() {
 
 function fallbackShare() {
   const currentUrl = encodeURIComponent(window.location.href);
-  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon N.19 Kesidang | Candidate for N.19 Kesidang | N.19 格西当州议席候选人";
+  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon Bayangan N.19 Kesidang | Proposed Candidate for N.19 Kesidang | N.19 格西当州议席准候选人";
   const shareText = encodeURIComponent(`${trilingualInfo}\n\n`);
 
   // Update Sharing Links

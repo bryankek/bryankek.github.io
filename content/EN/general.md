@@ -24,7 +24,7 @@ cta_share_profile: Share Profile
 status_active: Active & Online
 footer_copyright: © 2026 Dr. Bryan Kek. All rights reserved.
 contact_saved_msg: Contact saved!
-profile_credentials: Candidate for N.19 Kesidang
+profile_credentials: Proposed Candidate for N.19 Kesidang
 share_modal_title: Share Profile
 speech_title: Background & Vision
 vcard_fn: Dr. Bryan Kek

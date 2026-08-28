@@ -24,7 +24,7 @@ cta_share_profile: Kongsi Profil
 status_active: Aktif & Dalam Talian
 footer_copyright: © 2026 Dr. Bryan Kek. Hak cipta terpelihara.
 contact_saved_msg: Kenalan disimpan!
-profile_credentials: Calon untuk N.19 Kesidang
+profile_credentials: Calon Bayangan untuk N.19 Kesidang
 share_modal_title: Kongsi Profil
 speech_title: Latar Belakang & Wawasan
 vcard_fn: Dr. Bryan Kek

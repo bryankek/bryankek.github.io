@@ -24,7 +24,7 @@ cta_share_profile: 分享主页
 status_active: 在线中
 footer_copyright: © 2026 郭杰汉医生 (Dr. Bryan Kek). 版权所有。
 contact_saved_msg: 联系人已保存！
-profile_credentials: N.19 格西当州议席候选人 (N.19 Kesidang)
+profile_credentials: N.19 格西当州议席准候选人 (N.19 Kesidang)
 share_modal_title: 分享主页
 speech_title: 背景与愿景
 vcard_fn: 郭杰汉医生 (Dr. Bryan Kek)

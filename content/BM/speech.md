@@ -3,7 +3,7 @@
 >Menang kalah adat bertanding,
 >**Tolak dinosaur kita bangkit.**
 
-Salam sejahtera semua, saya Dr. Bryan Kek, calon BERSAMA bagi kawasan N.19 Kesidang. Ramai mengenali saya sebagai doktor komuniti dan pendengar yang sentiasa berada di lapangan bersama masyarakat. 
+Salam sejahtera semua, saya Dr. Bryan Kek, calon bayangan BERSAMA bagi kawasan N.19 Kesidang. Ramai mengenali saya sebagai doktor komuniti dan pendengar yang sentiasa berada di lapangan bersama masyarakat. 
 
 Saya anak jati Melaka, dan keluarga saya berakar umbi dari Kesidang. Di sinilah tempat saya membesar, belajar erti kehidupan, dan tempat saya kembali berkhidmat dengan sepenuh hati.
 
@@ -21,7 +21,7 @@ Terus terang saya katakan, saya sudah muak dan bosan dengan corak politik lama i
 > Merujuk kepada ahli politik di Malaysia yang masih mengamalkan politik lapuk, gila kuasa, hanya mementingkan kepentingan peribadi, dan sekadar berlakon (wayang) demi meraih undi rakyat tanpa membawa sebarang pembaharuan yang bermakna.
 > Contoh: "Rakyat sudah muak dengan dinosaur politik yang hanya tahu berwayang setiap kali tibanya musim pilihan raya."
 
-Saya faham, bertanding di kawasan yang mempunyai penyandang memerlukan saya membuktikan keupayaan diri. Oleh itu, saya tidak meminta anda memilih saya semata-mata kerana gelaran doktor, tetapi nilailah saya berdasarkan rekod kerja, prinsip, dan tindakan nyata berasaskan empat janji utama saya, SAMA:
+Saya faham, persediaan bertanding di kawasan yang mempunyai penyandang memerlukan saya membuktikan keupayaan diri. Oleh itu, saya tidak meminta anda memilih saya semata-mata kerana gelaran doktor, tetapi nilailah saya berdasarkan rekod kerja, prinsip, dan tindakan nyata berasaskan empat janji utama saya, SAMA:
 
 > **Sepakat**
 > Saya akan sepakat dan bekerjasama dengan rakyat demi kebaikan bersama.
