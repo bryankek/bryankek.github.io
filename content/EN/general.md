@@ -41,3 +41,4 @@ vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
 join_btn: Join BERSAMA Member
 tag_official: Official Candidate
+election_disclaimer: Published by Pusat Kempen BERSAMA N19 Kesidang, 37, Jalan MJ32, Taman Merdeka Jaya, 75350 Batu Berendam, Melaka.

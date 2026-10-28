@@ -1068,6 +1068,21 @@ body {
   color: #ffffff !important;
 }
 
+/* Election Publisher Statutory Notice */
+.election-publisher-notice {
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: #202070;
+  opacity: 0.9;
+  margin-bottom: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  background: rgba(32, 32, 112, 0.05);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(32, 32, 112, 0.15);
+  display: inline-block;
+  font-weight: 600;
+}
+
 .linktree-footer {
   text-align: center;
   margin-top: 1.5rem;
