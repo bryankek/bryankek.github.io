@@ -38,9 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
   
   // Set default translations and load content
   changeLanguage(currentLang);
-  
-  // Load first upcoming schedule preview from Google Sheets
-  loadUpcomingSchedulePreview();
 });
 
 // 1. Language Switcher
@@ -190,8 +187,8 @@ function parseSpeech(text) {
       html += `<div class="poem-block">${lines.join('<br>')}</div>`;
     } else {
       // Regular paragraph (checks for concluding line)
-      if (p.includes('Bersama-samalah') || p.includes('Join me') || p.includes('让我们携手') || p.includes('ஒரு சிறந்த')) {
-        html += `<p class="speech-paragraph" style="font-weight: 600; text-align: center;">${p.replace(/\n/g, '<br>')}</p>`;
+      if (p.includes('Bersama-samalah') || p.includes('Join me') || p.includes('让我们携手') || p.includes('Sertai saya') || p.includes('加入我')) {
+        html += `<p class="speech-paragraph speech-cta" style="font-weight: 700; text-align: center;">${p.replace(/\n/g, '<br>')}</p>`;
       } else {
         html += `<p class="speech-paragraph">${p.replace(/\n/g, '<br>')}</p>`;
       }
@@ -395,7 +392,7 @@ function copyProfileLink() {
 
 // 4.1 Social Sharing Logic
 function shareProfile() {
-  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon Bayangan N.19 Kesidang | Proposed Candidate for N.19 Kesidang | N.19 格西当州议席准候选人";
+  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon N.19 Kesidang | Candidate for N.19 Kesidang | N.19 格西当州议席候选人";
   const shareData = {
     title: "Dr. Bryan Kek",
     text: trilingualInfo,
@@ -418,7 +415,7 @@ function shareProfile() {
 
 function fallbackShare() {
   const currentUrl = encodeURIComponent(window.location.href);
-  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon Bayangan N.19 Kesidang | Proposed Candidate for N.19 Kesidang | N.19 格西当州议席准候选人";
+  const trilingualInfo = "Dr. Bryan Kek (郭杰汉医生) - Calon N.19 Kesidang | Candidate for N.19 Kesidang | N.19 格西当州议席候选人";
   const shareText = encodeURIComponent(`${trilingualInfo}\n\n`);
 
   // Update Sharing Links

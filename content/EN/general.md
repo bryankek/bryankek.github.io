@@ -1,4 +1,4 @@
-brand_subtext: Portfolio & Social Links
+brand_subtext: Official Candidate Links & Profile
 nav_about: Profile
 nav_socials: Social Media
 nav_cv: Background
@@ -24,15 +24,20 @@ cta_share_profile: Share Profile
 status_active: Active & Online
 footer_copyright: © 2026 Dr. Bryan Kek. All rights reserved.
 contact_saved_msg: Contact saved!
-profile_credentials: Proposed Candidate for N.19 Kesidang
+profile_credentials: Candidate for N.19 Kesidang
 share_modal_title: Share Profile
-speech_title: Background & Vision
+speech_title: Message from Dr. Bryan
+link_candidate_profile: Official Candidate Profile
+link_candidate_desc: Manifesto, vision & commitments for N.19 Kesidang
+link_join_member: Join BERSAMA Member
+link_join_desc: Register as a member and build a better future together
+link_whatsapp: Contact via WhatsApp
+link_whatsapp_desc: Direct community channel (+60 16-880 4697)
 vcard_fn: Dr. Bryan Kek
 vcard_org: BERSAMA
-vcard_title: Community Doctor, Civic Advocate
+vcard_title: Candidate for N.19 Kesidang | Community Doctor
 vcard_tel: +60168804697
 vcard_email: drbryankek@gmail.com
 vcard_url: https://dr.bryankek.my
 join_btn: Join BERSAMA Member
-link_schedule: Official Schedule
-link_mediakit: Official Media Kit
+tag_official: Official Candidate

@@ -1,41 +1,15 @@
->Pohon beringin daunnya rendang,
->Tumbuh subur di pinggir bukit;
->Menang kalah adat bertanding,
->**Tolak dinosaur kita bangkit.**
+I’m Dr Bryan Kek Kit Hun.
 
-Hi everyone, I am Dr. Bryan Kek, representing BERSAMA for N.19 Kesidang for the upcoming Melaka State Election. Many know me as a community doctor and a listener who is always on the ground with the community. I am born and bred in Melaka, and my family has deep roots in Kesidang. This is where I grew up, and learned the meaning of life and where I returned to serve with all my heart.
+As a doctor, I help people everyday. I treat my patients, tend to their health and their comfort. In a medical emergency, I don’t think twice, I help. I do my best, but unfortunately, it isn’t enough.
 
-From the clinic to the community, my daily duty is to listen and heal. Throughout my journey of providing medical care and palliative care to homes, I have witnessed the burden quietly borne by our youth. 
+Everyday, Malaysians are struggling. Working, earning, trying to live. We do our best and expect our political leaders to do the same. 
 
-Many of the younger generation today are caught in a dilemma between building a career to earn a living and the responsibility of caring for parents who are elderly, bedridden, or facing terminal illnesses. The burden of medical costs, time, and emotional exhaustion is overwhelming.
+Unfortunately, they aren’t doing enough.
 
-But what do we see on the political stage today? We are presented with dinosaur politics, stale politics obsessed with power struggles, empty rhetoric repeated every time election comes around. Their sweet promises never solve the real issues of the grassroots. 
+That’s why I’m not relying on them anymore. 
 
-Frankly speaking, I am sick and tired of dinosaur politics. This frustration is what drove me to step forward; because if we do not rise to bring reform, the fate of the people and the younger generation will continue to be neglected in the hands of those who refuse to change.
+I want to make things better. A community where we don’t have to struggle daily, where we can all have better lives, better futures. A better Kesidang. A brighter Melaka.
 
-> **dinosaur / dinosaur politics (noun)**
-> Refers to politicians in Malaysia who practice old-style politics, driven solely by personal gain, power struggles, and empty political theater (wayang), while failing to deliver any genuine reform or service to the people.
-> Example: "Voters are tired of political dinosaurs who put on a show during elections but ignore the real needs of the community."
+I can’t do this alone, so let’s do it together. 
 
-I understand that preparing to contest in a constituency with an incumbent requires me to prove my capability. Therefore, I do not ask you to choose me solely because of my medical title, but judge me based on my track record, principles, and concrete actions founded on my four main promise, SAMA
-
-> **Sepakat**
-> I will always be here to work with the people for a better future.
-> 
-> **Amanah**
-> I will practice transparency and act with integrity.
-> 
-> **Merit (Fakta)**
-> I will make decisions based on merit and facts, not empty talk.
-> 
-> **Adil**
-> I will champion inclusivity fairly and put the people first.
-
-My commitment is to expand medical services and home-based palliative care for the elderly, terminally ill and bedridden patients, easing the financial and emotional burden on caregivers, and creating economic skill opportunities so our youth can progress without neglecting their beloved parents. I stand here with youthful energy, a sincere heart, and a determination to listen and solve problems together with you.
-
->Indah selasih mekar berseri,
->Petik sekuntum di tepi barat;
->Ikhlas berkhidmat sepenuh hati,
->**Saya sentiasa BERSAMA rakyat.**
-
-**Join me and BERSAMA in building a better Kesidang, Melaka, and Malaysia.**
+**Join me to make a better Melaka, BERSAMA.**
